@@ -2,30 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Core Engine Oficial</title>
+    <title>Game-Strike Retro Engine</title>
     <style>
-        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: 0; }
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+        #emulator { width: 100%; height: 100%; }
     </style>
 </head>
 <body>
 
-    <iframe id="archive-player" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    <div id="emulator"></div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const romUrl = params.get('rom') || '';
+        const romUrl = params.get('rom');
+        const core = params.get('core') || 'wonderswan';
 
         if (romUrl) {
-            const frame = document.getElementById('archive-player');
+            // Configuración nativa directa
+            window.EJS_player = '#emulator';
+            window.EJS_core = core;
+            window.EJS_gameUrl = romUrl;
             
-            // Extraemos el nombre exacto de la ROM (ejemplo: Tetris.zip)
-            let nombreRom = romUrl.substring(romUrl.lastIndexOf('/') + 1);
-            
-            // URL MÁGICA: Apunta al embed directo de la colección limpia (_20260516)
-            // Usamos el parámetro (?file=) en formato de consulta estándar. 
-            // Esto le dice a Archive que cargue SOLO el emulador, ignorando scripts de banners y búsquedas.
-            frame.src = `https://archive.org/embed/wwf-wrestle-mania-the-arcade-game-usa_20260516?file=${nombreRom}&autoplay=1`;
+            // Usamos el servidor de datos e imágenes estático de la red global unificada
+            window.EJS_pathtodata = 'https://raw.githack.com/emulatorjs/emulatorjs/main/data/';
+            window.EJS_startOnLoaded = true;
+
+            // Inyectamos el cargador principal desde una ruta espejo estática que no se rompe ni busca sub-scripts
+            const script = document.createElement('script');
+            script.src = 'https://raw.githack.com/emulatorjs/emulatorjs/main/data/loader.js';
+            document.body.appendChild(script);
         }
     </script>
 </body>
