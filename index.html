@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game-Strike Retro</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/emulator.css">
     <style>
         body { background-color: #0b0f19; }
         ::-webkit-scrollbar { width: 8px; }
@@ -12,12 +14,11 @@
         ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #374151; }
         
-        /* Ajuste para que el contenedor local del emulador ocupe todo el espacio */
-        #emulator-container-box iframe {
-            width: 100% !important;
-            height: 100% !important;
-            border: 0 !important;
-            border-radius: 12px;
+        /* Forzamos al contenedor local a respetar el aspect ratio retro */
+        #emulator-container-box {
+            width: 100%;
+            height: 100%;
+            min-height: 550px;
         }
     </style>
 </head>
@@ -44,8 +45,8 @@
                 </button>
             </div>
             
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
-                <div id="emulator-container-box" class="w-full h-full"></div>
+            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center p-2">
+                <div id="emulator-container-box"></div>
             </div>
             <div class="bg-gray-950 p-3 rounded-xl border border-gray-800/60 flex flex-wrap gap-4 justify-around text-xs text-gray-400 font-mono">
                 <span>🎮 <b>Moverse:</b> Flechas Dirección</span>
@@ -71,7 +72,7 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v14.0 - Sistema Autoalojado Indestructible
+        &copy; 2026 Game-Strike Retro Engine v15.0 - Parche NippleJS Aplicado
     </footer>
 
     <script>
@@ -138,37 +139,34 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeo estricto de núcleos de sistema oficiales
             let coreSystem = "wonderswan"; 
             if (consola.includes("mame") || consola.includes("arcade")) coreSystem = "arcade";
             if (consola.includes("nes") || consola.includes("famicom")) coreSystem = "nes";
             if (consola.includes("snes") || consola.includes("sfc")) coreSystem = "snes";
             if (consola.includes("gba")) coreSystem = "gba";
 
-            // Limpiamos el contenedor
             emulatorContainerBox.innerHTML = "";
 
-            // Creamos los elementos de configuración nativos del emulador local
-            // Cargamos dinámicamente las variables globales de inicialización del core
-            const scriptConfig = document.createElement('script');
-            scriptConfig.text = `
-                EJS_player = '#emulator-container-box';
-                EJS_core = '${coreSystem}';
-                EJS_gameUrl = '${urlRom}';
-                EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
-                EJS_startOnLoaded = true;
-            `;
+            // Inyectamos las variables de configuración nativas de EmulatorJS
+            window.EJS_player = '#emulator-container-box';
+            window.EJS_core = coreSystem;
+            window.EJS_gameUrl = urlRom;
+            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
+            window.EJS_startOnLoaded = true;
             
+            // Cargamos el cargador oficial que ahora sí va a encontrar NippleJS pre-cargado arriba
             const scriptLoader = document.createElement('script');
             scriptLoader.src = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/loader.js';
-
-            emulatorContainerBox.appendChild(scriptConfig);
             emulatorContainerBox.appendChild(scriptLoader);
         }
 
         function cerrarJuego() {
             emulatorSection.classList.add('hidden');
             emulatorContainerBox.innerHTML = ""; 
+            // Limpiamos variables globales al cerrar
+            window.EJS_player = null;
+            window.EJS_core = null;
+            window.EJS_gameUrl = null;
         }
 
         searchInput.addEventListener('input', (e) => {
