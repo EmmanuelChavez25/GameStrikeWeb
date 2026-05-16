@@ -28,23 +28,10 @@
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8 space-y-8">
 
-        <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
-            <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Consola Virtual</h2>
-                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
-                    ✕ CERRAR JUEGO
-                </button>
-            </div>
-            
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
-                <iframe id="emulator-frame" class="w-full h-full border-0" allowfullscreen="true"></iframe>
-            </div>
-        </section>
-
         <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
                 <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Mi Colección Retro</h1>
-                <p class="mt-2 text-sm text-gray-400">Hacé clic en cualquier juego para ejecutar la ROM directa.</p>
+                <p class="mt-2 text-sm text-gray-400">Descargá tus ROMs preferidas al toque para jugarlas en tu emulador favorito de PC o Celular.</p>
             </div>
             <div class="bg-indigo-950/50 border border-indigo-800/40 rounded-xl px-4 py-2 self-start sm:self-center">
                 <span class="text-xs text-indigo-400 font-bold uppercase tracking-wider block">Total Catálogo</span>
@@ -57,14 +44,11 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro - Sistema Local Autónomo
+        &copy; 2026 Game-Strike Retro - Servidor de Descargas Autónomo
     </footer>
 
     <script>
         const gamesGrid = document.getElementById('games-grid');
-        const emulatorSection = document.getElementById('emulator-section');
-        const emulatorFrame = document.getElementById('emulator-frame');
-        const currentGameTitle = document.getElementById('current-game-title');
         const gameCounter = document.getElementById('game-counter');
         const searchInput = document.getElementById('search-input');
 
@@ -73,39 +57,44 @@
         async function cargarCatalogoCompleto() {
             try {
                 const response = await fetch('all_roms.json');
-                if (!response.ok) throw new Error("No json");
+                if (!response.ok) throw new Error("No se pudo leer all_roms.json");
                 listaJuegos = await response.json();
                 gameCounter.textContent = `${listaJuegos.length} Juegos`;
                 renderizarGrilla(listaJuegos);
             } catch (error) {
                 console.error(error);
+                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Error al leer la lista de juegos.</div>`;
             }
         }
 
         function renderizarGrilla(juegos) {
             gamesGrid.innerHTML = ""; 
-            if(juegos.length === 0) return;
+            if(juegos.length === 0) {
+                gamesGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-8">No hay resultados.</p>`;
+                return;
+            }
 
             const fragment = document.createDocumentFragment();
             juegos.forEach(juego => {
                 const tarjeta = document.createElement('div');
-                tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between";
+                tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg hover:border-indigo-500/50 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between";
                 
                 const imgSrc = juego.image || 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500';
-                const nombreEscapado = (juego.name || 'Juego').replace(/'/g, "\\'");
-                const urlRom = juego.romUrl || '';
+                const urlRom = juego.romUrl || '#';
                 const consola = juego.console || 'Retro';
 
                 tarjeta.innerHTML = `
                     <div class="relative">
-                        <img src="${imgSrc}" class="w-full h-44 object-cover" loading="lazy">
-                        <span class="absolute top-3 right-3 bg-gray-950/80 text-indigo-400 text-[10px] font-black px-2 py-1 rounded border border-gray-800 uppercase">${consola}</span>
+                        <img src="${imgSrc}" alt="${juego.name}" class="w-full h-44 object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-gray-950/80 backdrop-blur text-indigo-400 text-[10px] font-black px-2 py-1 rounded-md tracking-wider uppercase border border-gray-800">
+                            ${consola}
+                        </span>
                     </div>
-                    <div class="p-4 space-y-4">
-                        <h3 class="text-white font-bold text-base line-clamp-2">${juego.name}</h3>
-                        <button onclick="iniciarJuegoReal('${nombreEscapado}', '${urlRom}', '${consola.toLowerCase()}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-sm">
-                            🎮 Jugar Ahora
-                        </button>
+                    <div class="p-4 flex-grow flex flex-col justify-between space-y-4">
+                        <h3 class="text-white font-bold text-base tracking-tight line-clamp-2">${juego.name}</h3>
+                        <a href="${urlRom}" download class="w-full block text-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all text-sm active:scale-95">
+                            📥 Descargar ROM
+                        </a>
                     </div>
                 `;
                 fragment.appendChild(tarjeta);
@@ -113,29 +102,12 @@
             gamesGrid.appendChild(fragment);
         }
 
-       function iniciarJuegoReal(nombre, urlRom, consola) {
-            currentGameTitle.textContent = `Jugando: ${nombre}`;
-            emulatorSection.classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            let systemId = "wonderswan"; 
-            if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
-            if (consola.includes("nes")) systemId = "nes";
-            if (consola.includes("snes")) systemId = "snes";
-
-            // Abre tu emulator.html local pasándole las variables por la URL
-            emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${systemId}`;
-        }
-
-        function cerrarJuego() {
-            emulatorSection.classList.add('hidden');
-            emulatorFrame.src = ""; 
-        }
-
         searchInput.addEventListener('input', (e) => {
-            const termino = e.target.value.toLowerCase();
-            const filtrados = listaJuegos.filter(j => (j.name || '').toLowerCase().includes(termino));
-            renderizarGrilla(filtrados);
+            const terminoBusqueda = e.target.value.toLowerCase();
+            const juegosFiltrados = listaJuegos.filter(juego => 
+                (juego.name || '').toLowerCase().includes(terminoBusqueda)
+            );
+            renderizarGrilla(juegosFiltrados);
         });
 
         window.addEventListener('DOMContentLoaded', cargarCatalogoCompleto);
