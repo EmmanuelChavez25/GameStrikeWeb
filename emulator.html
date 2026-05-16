@@ -5,35 +5,26 @@
     <title>Game-Strike Retro Engine</title>
     <style>
         html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
-        #emulator { width: 100%; height: 100%; }
+        iframe { width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
 
-    <div id="emulator"></div>
+    <iframe id="retro-player"></iframe>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom');
         let core = params.get('core') || 'wonderswan';
 
+        // Corrección de nombres de cores para el servidor espejo comercial
+        if (core === 'arcade') core = 'mame';
+
         if (romUrl) {
-            // Mapeo de compatibilidad estricta para el CDN de producción
-            if (core === 'wonderswan') core = 'mednafen_wswan'; // Nombre real y estable del core de Wonderswan
-            if (core === 'arcade') core = 'mame2003_plus';      // Nombre real y estable para WWF Arcade
-
-            window.EJS_player = '#emulator';
-            window.EJS_core = core;
-            window.EJS_gameUrl = romUrl;
-            
-            // Apuntamos al CDN oficial de producción que contiene los archivos compilados estables (.data y .wasm)
-            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
-            window.EJS_startOnLoaded = true;
-
-            // Inyectamos el cargador oficial desde la misma infraestructura estable
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/loader.js';
-            document.body.appendChild(script);
+            const player = document.getElementById('retro-player');
+            // Usamos la pasarela espejo de emulación unificada de un solo archivo.
+            // Al pasarle los parámetros limpios, levanta el núcleo directo en tu pantalla sin buscar librerías externas sueltas.
+            player.src = `https://www.retrogames.cc/embed/retroarch.html?core=${core}&rom=${encodeURIComponent(romUrl)}`;
         }
     </script>
 </body>

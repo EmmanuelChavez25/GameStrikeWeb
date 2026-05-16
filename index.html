@@ -113,7 +113,7 @@
             gamesGrid.appendChild(fragment);
         }
 
-        function iniciarJuegoReal(nombre, urlRom, consola) {
+       function iniciarJuegoReal(nombre, urlRom, consola) {
             currentGameTitle.textContent = `Jugando: ${nombre}`;
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -122,9 +122,8 @@
             if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
             if (consola.includes("nes")) systemId = "nes";
             if (consola.includes("snes")) systemId = "snes";
-            if (consola.includes("gba")) systemId = "gba";
 
-            // Llama a tu emulator.html pasándole los datos limpios
+            // Abre tu emulator.html local pasándole las variables por la URL
             emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${systemId}`;
         }
 
