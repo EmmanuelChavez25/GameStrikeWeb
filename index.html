@@ -72,7 +72,7 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v7.5 - Carga Masiva Optimizada
+        &copy; 2026 Game-Strike Retro Engine v7.6 - Filtro URL Optimizado
     </footer>
 
     <script>
@@ -85,18 +85,15 @@
 
         let listaJuegos = [];
 
-        // Función para leer de golpe todo tu archivo JSON
+        // Lee el archivo JSON local
         async function cargarCatalogoCompleto() {
             try {
                 const response = await fetch('all_roms.json');
                 if (!response.ok) throw new Error("No se pudo cargar el archivo all_roms.json");
                 
                 listaJuegos = await response.json();
-                
-                // Actualizamos el contador dinámico en pantalla
                 gameCounter.textContent = `${listaJuegos.length} Juegos`;
                 
-                // Pintamos la grilla completa
                 renderizarGrilla(listaJuegos);
 
             } catch (error) {
@@ -109,7 +106,7 @@
             }
         }
 
-        // Función encargada de dibujar las tarjetas mapeando "image", "romUrl", "name" y "console"
+        // Dibuja las tarjetas y limpia los links de descarga de Archive
         function renderizarGrilla(juegos) {
             gamesGrid.innerHTML = ""; 
             
@@ -124,19 +121,28 @@
                 const tarjeta = document.createElement('div');
                 tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg hover:border-indigo-500/50 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between";
                 
-                // Mapea la propiedad "image"
                 const imgSrc = juego.image || 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60';
                 
-                // Mapea la propiedad "romUrl" y la pasa a formato embed si es de archive
+                // --- PARCHE INTELIGENTE DE URLS ---
                 let urlFinal = juego.romUrl || '';
-                if (urlFinal.includes("archive.org/details/")) {
+                
+                // Si viene como link directo de descarga (/download/), extraemos el ID de la colección
+                if (urlFinal.includes("archive.org/download/")) {
+                    let partes = urlFinal.split("archive.org/download/");
+                    if (partes[1]) {
+                        let idJuego = partes[1].split("/")[0];
+                        urlFinal = `https://archive.org/embed/${idJuego}`;
+                    }
+                } else if (urlFinal.includes("archive.org/details/")) {
                     urlFinal = urlFinal.replace("archive.org/details/", "archive.org/embed/");
                 }
+
+                // Autoplay para que cargue solo
                 if (urlFinal && !urlFinal.includes("autoplay=1")) {
                     urlFinal += urlFinal.includes("?") ? "&autoplay=1" : "?autoplay=1";
                 }
+                // ----------------------------------
 
-                // Escapamos comillas simples en el string del nombre para que el click no rompa el HTML
                 const nombreEscapado = (juego.name || 'Juego Retro').replace(/'/g, "\\'");
 
                 tarjeta.innerHTML = `
@@ -171,7 +177,7 @@
             emulatorFrame.src = ""; 
         }
 
-        // Filtro de búsqueda en tiempo real usando "name"
+        // Buscador en tiempo real
         searchInput.addEventListener('input', (e) => {
             const terminoBusqueda = e.target.value.toLowerCase();
             const juegosFiltrados = listaJuegos.filter(juego => 
