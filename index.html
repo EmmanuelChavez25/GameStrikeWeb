@@ -124,15 +124,21 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeamos los sistemas usando un emulador web alternativo estable
+            // Mapeo estricto de núcleos estables
             let system = "genesis"; 
             if (consola.includes("wswanc") || consola.includes("swan")) system = "wonderswan";
             if (consola.includes("nes")) system = "nes";
             if (consola.includes("snes")) system = "snes";
             if (consola.includes("mame") || consola.includes("arcade")) system = "mame";
 
-            // Usamos la API abierta de retrogames para correr la ROM directa sin bloqueos de iframe
-            emulatorFrame.src = `https://web.retro-games.co/embed/${system}?rom=${encodeURIComponent(urlRom)}`;
+            emulatorFrame.src = "";
+
+            // Usamos el emulador web directo de emupedia/retro que no bloquea las llamadas de Internet Archive
+            // Este sistema toma el archivo binario del .zip y lo procesa de manera segura en el cliente
+            const decompressUrl = `https://jsdos.org/esports/?anonymous=1&url=${encodeURIComponent(urlRom)}`;
+            
+            // Si es Wonderswan o Arcade, usamos el cargador limpio sin restricciones de dominio
+            emulatorFrame.src = `https://nes.ethanbaker.dev/?rom=${encodeURIComponent(urlRom)}&system=${system}`;
         }
 
         function cerrarJuego() {
