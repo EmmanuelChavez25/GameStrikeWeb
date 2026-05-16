@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Core Engine Indestructible</title>
+    <title>Core Engine Oficial</title>
     <style>
         html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
         iframe { width: 100%; height: 100%; border: 0; }
@@ -10,23 +10,22 @@
 </head>
 <body>
 
-    <iframe id="archive-frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    <iframe id="archive-player" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 
     <script>
-        // Capturamos la URL del .zip que viene del index.html
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom') || '';
 
         if (romUrl) {
-            const frame = document.getElementById('archive-frame');
+            const frame = document.getElementById('archive-player');
             
-            // LÓGICA DE DETECCIÓN DEFINITIVA
-            // Extraemos el nombre exacto de la ROM desde la URL para pasárselo al emulador oficial
+            // Extraemos el nombre exacto de la ROM (ejemplo: Tetris.zip)
             let nombreRom = romUrl.substring(romUrl.lastIndexOf('/') + 1);
             
-            // Usamos la API unificada de emulación estática de Internet Archive
-            // Esta ruta le dice a Archive: "Cargá tu consola virtual oficial, abrí la colección limpia _20260516 y ejecutá este .zip"
-            frame.src = `https://archive.org/embed/wwf-wrestle-mania-the-arcade-game-usa_20260516&file=${nombreRom}&autoplay=1`;
+            // URL MÁGICA: Apunta al embed directo de la colección limpia (_20260516)
+            // Usamos el parámetro (?file=) en formato de consulta estándar. 
+            // Esto le dice a Archive que cargue SOLO el emulador, ignorando scripts de banners y búsquedas.
+            frame.src = `https://archive.org/embed/wwf-wrestle-mania-the-arcade-game-usa_20260516?file=${nombreRom}&autoplay=1`;
         }
     </script>
 </body>
