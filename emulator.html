@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Core Engine</title>
+    <title>Core Engine Premium</title>
     <style>
         html, body, #game { width: 100%; height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden; }
     </style>
@@ -16,11 +16,8 @@
         const romUrl = params.get('rom');
         let core = params.get('core') || 'wonderswan';
 
-        // Mapeo estricto para los servidores estables de producción
         if (core === 'wonderswan') core = 'mednafen_wswan';
         if (core === 'arcade') core = 'mame2003_plus';
-        
-        // El núcleo oficial para revivir Sega 32X en la web se llama picodrive
         if (core === 'sega32x') core = 'picodrive'; 
 
         if (romUrl && core) {
@@ -28,9 +25,12 @@
             window.EJS_core = core;
             window.EJS_gameUrl = romUrl;
             
-            // Usamos la pasarela blindada de LinuxServer
-            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
+            // CONFIGURACIÓN DE SEGURIDAD PARA EVITAR LOS 404 DE IMÁGENES:
+            window.EJS_backgroundImg = ''; // Desactivamos la imagen de carga de fondo
             window.EJS_startOnLoaded = true;
+            
+            // Apuntamos al CDN estable unificado de LinuxServer
+            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
 
             const loader = document.createElement('script');
             loader.src = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/loader.js';
