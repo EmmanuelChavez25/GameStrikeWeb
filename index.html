@@ -30,7 +30,7 @@
 
         <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Cargando consola...</h2>
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Consola Virtual Privada</h2>
                 <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
                     ✕ CERRAR JUEGO
                 </button>
@@ -39,8 +39,8 @@
             <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
                 <iframe id="emulator-frame" class="w-full h-full border-0 rounded-xl" allowfullscreen="true" scrolling="no"></iframe>
             </div>
-            <div class="bg-gray-950 p-3 rounded-xl border border-gray-800/60 flex flex-wrap gap-4 justify-around text-xs text-gray-400 font-mono">
-                <span>Controles activos en teclado y gamepads USB automáticamente al iniciar.</span>
+            <div class="bg-gray-950 p-3 rounded-xl border border-gray-800/60 text-center text-xs text-gray-400 font-mono">
+                Apretá la pantalla para tomar el control. El emulador corre de forma aislada en tu navegador.
             </div>
         </section>
 
@@ -60,7 +60,7 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v16.0 - Motor Monolítico Seguro
+        &copy; 2026 Game-Strike Retro Engine v17.0 - Servidor Espejo LinuxServer
     </footer>
 
     <script>
@@ -127,16 +127,15 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeo a sistemas estables comerciales de carga directa
+            // Mapeo definitivo de cores estables
             let system = "wonderswan"; 
             if (consola.includes("mame") || consola.includes("arcade")) system = "mame";
             if (consola.includes("nes")) system = "nes";
             if (consola.includes("snes")) system = "snes";
-            if (consola.includes("gba")) system = "gba";
 
-            // Usamos un puente de carga puramente binario a traves del sandbox HTTPS de emupedia
-            // Este sistema procesa los archivos .zip directamente en memoria sin scripts secundarios sueltos
-            emulatorFrame.src = `https://emupedia.net/emupedia-game-retroarch/?core=${system}&rom=${encodeURIComponent(urlRom)}`;
+            // Usamos la compilación en espejo oficial de la comunidad retro abierta
+            // Este procesador encapsula GamepadHandler y NippleJS dentro del mismo paquete y lee de Internet Archive directo sin CORS
+            emulatorFrame.src = `https://danyonsmith.github.io/wsemu/?rom=${encodeURIComponent(urlRom)}&system=${system}`;
         }
 
         function cerrarJuego() {
