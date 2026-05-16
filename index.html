@@ -11,6 +11,14 @@
         ::-webkit-scrollbar-track { background: #0b0f19; }
         ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #374151; }
+        
+        /* Ajuste para que el contenedor local del emulador ocupe todo el espacio */
+        #emulator-container-box iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: 0 !important;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body class="text-gray-100 min-h-screen font-sans flex flex-col">
@@ -30,16 +38,21 @@
 
         <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Inicializando consola...</h2>
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Cargando consola local...</h2>
                 <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
                     ✕ CERRAR JUEGO
                 </button>
             </div>
             
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
-                <iframe id="emulator-frame" class="w-full h-full border-0 rounded-xl" allowfullscreen="true" scrolling="no"></iframe>
+            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
+                <div id="emulator-container-box" class="w-full h-full"></div>
             </div>
-            <p class="text-center text-xs text-gray-500 font-mono">Controles integrados en el reproductor. Hacé clic para empezar.</p>
+            <div class="bg-gray-950 p-3 rounded-xl border border-gray-800/60 flex flex-wrap gap-4 justify-around text-xs text-gray-400 font-mono">
+                <span>🎮 <b>Moverse:</b> Flechas Dirección</span>
+                <span>🕹️ <b>Botones:</b> Z, X, C, V, A, S</span>
+                <span>🟢 <b>Start:</b> Enter</span>
+                <span>🟡 <b>Select:</b> Shift derecho</span>
+            </div>
         </section>
 
         <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -58,13 +71,13 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v13.0 - Motor Independiente Estable
+        &copy; 2026 Game-Strike Retro Engine v14.0 - Sistema Autoalojado Indestructible
     </footer>
 
     <script>
         const gamesGrid = document.getElementById('games-grid');
         const emulatorSection = document.getElementById('emulator-section');
-        const emulatorFrame = document.getElementById('emulator-frame');
+        const emulatorContainerBox = document.getElementById('emulator-container-box');
         const currentGameTitle = document.getElementById('current-game-title');
         const gameCounter = document.getElementById('game-counter');
         const searchInput = document.getElementById('search-input');
@@ -125,21 +138,37 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Identificación estricta de la consola para EmulatorJS
-            let systemId = "wonderswan"; 
-            if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
-            if (consola.includes("nes")) systemId = "nes";
-            if (consola.includes("snes")) systemId = "snes";
-            if (consola.includes("gba")) systemId = "gba";
+            // Mapeo estricto de núcleos de sistema oficiales
+            let coreSystem = "wonderswan"; 
+            if (consola.includes("mame") || consola.includes("arcade")) coreSystem = "arcade";
+            if (consola.includes("nes") || consola.includes("famicom")) coreSystem = "nes";
+            if (consola.includes("snes") || consola.includes("sfc")) coreSystem = "snes";
+            if (consola.includes("gba")) coreSystem = "gba";
 
-            // Usamos un puente embebido oficial del servidor de desarrollo estable del emulador web unificado
-            // Esto evita problemas de IP caídas porque corre en servidores espejo distribuidos a nivel mundial
-            emulatorFrame.src = `https://emulatorjs.org/standalone/embed.html?game=${encodeURIComponent(urlRom)}&core=${systemId}`;
+            // Limpiamos el contenedor
+            emulatorContainerBox.innerHTML = "";
+
+            // Creamos los elementos de configuración nativos del emulador local
+            // Cargamos dinámicamente las variables globales de inicialización del core
+            const scriptConfig = document.createElement('script');
+            scriptConfig.text = `
+                EJS_player = '#emulator-container-box';
+                EJS_core = '${coreSystem}';
+                EJS_gameUrl = '${urlRom}';
+                EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
+                EJS_startOnLoaded = true;
+            `;
+            
+            const scriptLoader = document.createElement('script');
+            scriptLoader.src = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/loader.js';
+
+            emulatorContainerBox.appendChild(scriptConfig);
+            emulatorContainerBox.appendChild(scriptLoader);
         }
 
         function cerrarJuego() {
             emulatorSection.classList.add('hidden');
-            emulatorFrame.src = ""; 
+            emulatorContainerBox.innerHTML = ""; 
         }
 
         searchInput.addEventListener('input', (e) => {
