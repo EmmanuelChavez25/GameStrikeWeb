@@ -36,7 +36,7 @@
                 </button>
             </div>
             
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
+            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
                 <div id="emulator-container" class="w-full h-full"></div>
             </div>
         </section>
@@ -57,7 +57,7 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v8.0 - EmulatorJS Integrado
+        &copy; 2026 Game-Strike Retro Engine v8.2 - Enlaces Directos Archive
     </footer>
 
     <script>
@@ -70,7 +70,6 @@
 
         let listaJuegos = [];
 
-        // Cargar catálogo JSON
         async function cargarCatalogoCompleto() {
             try {
                 const response = await fetch('all_roms.json');
@@ -80,11 +79,10 @@
                 renderizarGrilla(listaJuegos);
             } catch (error) {
                 console.error(error);
-                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Falta el archivo all_roms.json en la raíz.</div>`;
+                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Error al leer la lista de juegos.</div>`;
             }
         }
 
-        // Renderizar Tarjetas
         function renderizarGrilla(juegos) {
             gamesGrid.innerHTML = ""; 
             if(juegos.length === 0) {
@@ -121,27 +119,23 @@
             gamesGrid.appendChild(fragment);
         }
 
-        // Lanza el emulador cargando el .zip de forma directa
         function iniciarJuegoReal(nombre, urlRom, consola) {
             currentGameTitle.textContent = `Jugando: ${nombre}`;
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeo automático de consolas para EmulatorJS
-            let core = "segaMD"; // por defecto Mega Drive / Genesis
+            // Identificación automática del core para EmulatorJS
+            let core = "segaMD"; 
             if (consola.includes("wswanc") || consola.includes("swan")) core = "wonderswan";
             if (consola.includes("nes") || consola.includes("famicom")) core = "nes";
             if (consola.includes("snes") || consola.includes("sfc")) core = "snes";
             if (consola.includes("gba")) core = "gba";
 
-            // Limpiamos el contenedor por si había un juego antes
             emulatorContainer.innerHTML = "";
 
-            // Creamos el iframe dinámico aislado para EmulatorJS
+            // Inyectamos el emulador web pasando la URL de tu .zip limpio de Archive
             const iframe = document.createElement('iframe');
             iframe.className = "w-full h-full border-0";
-            
-            // Usamos un servidor embed público y confiable de EmulatorJS pasando tus datos directo
             iframe.src = `https://emulatorjs.org/embed.html?game=${encodeURIComponent(urlRom)}&core=${core}`;
             
             emulatorContainer.appendChild(iframe);
