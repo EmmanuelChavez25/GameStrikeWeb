@@ -6,23 +6,11 @@
     <title>Game-Strike Retro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background-color: #0b0f19;
-        }
-        /* Custom scrollbar estético */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0f19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1f2937;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #374151;
-        }
+        body { background-color: #0b0f19; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0f19; }
+        ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #374151; }
     </style>
 </head>
 <body class="text-gray-100 min-h-screen font-sans flex flex-col">
@@ -42,24 +30,21 @@
 
         <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">
-                    Inicializando consola virtual...
-                </h2>
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Inicializando juego...</h2>
                 <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
                     ✕ CERRAR JUEGO
                 </button>
             </div>
             
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
-                <iframe id="emulator-frame" src="" class="absolute inset-0 w-full h-full border-0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
+                <div id="emulator-container" class="w-full h-full"></div>
             </div>
-            <p class="text-center text-xs text-gray-500 font-mono">Hacé un clic adentro de la pantalla para activar el mouse y los controles del teclado.</p>
         </section>
 
         <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
                 <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Mi Colección Retro</h1>
-                <p class="mt-2 text-sm text-gray-400">Hacé clic en cualquier título para lanzar el emulador oficial de Archive.</p>
+                <p class="mt-2 text-sm text-gray-400">Hacé clic en cualquier juego para ejecutar la ROM directa en vivo.</p>
             </div>
             <div class="bg-indigo-950/50 border border-indigo-800/40 rounded-xl px-4 py-2 self-start sm:self-center">
                 <span class="text-xs text-indigo-400 font-bold uppercase tracking-wider block">Total Catálogo</span>
@@ -72,112 +57,101 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v7.6 - Filtro URL Optimizado
+        &copy; 2026 Game-Strike Retro Engine v8.0 - EmulatorJS Integrado
     </footer>
 
     <script>
         const gamesGrid = document.getElementById('games-grid');
         const emulatorSection = document.getElementById('emulator-section');
-        const emulatorFrame = document.getElementById('emulator-frame');
+        const emulatorContainer = document.getElementById('emulator-container');
         const currentGameTitle = document.getElementById('current-game-title');
         const gameCounter = document.getElementById('game-counter');
         const searchInput = document.getElementById('search-input');
 
         let listaJuegos = [];
 
-        // Lee el archivo JSON local
+        // Cargar catálogo JSON
         async function cargarCatalogoCompleto() {
             try {
                 const response = await fetch('all_roms.json');
-                if (!response.ok) throw new Error("No se pudo cargar el archivo all_roms.json");
-                
+                if (!response.ok) throw new Error("No se pudo cargar all_roms.json");
                 listaJuegos = await response.json();
                 gameCounter.textContent = `${listaJuegos.length} Juegos`;
-                
                 renderizarGrilla(listaJuegos);
-
             } catch (error) {
                 console.error(error);
-                gamesGrid.innerHTML = `
-                    <div class="col-span-full text-center py-12 bg-gray-900 rounded-2xl border border-gray-800">
-                        <p class="text-gray-400 font-medium">Falta configurar, renombrar o subir el archivo all_roms.json en la raíz.</p>
-                    </div>
-                `;
+                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Falta el archivo all_roms.json en la raíz.</div>`;
             }
         }
 
-        // Dibuja las tarjetas y limpia los links de descarga de Archive
+        // Renderizar Tarjetas
         function renderizarGrilla(juegos) {
             gamesGrid.innerHTML = ""; 
-            
             if(juegos.length === 0) {
-                gamesGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-8">No se encontraron juegos con ese nombre.</p>`;
+                gamesGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-8">No hay resultados.</p>`;
                 return;
             }
 
             const fragment = document.createDocumentFragment();
-
             juegos.forEach(juego => {
                 const tarjeta = document.createElement('div');
                 tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg hover:border-indigo-500/50 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between";
                 
                 const imgSrc = juego.image || 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60';
-                
-                // --- PARCHE INTELIGENTE DE URLS ---
-                let urlFinal = juego.romUrl || '';
-                
-                // Si viene como link directo de descarga (/download/), extraemos el ID de la colección
-                if (urlFinal.includes("archive.org/download/")) {
-                    let partes = urlFinal.split("archive.org/download/");
-                    if (partes[1]) {
-                        let idJuego = partes[1].split("/")[0];
-                        urlFinal = `https://archive.org/embed/${idJuego}`;
-                    }
-                } else if (urlFinal.includes("archive.org/details/")) {
-                    urlFinal = urlFinal.replace("archive.org/details/", "archive.org/embed/");
-                }
-
-                // Autoplay para que cargue solo
-                if (urlFinal && !urlFinal.includes("autoplay=1")) {
-                    urlFinal += urlFinal.includes("?") ? "&autoplay=1" : "?autoplay=1";
-                }
-                // ----------------------------------
-
-                const nombreEscapado = (juego.name || 'Juego Retro').replace(/'/g, "\\'");
+                const nombreEscapado = (juego.name || 'Juego').replace(/'/g, "\\'");
+                const urlRom = juego.romUrl || '';
+                const consola = juego.console || 'Retro';
 
                 tarjeta.innerHTML = `
                     <div class="relative">
-                        <img src="${imgSrc}" alt="${juego.name || 'Juego'}" class="w-full h-44 object-cover" loading="lazy">
+                        <img src="${imgSrc}" alt="${juego.name}" class="w-full h-44 object-cover" loading="lazy">
                         <span class="absolute top-3 right-3 bg-gray-950/80 backdrop-blur text-indigo-400 text-[10px] font-black px-2 py-1 rounded-md tracking-wider uppercase border border-gray-800">
-                            ${juego.console || 'Retro'}
+                            ${consola}
                         </span>
                     </div>
                     <div class="p-4 flex-grow flex flex-col justify-between space-y-4">
-                        <h3 class="text-white font-bold text-base tracking-tight line-clamp-2">${juego.name || 'Sin nombre'}</h3>
-                        <button onclick="iniciarJuegoIframe('${nombreEscapado}', '${urlFinal}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all text-sm active:scale-95">
+                        <h3 class="text-white font-bold text-base tracking-tight line-clamp-2">${juego.name}</h3>
+                        <button onclick="iniciarJuegoReal('${nombreEscapado}', '${urlRom}', '${consola.toLowerCase()}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all text-sm active:scale-95">
                             🎮 Jugar Ahora
                         </button>
                     </div>
                 `;
                 fragment.appendChild(tarjeta);
             });
-
             gamesGrid.appendChild(fragment);
         }
 
-        function iniciarJuegoIframe(nombre, embedUrl) {
+        // Lanza el emulador cargando el .zip de forma directa
+        function iniciarJuegoReal(nombre, urlRom, consola) {
             currentGameTitle.textContent = `Jugando: ${nombre}`;
-            emulatorFrame.src = embedUrl;
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Mapeo automático de consolas para EmulatorJS
+            let core = "segaMD"; // por defecto Mega Drive / Genesis
+            if (consola.includes("wswanc") || consola.includes("swan")) core = "wonderswan";
+            if (consola.includes("nes") || consola.includes("famicom")) core = "nes";
+            if (consola.includes("snes") || consola.includes("sfc")) core = "snes";
+            if (consola.includes("gba")) core = "gba";
+
+            // Limpiamos el contenedor por si había un juego antes
+            emulatorContainer.innerHTML = "";
+
+            // Creamos el iframe dinámico aislado para EmulatorJS
+            const iframe = document.createElement('iframe');
+            iframe.className = "w-full h-full border-0";
+            
+            // Usamos un servidor embed público y confiable de EmulatorJS pasando tus datos directo
+            iframe.src = `https://emulatorjs.org/embed.html?game=${encodeURIComponent(urlRom)}&core=${core}`;
+            
+            emulatorContainer.appendChild(iframe);
         }
 
         function cerrarJuego() {
             emulatorSection.classList.add('hidden');
-            emulatorFrame.src = ""; 
+            emulatorContainer.innerHTML = ""; 
         }
 
-        // Buscador en tiempo real
         searchInput.addEventListener('input', (e) => {
             const terminoBusqueda = e.target.value.toLowerCase();
             const juegosFiltrados = listaJuegos.filter(juego => 
@@ -188,6 +162,5 @@
 
         window.addEventListener('DOMContentLoaded', cargarCatalogoCompleto);
     </script>
-
 </body>
 </html>
