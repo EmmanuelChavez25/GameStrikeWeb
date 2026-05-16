@@ -16,15 +16,19 @@
         const romUrl = params.get('rom');
         let core = params.get('core') || 'wonderswan';
 
-        // Corrección de nombres para el CDN estable de producción
+        // Mapeo estricto para los servidores estables de producción
         if (core === 'wonderswan') core = 'mednafen_wswan';
         if (core === 'arcade') core = 'mame2003_plus';
+        
+        // El núcleo oficial para revivir Sega 32X en la web se llama picodrive
+        if (core === 'sega32x') core = 'picodrive'; 
 
         if (romUrl && core) {
             window.EJS_player = '#game';
             window.EJS_core = core;
             window.EJS_gameUrl = romUrl;
-            // Usamos la ruta estática global de LinuxServer que viene con todas las dependencias unificadas
+            
+            // Usamos la pasarela blindada de LinuxServer
             window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
             window.EJS_startOnLoaded = true;
 
