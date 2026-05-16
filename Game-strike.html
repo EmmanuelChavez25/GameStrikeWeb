@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Strike | Tu Plataforma Retro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;600;800&display=swap');
+        
+        body { font-family: 'Changa', sans-serif; scroll-behavior: smooth; }
+
+        /* Efecto de degradado premium para el logo */
+        .brand-logo {
+            background: linear-gradient(to right, #3b82f6, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+        }
+
+        .transition-all-fast { transition: all 0.2s ease-in-out; }
+        
+        /* Animación y luces en las tarjetas tipo Arcade */
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2), 0 4px 6px -2px rgba(99, 102, 241, 0.1);
+        }
+
+        .game-card:hover .play-btn { background: linear-gradient(to right, #3b82f6, #6366f1); color: white; }
+        .game-card:hover .console-label { color: #818cf8; }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+
+    <header class="bg-gray-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center gap-4">
+            <h1 class="text-3xl font-black brand-logo tracking-wider">GAME-STRIKE</h1>
+            
+            <div class="relative flex-grow max-w-sm">
+                <input type="text" id="game-search" oninput="buscarJuegos()" placeholder="Buscar juego de Sega..." 
+                       class="w-full bg-gray-800 text-gray-200 text-sm pl-10 pr-4 py-2 rounded-full border border-gray-700 search-input transition-all-fast">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-6 flex-grow">
+        
+        <section id="emulator-section" class="hidden mb-8 bg-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
+            <div class="bg-gray-900 p-3 flex justify-between items-center border-b border-gray-800">
+                <h3 id="current-game-title" class="font-bold text-indigo-300 text-sm md:text-base">Iniciando emulador local...</h3>
+                <button onclick="cerrarEmulador()" class="bg-red-600 hover:bg-red-700 text-white text-xs px-4 py-2 rounded-full font-semibold transition">
+                    Cerrar Juego
+                </button>
+            </div>
+            <div class="w-full flex justify-center bg-black">
+                <div class="w-full max-w-4xl aspect-video bg-gray-950 relative">
+                    <iframe id="emulator-frame" src="" class="w-full h-full border-0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="bg-gray-900 p-3 text-center text-[11px] text-gray-500 border-t border-gray-800">
+                Controles: Flechas de dirección | Z, X, C, A, S, D | Enter (Start) | Shift (Select)
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <div id="filter-buttons" class="flex flex-wrap gap-2.5 p-3 bg-gray-900 rounded-xl border border-gray-800 shadow-inner">
+                <button id="btn-todos" onclick="filtrarConsola('TODOS')" class="bg-indigo-600 text-white text-xs md:text-sm px-5 py-2.5 rounded-full font-bold shadow hover:bg-indigo-700 transition-all-fast uppercase tracking-wider">
+                    Sega (Fase 1)
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 tracking-wide">
+                <span class="w-3 h-8 bg-indigo-500 rounded-full"></span>
+                Biblioteca Retro <span id="juegos-count" class="text-sm text-gray-500 font-medium"></span>
+            </h2>
+            
+            <div id="games-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
+                <p class="text-gray-600 col-span-full text-center py-16">Cargando catálogo desde la nube...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 p-5 text-center text-xs text-gray-600 mt-12">
+        &copy; 2026 Game-Strike. Consola Virtual Autónoma.
+    </footer>
+
+    <script>
+        let todosLosJuegos = []; 
+        let filtroActual = 'TODOS';
+
+        const gamesGrid = document.getElementById('games-grid');
+        const emulatorSection = document.getElementById('emulator-section');
+        const emulatorFrame = document.getElementById('emulator-frame');
+        const currentGameTitle = document.getElementById('current-game-title');
+        const filterButtonsContainer = document.getElementById('filter-buttons');
+        const juegosCount = document.getElementById('juegos-count');
+        const searchInput = document.getElementById('game-search');
+
+        // Mapeo de emulación para Sega
+        const mapeoConsolas = {
+            'GENESIS': 'segaMD', 
+            'MEGADRIVE': 'segaMD', 
+            'SEGAMD': 'segaMD',
+            'SEGA': 'segaMD'
+        };
+
+        async function cargarCatalogo() {
+            try {
+                const response = await fetch('all_roms.json');
+                const datosBrutos = await response.json();
+                
+                // PARCHE ESTRATÉGICO: Filtramos en caliente para que SOLO muestre Sega por ahora
+                const consolasSega = ['GENESIS', 'MEGADRIVE', 'SEGAMD', 'SEGA'];
+                todosLosJuegos = datosBrutos.filter(juego => consolasSega.includes(juego.console.toUpperCase()));
+                
+                renderizarJuegos(todosLosJuegos);
+            } catch (error) {
+                gamesGrid.innerHTML = `<p class="text-red-500 col-span-full text-center py-10">Error leyendo la base de datos de juegos.</p>`;
+            }
+        }
+
+        function filtrarConsola(consolaSeleccionada) {
+            filtroActual = consolaSeleccionada;
+            searchInput.value = ''; 
+            renderizarJuegos(todosLosJuegos);
+        }
+
+        function buscarJuegos() {
+            const termino = searchInput.value.toLowerCase().trim();
+            const resultados = todosLosJuegos.filter(juego => juego.name.toLowerCase().includes(termino));
+            renderizarJuegos(resultados);
+        }
+
+        function renderizarJuegos(juegos) {
+            gamesGrid.innerHTML = '';
+            juegosCount.textContent = `(${juegos.length} disponibles)`;
+            
+            if (juegos.length === 0) {
+                gamesGrid.innerHTML = `<p class="text-gray-600 col-span-full text-center py-16">No hay títulos de Sega con ese nombre.</p>`;
+                return;
+            }
+            
+            // Limitamos a 150 en la vista por rendimiento, el buscador busca sobre el total
+            const juegosAMostrar = searchInput.value === '' ? juegos.slice(0, 150) : juegos;
+
+            juegosAMostrar.forEach(juego => {
+                const card = document.createElement('div');
+                card.className = "game-card bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-105 border border-gray-800 transition-all-fast cursor-pointer flex flex-col justify-between";
+                card.onclick = () => iniciarJuego(juego.name, juego.console, juego.romUrl);
+
+                card.innerHTML = `
+                    <div class="w-full h-40 md:h-44 bg-gray-950 flex items-center justify-center overflow-hidden relative">
+                        <img src="${juego.image}" alt="${juego.name}" 
+                             class="w-full h-full object-contain p-2" 
+                             onerror="this.onerror=null; this.src='https://via.placeholder.com/150x200/1f2937/ffffff?text=SEGA';">
+                    </div>
+                    <div class="p-3 bg-gray-900 border-t border-gray-800">
+                        <span class="console-label text-[9px] uppercase font-bold tracking-widest text-gray-500 block mb-1 transition-all-fast">SEGA</span>
+                        <h4 class="font-bold text-xs text-gray-200 line-clamp-2 h-8" title="${juego.name}">${juego.name}</h4>
+                    </div>
+                `;
+                gamesGrid.appendChild(card);
+            });
+        }
+
+        function iniciarJuego(nombre, consola, romUrl) {
+            currentGameTitle.textContent = `Jugando de forma remota: ${nombre}`;
+            
+            // Mapeamos el sistema (siempre caerá en segaMD para esta fase)
+            const sistemaEmu = mapeoConsolas[consola.toUpperCase()] || 'segaMD';
+            
+            // Levantamos el iframe apuntando al emulador local y pasándole la URL de Archive.org
+            emulatorFrame.src = `emulators/web/emulator.html?system=${sistemaEmu}&url=${encodeURIComponent(romUrl)}`;
+            
+            emulatorSection.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cerrarEmulador() {
+            emulatorSection.classList.add('hidden');
+            emulatorFrame.src = '';
+        }
+
+        cargarCatalogo();
+    </script>
+</body>
+</html>

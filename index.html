@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Strike Retro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0b0f19;
+        }
+        /* Custom scrollbar estético */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen font-sans flex flex-col">
+
+    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 backdrop-blur bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+                GAME-STRIKE RETRO
+            </span>
+            <div class="w-64 sm:w-80">
+                <input type="text" id="search-input" placeholder="Buscar entre los juegos..." class="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 transition-colors">
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8 space-y-8">
+
+        <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
+            <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">
+                    Inicializando consola virtual...
+                </h2>
+                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
+                    ✕ CERRAR JUEGO
+                </button>
+            </div>
+            
+            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
+                <iframe id="emulator-frame" src="" class="absolute inset-0 w-full h-full border-0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            </div>
+            <p class="text-center text-xs text-gray-500 font-mono">Hacé un clic adentro de la pantalla para activar el mouse y los controles del teclado.</p>
+        </section>
+
+        <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Mi Colección Retro</h1>
+                <p class="mt-2 text-sm text-gray-400">Hacé clic en cualquier título para lanzar el emulador oficial de Archive.</p>
+            </div>
+            <div class="bg-indigo-950/50 border border-indigo-800/40 rounded-xl px-4 py-2 self-start sm:self-center">
+                <span class="text-xs text-indigo-400 font-bold uppercase tracking-wider block">Total Catálogo</span>
+                <span id="game-counter" class="text-xl font-black text-white font-mono">0 Juegos</span>
+            </div>
+        </div>
+
+        <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            </div>
+
+    </main>
+
+    <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
+        &copy; 2026 Game-Strike Retro Engine v7.0 - Carga Masiva Automatizada
+    </footer>
+
+    <script>
+        const gamesGrid = document.getElementById('games-grid');
+        const emulatorSection = document.getElementById('emulator-section');
+        const emulatorFrame = document.getElementById('emulator-frame');
+        const currentGameTitle = document.getElementById('current-game-title');
+        const gameCounter = document.getElementById('game-counter');
+        const searchInput = document.getElementById('search-input');
+
+        let listaJuegos = []; // Guardará el array completo de los miles de juegos
+
+        // Función para leer de golpe todo tu archivo JSON
+        async function cargarCatalogoCompleto() {
+            try {
+                // Buscamos tu all_roms.json local
+                const response = await fetch('all_roms.json');
+                if (!response.ok) throw new Error("No se pudo cargar el archivo all_roms.json");
+                
+                listaJuegos = await response.json();
+                
+                // Actualizamos el contador dinámico en pantalla
+                gameCounter.textContent = `${listaJuegos.length} Juegos`;
+                
+                // Pintamos la grilla inicial completa
+                renderizarGrilla(listaJuegos);
+
+            } catch (error) {
+                console.error(error);
+                gamesGrid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-gray-900 rounded-2xl border border-gray-800">
+                        <p class="text-gray-400 font-medium">Falta configurar o subir el archivo all_roms.json en la raíz.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Función encargada de dibujar las tarjetas rápido en el HTML
+        function renderizarGrilla(juegos) {
+            gamesGrid.innerHTML = ""; // Limpiamos pantalla
+            
+            if(juegos.length === 0) {
+                gamesGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-8">No se encontraron juegos con ese nombre.</p>`;
+                return;
+            }
+
+            // Usamos un fragment para inyectar miles de nodos optimizando la memoria del navegador
+            const fragment = document.createDocumentFragment();
+
+            juegos.forEach(juego => {
+                const tarjeta = document.createElement('div');
+                tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg hover:border-indigo-500/50 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between";
+                
+                // Si el juego no tiene imagen asignada en tu JSON, le mete una por defecto estética
+                const imgSrc = juego.imagen || 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60';
+                
+                // Limpiamos la URL por si tiene la vista de detalles común, pasándola a formato embed puro
+                let urlFinal = juego.url;
+                if (urlFinal.includes("archive.org/details/")) {
+                    urlFinal = urlFinal.replace("archive.org/details/", "archive.org/embed/");
+                }
+                // Nos aseguramos que tenga autoplay activado para ahorrar clics rotos
+                if (!urlFinal.includes("autoplay=1")) {
+                    urlFinal += urlFinal.includes("?") ? "&autoplay=1" : "?autoplay=1";
+                }
+
+                tarjeta.innerHTML = `
+                    <div class="relative">
+                        <img src="${imgSrc}" alt="${juego.nombre}" class="w-full h-44 object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-gray-950/80 backdrop-blur text-indigo-400 text-[10px] font-black px-2 py-1 rounded-md tracking-wider uppercase border border-gray-800">
+                            ${juego.consola || 'Retro'}
+                        </span>
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between space-y-4">
+                        <h3 class="text-white font-bold text-base tracking-tight line-clamp-2">${juego.nombre}</h3>
+                        <button onclick="iniciarJuegoIframe('${juego.nombre}', '${urlFinal}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all text-sm active:scale-95">
+                            🎮 Jugar Ahora
+                        </button>
+                    </div>
+                `;
+                fragment.appendChild(tarjeta);
+            });
+
+            gamesGrid.appendChild(fragment);
+        }
+
+        // Función del botón para clavar la ROM directa en el frame
+        function iniciarJuegoIframe(nombre, embedUrl) {
+            currentGameTitle.textContent = `Jugando: ${nombre}`;
+            emulatorFrame.src = embedUrl;
+            emulatorSection.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cerrarJuego() {
+            emulatorSection.classList.add('hidden');
+            emulatorFrame.src = ""; // Cortamos el proceso del juego en segundo plano
+        }
+
+        // Filtro de búsqueda instantáneo en tiempo real
+        searchInput.addEventListener('input', (e) => {
+            const terminoBusqueda = e.target.value.toLowerCase();
+            const juegosFiltrados = listaJuegos.filter(juego => 
+                juego.nombre.toLowerCase().includes(terminoBusqueda)
+            );
+            renderizarGrilla(juegosFiltrados);
+        });
+
+        // Disparamos la lectura automática al levantar la página
+        window.addEventListener('DOMContentLoaded', cargarCatalogoCompleto);
+    </script>
+
+</body>
+</html>
