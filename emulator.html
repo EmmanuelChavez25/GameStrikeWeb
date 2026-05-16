@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Engine</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/emulator.css">
+    <style>
+        html, body, #game { width: 100%; height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <div id="game"></div>
+
+    <script>
+        // Capturamos los datos de la ROM que le pasa el index por la URL
+        const params = new URLSearchParams(window.location.search);
+        const romUrl = params.get('rom');
+        const core = params.get('core');
+
+        if (romUrl && core) {
+            window.EJS_player = '#game';
+            window.EJS_core = core;
+            window.EJS_gameUrl = romUrl;
+            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
+            window.EJS_startOnLoaded = true;
+
+            // Cargamos el procesador plano de gamepads nativo
+            const loader = document.createElement('script');
+            loader.src = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/loader.js';
+            document.body.appendChild(loader);
+        }
+    </script>
+</body>
+</html>
