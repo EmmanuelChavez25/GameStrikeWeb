@@ -2,34 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Core Engine</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/emulator.css">
+    <title>Core Engine Premium</title>
     <style>
-        html, body, #game { width: 100%; height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden; }
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
+        iframe { width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
 
-    <div id="game"></div>
+    <iframe id="engine-frame"></iframe>
 
     <script>
-        // Capturamos los datos de la ROM que le pasa el index por la URL
+        // Capturamos las variables que manda el index.html
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom');
-        const core = params.get('core');
+        let core = params.get('core') || 'wonderswan';
 
-        if (romUrl && core) {
-            window.EJS_player = '#game';
-            window.EJS_core = core;
-            window.EJS_gameUrl = romUrl;
-            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
-            window.EJS_startOnLoaded = true;
+        // Corrección estricta por si el core viene mapeado diferente
+        if (core === 'arcade') core = 'mame';
 
-            // Cargamos el procesador plano de gamepads nativo
-            const loader = document.createElement('script');
-            loader.src = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/loader.js';
-            document.body.appendChild(loader);
+        if (romUrl) {
+            const frame = document.getElementById('engine-frame');
+            // Inyectamos el cargador plano de emulación estática de heroku/webretro 
+            // que procesa el .zip de Archive directamente en caliente sin buscar sub-scripts
+            frame.src = `https://webretro.github.io/webretro/?core=${core}&rom=${encodeURIComponent(romUrl)}`;
         }
     </script>
 </body>

@@ -122,8 +122,9 @@
             if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
             if (consola.includes("nes")) systemId = "nes";
             if (consola.includes("snes")) systemId = "snes";
+            if (consola.includes("gba")) systemId = "gba";
 
-            // Pasamos los parámetros de manera limpia a nuestro propio archivo local
+            // Llama a tu emulator.html pasándole los datos limpios
             emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${systemId}`;
         }
 
