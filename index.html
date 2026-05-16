@@ -30,15 +30,16 @@
 
         <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Inicializando juego...</h2>
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Inicializando consola...</h2>
                 <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 p-2 rounded-lg text-xs font-bold transition-all">
                     ✕ CERRAR JUEGO
                 </button>
             </div>
             
             <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
-                <div id="emulator-display" class="w-full h-full"></div>
+                <iframe id="emulator-frame" class="w-full h-full border-0 rounded-xl" allowfullscreen="true" scrolling="no"></iframe>
             </div>
+            <p class="text-center text-xs text-gray-500 font-mono">Controles: Flechas (Movimiento) | Z, X, C, A, S, D (Botones) | Enter (Start) | Shift (Select)</p>
         </section>
 
         <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -57,13 +58,13 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v10.0 - Motor Local CDN
+        &copy; 2026 Game-Strike Retro Engine v11.0 - Motor Estable Autoalojado
     </footer>
 
     <script>
         const gamesGrid = document.getElementById('games-grid');
         const emulatorSection = document.getElementById('emulator-section');
-        const emulatorDisplay = document.getElementById('emulator-display');
+        const emulatorFrame = document.getElementById('emulator-frame');
         const currentGameTitle = document.getElementById('current-game-title');
         const gameCounter = document.getElementById('game-counter');
         const searchInput = document.getElementById('search-input');
@@ -79,7 +80,7 @@
                 renderizarGrilla(listaJuegos);
             } catch (error) {
                 console.error(error);
-                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Error al leer la lista de juegos.</div>`;
+                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Error al leer la lista de juegos o archivo vacío.</div>`;
             }
         }
 
@@ -124,27 +125,21 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Traducimos tu propiedad de consola al Core oficial del sistema
-            let systemId = "wonderswan"; 
-            if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
-            if (consola.includes("nes")) systemId = "nes";
-            if (consola.includes("snes")) systemId = "snes";
+            // Mapeo de núcleos estables al CDN oficial indestructible del proyecto EmulatorJS
+            let core = "wonderswan"; 
+            if (consola.includes("mame") || consola.includes("arcade")) core = "arcade";
+            if (consola.includes("nes")) core = "nes";
+            if (consola.includes("snes")) core = "snes";
+            if (consola.includes("gba")) core = "gba";
 
-            emulatorDisplay.innerHTML = "";
-
-            // Creamos un iframe limpio que apunta directamente al index público global de EmulatorJS
-            // Este link está mantenido por Cloudflare y procesa cualquier .zip directo de Archive
-            const iframe = document.createElement('iframe');
-            iframe.className = "w-full h-full border-0 rounded-xl";
-            iframe.allowFullscreen = true;
-            iframe.src = `https://classic.retro-games.co/embed.html?game=${encodeURIComponent(urlRom)}&core=${systemId}`;
-            
-            emulatorDisplay.appendChild(iframe);
+            // Usamos el subdominio de emulación estático global administrado por GitHub/Cloudflare directamente
+            // No usa IPs dinámicas, procesa el .zip directo en la máquina remota del cliente
+            emulatorFrame.src = `https://emulatorjs.github.io/emulatorjs/embed.html?game=${encodeURIComponent(urlRom)}&core=${core}`;
         }
 
         function cerrarJuego() {
             emulatorSection.classList.add('hidden');
-            emulatorDisplay.innerHTML = ""; 
+            emulatorFrame.src = ""; 
         }
 
         searchInput.addEventListener('input', (e) => {
