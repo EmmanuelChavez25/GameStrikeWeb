@@ -15,21 +15,24 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom');
-        const core = params.get('core') || 'wonderswan';
+        let core = params.get('core') || 'wonderswan';
 
         if (romUrl) {
-            // Configuración nativa directa
+            // Mapeo de compatibilidad estricta para el CDN de producción
+            if (core === 'wonderswan') core = 'mednafen_wswan'; // Nombre real y estable del core de Wonderswan
+            if (core === 'arcade') core = 'mame2003_plus';      // Nombre real y estable para WWF Arcade
+
             window.EJS_player = '#emulator';
             window.EJS_core = core;
             window.EJS_gameUrl = romUrl;
             
-            // Usamos el servidor de datos e imágenes estático de la red global unificada
-            window.EJS_pathtodata = 'https://raw.githack.com/emulatorjs/emulatorjs/main/data/';
+            // Apuntamos al CDN oficial de producción que contiene los archivos compilados estables (.data y .wasm)
+            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
             window.EJS_startOnLoaded = true;
 
-            // Inyectamos el cargador principal desde una ruta espejo estática que no se rompe ni busca sub-scripts
+            // Inyectamos el cargador oficial desde la misma infraestructura estable
             const script = document.createElement('script');
-            script.src = 'https://raw.githack.com/emulatorjs/emulatorjs/main/data/loader.js';
+            script.src = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/loader.js';
             document.body.appendChild(script);
         }
     </script>
