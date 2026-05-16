@@ -2,29 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Game-Strike Retro Engine</title>
+    <title>Core Engine</title>
     <style>
-        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: 0; }
+        html, body, #game { width: 100%; height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden; }
     </style>
 </head>
 <body>
 
-    <iframe id="retro-player"></iframe>
+    <div id="game"></div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom');
         let core = params.get('core') || 'wonderswan';
 
-        // Corrección de nombres de cores para el servidor espejo comercial
-        if (core === 'arcade') core = 'mame';
+        // Corrección de nombres para el CDN estable de producción
+        if (core === 'wonderswan') core = 'mednafen_wswan';
+        if (core === 'arcade') core = 'mame2003_plus';
 
-        if (romUrl) {
-            const player = document.getElementById('retro-player');
-            // Usamos la pasarela espejo de emulación unificada de un solo archivo.
-            // Al pasarle los parámetros limpios, levanta el núcleo directo en tu pantalla sin buscar librerías externas sueltas.
-            player.src = `https://www.retrogames.cc/embed/retroarch.html?core=${core}&rom=${encodeURIComponent(romUrl)}`;
+        if (romUrl && core) {
+            window.EJS_player = '#game';
+            window.EJS_core = core;
+            window.EJS_gameUrl = romUrl;
+            // Usamos la ruta estática global de LinuxServer que viene con todas las dependencias unificadas
+            window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
+            window.EJS_startOnLoaded = true;
+
+            const loader = document.createElement('script');
+            loader.src = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/loader.js';
+            document.body.appendChild(loader);
         }
     </script>
 </body>
