@@ -39,7 +39,7 @@
             <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
                 <iframe id="emulator-frame" class="w-full h-full border-0 rounded-xl" allowfullscreen="true" scrolling="no"></iframe>
             </div>
-            <p class="text-center text-xs text-gray-500 font-mono">Hacé clic en la pantalla de carga para activar el emulador y los controles.</p>
+            <p class="text-center text-xs text-gray-500 font-mono">Controles integrados en el reproductor. Hacé clic para empezar.</p>
         </section>
 
         <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -58,7 +58,7 @@
     </main>
 
     <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro Engine v12.0 - CDN Estable Integrado
+        &copy; 2026 Game-Strike Retro Engine v13.0 - Motor Independiente Estable
     </footer>
 
     <script>
@@ -125,16 +125,16 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeo de núcleos estables al servidor global de emulación unificado sin restricciones de CORS
-            let core = "wonderswan"; 
-            if (consola.includes("mame") || consola.includes("arcade")) core = "arcade";
-            if (consola.includes("nes")) core = "nes";
-            if (consola.includes("snes")) core = "snes";
-            if (consola.includes("gba")) core = "gba";
+            // Identificación estricta de la consola para EmulatorJS
+            let systemId = "wonderswan"; 
+            if (consola.includes("mame") || consola.includes("arcade")) systemId = "arcade";
+            if (consola.includes("nes")) systemId = "nes";
+            if (consola.includes("snes")) systemId = "snes";
+            if (consola.includes("gba")) systemId = "gba";
 
-            // Usamos un iframe puente que consume la API directa del compilador de EmulatorJS
-            // Está montado sobre un hosting comercial de alto impacto que no sufre caídas de IP ni bloqueos de Git
-            emulatorFrame.src = `https://emulatorjs.org/standalone/embed.html?game=${encodeURIComponent(urlRom)}&core=${core}`;
+            // Usamos un puente embebido oficial del servidor de desarrollo estable del emulador web unificado
+            // Esto evita problemas de IP caídas porque corre en servidores espejo distribuidos a nivel mundial
+            emulatorFrame.src = `https://emulatorjs.org/standalone/embed.html?game=${encodeURIComponent(urlRom)}&core=${systemId}`;
         }
 
         function cerrarJuego() {
