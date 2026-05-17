@@ -10,146 +10,95 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0b0f19; }
         ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #374151; }
     </style>
 </head>
 <body class="text-gray-100 min-h-screen font-sans flex flex-col">
 
-    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 backdrop-blur bg-opacity-90">
+    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
                 GAME-STRIKE RETRO
             </span>
-            <div class="w-64 sm:w-80">
-                <input type="text" id="search-input" placeholder="Buscar entre los juegos..." class="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 transition-colors">
+            <div class="w-64">
+                <input type="text" id="search-input" placeholder="Buscar juego..." class="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none">
             </div>
         </div>
     </header>
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8 space-y-8">
 
-        <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl space-y-4 p-4">
+        <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 p-4 space-y-4 shadow-2xl">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Inicializando consola...</h2>
-                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 px-3 py-1.5 rounded-lg text-xs font-bold transition-all uppercase tracking-wider">
-                    ✕ Cerrar Juego
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Cargando...</h2>
+                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 px-3 py-1.5 rounded-lg text-xs font-bold transition-all">
+                    ✕ CERRAR CONSOLA
                 </button>
             </div>
-            
-            <div class="relative w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
-                <iframe id="emulator-frame" class="w-full h-full border-0 rounded-xl" allowfullscreen="true" scrolling="no"></iframe>
+            <div class="w-full h-[600px] bg-black rounded-xl overflow-hidden shadow-inner">
+                <iframe id="emulator-frame" class="w-full h-full border-0" allowfullscreen="true" scrolling="no"></iframe>
             </div>
         </section>
 
-        <div class="border-b border-gray-800 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div>
-                <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Mi Colección Retro</h1>
-                <p class="mt-2 text-sm text-gray-400">Hacé clic en cualquier título para ejecutarlo en vivo directo en la pantalla sin instalar nada.</p>
-            </div>
-            <div class="bg-indigo-950/50 border border-indigo-800/40 rounded-xl px-4 py-2 self-start sm:self-center">
-                <span class="text-xs text-indigo-400 font-bold uppercase tracking-wider block">Total Catálogo</span>
-                <span id="game-counter" class="text-xl font-black text-white font-mono">0 Juegos</span>
-            </div>
+        <div class="border-b border-gray-800 pb-4">
+            <h1 class="text-3xl font-extrabold text-white">Consola en Línea</h1>
+            <p class="text-sm text-gray-400 mt-1">Hacé clic en Jugar Ahora para iniciar el emulador oficial blindado.</p>
         </div>
 
         <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 
     </main>
 
-    <footer class="bg-gray-950 border-t border-gray-900 py-6 text-center text-xs text-gray-500 font-medium">
-        &copy; 2026 Game-Strike Retro - Emulación Nativa en Pantalla
-    </footer>
-
     <script>
         const gamesGrid = document.getElementById('games-grid');
         const emulatorSection = document.getElementById('emulator-section');
         const emulatorFrame = document.getElementById('emulator-frame');
         const currentGameTitle = document.getElementById('current-game-title');
-        const gameCounter = document.getElementById('game-counter');
         const searchInput = document.getElementById('search-input');
-
         let listaJuegos = [];
 
-        // Lee el archivo JSON local con las rutas relativas
         async function cargarCatalogoCompleto() {
             try {
                 const response = await fetch('all_roms.json');
-                if (!response.ok) throw new Error("No se pudo leer all_roms.json");
                 listaJuegos = await response.json();
-                gameCounter.textContent = `${listaJuegos.length} Juegos`;
                 renderizarGrilla(listaJuegos);
             } catch (error) {
-                console.error(error);
-                gamesGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">Error al cargar la lista de juegos locales.</div>`;
+                gamesGrid.innerHTML = `<p class="text-center text-gray-400 col-span-full">Error al cargar el catálogo.</p>`;
             }
         }
 
-        // Pinta las tarjetas de los juegos en la pantalla
         function renderizarGrilla(juegos) {
-            gamesGrid.innerHTML = ""; 
-            if(juegos.length === 0) {
-                gamesGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-8">No se encontraron juegos con ese nombre.</p>`;
-                return;
-            }
-
-            const fragment = document.createDocumentFragment();
+            gamesGrid.innerHTML = "";
             juegos.forEach(juego => {
                 const tarjeta = document.createElement('div');
-                tarjeta.className = "bg-gray-900 border border-gray-800/80 rounded-2xl overflow-hidden shadow-lg hover:border-indigo-500/50 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between";
-                
-                const imgSrc = juego.image || 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500';
-                const nombreEscapado = (juego.name || 'Juego').replace(/'/g, "\\'");
-                const urlRom = juego.romUrl || '';
-                const consola = juego.console || 'Retro';
-
+                tarjeta.className = "bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden p-4 flex flex-col justify-between space-y-4 shadow-lg";
                 tarjeta.innerHTML = `
-                    <div class="relative">
-                        <img src="${imgSrc}" alt="${juego.name}" class="w-full h-44 object-cover" loading="lazy">
-                        <span class="absolute top-3 right-3 bg-gray-950/80 backdrop-blur text-indigo-400 text-[10px] font-black px-2 py-1 rounded-md tracking-wider uppercase border border-gray-800">
-                            ${consola}
-                        </span>
+                    <div>
+                        <span class="text-[10px] bg-indigo-950 border border-indigo-800 text-indigo-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider">${juego.console}</span>
+                        <h3 class="text-white font-bold text-lg mt-2">${juego.name}</h3>
                     </div>
-                    <div class="p-4 flex-grow flex flex-col justify-between space-y-4">
-                        <h3 class="text-white font-bold text-base tracking-tight line-clamp-2">${juego.name}</h3>
-                        <button onclick="iniciarJuegoReal('${nombreEscapado}', '${urlRom}', '${consola}')" class="w-full block text-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all text-sm active:scale-95">
-                            🎮 Jugar Ahora
-                        </button>
-                    </div>
+                    <button onclick="iniciarJuegoReal('${juego.name.replace(/'/g, "\\'")}', '${encodeURIComponent(juego.embedUrl)}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl transition-all text-sm">
+                        🎮 Jugar Ahora
+                    </button>
                 `;
-                fragment.appendChild(tarjeta);
+                gamesGrid.appendChild(tarjeta);
             });
-            gamesGrid.appendChild(fragment);
         }
 
-        // Ejecuta el motor correcto basándose en tu hardware local real
-        function iniciarJuegoReal(nombre, urlRom, consola) {
-            currentGameTitle.textContent = `Jugando: ${nombre}`;
+        function iniciarJuegoReal(nombre, embedUrl) {
+            currentGameTitle.textContent = `Jugando a: ${nombre}`;
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            let systemId = "sega32x"; // Forzamos Sega 32X para tu carpeta real
-
-            // Si es el de lucha libre de la raíz o el tag dice MAME, cambia a Arcade
-            if (consola === "MAME" || nombre.toLowerCase().includes("wrestlemania")) {
-                systemId = "arcade";
-            }
-
-            // Inyectamos las variables al iframe local sin usar servidores externos intermedios
-            emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${systemId}`;
+            emulatorFrame.src = `emulator.html?embed=${embedUrl}`;
         }
 
         function cerrarJuego() {
             emulatorSection.classList.add('hidden');
-            emulatorFrame.src = ""; 
+            emulatorFrame.src = "";
         }
 
-        // Buscador predictivo en tiempo real
         searchInput.addEventListener('input', (e) => {
-            const terminoBusqueda = e.target.value.toLowerCase();
-            const juegosFiltrados = listaJuegos.filter(juego => 
-                (juego.name || '').toLowerCase().includes(terminoBusqueda)
-            );
-            renderizarGrilla(juegosFiltrados);
+            const term = e.target.value.toLowerCase();
+            renderizarGrilla(listaJuegos.filter(j => j.name.toLowerCase().includes(term)));
         });
 
         window.addEventListener('DOMContentLoaded', cargarCatalogoCompleto);

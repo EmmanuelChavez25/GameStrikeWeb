@@ -2,223 +2,43 @@
   {
     "name": "After Burner Complete",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/After%20Burner%20Complete%20~%20After%20Burner%20(Japan,%20USA).zip",
+    "embedUrl": "https://archive.org/embed/sg_After_Burner_Complete_1995_Sega_JP_en",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
-    "name": "Amazing Spider-Man, The - Web of Fire (USA)",
+    "name": "Doom (USA, Europe)",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Amazing%20Spider-Man,%20The%20-%20Web%20of%20Fire%20(USA).zip",
+    "embedUrl": "https://archive.org/embed/sg_Doom_1994_Sega_US_eu",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
-    "name": "BC Racers (USA)",
+    "name": "Mortal Kombat II",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/BC%20Racers%20(USA).zip",
+    "embedUrl": "https://archive.org/embed/sg_Mortal_Kombat_II_1994_Acclaim_US_eu",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
-    "name": "Blackthorne (USA)",
+    "name": "Primal Rage",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Blackthorne%20(USA).zip",
+    "embedUrl": "https://archive.org/embed/sg_Primal_Rage_1995_Time_Warner_Interactive_US_eu",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
-    "name": "Brutal Unleashed - Above the Claw (USA)",
+    "name": "Star Wars Arcade",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Brutal%20Unleashed%20-%20Above%20the%20Claw%20(USA).zip",
+    "embedUrl": "https://archive.org/embed/sg_Star_Wars_Arcade_1994_Sega_US",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
-    "name": "Chaotix ~ Knuckles' Chaotix (Japan, USA)",
+    "name": "Virtua Racing Deluxe",
     "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Chaotix%20~%20Knuckles'%20Chaotix%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Cyber Brawl ~ Cosmic Carnage (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Cyber%20Brawl%20~%20Cosmic%20Carnage%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Darxide (Europe) (En,Fr,De,Es)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Darxide%20(Europe)%20(En,Fr,De,Es).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Doom (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Doom%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "FIFA Soccer '96 (Europe) (En,Fr,De,Es,It,Sv)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/FIFA%20Soccer%20'96%20(Europe)%20(En,Fr,De,Es,It,Sv).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Golf Magazine 36 Great Holes Starring Fred Couples (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Golf%20Magazine%2036%20Great%20Holes%20Starring%20Fred%20Couples%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Kolibri (USA, Europe)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Kolibri%20(USA,%20Europe).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Metal Head (Japan, USA) (En,Ja)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Metal%20Head%20(Japan,%20USA)%20(En,Ja).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Mortal Kombat II (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Mortal%20Kombat%20II%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Motocross Championship (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Motocross%20Championship%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "NBA Jam - Tournament Edition (World)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/NBA%20Jam%20-%20Tournament%20Edition%20(World).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "NFL Quarterback Club (World)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/NFL%20Quarterback%20Club%20(World).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Parasquad ~ Zaxxon's Motherbase 2000 (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Parasquad%20~%20Zaxxon's%20Motherbase%202000%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Pitfall - The Mayan Adventure (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Pitfall%20-%20The%20Mayan%20Adventure%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Primal Rage (USA, Europe)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Primal%20Rage%20(USA,%20Europe).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "RBI Baseball '95 (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/RBI%20Baseball%20'95%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Shadow Squadron ~ Stellar Assault (USA, Europe)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Shadow%20Squadron%20~%20Stellar%20Assault%20(USA,%20Europe).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Soulstar X (USA) (Proto)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Soulstar%20X%20(USA)%20(Proto).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Space Harrier (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Space%20Harrier%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Star%20Trek%20-%20Starfleet%20Academy%20-%20Starship%20Bridge%20Simulator%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Star Wars Arcade (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Star%20Wars%20Arcade%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "T-Mek (USA, Europe)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/T-Mek%20(USA,%20Europe).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Tempo (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Tempo%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Toughman Contest (USA, Europe)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Toughman%20Contest%20(USA,%20Europe).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Virtua Fighter (Japan, USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Virtua%20Fighter%20(Japan,%20USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Virtua Hamster (USA) (Proto)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Virtua%20Hamster%20(USA)%20(Proto).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "Virtua Racing Deluxe (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/Virtua%20Racing%20Deluxe%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "World Series Baseball Starring Deion Sanders (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/World%20Series%20Baseball%20Starring%20Deion%20Sanders%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "WWF Raw (World)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/WWF%20Raw%20(World).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "WWF WrestleMania - The Arcade Game (USA)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/WWF%20WrestleMania%20-%20The%20Arcade%20Game%20(USA).zip",
-    "image": "https://i.imgur.com/E0n9B8R.png"
-  },
-  {
-    "name": "X-Men (USA) (Proto)",
-    "console": "SEGA32X",
-    "romUrl": "roms/wswanc/X-Men%20(USA)%20(Proto).zip",
+    "embedUrl": "https://archive.org/embed/sg_Virtua_Racing_Deluxe_1994_Sega_US",
     "image": "https://i.imgur.com/E0n9B8R.png"
   },
   {
     "name": "WWF WrestleMania: The Arcade Game (MAME)",
     "console": "MAME",
-    "romUrl": "roms/wwf-wrestle-mania-the-arcade-game-usa.zip",
+    "embedUrl": "https://archive.org/embed/wwf-wrestle-mania-the-arcade-game-usa_20260516",
     "image": "https://i.imgur.com/E0n9B8R.png"
   }
 ]
