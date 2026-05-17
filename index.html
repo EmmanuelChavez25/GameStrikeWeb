@@ -29,8 +29,8 @@
 
         <section id="emulator-section" class="hidden bg-gray-900 rounded-2xl border border-gray-800 p-4 space-y-4 shadow-2xl">
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Cargando...</h2>
-                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 px-3 py-1.5 rounded-lg text-xs font-bold transition-all">
+                <h2 id="current-game-title" class="text-lg font-bold text-indigo-400">Iniciando Consola Retro...</h2>
+                <button onclick="cerrarJuego();" class="text-gray-400 hover:text-rose-500 bg-gray-800 px-3 py-1.5 rounded-lg text-xs font-bold">
                     ✕ CERRAR CONSOLA
                 </button>
             </div>
@@ -40,8 +40,8 @@
         </section>
 
         <div class="border-b border-gray-800 pb-4">
-            <h1 class="text-3xl font-extrabold text-white">Consola en Línea</h1>
-            <p class="text-sm text-gray-400 mt-1">Hacé clic en Jugar Ahora para iniciar el emulador oficial blindado.</p>
+            <h1 class="text-3xl font-extrabold text-white">Mi Colección Retro</h1>
+            <p class="text-sm text-gray-400 mt-1">Hacé clic en Jugar Ahora para iniciar el emulador nativo en la pantalla.</p>
         </div>
 
         <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
@@ -62,7 +62,7 @@
                 listaJuegos = await response.json();
                 renderizarGrilla(listaJuegos);
             } catch (error) {
-                gamesGrid.innerHTML = `<p class="text-center text-gray-400 col-span-full">Error al cargar el catálogo.</p>`;
+                gamesGrid.innerHTML = `<p class="text-center text-gray-400 col-span-full">Error al cargar la lista.</p>`;
             }
         }
 
@@ -71,12 +71,16 @@
             juegos.forEach(juego => {
                 const tarjeta = document.createElement('div');
                 tarjeta.className = "bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden p-4 flex flex-col justify-between space-y-4 shadow-lg";
+                
+                // Imagen por defecto si Imgur falla
+                const imgSrc = "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400";
+                
                 tarjeta.innerHTML = `
                     <div>
-                        <span class="text-[10px] bg-indigo-950 border border-indigo-800 text-indigo-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider">${juego.console}</span>
-                        <h3 class="text-white font-bold text-lg mt-2">${juego.name}</h3>
+                        <span class="text-[10px] bg-indigo-950 border border-indigo-800 text-indigo-400 px-2 py-0.5 rounded font-bold uppercase">${juego.console}</span>
+                        <h3 class="text-white font-bold text-base mt-2">${juego.name}</h3>
                     </div>
-                    <button onclick="iniciarJuegoReal('${juego.name.replace(/'/g, "\\'")}', '${encodeURIComponent(juego.embedUrl)}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl transition-all text-sm">
+                    <button onclick="iniciarJuegoReal('${juego.name.replace(/'/g, "\\'")}', '${juego.romUrl}', '${juego.console}')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl text-sm">
                         🎮 Jugar Ahora
                     </button>
                 `;
@@ -84,11 +88,15 @@
             });
         }
 
-        function iniciarJuegoReal(nombre, embedUrl) {
-            currentGameTitle.textContent = `Jugando a: ${nombre}`;
+        function iniciarJuegoReal(nombre, urlRom, consola) {
+            currentGameTitle.textContent = `Jugando: ${nombre}`;
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            emulatorFrame.src = `emulator.html?embed=${embedUrl}`;
+            
+            let core = "sega32x";
+            if (consola === "MAME") core = "arcade";
+
+            emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${core}`;
         }
 
         function cerrarJuego() {
