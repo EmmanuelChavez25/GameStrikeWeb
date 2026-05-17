@@ -41,10 +41,20 @@ const romUrl = params.get('rom');
 
 const coreParam = params.get('core') || 'sega32x';
 
+/* CORE DEFAULT */
+
 let coreId = 'picodrive';
+
+/* MAME */
 
 if(coreParam === 'arcade'){
     coreId = 'mame2003_plus';
+}
+
+/* ATARI 7800 */
+
+if(coreParam === 'atari7800'){
+    coreId = 'prosystem';
 }
 
 if(romUrl){

@@ -45,6 +45,11 @@
     "romUrl": "roms/wswanc/doom.zip"
   },
   {
+  "name": "Mario Bros",
+  "console": "ATARI7800",
+  "romUrl": "roms/atari7800/mariobros.a78"
+  },
+  {
     "name": "FIFA Soccer 96",
     "console": "SEGA32X",
     "romUrl": "roms/wswanc/fifa96.zip"
