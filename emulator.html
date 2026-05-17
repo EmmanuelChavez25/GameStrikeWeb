@@ -1,136 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>GameStrike Console Pro</title>
-
-<style>
-
-html, body, #game{
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
-    background:black;
-    overflow:hidden;
-}
-
-/* =========================
-   UI GENERAL
-========================= */
-
-.btn{
-    position:fixed;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.25);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:Arial;
-    font-weight:bold;
-    z-index:9999;
-    user-select:none;
-    touch-action:none;
-}
-
-.btn:active{
-    transform:scale(0.88);
-    background:rgba(255,255,255,0.3);
-}
-
-/* botones acción derecha */
-#aBtn{ bottom:120px; right:40px; }
-#bBtn{ bottom:60px; right:110px; }
-#xBtn{ bottom:180px; right:110px; }
-#yBtn{ bottom:120px; right:180px; }
-
-/* start/select/menu */
-#startBtn{ bottom:40px; left:120px; width:70px; height:40px; border-radius:10px; }
-#selectBtn{ bottom:40px; left:30px; width:70px; height:40px; border-radius:10px; }
-#menuBtn{ top:20px; left:20px; width:60px; height:40px; border-radius:10px; }
-#fsBtn{ top:20px; right:20px; width:60px; height:40px; border-radius:10px; }
-
-/* =========================
-   JOYSTICK
-========================= */
-
-#joyArea{
-    position:fixed;
-    bottom:40px;
-    left:40px;
-    width:140px;
-    height:140px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:50%;
-    z-index:9999;
-}
-
-#stick{
-    position:absolute;
-    width:60px;
-    height:60px;
-    background:rgba(255,255,255,0.25);
-    border-radius:50%;
-    top:40px;
-    left:40px;
-}
-
-/* overlay menu simple */
-#overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.85);
-    color:white;
-    display:none;
-    z-index:10000;
-    font-family:Arial;
-    padding:20px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div id="game"></div>
-
-<!-- JOYSTICK -->
-<div id="joyArea">
-    <div id="stick"></div>
-</div>
-
-<!-- BOTONES -->
-<div class="btn" id="aBtn">A</div>
-<div class="btn" id="bBtn">B</div>
-<div class="btn" id="xBtn">X</div>
-<div class="btn" id="yBtn">Y</div>
-
-<div class="btn" id="startBtn">START</div>
-<div class="btn" id="selectBtn">SEL</div>
-
-<div class="btn" id="menuBtn">≡</div>
-<div class="btn" id="fsBtn">⛶</div>
-
-<!-- OVERLAY -->
-<div id="overlay">
-    <h2>MENU</h2>
-    <p>GameStrike Console Pro</p>
-    <p>⚙ Opciones futuras aquí</p>
-    <button onclick="toggleMenu()">Cerrar</button>
-</div>
-
 <script>
 
 /* =========================
@@ -160,6 +27,15 @@ if(romUrl){
         'https://cdn.emulatorjs.org/stable/data/loader.js';
     document.body.appendChild(loader);
 
+    /* 🔥 FIX PRO REAL: foco correcto */
+    setTimeout(() => {
+        const canvas = document.querySelector("canvas");
+        if(canvas){
+            canvas.setAttribute("tabindex","0");
+            canvas.focus();
+        }
+    }, 2000);
+
 }else{
     document.body.innerHTML = "No se encontró ROM.";
 }
@@ -188,73 +64,125 @@ document.getElementById("menuBtn").onclick = toggleMenu;
 ========================= */
 
 function vibrate(){
-    if(navigator.vibrate) navigator.vibrate(50);
+    if(navigator.vibrate) navigator.vibrate(40);
 }
 
 /* =========================
-   INPUT SIMULADO
+   🔥 INPUT ENGINE PRO REAL
 ========================= */
 
-function pressKey(key){
-    document.dispatchEvent(new KeyboardEvent("keydown",{key}));
-    setTimeout(()=>{
-        document.dispatchEvent(new KeyboardEvent("keyup",{key}));
-    },80);
+function getCanvas(){
+    return document.querySelector("canvas");
 }
 
-/* BOTONES */
+function press(key){
 
-document.getElementById("aBtn").onclick = () => { pressKey("z"); vibrate(); };
-document.getElementById("bBtn").onclick = () => { pressKey("x"); vibrate(); };
-document.getElementById("xBtn").onclick = () => { pressKey("a"); vibrate(); };
-document.getElementById("yBtn").onclick = () => { pressKey("s"); vibrate(); };
+    const canvas = getCanvas();
+    if(canvas) canvas.focus();
 
-document.getElementById("startBtn").onclick = () => { pressKey("Enter"); vibrate(); };
-document.getElementById("selectBtn").onclick = () => { pressKey("Shift"); vibrate(); };
+    if(!canvas) return;
+
+    const down = new KeyboardEvent("keydown", {
+        key,
+        bubbles: true
+    });
+
+    const up = new KeyboardEvent("keyup", {
+        key,
+        bubbles: true
+    });
+
+    canvas.dispatchEvent(down);
+
+    setTimeout(() => {
+        canvas.dispatchEvent(up);
+    }, 60);
+}
 
 /* =========================
-   JOYSTICK SIMPLE
+   KEYMAP LIMPIO (CORRECTO)
+========================= */
+
+const KEYMAP = {
+    a: "z",
+    b: "x",
+    x: "a",
+    y: "s",
+    start: "Enter",
+    select: "Shift",
+    up: "ArrowUp",
+    down: "ArrowDown",
+    left: "ArrowLeft",
+    right: "ArrowRight"
+};
+
+/* =========================
+   BOTONES
+========================= */
+
+document.getElementById("aBtn").onclick = () => { press(KEYMAP.a); vibrate(); };
+document.getElementById("bBtn").onclick = () => { press(KEYMAP.b); vibrate(); };
+document.getElementById("xBtn").onclick = () => { press(KEYMAP.x); vibrate(); };
+document.getElementById("yBtn").onclick = () => { press(KEYMAP.y); vibrate(); };
+
+document.getElementById("startBtn").onclick = () => { press(KEYMAP.start); vibrate(); };
+document.getElementById("selectBtn").onclick = () => { press(KEYMAP.select); vibrate(); };
+
+/* =========================
+   JOYSTICK PRO (SIN SPAM)
 ========================= */
 
 const stick = document.getElementById("stick");
 const joy = document.getElementById("joyArea");
 
 let active = false;
+let lastDir = "";
 
-joy.addEventListener("touchstart", () => active = true);
+joy.addEventListener("touchstart", () => {
+    active = true;
+});
+
 joy.addEventListener("touchend", () => {
     active = false;
     stick.style.top = "40px";
     stick.style.left = "40px";
+    lastDir = "";
 });
 
 joy.addEventListener("touchmove", (e) => {
 
-if(!active) return;
+    if(!active) return;
 
-const t = e.touches[0];
-const rect = joy.getBoundingClientRect();
+    const t = e.touches[0];
+    const rect = joy.getBoundingClientRect();
 
-let x = t.clientX - rect.left - 70;
-let y = t.clientY - rect.top - 70;
+    let x = t.clientX - rect.left - 70;
+    let y = t.clientY - rect.top - 70;
 
-const max = 40;
+    const max = 40;
 
-x = Math.max(-max, Math.min(max, x));
-y = Math.max(-max, Math.min(max, y));
+    x = Math.max(-max, Math.min(max, x));
+    y = Math.max(-max, Math.min(max, y));
 
-stick.style.left = (40 + x) + "px";
-stick.style.top = (40 + y) + "px";
+    stick.style.left = (40 + x) + "px";
+    stick.style.top = (40 + y) + "px";
 
-/* movimientos básicos */
-if(x > 20) pressKey("ArrowRight");
-if(x < -20) pressKey("ArrowLeft");
-if(y > 20) pressKey("ArrowDown");
-if(y < -20) pressKey("ArrowUp");
+    let dir = "";
+
+    if(x > 20) dir = "right";
+    else if(x < -20) dir = "left";
+    else if(y > 20) dir = "down";
+    else if(y < -20) dir = "up";
+
+    if(dir !== lastDir && dir !== ""){
+        lastDir = dir;
+        press(KEYMAP[dir]);
+    }
+
+    if(dir === ""){
+        lastDir = "";
+    }
 
 });
 
 </script>
-
-</body>
-</html>

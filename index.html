@@ -10,16 +10,12 @@
 
 <style>
 
-html{
-    scroll-behavior:smooth;
-}
+html{ scroll-behavior:smooth; }
 
 body{
     background:#070b14;
     overflow-x:hidden;
 }
-
-/* Fondo */
 
 body::before{
     content:"";
@@ -32,46 +28,20 @@ body::before{
     z-index:-1;
 }
 
-/* Scroll */
+::-webkit-scrollbar{ width:8px; }
+::-webkit-scrollbar-track{ background:#0b0f19; }
+::-webkit-scrollbar-thumb{ background:#312e81; border-radius:10px; }
 
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#0b0f19;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#312e81;
-    border-radius:10px;
-}
-
-/* Tarjetas */
-
-.game-card{
-    transition:.25s;
-}
-
+.game-card{ transition:.25s; }
 .game-card:hover{
     transform:translateY(-5px) scale(1.02);
     border-color:#6366f1;
     box-shadow:0 0 20px rgba(99,102,241,.25);
 }
 
-/* Fullscreen */
+.fullscreen-mode{ overflow:hidden; }
 
-.fullscreen-mode{
-    overflow:hidden;
-}
-
-/* Emulator */
-
-.emulator-container{
-    height:75vh;
-}
-
-/* Loading */
+.emulator-container{ height:75vh; }
 
 #loading-overlay{
     position:fixed;
@@ -94,11 +64,7 @@ body::before{
     margin-bottom:25px;
 }
 
-@keyframes spin{
-    to{
-        transform:rotate(360deg);
-    }
-}
+@keyframes spin{ to{ transform:rotate(360deg);} }
 
 .loading-text{
     font-size:22px;
@@ -109,27 +75,10 @@ body::before{
 .loading-sub{
     color:#9ca3af;
     margin-top:10px;
-    text-align:center;
-    padding:0 20px;
 }
 
 @media(max-width:768px){
-
-    .emulator-container{
-        height:60vh;
-    }
-
-    .mobile-header{
-        flex-direction:column;
-        height:auto;
-        gap:12px;
-        padding:14px 0;
-    }
-
-    .mobile-search{
-        width:100%;
-    }
-
+    .emulator-container{ height:60vh; }
 }
 
 </style>
@@ -138,50 +87,51 @@ body::before{
 <body class="text-white font-sans min-h-screen flex flex-col">
 
 <!-- LOADING -->
-
 <div id="loading-overlay">
-
 <div class="loader"></div>
-
-<div class="loading-text">
-CARGANDO JUEGO...
-</div>
-
-<div class="loading-sub">
-Preparando emulador retro
-</div>
-
+<div class="loading-text">CARGANDO JUEGO...</div>
+<div class="loading-sub">Preparando emulador retro</div>
 </div>
 
 <!-- HEADER -->
-
 <header class="sticky top-0 z-50 backdrop-blur-lg bg-black/60 border-b border-indigo-900">
 
 <div class="max-w-7xl mx-auto px-4">
 
-<div class="h-16 mobile-header flex items-center justify-between">
+<div class="h-16 flex items-center justify-between">
 
 <div>
-
-<h1 class="text-2xl md:text-3xl font-black tracking-widest bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+<h1 class="text-2xl font-black bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
 GAME-STRIKE RETRO
 </h1>
+<p class="text-xs text-gray-400">Retro Gaming Online</p>
 
-<p class="text-xs text-gray-400 mt-1">
-Retro Gaming Online
-</p>
+<!-- 🔥 BOTONES CONSOLA -->
+<div class="flex gap-2 mt-2 flex-wrap">
+
+<button onclick="filtrarConsola('ALL')" class="px-3 py-1 text-xs rounded-xl bg-gray-800 border border-gray-600">
+ALL
+</button>
+
+<button onclick="filtrarConsola('SEGA32X')" class="px-3 py-1 text-xs rounded-xl bg-indigo-600">
+SEGA32X
+</button>
+
+<button onclick="filtrarConsola('ATARI7800')" class="px-3 py-1 text-xs rounded-xl bg-purple-600">
+ATARI7800
+</button>
 
 </div>
 
-<div class="mobile-search w-72">
+</div>
 
+<div class="w-72">
 <input
 type="text"
 id="search-input"
 placeholder="Buscar juego..."
-class="w-full bg-gray-900 border border-gray-700 focus:border-indigo-500 rounded-2xl px-4 py-2 outline-none text-sm"
+class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"
 />
-
 </div>
 
 </div>
@@ -191,143 +141,44 @@ class="w-full bg-gray-900 border border-gray-700 focus:border-indigo-500 rounded
 </header>
 
 <!-- MAIN -->
-
 <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-6 space-y-8">
 
-<!-- HERO -->
+<!-- EMULATOR -->
+<section id="emulator-section" class="hidden bg-black/70 border border-indigo-900 rounded-3xl overflow-hidden">
 
-<section class="bg-gradient-to-r from-indigo-950/60 to-purple-950/60 border border-indigo-900 rounded-3xl p-6 md:p-10 shadow-2xl">
+<div class="flex justify-between px-4 py-3 border-b border-indigo-900">
 
-<div class="flex flex-col md:flex-row items-center justify-between gap-6">
-
-<div>
-
-<h2 class="text-3xl md:text-5xl font-black leading-tight">
-JUGÁ RETRO
-<br>
-DESDE TU NAVEGADOR
-</h2>
-
-<p class="text-gray-300 mt-4 max-w-xl">
-Disfrutá clásicos retro directamente desde PC, Android o iPhone sin instalar nada.
-</p>
-
-</div>
-
-<div class="text-center">
-
-<div class="text-6xl">
-👾
-</div>
-
-<p class="text-indigo-400 font-bold mt-3">
-GAME-STRIKE
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EMULADOR -->
-
-<section
-id="emulator-section"
-class="hidden bg-black/70 backdrop-blur-xl border border-indigo-900 rounded-3xl overflow-hidden shadow-2xl"
->
-
-<div class="flex items-center justify-between px-4 py-3 border-b border-indigo-900 bg-black/40">
-
-<div>
-
-<h2
-id="current-game-title"
-class="text-lg md:text-xl font-black text-indigo-400"
->
-Cargando juego...
-</h2>
-
-<p class="text-xs text-gray-400">
-Pantalla completa recomendada
-</p>
-
-</div>
+<h2 id="current-game-title" class="text-indigo-400 font-black">Cargando...</h2>
 
 <div class="flex gap-2">
-
-<button
-onclick="fullscreenGame()"
-class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-xl text-sm font-bold"
->
-⛶ Fullscreen
-</button>
-
-<button
-onclick="cerrarJuego()"
-class="bg-rose-600 hover:bg-rose-500 px-4 py-2 rounded-xl text-sm font-bold"
->
-✕ Salir
-</button>
-
+<button onclick="fullscreenGame()" class="bg-indigo-600 px-4 py-2 rounded-xl text-sm">Fullscreen</button>
+<button onclick="cerrarJuego()" class="bg-red-600 px-4 py-2 rounded-xl text-sm">Salir</button>
 </div>
 
 </div>
 
-<div class="emulator-container w-full bg-black">
-
-<iframe
-id="emulator-frame"
-class="w-full h-full border-0"
-allowfullscreen
-webkitallowfullscreen
-mozallowfullscreen
-allow="autoplay; fullscreen; gamepad *;"
-scrolling="no"
-></iframe>
-
+<div class="emulator-container bg-black">
+<iframe id="emulator-frame" class="w-full h-full border-0" allowfullscreen></iframe>
 </div>
 
 </section>
 
 <!-- INFO -->
-
-<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex justify-between items-center">
 
 <div>
-
-<h3 class="text-3xl font-black">
-Colección Retro
-</h3>
-
-<p class="text-gray-400 mt-1">
-Seleccioná un juego para comenzar.
-</p>
-
+<h3 class="text-3xl font-black">Colección Retro</h3>
+<p class="text-gray-400">Seleccioná un juego</p>
 </div>
 
-<div class="bg-indigo-950 border border-indigo-800 px-4 py-2 rounded-2xl text-sm">
+<div class="bg-indigo-950 border border-indigo-800 px-4 py-2 rounded-2xl">
 🎮 <span id="games-count">0</span> Juegos
 </div>
 
 </div>
 
 <!-- GRID -->
-
-<div
-id="games-grid"
-class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-></div>
-
-<!-- PUBLICIDAD NATIVA -->
-
-<div class="mt-10">
-
-<script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
-
-<div id="container-e61a275bae57ec5c68e79426fe108696"></div>
-
-</div>
+<div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 
 </main>
 
@@ -341,199 +192,119 @@ const searchInput = document.getElementById('search-input');
 const gamesCount = document.getElementById('games-count');
 const loadingOverlay = document.getElementById('loading-overlay');
 
-const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
 let listaJuegos = [];
+let consolaActiva = "ALL";
 
-/* CARGAR JSON */
+/* =========================
+   FILTRO CONSOLAS
+========================= */
 
-async function cargarCatalogoCompleto(){
+window.filtrarConsola = function(consola){
+    consolaActiva = consola;
 
-    try{
+    let data = listaJuegos;
 
-        const response = await fetch('./all_roms.json');
-
-        listaJuegos = await response.json();
-
-        gamesCount.textContent = listaJuegos.length;
-
-        renderizarGrilla(listaJuegos);
-
-    }catch(error){
-
-        console.error(error);
-
-        gamesGrid.innerHTML = `
-            <div class="col-span-full text-center text-red-400 text-lg">
-                Error cargando catálogo.
-            </div>
-        `;
+    if(consola !== "ALL"){
+        data = listaJuegos.filter(j => j.console === consola);
     }
+
+    renderizar(data);
+};
+
+/* =========================
+   CARGAR JSON
+========================= */
+
+async function cargar(){
+
+    const res = await fetch('./all_roms.json');
+    listaJuegos = await res.json();
+
+    gamesCount.textContent = listaJuegos.length;
+
+    renderizar(listaJuegos);
 }
 
-/* RENDER */
+/* =========================
+   RENDER
+========================= */
 
-function renderizarGrilla(juegos){
+function renderizar(juegos){
 
     gamesGrid.innerHTML = "";
 
-    juegos.forEach(juego => {
+    juegos.forEach(j => {
 
-        const card = document.createElement('div');
+        const card = document.createElement("div");
 
-        card.className =
-        "game-card bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl overflow-hidden p-5 flex flex-col justify-between gap-5";
+        card.className = "game-card bg-gray-900 border border-gray-800 rounded-3xl p-5";
 
         card.innerHTML = `
-
-            <div>
-
-                <div class="flex items-center justify-between">
-
-                    <span class="text-[10px] uppercase bg-indigo-950 border border-indigo-800 text-indigo-400 px-2 py-1 rounded-lg font-bold tracking-wider">
-                        ${juego.console}
-                    </span>
-
-                </div>
-
-                <h3 class="text-lg font-bold mt-4 leading-tight">
-                    ${juego.name}
-                </h3>
-
-            </div>
-
-            <button
-            class="play-btn w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 transition text-white font-black py-3 rounded-2xl"
-            >
-                🎮 JUGAR AHORA
-            </button>
+            <span class="text-xs bg-black px-2 py-1 rounded">${j.console}</span>
+            <h3 class="mt-3 font-bold">${j.name}</h3>
+            <button class="mt-4 w-full bg-indigo-600 py-2 rounded-xl">JUGAR</button>
         `;
 
-        const boton = card.querySelector('.play-btn');
+        card.querySelector("button").onclick = () => {
 
-        boton.addEventListener('click', () => {
-
-            iniciarJuegoReal(
-                juego.name,
-                juego.romUrl,
-                juego.console
-            );
-
-        });
-
-        gamesGrid.appendChild(card);
-
-    });
-
-}
-
-/* INICIAR */
-
-function iniciarJuegoReal(nombre, romUrl, consola){
-
-    loadingOverlay.style.display = 'flex';
-
-    /* SOCIAL BAR */
-
-    const adScript = document.createElement('script');
-
-    adScript.src = 'https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js';
-
-    document.body.appendChild(adScript);
-
-    setTimeout(() => {
-
-        currentGameTitle.textContent = `Jugando: ${nombre}`;
-
-        emulatorSection.classList.remove('hidden');
-
-        document.body.classList.add('fullscreen-mode');
-
-        window.scrollTo({
-            top:0,
-            behavior:'smooth'
-        });
-
-        let core = 'sega32x';
-
-        if(consola === 'MAME'){
-            core = 'arcade';
-        }
-
-        if(consola === 'ATARI7800'){
-            core = 'atari7800';
-        }
-
-        emulatorFrame.src =
-        `./emulator.html?rom=${encodeURIComponent(romUrl)}&core=${core}`;
-
-        loadingOverlay.style.display = 'none';
-
-        if(isMobile){
+            loadingOverlay.style.display = "flex";
 
             setTimeout(() => {
 
-                alert('📱 Girá el teléfono y tocá FULLSCREEN para jugar mejor');
+                currentGameTitle.textContent = j.name;
+                emulatorSection.classList.remove("hidden");
 
-            }, 1000);
+                let core = "sega32x";
+                if(j.console === "ATARI7800") core = "atari7800";
 
-        }
+                emulatorFrame.src =
+                `./emulator.html?rom=${encodeURIComponent(j.romUrl)}&core=${core}`;
 
-    }, 5000);
+                loadingOverlay.style.display = "none";
 
+                window.scrollTo({top:0});
+
+            }, 800);
+        };
+
+        gamesGrid.appendChild(card);
+    });
 }
 
-/* CERRAR */
+/* =========================
+   BUSCADOR
+========================= */
 
-function cerrarJuego(){
+searchInput.addEventListener("input", e => {
 
-    emulatorFrame.src = "";
+    let data = listaJuegos;
 
-    emulatorSection.classList.add('hidden');
-
-    document.body.classList.remove('fullscreen-mode');
-
-}
-
-/* FULLSCREEN */
-
-function fullscreenGame(){
-
-    const iframe = document.getElementById('emulator-frame');
-
-    if(iframe.requestFullscreen){
-
-        iframe.requestFullscreen();
-
-    }else if(iframe.webkitRequestFullscreen){
-
-        iframe.webkitRequestFullscreen();
-
-    }else if(iframe.msRequestFullscreen){
-
-        iframe.msRequestFullscreen();
-
+    if(consolaActiva !== "ALL"){
+        data = data.filter(j => j.console === consolaActiva);
     }
 
-}
+    const t = e.target.value.toLowerCase();
 
-/* BUSCADOR */
+    data = data.filter(j => j.name.toLowerCase().includes(t));
 
-searchInput.addEventListener('input', e => {
-
-    const texto = e.target.value.toLowerCase();
-
-    const filtrados = listaJuegos.filter(j =>
-        j.name.toLowerCase().includes(texto)
-    );
-
-    renderizarGrilla(filtrados);
-
+    renderizar(data);
 });
 
-/* START */
+/* =========================
+   CONTROLES
+========================= */
 
-window.addEventListener('DOMContentLoaded', cargarCatalogoCompleto);
+function cerrarJuego(){
+    emulatorFrame.src = "";
+    emulatorSection.classList.add("hidden");
+}
+
+function fullscreenGame(){
+    emulatorFrame.requestFullscreen();
+}
+
+/* INIT */
+window.onload = cargar;
 
 </script>
 
