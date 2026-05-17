@@ -29,21 +29,37 @@ const romUrl = params.get('game');
 const coreParam = (params.get('core') || '').toLowerCase();
 
 /* =========================
-   SOLO EMULATORJS CORES
+   CORE SEGURO
 ========================= */
 
 let coreId = "picodrive";
 
+/* SEGA */
 if(coreParam.includes("sega")) coreId = "picodrive";
+
+/* ARCADE */
 if(coreParam.includes("arcade")) coreId = "mame2003_plus";
+
+/* ATARI 7800 */
 if(coreParam.includes("7800")) coreId = "prosystem";
 
-/* 🚫 IMPORTANTE: NO ATARI2600 AQUÍ */
+/* 🚀 ATARI 2600 (IMPORTANTE) */
+if(coreParam.includes("2600")) coreId = "stella2014";
+
+/* 🚀 JAGUAR (CLAVE NUEVO) */
+if(coreParam.includes("jaguar")) coreId = "virtualjaguar";
+
+/* fallback seguro */
+if(!coreParam) coreId = "picodrive";
 
 if(!romUrl){
     document.body.innerHTML = "NO ROM";
     throw new Error("NO ROM");
 }
+
+/* =========================
+   EMULATORJS INIT
+========================= */
 
 window.EJS_player = "#game";
 window.EJS_core = coreId;
