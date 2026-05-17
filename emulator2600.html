@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ATARI 2600</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Atari 2600</title>
+<style>
+html,body{
+margin:0;
+padding:0;
+background:black;
+height:100%;
+overflow:hidden;
+}
+iframe{
+width:100%;
+height:100%;
+border:0;
+}
+</style>
 </head>
 
-<body style="margin:0;background:black;">
+<body>
 
-<div id="game"></div>
-
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/libs/stats.min.js"></script>
+<iframe id="emu"></iframe>
 
 <script>
 
-/* 🔥 SOLUCIÓN SIMPLE REAL */
 const params = new URLSearchParams(location.search);
 const rom = params.get("game");
 
+/* 🔥 EMULADOR REAL EXTERNO ESTABLE */
 if(!rom){
     document.body.innerHTML = "NO ROM";
 }
 
-/* 👉 ATARI 2600 EN WEB NO ES ESTABLE EN EMULATORJS */
-/* SOLUCIÓN: fallback visible o emulador alternativo */
+/* 👉 Stella Web (RetroArch Web Core host confiable) */
+const url =
+`https://binbashbanana.github.io/webretro/?core=stella2014&rom=${encodeURIComponent(location.origin + "/" + rom)}`;
 
-document.body.innerHTML = `
-<div style="color:white;text-align:center;margin-top:20%">
-<h2>ATARI 2600</h2>
-<p>Este core requiere emulador separado estable</p>
-<p>ROM: ${rom}</p>
-</div>
-`;
+document.getElementById("emu").src = url;
 
 </script>
 
