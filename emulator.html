@@ -32,24 +32,41 @@ const coreParam = (params.get('core') || '').toLowerCase();
    CORE SEGURO
 ========================= */
 
-let coreId = "picodrive";
+let coreId = "picodrive"; // default sega
 
-/* SEGA */
+/* =========================
+   SEGA
+========================= */
 if(coreParam.includes("sega")) coreId = "picodrive";
 
-/* ARCADE */
+/* =========================
+   ARCADE
+========================= */
 if(coreParam.includes("arcade")) coreId = "mame2003_plus";
 
-/* ATARI 7800 */
+/* =========================
+   ATARI 7800
+========================= */
 if(coreParam.includes("7800")) coreId = "prosystem";
 
-/* 🚀 ATARI 2600 (IMPORTANTE) */
+/* =========================
+   ATARI 2600
+========================= */
 if(coreParam.includes("2600")) coreId = "stella2014";
 
-/* 🚀 JAGUAR (CORREGIDO PARA EMULATORJS) */
-if(coreParam.includes("jaguar")) coreId = "jaguar";
+/* =========================
+   JAGUAR
+========================= */
+if(coreParam.includes("jaguar")) coreId = "virtualjaguar";
 
-/* fallback seguro */
+/* =========================
+   NES (AGREGADO)
+========================= */
+if(coreParam.includes("nes")) coreId = "fceumm";
+
+/* =========================
+   fallback seguro
+========================= */
 if(!coreParam) coreId = "picodrive";
 
 if(!romUrl){
