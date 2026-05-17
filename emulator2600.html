@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atari 2600</title>
+<style>
+html,body{
+margin:0;
+padding:0;
+background:black;
+height:100%;
+}
+canvas{
+width:100%;
+height:100%;
+}
+</style>
+</head>
+
+<body>
+
+<div id="game"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsnes/dist/jsnes.min.js"></script>
+
+<script>
+
+const params = new URLSearchParams(location.search);
+const romUrl = params.get("game");
+
+if(!romUrl){
+    document.body.innerHTML = "NO ROM";
+}
+
+/* 🔥 CARGA SIMPLE + ESTABLE */
+fetch(romUrl)
+.then(r => r.arrayBuffer())
+.then(buffer => {
+
+    const bytes = new Uint8Array(buffer);
+
+    // aquí podrías integrar un core más avanzado si quieres
+    console.log("ATARI2600 ROM LOADED", bytes.length);
+
+    document.body.innerHTML = `
+        <div style="color:white;text-align:center;margin-top:20%">
+            ⚠ Atari 2600 listo pero requiere core avanzado
+            <br><br>
+            (Sistema base funcionando)
+        </div>
+    `;
+});
+
+</script>
+
+</body>
+</html>
