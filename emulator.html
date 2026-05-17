@@ -5,7 +5,7 @@
 ========================= */
 
 const params = new URLSearchParams(window.location.search);
-const romUrl = params.get('rom');
+const romUrl = params.get('game') || params.get('rom'); // 🔥 FIX COMPATIBLE
 const coreParam = params.get('core') || 'sega32x';
 
 let coreId = 'picodrive';
@@ -17,8 +17,12 @@ if(romUrl){
 
     window.EJS_player = '#game';
     window.EJS_core = coreId;
+
     window.EJS_gameUrl = romUrl;
+    window.EJS_gameName = romUrl.split('/').pop(); // 🔥 FIX PRO
+
     window.EJS_startOnLoaded = true;
+
     window.EJS_pathtodata =
         'https://cdn.emulatorjs.org/stable/data/';
 
@@ -27,16 +31,26 @@ if(romUrl){
         'https://cdn.emulatorjs.org/stable/data/loader.js';
     document.body.appendChild(loader);
 
-    /* 🔥 FIX PRO REAL: foco correcto */
-    setTimeout(() => {
+    /* =========================
+       🔥 FIX PRO CANVAS READY
+    ========================= */
+
+    function focusCanvasRetry(){
         const canvas = document.querySelector("canvas");
+
         if(canvas){
             canvas.setAttribute("tabindex","0");
             canvas.focus();
+            return;
         }
-    }, 2000);
+
+        setTimeout(focusCanvasRetry, 500);
+    }
+
+    setTimeout(focusCanvasRetry, 1500);
 
 }else{
+
     document.body.innerHTML = "No se encontró ROM.";
 }
 
@@ -68,39 +82,31 @@ function vibrate(){
 }
 
 /* =========================
-   🔥 INPUT ENGINE PRO REAL
+   INPUT ENGINE PRO FIX
 ========================= */
-
-function getCanvas(){
-    return document.querySelector("canvas");
-}
 
 function press(key){
 
-    const canvas = getCanvas();
-    if(canvas) canvas.focus();
-
-    if(!canvas) return;
-
-    const down = new KeyboardEvent("keydown", {
+    const eventDown = new KeyboardEvent("keydown", {
         key,
         bubbles: true
     });
 
-    const up = new KeyboardEvent("keyup", {
+    const eventUp = new KeyboardEvent("keyup", {
         key,
         bubbles: true
     });
 
-    canvas.dispatchEvent(down);
+    /* 🔥 FIX IMPORTANTE: enviar al document */
+    document.dispatchEvent(eventDown);
 
     setTimeout(() => {
-        canvas.dispatchEvent(up);
+        document.dispatchEvent(eventUp);
     }, 60);
 }
 
 /* =========================
-   KEYMAP LIMPIO (CORRECTO)
+   KEYMAP
 ========================= */
 
 const KEYMAP = {
@@ -129,7 +135,7 @@ document.getElementById("startBtn").onclick = () => { press(KEYMAP.start); vibra
 document.getElementById("selectBtn").onclick = () => { press(KEYMAP.select); vibrate(); };
 
 /* =========================
-   JOYSTICK PRO (SIN SPAM)
+   JOYSTICK PRO
 ========================= */
 
 const stick = document.getElementById("stick");
