@@ -1,194 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Emulator</title>
+
+<style>
+html,body,#game{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:black;
+    overflow:hidden;
+}
+</style>
+</head>
+
+<body>
+
+<div id="game"></div>
+
 <script>
 
 /* =========================
-   EMULATOR (NO TOCAR TU LOGICA)
+   LOAD PARAMS
 ========================= */
 
 const params = new URLSearchParams(window.location.search);
-const romUrl = params.get('game') || params.get('rom'); // 🔥 FIX COMPATIBLE
+
+/* FIX: acepta game o rom */
+const romUrl = params.get('game') || params.get('rom');
 const coreParam = params.get('core') || 'sega32x';
+
+/* =========================
+   CORE MAP
+========================= */
 
 let coreId = 'picodrive';
 
 if(coreParam === 'arcade') coreId = 'mame2003_plus';
 if(coreParam === 'atari7800') coreId = 'prosystem';
 
-if(romUrl){
+/* =========================
+   VALIDATION FIX
+========================= */
 
-    window.EJS_player = '#game';
-    window.EJS_core = coreId;
+if(!romUrl){
+    document.body.innerHTML = "ERROR: NO ROM";
+    throw new Error("No ROM");
+}
 
-    window.EJS_gameUrl = romUrl;
-    window.EJS_gameName = romUrl.split('/').pop(); // 🔥 FIX PRO
+/* =========================
+   EMULATORJS INIT
+========================= */
 
-    window.EJS_startOnLoaded = true;
+window.EJS_player = "#game";
+window.EJS_core = coreId;
+window.EJS_gameUrl = romUrl;
+window.EJS_startOnLoaded = true;
+window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
 
-    window.EJS_pathtodata =
-        'https://cdn.emulatorjs.org/stable/data/';
+/* =========================
+   LOAD SCRIPT PROPERLY
+========================= */
 
-    const loader = document.createElement('script');
-    loader.src =
-        'https://cdn.emulatorjs.org/stable/data/loader.js';
-    document.body.appendChild(loader);
+function loadEmulator(){
+    const s = document.createElement("script");
+    s.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+    s.onload = () => waitCanvas();
+    document.body.appendChild(s);
+}
 
-    /* =========================
-       🔥 FIX PRO CANVAS READY
-    ========================= */
+/* =========================
+   WAIT CANVAS FIX (IMPORTANTE)
+========================= */
 
-    function focusCanvasRetry(){
-        const canvas = document.querySelector("canvas");
+function waitCanvas(){
+    const canvas = document.querySelector("canvas");
 
-        if(canvas){
-            canvas.setAttribute("tabindex","0");
-            canvas.focus();
-            return;
-        }
-
-        setTimeout(focusCanvasRetry, 500);
+    if(canvas){
+        canvas.tabIndex = 0;
+        canvas.focus();
+        return;
     }
 
-    setTimeout(focusCanvasRetry, 1500);
-
-}else{
-
-    document.body.innerHTML = "No se encontró ROM.";
+    setTimeout(waitCanvas, 500);
 }
 
-/* =========================
-   FULLSCREEN
-========================= */
-
-document.getElementById("fsBtn").onclick = () => {
-    document.documentElement.requestFullscreen();
-};
-
-/* =========================
-   MENU
-========================= */
-
-function toggleMenu(){
-    const o = document.getElementById("overlay");
-    o.style.display = (o.style.display === "block") ? "none" : "block";
-}
-
-document.getElementById("menuBtn").onclick = toggleMenu;
-
-/* =========================
-   VIBRACIÓN
-========================= */
-
-function vibrate(){
-    if(navigator.vibrate) navigator.vibrate(40);
-}
-
-/* =========================
-   INPUT ENGINE PRO FIX
-========================= */
-
-function press(key){
-
-    const eventDown = new KeyboardEvent("keydown", {
-        key,
-        bubbles: true
-    });
-
-    const eventUp = new KeyboardEvent("keyup", {
-        key,
-        bubbles: true
-    });
-
-    /* 🔥 FIX IMPORTANTE: enviar al document */
-    document.dispatchEvent(eventDown);
-
-    setTimeout(() => {
-        document.dispatchEvent(eventUp);
-    }, 60);
-}
-
-/* =========================
-   KEYMAP
-========================= */
-
-const KEYMAP = {
-    a: "z",
-    b: "x",
-    x: "a",
-    y: "s",
-    start: "Enter",
-    select: "Shift",
-    up: "ArrowUp",
-    down: "ArrowDown",
-    left: "ArrowLeft",
-    right: "ArrowRight"
-};
-
-/* =========================
-   BOTONES
-========================= */
-
-document.getElementById("aBtn").onclick = () => { press(KEYMAP.a); vibrate(); };
-document.getElementById("bBtn").onclick = () => { press(KEYMAP.b); vibrate(); };
-document.getElementById("xBtn").onclick = () => { press(KEYMAP.x); vibrate(); };
-document.getElementById("yBtn").onclick = () => { press(KEYMAP.y); vibrate(); };
-
-document.getElementById("startBtn").onclick = () => { press(KEYMAP.start); vibrate(); };
-document.getElementById("selectBtn").onclick = () => { press(KEYMAP.select); vibrate(); };
-
-/* =========================
-   JOYSTICK PRO
-========================= */
-
-const stick = document.getElementById("stick");
-const joy = document.getElementById("joyArea");
-
-let active = false;
-let lastDir = "";
-
-joy.addEventListener("touchstart", () => {
-    active = true;
-});
-
-joy.addEventListener("touchend", () => {
-    active = false;
-    stick.style.top = "40px";
-    stick.style.left = "40px";
-    lastDir = "";
-});
-
-joy.addEventListener("touchmove", (e) => {
-
-    if(!active) return;
-
-    const t = e.touches[0];
-    const rect = joy.getBoundingClientRect();
-
-    let x = t.clientX - rect.left - 70;
-    let y = t.clientY - rect.top - 70;
-
-    const max = 40;
-
-    x = Math.max(-max, Math.min(max, x));
-    y = Math.max(-max, Math.min(max, y));
-
-    stick.style.left = (40 + x) + "px";
-    stick.style.top = (40 + y) + "px";
-
-    let dir = "";
-
-    if(x > 20) dir = "right";
-    else if(x < -20) dir = "left";
-    else if(y > 20) dir = "down";
-    else if(y < -20) dir = "up";
-
-    if(dir !== lastDir && dir !== ""){
-        lastDir = dir;
-        press(KEYMAP[dir]);
-    }
-
-    if(dir === ""){
-        lastDir = "";
-    }
-
-});
+/* START */
+loadEmulator();
 
 </script>
+
+</body>
+</html>
