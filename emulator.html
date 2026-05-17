@@ -14,22 +14,22 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const romUrl = params.get('rom');
-        let core = params.get('core') || 'wonderswan';
+        let core = params.get('core') || 'sega32x';
 
-        if (core === 'wonderswan') core = 'mednafen_wswan';
-        if (core === 'arcade') core = 'mame2003_plus';
-        if (core === 'sega32x') core = 'picodrive'; 
+        // Mapeo estricto de núcleos para el CDN de producción de LinuxServer
+        if (core === 'sega32x') core = 'picodrive';      // El motor legendario de Sega Megadrive/32X
+        if (core === 'arcade') core = 'mame2003_plus';    // El motor para el WWF WrestleMania Arcade
 
         if (romUrl && core) {
             window.EJS_player = '#game';
             window.EJS_core = core;
             window.EJS_gameUrl = romUrl;
             
-            // CONFIGURACIÓN DE SEGURIDAD PARA EVITAR LOS 404 DE IMÁGENES:
-            window.EJS_backgroundImg = ''; // Desactivamos la imagen de carga de fondo
+            // Configuraciones de estabilidad
+            window.EJS_backgroundImg = ''; 
             window.EJS_startOnLoaded = true;
             
-            // Apuntamos al CDN estable unificado de LinuxServer
+            // Servidor oficial unificado
             window.EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/linuxserver/emulatorjs@latest/frontend/data/';
 
             const loader = document.createElement('script');

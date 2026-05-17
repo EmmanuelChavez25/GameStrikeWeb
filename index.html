@@ -118,18 +118,17 @@
             emulatorSection.classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Mapeo automático de consolas incluyendo el catálogo real de Sega
-            let systemId = "wonderswan"; 
-            const consolaClean = consola.toLowerCase();
+            let systemId = "arcade"; // Por defecto si es MAME
+            const nombreLower = nombre.toLowerCase();
 
-            if (consolaClean.includes("mame") || consolaClean.includes("arcade")) systemId = "arcade";
-            if (consolaClean.includes("nes")) systemId = "nes";
-            if (consolaClean.includes("snes")) systemId = "snes";
-            
-            // AGREGAMOS EL SOPORTE PARA SEGA 32X
-            if (consolaClean.includes("32x") || consolaClean.includes("sega")) systemId = "sega32x";
+            // Si el archivo está en la carpeta wswanc pero es de Sega 32X, forzamos el sistema correcto
+            if (urlRom.includes("wswanc/") && !nombreLower.includes("wrestlemania")) {
+                systemId = "sega32x";
+            } else if (nombreLower.includes("wrestlemania") || consola.includes("mame")) {
+                systemId = "arcade";
+            }
 
-            // Mandamos los datos limpios a tu emulator.html local
+            // Abre tu emulator.html local pasándole el juego y el sistema real
             emulatorFrame.src = `emulator.html?rom=${encodeURIComponent(urlRom)}&core=${systemId}`;
         }
 
