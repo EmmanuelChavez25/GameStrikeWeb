@@ -2,30 +2,103 @@
 <html lang="es">
 <head>
 
-    <meta charset="UTF-8"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+<title>GameStrike Console Pro</title>
 
-    <title>GameStrike Player</title>
+<style>
 
-    <style>
+html, body, #game{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:black;
+    overflow:hidden;
+}
 
-        html,
-        body,
-        #game{
+/* =========================
+   UI GENERAL
+========================= */
 
-            margin:0;
-            padding:0;
-            width:100%;
-            height:100%;
-            background:black;
-            overflow:hidden;
-        }
+.btn{
+    position:fixed;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.25);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Arial;
+    font-weight:bold;
+    z-index:9999;
+    user-select:none;
+    touch-action:none;
+}
 
-    </style>
+.btn:active{
+    transform:scale(0.88);
+    background:rgba(255,255,255,0.3);
+}
+
+/* botones acción derecha */
+#aBtn{ bottom:120px; right:40px; }
+#bBtn{ bottom:60px; right:110px; }
+#xBtn{ bottom:180px; right:110px; }
+#yBtn{ bottom:120px; right:180px; }
+
+/* start/select/menu */
+#startBtn{ bottom:40px; left:120px; width:70px; height:40px; border-radius:10px; }
+#selectBtn{ bottom:40px; left:30px; width:70px; height:40px; border-radius:10px; }
+#menuBtn{ top:20px; left:20px; width:60px; height:40px; border-radius:10px; }
+#fsBtn{ top:20px; right:20px; width:60px; height:40px; border-radius:10px; }
+
+/* =========================
+   JOYSTICK
+========================= */
+
+#joyArea{
+    position:fixed;
+    bottom:40px;
+    left:40px;
+    width:140px;
+    height:140px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:50%;
+    z-index:9999;
+}
+
+#stick{
+    position:absolute;
+    width:60px;
+    height:60px;
+    background:rgba(255,255,255,0.25);
+    border-radius:50%;
+    top:40px;
+    left:40px;
+}
+
+/* overlay menu simple */
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    color:white;
+    display:none;
+    z-index:10000;
+    font-family:Arial;
+    padding:20px;
+}
+
+</style>
 
 </head>
 
@@ -33,63 +106,153 @@
 
 <div id="game"></div>
 
+<!-- JOYSTICK -->
+<div id="joyArea">
+    <div id="stick"></div>
+</div>
+
+<!-- BOTONES -->
+<div class="btn" id="aBtn">A</div>
+<div class="btn" id="bBtn">B</div>
+<div class="btn" id="xBtn">X</div>
+<div class="btn" id="yBtn">Y</div>
+
+<div class="btn" id="startBtn">START</div>
+<div class="btn" id="selectBtn">SEL</div>
+
+<div class="btn" id="menuBtn">≡</div>
+<div class="btn" id="fsBtn">⛶</div>
+
+<!-- OVERLAY -->
+<div id="overlay">
+    <h2>MENU</h2>
+    <p>GameStrike Console Pro</p>
+    <p>⚙ Opciones futuras aquí</p>
+    <button onclick="toggleMenu()">Cerrar</button>
+</div>
+
 <script>
 
+/* =========================
+   EMULATOR (NO TOCAR TU LOGICA)
+========================= */
+
 const params = new URLSearchParams(window.location.search);
-
 const romUrl = params.get('rom');
-
 const coreParam = params.get('core') || 'sega32x';
-
-/* CORE DEFAULT */
 
 let coreId = 'picodrive';
 
-/* MAME */
-
-if(coreParam === 'arcade'){
-    coreId = 'mame2003_plus';
-}
-
-/* ATARI 7800 */
-
-if(coreParam === 'atari7800'){
-    coreId = 'prosystem';
-}
+if(coreParam === 'arcade') coreId = 'mame2003_plus';
+if(coreParam === 'atari7800') coreId = 'prosystem';
 
 if(romUrl){
 
     window.EJS_player = '#game';
-
     window.EJS_core = coreId;
-
     window.EJS_gameUrl = romUrl;
-
     window.EJS_startOnLoaded = true;
-
     window.EJS_pathtodata =
         'https://cdn.emulatorjs.org/stable/data/';
 
     const loader = document.createElement('script');
-
     loader.src =
         'https://cdn.emulatorjs.org/stable/data/loader.js';
-
     document.body.appendChild(loader);
 
 }else{
-
-    document.body.innerHTML = `
-        <div style="
-            color:white;
-            text-align:center;
-            padding-top:50px;
-            font-family:Arial;
-        ">
-            No se encontró ROM.
-        </div>
-    `;
+    document.body.innerHTML = "No se encontró ROM.";
 }
+
+/* =========================
+   FULLSCREEN
+========================= */
+
+document.getElementById("fsBtn").onclick = () => {
+    document.documentElement.requestFullscreen();
+};
+
+/* =========================
+   MENU
+========================= */
+
+function toggleMenu(){
+    const o = document.getElementById("overlay");
+    o.style.display = (o.style.display === "block") ? "none" : "block";
+}
+
+document.getElementById("menuBtn").onclick = toggleMenu;
+
+/* =========================
+   VIBRACIÓN
+========================= */
+
+function vibrate(){
+    if(navigator.vibrate) navigator.vibrate(50);
+}
+
+/* =========================
+   INPUT SIMULADO
+========================= */
+
+function pressKey(key){
+    document.dispatchEvent(new KeyboardEvent("keydown",{key}));
+    setTimeout(()=>{
+        document.dispatchEvent(new KeyboardEvent("keyup",{key}));
+    },80);
+}
+
+/* BOTONES */
+
+document.getElementById("aBtn").onclick = () => { pressKey("z"); vibrate(); };
+document.getElementById("bBtn").onclick = () => { pressKey("x"); vibrate(); };
+document.getElementById("xBtn").onclick = () => { pressKey("a"); vibrate(); };
+document.getElementById("yBtn").onclick = () => { pressKey("s"); vibrate(); };
+
+document.getElementById("startBtn").onclick = () => { pressKey("Enter"); vibrate(); };
+document.getElementById("selectBtn").onclick = () => { pressKey("Shift"); vibrate(); };
+
+/* =========================
+   JOYSTICK SIMPLE
+========================= */
+
+const stick = document.getElementById("stick");
+const joy = document.getElementById("joyArea");
+
+let active = false;
+
+joy.addEventListener("touchstart", () => active = true);
+joy.addEventListener("touchend", () => {
+    active = false;
+    stick.style.top = "40px";
+    stick.style.left = "40px";
+});
+
+joy.addEventListener("touchmove", (e) => {
+
+if(!active) return;
+
+const t = e.touches[0];
+const rect = joy.getBoundingClientRect();
+
+let x = t.clientX - rect.left - 70;
+let y = t.clientY - rect.top - 70;
+
+const max = 40;
+
+x = Math.max(-max, Math.min(max, x));
+y = Math.max(-max, Math.min(max, y));
+
+stick.style.left = (40 + x) + "px";
+stick.style.top = (40 + y) + "px";
+
+/* movimientos básicos */
+if(x > 20) pressKey("ArrowRight");
+if(x < -20) pressKey("ArrowLeft");
+if(y > 20) pressKey("ArrowDown");
+if(y < -20) pressKey("ArrowUp");
+
+});
 
 </script>
 
