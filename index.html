@@ -104,7 +104,6 @@ body::before{
 
 <body class="text-white font-sans min-h-screen flex flex-col">
 
-<!-- WELCOME -->
 <div id="welcome">
 
     <h1>BIENVENIDOS A GAME STRIKE</h1>
@@ -124,17 +123,16 @@ body::before{
     <button onclick="enterSite()">ENTRAR</button>
 </div>
 
-<!-- LOADING -->
 <div id="loading-overlay">
 <div class="loader"></div>
 <div>CARGANDO JUEGO...</div>
 </div>
 
-<!-- HEADER -->
 <header class="sticky top-0 z-50 backdrop-blur-lg bg-black/60 border-b border-indigo-900">
 
-<div class="max-w-7xl mx-auto px-4">
+<div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
 
+<div>
 <h1 class="text-2xl font-black text-indigo-400">GAME-STRIKE RETRO</h1>
 
 <div class="flex gap-2 mt-2 flex-wrap">
@@ -144,16 +142,21 @@ body::before{
 <button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs bg-purple-600 rounded-xl">ATARI7800</button>
 <button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs bg-green-600 rounded-xl">JAGUAR</button>
 
-<!-- 🔥 AGREGADO NES -->
 <button onclick="filtrar('NES')" class="px-3 py-1 text-xs bg-red-600 rounded-xl">NES</button>
 
+</div>
+</div>
+
+<div class="w-full md:w-72">
+<input type="text" id="search-input" oninput="buscar(this.value)"
+placeholder="Buscar juegos..."
+class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 text-white"/>
 </div>
 
 </div>
 
 </header>
 
-<!-- MAIN -->
 <main class="max-w-7xl mx-auto px-4 py-6">
 
 <section id="emulator-section" class="hidden bg-black/70 rounded-3xl overflow-hidden border border-indigo-900">
@@ -173,7 +176,6 @@ body::before{
 
 <div id="games-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
 
-<!-- TOUCH CONTROLS -->
 <div id="touch-controls" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 gap-2 z-[9999]">
 <button onclick="pressKey('A')" class="bg-indigo-600 px-3 py-2 rounded-xl">A</button>
 <button onclick="pressKey('B')" class="bg-purple-600 px-3 py-2 rounded-xl">B</button>
@@ -200,9 +202,16 @@ const currentGameTitle = document.getElementById("current-game-title");
 
 let lista = [];
 let filtro = "ALL";
+let busqueda = ""; // 🔥 VARIABLE DE BÚSQUEDA NUEVA
 
 function filtrar(f){
     filtro = f;
+    render();
+}
+
+// 🔥 FUNCIÓN NUEVA PARA CONTROLAR LA ENTRADA DEL BUSCADOR
+function buscar(texto){
+    busqueda = texto.toLowerCase();
     render();
 }
 
@@ -218,14 +227,20 @@ function render(){
 
     let data = lista;
 
+    // Filtrar por consola seleccionada
     if(filtro !== "ALL"){
         data = data.filter(g => g.console === filtro);
+    }
+
+    // 🔥 FILTRAR ADEMÁS POR EL TEXTO DEL BUSCADOR
+    if(busqueda !== ""){
+        data = data.filter(g => g.name.toLowerCase().includes(busqueda));
     }
 
     data.forEach(g => {
 
         const div = document.createElement("div");
-        div.className = "bg-gray-900 p-3 rounded-2xl border border-gray-800";
+        div.className = "bg-gray-900 p-3 rounded-2xl border border-gray-800 game-card"; // Reincorporada la clase de transición
 
         div.innerHTML = `
             <div class="text-xs">${g.console}</div>
