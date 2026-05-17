@@ -24,43 +24,45 @@ html,body,#game{
 <script>
 
 /* =========================
-   LOAD PARAMS
+   PARAMS
 ========================= */
 
 const params = new URLSearchParams(window.location.search);
 
 const romUrl = params.get('game') || params.get('rom');
-let coreParam = (params.get('core') || '').toLowerCase();
+let coreParam = params.get('core') || '';
 
 /* =========================
-   AUTO DETECT FIX (PRO MODE)
+   FIX CONSOLA (IMPORTANTE)
 ========================= */
 
-function detectCore() {
-
-    /* si viene vacío → sega por defecto */
-    if(!coreParam) return "picodrive";
-
-    /* normalizamos errores típicos */
-    coreParam = coreParam.replace(/\s/g,'');
-
-    if(coreParam.includes("sega") || coreParam === "sega32x") return "picodrive";
-
-    if(coreParam.includes("arcade") || coreParam.includes("mame")) return "mame2003_plus";
-
-    if(coreParam.includes("7800")) return "prosystem";
-
-    /* 🔥 ATARI 2600 FIX REAL */
-    if(coreParam.includes("2600") || coreParam.includes("atari2600")) return "stella2014";
-
-    /* fallback seguro */
-    return "picodrive";
-}
-
-let coreId = detectCore();
+coreParam = coreParam.trim().toLowerCase();
 
 /* =========================
-   VALIDATION FIX
+   CORE MAP REAL
+========================= */
+
+let coreId = "picodrive";
+
+/* SEGA */
+if(coreParam.includes("sega")) coreId = "picodrive";
+
+/* ARCADE */
+if(coreParam.includes("arcade") || coreParam.includes("mame")) coreId = "mame2003_plus";
+
+/* 7800 */
+if(coreParam.includes("7800")) coreId = "prosystem";
+
+/* 2600 🔥 FIX REAL */
+if(coreParam.includes("2600") || coreParam.includes("atari2600")) {
+    coreId = "stella2014";
+}
+
+/* fallback seguro */
+if(!coreParam) coreId = "picodrive";
+
+/* =========================
+   ROM VALIDATION
 ========================= */
 
 if(!romUrl){
@@ -83,33 +85,23 @@ window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
 ========================= */
 
 function loadEmulator(){
+
     const s = document.createElement("script");
     s.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-    s.onload = () => waitCanvas();
+
+    s.onload = () => {
+        setTimeout(() => {
+            const canvas = document.querySelector("canvas");
+            if(canvas){
+                canvas.tabIndex = 0;
+                canvas.focus();
+            }
+        }, 1500);
+    };
+
     document.body.appendChild(s);
 }
 
-/* =========================
-   CANVAS FIX (IMPORTANTE)
-========================= */
-
-function waitCanvas(){
-    const canvas = document.querySelector("canvas");
-
-    if(canvas){
-        canvas.tabIndex = 0;
-        canvas.focus();
-
-        /* FIX INPUT MOBILE */
-        canvas.style.outline = "none";
-
-        return;
-    }
-
-    setTimeout(waitCanvas, 300);
-}
-
-/* START */
 loadEmulator();
 
 </script>
