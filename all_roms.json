@@ -1,7 +1,187 @@
 [
   {
+    "name": "After Burner Complete",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/afterburner.zip"
+  },
+  {
+    "name": "Amazing Spider-Man Web of Fire",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/spidermanweboffire.zip"
+  },
+  {
+    "name": "BC Racers",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/bcracers.zip"
+  },
+  {
+    "name": "Blackthorne",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/blackthorne.zip"
+  },
+  {
+    "name": "Brutal Unleashed",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/brutalunleashed.zip"
+  },
+  {
+    "name": "Knuckles Chaotix",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/chaotix.zip"
+  },
+  {
+    "name": "Cosmic Carnage",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/cosmiccarnage.zip"
+  },
+  {
+    "name": "Darxide",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/darxide.zip"
+  },
+  {
     "name": "Doom",
     "console": "SEGA32X",
     "romUrl": "roms/wswanc/doom.zip"
+  },
+  {
+    "name": "FIFA Soccer 96",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/fifa96.zip"
+  },
+  {
+    "name": "Golf Magazine 36 Great Holes",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/golf36.zip"
+  },
+  {
+    "name": "Kolibri",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/kolibri.zip"
+  },
+  {
+    "name": "Metal Head",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/metalhead.zip"
+  },
+  {
+    "name": "Mortal Kombat II",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/mk2.zip"
+  },
+  {
+    "name": "Motocross Championship",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/motocross.zip"
+  },
+  {
+    "name": "NBA Jam Tournament Edition",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/nbajamte.zip"
+  },
+  {
+    "name": "NFL Quarterback Club",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/nflqbclub.zip"
+  },
+  {
+    "name": "Parasquad",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/parasquad.zip"
+  },
+  {
+    "name": "Pitfall",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/pitfall.zip"
+  },
+  {
+    "name": "Primal Rage",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/primalrage.zip"
+  },
+  {
+    "name": "RBI Baseball 95",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/rbibaseball95.zip"
+  },
+  {
+    "name": "Shadow Squadron",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/shadowsquadron.zip"
+  },
+  {
+    "name": "Soulstar X",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/soulstarx.zip"
+  },
+  {
+    "name": "Space Harrier",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/spaceharrier.zip"
+  },
+  {
+    "name": "Star Trek Starfleet Academy",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/startrek.zip"
+  },
+  {
+    "name": "Star Wars Arcade",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/starwarsarcade.zip"
+  },
+  {
+    "name": "T-Mek",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/tmek.zip"
+  },
+  {
+    "name": "Tempo",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/tempo.zip"
+  },
+  {
+    "name": "Toughman Contest",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/toughman.zip"
+  },
+  {
+    "name": "Virtua Fighter",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/virtuafighter.zip"
+  },
+  {
+    "name": "Virtua Hamster",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/virtuahamster.zip"
+  },
+  {
+    "name": "Virtua Racing Deluxe",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/virtuaracing.zip"
+  },
+  {
+    "name": "World Series Baseball",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/worldseriesbaseball.zip"
+  },
+  {
+    "name": "WWF Raw",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/wwfraw.zip"
+  },
+  {
+    "name": "WWF WrestleMania Arcade",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/wwfwrestlemania.zip"
+  },
+  {
+    "name": "X-Men",
+    "console": "SEGA32X",
+    "romUrl": "roms/wswanc/xmen.zip"
+  },
+  {
+    "name": "WWF WrestleMania Arcade MAME",
+    "console": "MAME",
+    "romUrl": "roms/wwfmania.zip"
   }
 ]
