@@ -29,18 +29,39 @@ html,body,#game{
 
 const params = new URLSearchParams(window.location.search);
 
-/* FIX: acepta game o rom */
 const romUrl = params.get('game') || params.get('rom');
 const coreParam = params.get('core') || 'sega32x';
 
 /* =========================
-   CORE MAP
+   CORE MAP (FIX REAL)
 ========================= */
 
 let coreId = 'picodrive';
 
-if(coreParam === 'arcade') coreId = 'mame2003_plus';
-if(coreParam === 'atari7800') coreId = 'prosystem';
+/* SEGA 32X */
+if(coreParam === 'sega32x'){
+    coreId = 'picodrive';
+}
+
+/* ARCADE */
+if(coreParam === 'arcade'){
+    coreId = 'mame2003_plus';
+}
+
+/* ATARI 7800 */
+if(coreParam === 'atari7800'){
+    coreId = 'prosystem';
+}
+
+/* 🔥 ATARI 2600 FIX */
+if(coreParam === 'atari2600'){
+    coreId = 'stella2014';
+}
+
+/* fallback seguro */
+if(!coreParam){
+    coreId = 'picodrive';
+}
 
 /* =========================
    VALIDATION FIX
@@ -73,7 +94,7 @@ function loadEmulator(){
 }
 
 /* =========================
-   WAIT CANVAS FIX (IMPORTANTE)
+   WAIT CANVAS FIX
 ========================= */
 
 function waitCanvas(){
