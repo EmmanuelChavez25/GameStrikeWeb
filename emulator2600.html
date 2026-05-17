@@ -3,54 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atari 2600</title>
-<style>
-html,body{
-margin:0;
-padding:0;
-background:black;
-height:100%;
-}
-canvas{
-width:100%;
-height:100%;
-}
-</style>
+<title>ATARI 2600</title>
 </head>
 
-<body>
+<body style="margin:0;background:black;">
 
 <div id="game"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/jsnes/dist/jsnes.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/libs/stats.min.js"></script>
 
 <script>
 
+/* 🔥 SOLUCIÓN SIMPLE REAL */
 const params = new URLSearchParams(location.search);
-const romUrl = params.get("game");
+const rom = params.get("game");
 
-if(!romUrl){
+if(!rom){
     document.body.innerHTML = "NO ROM";
 }
 
-/* 🔥 CARGA SIMPLE + ESTABLE */
-fetch(romUrl)
-.then(r => r.arrayBuffer())
-.then(buffer => {
+/* 👉 ATARI 2600 EN WEB NO ES ESTABLE EN EMULATORJS */
+/* SOLUCIÓN: fallback visible o emulador alternativo */
 
-    const bytes = new Uint8Array(buffer);
-
-    // aquí podrías integrar un core más avanzado si quieres
-    console.log("ATARI2600 ROM LOADED", bytes.length);
-
-    document.body.innerHTML = `
-        <div style="color:white;text-align:center;margin-top:20%">
-            ⚠ Atari 2600 listo pero requiere core avanzado
-            <br><br>
-            (Sistema base funcionando)
-        </div>
-    `;
-});
+document.body.innerHTML = `
+<div style="color:white;text-align:center;margin-top:20%">
+<h2>ATARI 2600</h2>
+<p>Este core requiere emulador separado estable</p>
+<p>ROM: ${rom}</p>
+</div>
+`;
 
 </script>
 
