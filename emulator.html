@@ -30,38 +30,34 @@ html,body,#game{
 const params = new URLSearchParams(window.location.search);
 
 const romUrl = params.get('game') || params.get('rom');
-const coreParam = params.get('core') || 'sega32x';
+let coreParam = (params.get('core') || '').toLowerCase();
 
 /* =========================
-   CORE MAP (FIX REAL)
+   AUTO DETECT FIX (PRO MODE)
 ========================= */
 
-let coreId = 'picodrive';
+function detectCore() {
 
-/* SEGA 32X */
-if(coreParam === 'sega32x'){
-    coreId = 'picodrive';
+    /* si viene vacío → sega por defecto */
+    if(!coreParam) return "picodrive";
+
+    /* normalizamos errores típicos */
+    coreParam = coreParam.replace(/\s/g,'');
+
+    if(coreParam.includes("sega") || coreParam === "sega32x") return "picodrive";
+
+    if(coreParam.includes("arcade") || coreParam.includes("mame")) return "mame2003_plus";
+
+    if(coreParam.includes("7800")) return "prosystem";
+
+    /* 🔥 ATARI 2600 FIX REAL */
+    if(coreParam.includes("2600") || coreParam.includes("atari2600")) return "stella2014";
+
+    /* fallback seguro */
+    return "picodrive";
 }
 
-/* ARCADE */
-if(coreParam === 'arcade'){
-    coreId = 'mame2003_plus';
-}
-
-/* ATARI 7800 */
-if(coreParam === 'atari7800'){
-    coreId = 'prosystem';
-}
-
-/* 🔥 ATARI 2600 FIX */
-if(coreParam === 'atari2600'){
-    coreId = 'stella2014';
-}
-
-/* fallback seguro */
-if(!coreParam){
-    coreId = 'picodrive';
-}
+let coreId = detectCore();
 
 /* =========================
    VALIDATION FIX
@@ -83,7 +79,7 @@ window.EJS_startOnLoaded = true;
 window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
 
 /* =========================
-   LOAD SCRIPT PROPERLY
+   LOAD EMULATOR
 ========================= */
 
 function loadEmulator(){
@@ -94,7 +90,7 @@ function loadEmulator(){
 }
 
 /* =========================
-   WAIT CANVAS FIX
+   CANVAS FIX (IMPORTANTE)
 ========================= */
 
 function waitCanvas(){
@@ -103,10 +99,14 @@ function waitCanvas(){
     if(canvas){
         canvas.tabIndex = 0;
         canvas.focus();
+
+        /* FIX INPUT MOBILE */
+        canvas.style.outline = "none";
+
         return;
     }
 
-    setTimeout(waitCanvas, 500);
+    setTimeout(waitCanvas, 300);
 }
 
 /* START */
