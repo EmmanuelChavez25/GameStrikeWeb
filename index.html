@@ -154,7 +154,7 @@ GAME-STRIKE RETRO
 <button onclick="filtrar('ALL')" class="px-3 py-1 text-xs rounded-xl bg-gray-800 border border-gray-600">ALL</button>
 <button onclick="filtrar('SEGA32X')" class="px-3 py-1 text-xs rounded-xl bg-indigo-600">SEGA32X</button>
 <button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs rounded-xl bg-purple-600">ATARI7800</button>
-<button onclick="filtrar('ATARI2600')" class="px-3 py-1 text-xs rounded-xl bg-green-600">ATARI2600</button>
+<button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs rounded-xl bg-green-600">JAGUAR</button>
 
 </div>
 
@@ -287,18 +287,16 @@ function render(juegos){
                 currentGameTitle.textContent = j.name;
                 emulatorSection.classList.remove("hidden");
 
-                let core = "sega32x";
-
-                if(j.console === "ATARI7800") core = "atari7800";
-
-                // 🔥 FIX IMPORTANTE ATARI2600
-                if(j.console === "ATARI2600"){
-                    emulatorFrame.src =
-                    "./emulator2600.html?game=" + encodeURIComponent(j.romUrl);
+                // FIX JAGUAR (nuevo sistema)
+                if(j.console === "JAGUAR"){
+                    emulatorFrame.src = "./emulator_jaguar.html?game=" + encodeURIComponent(j.romUrl);
                     loadingOverlay.style.display = "none";
                     window.scrollTo({top:0});
                     return;
                 }
+
+                let core = "sega32x";
+                if(j.console === "ATARI7800") core = "atari7800";
 
                 emulatorFrame.src =
                 `./emulator.html?game=${encodeURIComponent(j.romUrl)}&core=${core}`;
