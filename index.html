@@ -294,7 +294,7 @@ function render(juegos){
                 // 🔥 FIX IMPORTANTE ATARI2600
                 if(j.console === "ATARI2600"){
                     emulatorFrame.src =
-                    "./atari2600.html?game=" + encodeURIComponent(j.romUrl);
+                    "./emulator2600.html?game=" + encodeURIComponent(j.romUrl);
                     loadingOverlay.style.display = "none";
                     window.scrollTo({top:0});
                     return;
