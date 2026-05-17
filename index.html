@@ -66,6 +66,43 @@ body::before{
 
 @keyframes spin{ to{ transform:rotate(360deg);} }
 
+/* =========================
+   🔥 WELCOME SCREEN
+========================= */
+
+#welcome{
+    position:fixed;
+    inset:0;
+    background:black;
+    z-index:100000;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+#welcome h1{
+    font-size:34px;
+    font-weight:900;
+    background:linear-gradient(90deg,#6366f1,#a855f7);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+#welcome p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+#welcome button{
+    margin-top:20px;
+    padding:10px 20px;
+    border-radius:12px;
+    background:#6366f1;
+    font-weight:bold;
+}
+
 .loading-text{
     font-size:22px;
     font-weight:900;
@@ -85,6 +122,22 @@ body::before{
 </head>
 
 <body class="text-white font-sans min-h-screen flex flex-col">
+
+<!-- 🔥 WELCOME SCREEN -->
+<div id="welcome">
+
+    <h1>BIENVENIDOS A GAME STRIKE</h1>
+    <p>Retro Gaming Online - EmulatorJS Edition</p>
+
+    <!-- PUBLICIDAD DENTRO DEL WELCOME -->
+    <div style="margin-top:20px;">
+        <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
+        <div id="container-e61a275bae57ec5c68e79426fe108696"></div>
+    </div>
+
+    <button onclick="enterSite()">ENTRAR</button>
+
+</div>
 
 <!-- LOADING -->
 <div id="loading-overlay">
@@ -128,12 +181,9 @@ ATARI7800
 </div>
 
 <div class="w-72">
-<input
-type="text"
-id="search-input"
+<input type="text" id="search-input"
 placeholder="Buscar juego..."
-class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"
-/>
+class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"/>
 </div>
 
 </div>
@@ -182,12 +232,6 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"
 <!-- GRID -->
 <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 
-<!-- PUBLICIDAD 1 -->
-<div class="mt-10">
-<script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
-<div id="container-e61a275bae57ec5c68e79426fe108696"></div>
-</div>
-
 <!-- PUBLICIDAD 2 -->
 <div class="mt-10">
 <script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"></script>
@@ -196,6 +240,10 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"
 </main>
 
 <script>
+
+function enterSite(){
+    document.getElementById("welcome").style.display = "none";
+}
 
 const gamesGrid = document.getElementById('games-grid');
 const emulatorSection = document.getElementById('emulator-section');
@@ -208,18 +256,10 @@ const loadingOverlay = document.getElementById('loading-overlay');
 let listaJuegos = [];
 let filtroActivo = "ALL";
 
-/* =========================
-   FILTRO
-========================= */
-
 function filtrar(tipo){
     filtroActivo = tipo;
     aplicar();
 }
-
-/* =========================
-   CARGAR JSON
-========================= */
 
 async function cargar(){
 
@@ -230,10 +270,6 @@ async function cargar(){
 
     aplicar();
 }
-
-/* =========================
-   APLICAR FILTRO + BUSQUEDA
-========================= */
 
 function aplicar(){
 
@@ -251,10 +287,6 @@ function aplicar(){
 
     render(data);
 }
-
-/* =========================
-   RENDER
-========================= */
 
 function render(juegos){
 
@@ -284,7 +316,6 @@ function render(juegos){
                 let core = "sega32x";
                 if(j.console === "ATARI7800") core = "atari7800";
 
-                /* 🔥 FIX IMPORTANTE */
                 emulatorFrame.src =
                 `./emulator.html?game=${encodeURIComponent(j.romUrl)}&core=${core}`;
 
@@ -299,15 +330,7 @@ function render(juegos){
     });
 }
 
-/* =========================
-   BUSCADOR
-========================= */
-
 searchInput.addEventListener("input", aplicar);
-
-/* =========================
-   CONTROLES
-========================= */
 
 function cerrarJuego(){
     emulatorFrame.src = "";
@@ -318,7 +341,6 @@ function fullscreenGame(){
     emulatorFrame.requestFullscreen();
 }
 
-/* INIT */
 window.onload = cargar;
 
 </script>
