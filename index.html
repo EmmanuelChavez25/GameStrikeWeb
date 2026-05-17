@@ -287,16 +287,10 @@ function render(juegos){
                 currentGameTitle.textContent = j.name;
                 emulatorSection.classList.remove("hidden");
 
-                // FIX JAGUAR (nuevo sistema)
-                if(j.console === "JAGUAR"){
-                    emulatorFrame.src = "./emulator_jaguar.html?game=" + encodeURIComponent(j.romUrl);
-                    loadingOverlay.style.display = "none";
-                    window.scrollTo({top:0});
-                    return;
-                }
-
+                // SELECCIÓN DE CORE SIMPLIFICADA (EVITA EL ERROR DE ARCHIVO FALTANTE)
                 let core = "sega32x";
                 if(j.console === "ATARI7800") core = "atari7800";
+                if(j.console === "JAGUAR") core = "jaguar";
 
                 emulatorFrame.src =
                 `./emulator.html?game=${encodeURIComponent(j.romUrl)}&core=${core}`;
