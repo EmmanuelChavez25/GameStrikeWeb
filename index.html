@@ -108,18 +108,18 @@ GAME-STRIKE RETRO
 
 <p class="text-xs text-gray-400">Retro Gaming Online</p>
 
-<!-- 🔥 BOTONES CONSOLA -->
+<!-- FILTROS -->
 <div class="flex gap-2 mt-2 flex-wrap">
 
-<button onclick="filtrarConsola('ALL')" class="px-3 py-1 text-xs rounded-xl bg-gray-800 border border-gray-600">
+<button onclick="filtrar('ALL')" class="px-3 py-1 text-xs rounded-xl bg-gray-800 border border-gray-600">
 ALL
 </button>
 
-<button onclick="filtrarConsola('SEGA32X')" class="px-3 py-1 text-xs rounded-xl bg-indigo-600">
+<button onclick="filtrar('SEGA32X')" class="px-3 py-1 text-xs rounded-xl bg-indigo-600">
 SEGA32X
 </button>
 
-<button onclick="filtrarConsola('ATARI7800')" class="px-3 py-1 text-xs rounded-xl bg-purple-600">
+<button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs rounded-xl bg-purple-600">
 ATARI7800
 </button>
 
@@ -182,17 +182,13 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"
 <!-- GRID -->
 <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 
-<!-- =========================
-   🔥 PUBLICIDAD 1
-========================= -->
+<!-- PUBLICIDAD 1 -->
 <div class="mt-10">
 <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
 <div id="container-e61a275bae57ec5c68e79426fe108696"></div>
 </div>
 
-<!-- =========================
-   🔥 PUBLICIDAD 2
-========================= -->
+<!-- PUBLICIDAD 2 -->
 <div class="mt-10">
 <script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"></script>
 </div>
@@ -210,23 +206,16 @@ const gamesCount = document.getElementById('games-count');
 const loadingOverlay = document.getElementById('loading-overlay');
 
 let listaJuegos = [];
-let consolaActiva = "ALL";
+let filtroActivo = "ALL";
 
 /* =========================
-   FILTRO CONSOLAS
+   FILTRO
 ========================= */
 
-window.filtrarConsola = function(consola){
-    consolaActiva = consola;
-
-    let data = listaJuegos;
-
-    if(consola !== "ALL"){
-        data = listaJuegos.filter(j => j.console === consola);
-    }
-
-    renderizar(data);
-};
+function filtrar(tipo){
+    filtroActivo = tipo;
+    aplicar();
+}
 
 /* =========================
    CARGAR JSON
@@ -239,14 +228,35 @@ async function cargar(){
 
     gamesCount.textContent = listaJuegos.length;
 
-    renderizar(listaJuegos);
+    aplicar();
+}
+
+/* =========================
+   APLICAR FILTRO + BUSQUEDA
+========================= */
+
+function aplicar(){
+
+    let data = listaJuegos;
+
+    if(filtroActivo !== "ALL"){
+        data = data.filter(j => j.console === filtroActivo);
+    }
+
+    const texto = searchInput.value.toLowerCase();
+
+    if(texto){
+        data = data.filter(j => j.name.toLowerCase().includes(texto));
+    }
+
+    render(data);
 }
 
 /* =========================
    RENDER
 ========================= */
 
-function renderizar(juegos){
+function render(juegos){
 
     gamesGrid.innerHTML = "";
 
@@ -274,14 +284,15 @@ function renderizar(juegos){
                 let core = "sega32x";
                 if(j.console === "ATARI7800") core = "atari7800";
 
+                /* 🔥 FIX IMPORTANTE */
                 emulatorFrame.src =
-                `./emulator.html?rom=${encodeURIComponent(j.romUrl)}&core=${core}`;
+                `./emulator.html?game=${encodeURIComponent(j.romUrl)}&core=${core}`;
 
                 loadingOverlay.style.display = "none";
 
                 window.scrollTo({top:0});
 
-            }, 800);
+            }, 700);
         };
 
         gamesGrid.appendChild(card);
@@ -292,20 +303,7 @@ function renderizar(juegos){
    BUSCADOR
 ========================= */
 
-searchInput.addEventListener("input", e => {
-
-    let data = listaJuegos;
-
-    if(consolaActiva !== "ALL"){
-        data = data.filter(j => j.console === consolaActiva);
-    }
-
-    const t = e.target.value.toLowerCase();
-
-    data = data.filter(j => j.name.toLowerCase().includes(t));
-
-    renderizar(data);
-});
+searchInput.addEventListener("input", aplicar);
 
 /* =========================
    CONTROLES
