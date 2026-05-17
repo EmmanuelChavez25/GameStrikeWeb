@@ -219,6 +219,10 @@ src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb107
 
 <script>
 
+function isMobile(){
+    return window.innerWidth <= 768;
+}
+
 function enterSite(){
     document.getElementById("welcome").style.display = "none";
 }
@@ -287,7 +291,6 @@ function render(juegos){
                 currentGameTitle.textContent = j.name;
                 emulatorSection.classList.remove("hidden");
 
-                // SELECCIÓN DE CORE SIMPLIFICADA (EVITA EL ERROR DE ARCHIVO FALTANTE)
                 let core = "sega32x";
                 if(j.console === "ATARI7800") core = "atari7800";
                 if(j.console === "JAGUAR") core = "jaguar";
@@ -315,6 +318,14 @@ function cerrarJuego(){
 function fullscreenGame(){
     emulatorFrame.requestFullscreen();
 }
+
+window.addEventListener("load", () => {
+
+    if(isMobile()){
+        document.querySelectorAll(".adbox").forEach(el => el.remove());
+    }
+
+});
 
 window.onload = cargar;
 
