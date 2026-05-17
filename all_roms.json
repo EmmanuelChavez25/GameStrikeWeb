@@ -835,3579 +835,3578 @@
         "romUrl":  "roms/jaguar/zoopu.j64"
     },
     {
-        "name":  "10-Yard Fight (USA, Europe)",
-        "romUrl":  "roms/nes/10-Yard Fight (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "10yardfightusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/10yardfightusaeurope.nes"
     },
     {
-        "name":  "1942 (Japan, USA)",
-        "romUrl":  "roms/nes/1942 (Japan, USA).nes",
-        "console":  "NES"
+        "name":  "1942japanusa",
+        "console":  "NES",
+        "romUrl":  "roms/nes/1942japanusa.nes"
     },
     {
-        "name":  "1943 - The Battle of Midway",
-        "romUrl":  "roms/nes/1943 - The Battle of Midway (USA).nes",
-        "console":  "NES"
+        "name":  "1943thebattleofmidway",
+        "console":  "NES",
+        "romUrl":  "roms/nes/1943thebattleofmidway.nes"
     },
     {
-        "name":  "2048 (tsone)",
-        "romUrl":  "roms/nes/2048 (tsone).nes",
-        "console":  "NES"
+        "name":  "2048tsone",
+        "console":  "NES",
+        "romUrl":  "roms/nes/2048tsone.nes"
     },
     {
-        "name":  "3-D WorldRunner",
-        "romUrl":  "roms/nes/3-D WorldRunner (USA).nes",
-        "console":  "NES"
+        "name":  "3dworldrunner",
+        "console":  "NES",
+        "romUrl":  "roms/nes/3dworldrunner.nes"
     },
     {
-        "name":  "720 Degrees",
-        "romUrl":  "roms/nes/720 Degrees (USA).nes",
-        "console":  "NES"
+        "name":  "720degrees",
+        "console":  "NES",
+        "romUrl":  "roms/nes/720degrees.nes"
     },
     {
-        "name":  "8 Eyes",
-        "romUrl":  "roms/nes/8 Eyes (USA).nes",
-        "console":  "NES"
+        "name":  "8eyes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/8eyes.nes"
     },
     {
-        "name":  "Abadox - The Deadly Inner War",
-        "romUrl":  "roms/nes/Abadox - The Deadly Inner War (USA).nes",
-        "console":  "NES"
+        "name":  "abadoxthedeadlyinnerwar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/abadoxthedeadlyinnerwar.nes"
     },
     {
-        "name":  "Addams Family, The",
-        "romUrl":  "roms/nes/Addams Family, The (USA).nes",
-        "console":  "NES"
+        "name":  "addamsfamilythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/addamsfamilythe.nes"
     },
     {
-        "name":  "Addams Family, The - Pugsley\u0027s Scavenger Hunt",
-        "romUrl":  "roms/nes/Addams Family, The - Pugsley\u0027s Scavenger Hunt (USA).nes",
-        "console":  "NES"
+        "name":  "addamsfamilythepugsleysscavengerhunt",
+        "console":  "NES",
+        "romUrl":  "roms/nes/addamsfamilythepugsleysscavengerhunt.nes"
     },
     {
-        "name":  "Advanced Dungeons \u0026 Dragons - DragonStrike",
-        "romUrl":  "roms/nes/Advanced Dungeons \u0026 Dragons - DragonStrike (USA).nes",
-        "console":  "NES"
+        "name":  "advanceddungeonsanddragonsdragonstrike",
+        "console":  "NES",
+        "romUrl":  "roms/nes/advanceddungeonsanddragonsdragonstrike.nes"
     },
     {
-        "name":  "Advanced Dungeons \u0026 Dragons - Heroes of the Lance",
-        "romUrl":  "roms/nes/Advanced Dungeons \u0026 Dragons - Heroes of the Lance (USA).nes",
-        "console":  "NES"
+        "name":  "advanceddungeonsanddragonsheroesofthelance",
+        "console":  "NES",
+        "romUrl":  "roms/nes/advanceddungeonsanddragonsheroesofthelance.nes"
     },
     {
-        "name":  "Advanced Dungeons \u0026 Dragons - Hillsfar",
-        "romUrl":  "roms/nes/Advanced Dungeons \u0026 Dragons - Hillsfar (USA).nes",
-        "console":  "NES"
+        "name":  "advanceddungeonsanddragonshillsfar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/advanceddungeonsanddragonshillsfar.nes"
     },
     {
-        "name":  "Advanced Dungeons \u0026 Dragons - Pool of Radiance",
-        "romUrl":  "roms/nes/Advanced Dungeons \u0026 Dragons - Pool of Radiance (USA).nes",
-        "console":  "NES"
+        "name":  "advanceddungeonsanddragonspoolofradiance",
+        "console":  "NES",
+        "romUrl":  "roms/nes/advanceddungeonsanddragonspoolofradiance.nes"
     },
     {
-        "name":  "Adventure Island II",
-        "romUrl":  "roms/nes/Adventure Island II (USA).nes",
-        "console":  "NES"
+        "name":  "adventureislandii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventureislandii.nes"
     },
     {
-        "name":  "Adventures in the Magic Kingdom",
-        "romUrl":  "roms/nes/Adventures in the Magic Kingdom (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresinthemagickingdom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresinthemagickingdom.nes"
     },
     {
-        "name":  "Adventures of Bayou Billy, The",
-        "romUrl":  "roms/nes/Adventures of Bayou Billy, The (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresofbayoubillythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresofbayoubillythe.nes"
     },
     {
-        "name":  "Adventures of Dino Riki",
-        "romUrl":  "roms/nes/Adventures of Dino Riki (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresofdinoriki",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresofdinoriki.nes"
     },
     {
-        "name":  "Adventures of Gilligan\u0027s Island, The",
-        "romUrl":  "roms/nes/Adventures of Gilligan\u0027s Island, The (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresofgilligansislandthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresofgilligansislandthe.nes"
     },
     {
-        "name":  "Adventures of Lolo",
-        "romUrl":  "roms/nes/Adventures of Lolo (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresoflolo",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresoflolo.nes"
     },
     {
-        "name":  "Adventures of Lolo 2",
-        "romUrl":  "roms/nes/Adventures of Lolo 2 (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresoflolo2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresoflolo2.nes"
     },
     {
-        "name":  "Adventures of Lolo 3",
-        "romUrl":  "roms/nes/Adventures of Lolo 3 (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresoflolo3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresoflolo3.nes"
     },
     {
-        "name":  "Adventures of Rad Gravity, The",
-        "romUrl":  "roms/nes/Adventures of Rad Gravity, The (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresofradgravitythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresofradgravitythe.nes"
     },
     {
-        "name":  "Adventures of Rocky and Bullwinkle and Friends, The",
-        "romUrl":  "roms/nes/Adventures of Rocky and Bullwinkle and Friends, The (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresofrockyandbullwinkleandfriendsthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresofrockyandbullwinkleandfriendsthe.nes"
     },
     {
-        "name":  "Adventures of Tom Sawyer",
-        "romUrl":  "roms/nes/Adventures of Tom Sawyer (USA).nes",
-        "console":  "NES"
+        "name":  "adventuresoftomsawyer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/adventuresoftomsawyer.nes"
     },
     {
-        "name":  "After Burner (Unl)",
-        "romUrl":  "roms/nes/After Burner (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "afterburner",
+        "console":  "NES",
+        "romUrl":  "roms/nes/afterburner.nes"
     },
     {
-        "name":  "Air Fortress",
-        "romUrl":  "roms/nes/Air Fortress (USA).nes",
-        "console":  "NES"
+        "name":  "airfortress",
+        "console":  "NES",
+        "romUrl":  "roms/nes/airfortress.nes"
     },
     {
-        "name":  "Airwolf",
-        "romUrl":  "roms/nes/Airwolf (USA).nes",
-        "console":  "NES"
+        "name":  "airwolf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/airwolf.nes"
     },
     {
-        "name":  "Al Unser Jr Turbo Racing",
-        "romUrl":  "roms/nes/Al Unser Jr. Turbo Racing (USA).nes",
-        "console":  "NES"
+        "name":  "aladdin",
+        "console":  "NES",
+        "romUrl":  "roms/nes/aladdin.nes"
     },
     {
-        "name":  "Aladdin",
-        "romUrl":  "roms/nes/Aladdin (Europe).nes",
-        "console":  "NES"
+        "name":  "alfredchicken",
+        "console":  "NES",
+        "romUrl":  "roms/nes/alfredchicken.nes"
     },
     {
-        "name":  "Alfred Chicken",
-        "romUrl":  "roms/nes/Alfred Chicken (USA).nes",
-        "console":  "NES"
+        "name":  "alien3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/alien3.nes"
     },
     {
-        "name":  "Alien 3",
-        "romUrl":  "roms/nes/Alien 3 (USA).nes",
-        "console":  "NES"
+        "name":  "aliensyndrome",
+        "console":  "NES",
+        "romUrl":  "roms/nes/aliensyndrome.nes"
     },
     {
-        "name":  "Alien Syndrome (Unl)",
-        "romUrl":  "roms/nes/Alien Syndrome (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "allprobasketball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/allprobasketball.nes"
     },
     {
-        "name":  "All-Pro Basketball",
-        "romUrl":  "roms/nes/All-Pro Basketball (USA).nes",
-        "console":  "NES"
+        "name":  "alphamission",
+        "console":  "NES",
+        "romUrl":  "roms/nes/alphamission.nes"
     },
     {
-        "name":  "Alpha Mission",
-        "romUrl":  "roms/nes/Alpha Mission (USA).nes",
-        "console":  "NES"
+        "name":  "alunserjrturboracing",
+        "console":  "NES",
+        "romUrl":  "roms/nes/alunserjrturboracing.nes"
     },
     {
-        "name":  "Amagon",
-        "romUrl":  "roms/nes/Amagon (USA).nes",
-        "console":  "NES"
+        "name":  "amagon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/amagon.nes"
     },
     {
-        "name":  "American Gladiators",
-        "romUrl":  "roms/nes/American Gladiators (USA).nes",
-        "console":  "NES"
+        "name":  "americangladiators",
+        "console":  "NES",
+        "romUrl":  "roms/nes/americangladiators.nes"
     },
     {
-        "name":  "Anticipation",
-        "romUrl":  "roms/nes/Anticipation (USA).nes",
-        "console":  "NES"
+        "name":  "anticipation",
+        "console":  "NES",
+        "romUrl":  "roms/nes/anticipation.nes"
     },
     {
-        "name":  "Arch Rivals - A Basketbrawl!",
-        "romUrl":  "roms/nes/Arch Rivals - A Basketbrawl! (USA).nes",
-        "console":  "NES"
+        "name":  "archon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/archon.nes"
     },
     {
-        "name":  "Archon",
-        "romUrl":  "roms/nes/Archon (USA).nes",
-        "console":  "NES"
+        "name":  "archrivalsabasketbrawl",
+        "console":  "NES",
+        "romUrl":  "roms/nes/archrivalsabasketbrawl.nes"
     },
     {
-        "name":  "Arkanoid",
-        "romUrl":  "roms/nes/Arkanoid (USA).nes",
-        "console":  "NES"
+        "name":  "arkanoid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/arkanoid.nes"
     },
     {
-        "name":  "Arkista\u0027s Ring",
-        "romUrl":  "roms/nes/Arkista\u0027s Ring (USA).nes",
-        "console":  "NES"
+        "name":  "arkistasring",
+        "console":  "NES",
+        "romUrl":  "roms/nes/arkistasring.nes"
     },
     {
-        "name":  "Astyanax",
-        "romUrl":  "roms/nes/Astyanax (USA).nes",
-        "console":  "NES"
+        "name":  "astyanax",
+        "console":  "NES",
+        "romUrl":  "roms/nes/astyanax.nes"
     },
     {
-        "name":  "Athena",
-        "romUrl":  "roms/nes/Athena (USA).nes",
-        "console":  "NES"
+        "name":  "athena",
+        "console":  "NES",
+        "romUrl":  "roms/nes/athena.nes"
     },
     {
-        "name":  "Athletic World",
-        "romUrl":  "roms/nes/Athletic World (USA).nes",
-        "console":  "NES"
+        "name":  "athleticworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/athleticworld.nes"
     },
     {
-        "name":  "Attack of the Killer Tomatoes",
-        "romUrl":  "roms/nes/Attack of the Killer Tomatoes (USA).nes",
-        "console":  "NES"
+        "name":  "attackofthekillertomatoes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/attackofthekillertomatoes.nes"
     },
     {
-        "name":  "Baby Boomer (Unl)",
-        "romUrl":  "roms/nes/Baby Boomer (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "babyboomer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/babyboomer.nes"
     },
     {
-        "name":  "Back to the Future",
-        "romUrl":  "roms/nes/Back to the Future (USA).nes",
-        "console":  "NES"
+        "name":  "backtothefuture",
+        "console":  "NES",
+        "romUrl":  "roms/nes/backtothefuture.nes"
     },
     {
-        "name":  "Back to the Future Part II \u0026 III",
-        "romUrl":  "roms/nes/Back to the Future Part II \u0026 III (USA).nes",
-        "console":  "NES"
+        "name":  "backtothefuturepartiiandiii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/backtothefuturepartiiandiii.nes"
     },
     {
-        "name":  "Bad Dudes",
-        "romUrl":  "roms/nes/Bad Dudes (USA).nes",
-        "console":  "NES"
+        "name":  "baddudes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/baddudes.nes"
     },
     {
-        "name":  "Bad News Baseball",
-        "romUrl":  "roms/nes/Bad News Baseball (USA).nes",
-        "console":  "NES"
+        "name":  "badnewsbaseball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/badnewsbaseball.nes"
     },
     {
-        "name":  "Bad Street Brawler",
-        "romUrl":  "roms/nes/Bad Street Brawler (USA).nes",
-        "console":  "NES"
+        "name":  "badstreetbrawler",
+        "console":  "NES",
+        "romUrl":  "roms/nes/badstreetbrawler.nes"
     },
     {
-        "name":  "Balloon Fight",
-        "romUrl":  "roms/nes/Balloon Fight (USA).nes",
-        "console":  "NES"
+        "name":  "balloonfight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/balloonfight.nes"
     },
     {
-        "name":  "Bandai Golf - Challenge Pebble Beach",
-        "romUrl":  "roms/nes/Bandai Golf - Challenge Pebble Beach (USA).nes",
-        "console":  "NES"
+        "name":  "bandaigolfchallengepebblebeach",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bandaigolfchallengepebblebeach.nes"
     },
     {
-        "name":  "Bandit Kings of Ancient China",
-        "romUrl":  "roms/nes/Bandit Kings of Ancient China (USA).nes",
-        "console":  "NES"
+        "name":  "banditkingsofancientchina",
+        "console":  "NES",
+        "romUrl":  "roms/nes/banditkingsofancientchina.nes"
     },
     {
-        "name":  "Bard\u0027s Tale, The",
-        "romUrl":  "roms/nes/Bard\u0027s Tale, The (USA).nes",
-        "console":  "NES"
+        "name":  "bardstalethe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bardstalethe.nes"
     },
     {
-        "name":  "Barker Bill\u0027s Trick Shooting",
-        "romUrl":  "roms/nes/Barker Bill\u0027s Trick Shooting (USA).nes",
-        "console":  "NES"
+        "name":  "barkerbillstrickshooting",
+        "console":  "NES",
+        "romUrl":  "roms/nes/barkerbillstrickshooting.nes"
     },
     {
-        "name":  "Baseball (USA, Europe)",
-        "romUrl":  "roms/nes/Baseball (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "baseballsimulator1000",
+        "console":  "NES",
+        "romUrl":  "roms/nes/baseballsimulator1000.nes"
     },
     {
-        "name":  "Baseball Simulator 1 000",
-        "romUrl":  "roms/nes/Baseball Simulator 1.000 (USA).nes",
-        "console":  "NES"
+        "name":  "baseballstars",
+        "console":  "NES",
+        "romUrl":  "roms/nes/baseballstars.nes"
     },
     {
-        "name":  "Baseball Stars",
-        "romUrl":  "roms/nes/Baseball Stars (USA).nes",
-        "console":  "NES"
+        "name":  "baseballstarsii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/baseballstarsii.nes"
     },
     {
-        "name":  "Baseball Stars II",
-        "romUrl":  "roms/nes/Baseball Stars II (USA).nes",
-        "console":  "NES"
+        "name":  "baseballusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/baseballusaeurope.nes"
     },
     {
-        "name":  "Bases Loaded 3",
-        "romUrl":  "roms/nes/Bases Loaded 3 (USA).nes",
-        "console":  "NES"
+        "name":  "basesloaded3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/basesloaded3.nes"
     },
     {
-        "name":  "Bases Loaded 4",
-        "romUrl":  "roms/nes/Bases Loaded 4 (USA).nes",
-        "console":  "NES"
+        "name":  "basesloaded4",
+        "console":  "NES",
+        "romUrl":  "roms/nes/basesloaded4.nes"
     },
     {
-        "name":  "Bases Loaded II - Second Season",
-        "romUrl":  "roms/nes/Bases Loaded II - Second Season (USA).nes",
-        "console":  "NES"
+        "name":  "basesloadediisecondseason",
+        "console":  "NES",
+        "romUrl":  "roms/nes/basesloadediisecondseason.nes"
     },
     {
-        "name":  "Batman - Return of the Joker",
-        "romUrl":  "roms/nes/Batman - Return of the Joker (USA).nes",
-        "console":  "NES"
+        "name":  "batmanreturnofthejoker",
+        "console":  "NES",
+        "romUrl":  "roms/nes/batmanreturnofthejoker.nes"
     },
     {
-        "name":  "Batman - The Video Game",
-        "romUrl":  "roms/nes/Batman - The Video Game (USA).nes",
-        "console":  "NES"
+        "name":  "batmanreturns",
+        "console":  "NES",
+        "romUrl":  "roms/nes/batmanreturns.nes"
     },
     {
-        "name":  "Batman Returns",
-        "romUrl":  "roms/nes/Batman Returns (USA).nes",
-        "console":  "NES"
+        "name":  "batmanthevideogame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/batmanthevideogame.nes"
     },
     {
-        "name":  "Battle Chess",
-        "romUrl":  "roms/nes/Battle Chess (USA).nes",
-        "console":  "NES"
+        "name":  "battlechess",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battlechess.nes"
     },
     {
-        "name":  "Battle of Olympus, The",
-        "romUrl":  "roms/nes/Battle of Olympus, The (USA).nes",
-        "console":  "NES"
+        "name":  "battleofolympusthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battleofolympusthe.nes"
     },
     {
-        "name":  "Battleship",
-        "romUrl":  "roms/nes/Battleship (USA).nes",
-        "console":  "NES"
+        "name":  "battleship",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battleship.nes"
     },
     {
-        "name":  "Battletank",
-        "romUrl":  "roms/nes/Battletank (USA).nes",
-        "console":  "NES"
+        "name":  "battletank",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battletank.nes"
     },
     {
-        "name":  "Battletoads",
-        "romUrl":  "roms/nes/Battletoads (USA).nes",
-        "console":  "NES"
+        "name":  "battletoads",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battletoads.nes"
     },
     {
-        "name":  "Battletoads-Double Dragon",
-        "romUrl":  "roms/nes/Battletoads-Double Dragon (USA).nes",
-        "console":  "NES"
+        "name":  "battletoadsdoubledragon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/battletoadsdoubledragon.nes"
     },
     {
-        "name":  "Beauty and the Beast",
-        "romUrl":  "roms/nes/Beauty and the Beast (Europe).nes",
-        "console":  "NES"
+        "name":  "beautyandthebeast",
+        "console":  "NES",
+        "romUrl":  "roms/nes/beautyandthebeast.nes"
     },
     {
-        "name":  "Bee 52 (Unl)",
-        "romUrl":  "roms/nes/Bee 52 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "bee52",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bee52.nes"
     },
     {
-        "name":  "Beetlejuice",
-        "romUrl":  "roms/nes/Beetlejuice (USA).nes",
-        "console":  "NES"
+        "name":  "beetlejuice",
+        "console":  "NES",
+        "romUrl":  "roms/nes/beetlejuice.nes"
     },
     {
-        "name":  "Best of the Best - Championship Karate",
-        "romUrl":  "roms/nes/Best of the Best - Championship Karate (USA).nes",
-        "console":  "NES"
+        "name":  "bestofthebestchampionshipkarate",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bestofthebestchampionshipkarate.nes"
     },
     {
-        "name":  "Big Nose Freaks Out (Unl)",
-        "romUrl":  "roms/nes/Big Nose Freaks Out (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "bigfoot",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bigfoot.nes"
     },
     {
-        "name":  "Big Nose the Caveman (Unl)",
-        "romUrl":  "roms/nes/Big Nose the Caveman (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "bignosefreaksout",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bignosefreaksout.nes"
     },
     {
-        "name":  "Bigfoot",
-        "romUrl":  "roms/nes/Bigfoot (USA).nes",
-        "console":  "NES"
+        "name":  "bignosethecaveman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bignosethecaveman.nes"
     },
     {
-        "name":  "Bill \u0026 Ted\u0027s Excellent Video Game Adventure",
-        "romUrl":  "roms/nes/Bill \u0026 Ted\u0027s Excellent Video Game Adventure (USA).nes",
-        "console":  "NES"
+        "name":  "billandtedsexcellentvideogameadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/billandtedsexcellentvideogameadventure.nes"
     },
     {
-        "name":  "Bill Elliott\u0027s NASCAR Challenge",
-        "romUrl":  "roms/nes/Bill Elliott\u0027s NASCAR Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "billelliottsnascarchallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/billelliottsnascarchallenge.nes"
     },
     {
-        "name":  "Bionic Commando",
-        "romUrl":  "roms/nes/Bionic Commando (USA).nes",
-        "console":  "NES"
+        "name":  "bioniccommando",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bioniccommando.nes"
     },
     {
-        "name":  "Black Bass, The",
-        "romUrl":  "roms/nes/Black Bass, The (USA).nes",
-        "console":  "NES"
+        "name":  "blackbassthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/blackbassthe.nes"
     },
     {
-        "name":  "Blackjack (Unl)",
-        "romUrl":  "roms/nes/Blackjack (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "blackjack",
+        "console":  "NES",
+        "romUrl":  "roms/nes/blackjack.nes"
     },
     {
-        "name":  "BladeBuster (High Level Challenge)",
-        "romUrl":  "roms/nes/BladeBuster (High Level Challenge).nes",
-        "console":  "NES"
+        "name":  "bladebusterhighlevelchallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bladebusterhighlevelchallenge.nes"
     },
     {
-        "name":  "Blades of Steel",
-        "romUrl":  "roms/nes/Blades of Steel (USA).nes",
-        "console":  "NES"
+        "name":  "bladesofsteel",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bladesofsteel.nes"
     },
     {
-        "name":  "Blaster Master",
-        "romUrl":  "roms/nes/Blaster Master (USA).nes",
-        "console":  "NES"
+        "name":  "blastermaster",
+        "console":  "NES",
+        "romUrl":  "roms/nes/blastermaster.nes"
     },
     {
-        "name":  "Blue Marlin, The",
-        "romUrl":  "roms/nes/Blue Marlin, The (USA).nes",
-        "console":  "NES"
+        "name":  "bluemarlinthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bluemarlinthe.nes"
     },
     {
-        "name":  "Blues Brothers, The",
-        "romUrl":  "roms/nes/Blues Brothers, The (USA).nes",
-        "console":  "NES"
+        "name":  "bluesbrothersthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bluesbrothersthe.nes"
     },
     {
-        "name":  "Bo Jackson Baseball",
-        "romUrl":  "roms/nes/Bo Jackson Baseball (USA).nes",
-        "console":  "NES"
+        "name":  "bojacksonbaseball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bojacksonbaseball.nes"
     },
     {
-        "name":  "Bomberman",
-        "romUrl":  "roms/nes/Bomberman (USA).nes",
-        "console":  "NES"
+        "name":  "bomberman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bomberman.nes"
     },
     {
-        "name":  "Bomberman II",
-        "romUrl":  "roms/nes/Bomberman II (USA).nes",
-        "console":  "NES"
+        "name":  "bombermanii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bombermanii.nes"
     },
     {
-        "name":  "Bonk\u0027s Adventure",
-        "romUrl":  "roms/nes/Bonk\u0027s Adventure (USA).nes",
-        "console":  "NES"
+        "name":  "bonksadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bonksadventure.nes"
     },
     {
-        "name":  "Boulder Dash",
-        "romUrl":  "roms/nes/Boulder Dash (USA).nes",
-        "console":  "NES"
+        "name":  "boulderdash",
+        "console":  "NES",
+        "romUrl":  "roms/nes/boulderdash.nes"
     },
     {
-        "name":  "Boy and His Blob, A - Trouble on Blobolonia",
-        "romUrl":  "roms/nes/Boy and His Blob, A - Trouble on Blobolonia (USA).nes",
-        "console":  "NES"
+        "name":  "boyandhisblobatroubleonblobolonia",
+        "console":  "NES",
+        "romUrl":  "roms/nes/boyandhisblobatroubleonblobolonia.nes"
     },
     {
-        "name":  "Bram Stoker\u0027s Dracula",
-        "romUrl":  "roms/nes/Bram Stoker\u0027s Dracula (USA).nes",
-        "console":  "NES"
+        "name":  "bramstokersdracula",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bramstokersdracula.nes"
     },
     {
-        "name":  "Break Time - The National Pool Tour",
-        "romUrl":  "roms/nes/Break Time - The National Pool Tour (USA).nes",
-        "console":  "NES"
+        "name":  "breakthru",
+        "console":  "NES",
+        "romUrl":  "roms/nes/breakthru.nes"
     },
     {
-        "name":  "BreakThru",
-        "romUrl":  "roms/nes/BreakThru (USA).nes",
-        "console":  "NES"
+        "name":  "breaktimethenationalpooltour",
+        "console":  "NES",
+        "romUrl":  "roms/nes/breaktimethenationalpooltour.nes"
     },
     {
-        "name":  "Bubble Bath Babes (Unl)",
-        "romUrl":  "roms/nes/Bubble Bath Babes (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "bubblebathbabes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bubblebathbabes.nes"
     },
     {
-        "name":  "Bubble Bobble",
-        "romUrl":  "roms/nes/Bubble Bobble (USA).nes",
-        "console":  "NES"
+        "name":  "bubblebobble",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bubblebobble.nes"
     },
     {
-        "name":  "Bubble Bobble Part 2",
-        "romUrl":  "roms/nes/Bubble Bobble Part 2 (USA).nes",
-        "console":  "NES"
+        "name":  "bubblebobblepart2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bubblebobblepart2.nes"
     },
     {
-        "name":  "Bucky O\u0027Hare",
-        "romUrl":  "roms/nes/Bucky O\u0027Hare (USA).nes",
-        "console":  "NES"
+        "name":  "buckyohare",
+        "console":  "NES",
+        "romUrl":  "roms/nes/buckyohare.nes"
     },
     {
-        "name":  "Bugs Bunny Birthday Blowout, The",
-        "romUrl":  "roms/nes/Bugs Bunny Birthday Blowout, The (USA).nes",
-        "console":  "NES"
+        "name":  "bugsbunnybirthdayblowoutthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bugsbunnybirthdayblowoutthe.nes"
     },
     {
-        "name":  "Bugs Bunny Crazy Castle, The",
-        "romUrl":  "roms/nes/Bugs Bunny Crazy Castle, The (USA).nes",
-        "console":  "NES"
+        "name":  "bugsbunnycrazycastlethe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bugsbunnycrazycastlethe.nes"
     },
     {
-        "name":  "Bump\u0027n\u0027Jump",
-        "romUrl":  "roms/nes/Bump\u0027n\u0027Jump (USA).nes",
-        "console":  "NES"
+        "name":  "bumpnjump",
+        "console":  "NES",
+        "romUrl":  "roms/nes/bumpnjump.nes"
     },
     {
-        "name":  "Burai Fighter",
-        "romUrl":  "roms/nes/Burai Fighter (USA).nes",
-        "console":  "NES"
+        "name":  "buraifighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/buraifighter.nes"
     },
     {
-        "name":  "BurgerTime",
-        "romUrl":  "roms/nes/BurgerTime (USA).nes",
-        "console":  "NES"
+        "name":  "burgertime",
+        "console":  "NES",
+        "romUrl":  "roms/nes/burgertime.nes"
     },
     {
-        "name":  "Cabal",
-        "romUrl":  "roms/nes/Cabal (USA).nes",
-        "console":  "NES"
+        "name":  "cabal",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cabal.nes"
     },
     {
-        "name":  "Caesars Palace",
-        "romUrl":  "roms/nes/Caesars Palace (USA).nes",
-        "console":  "NES"
+        "name":  "caesarspalace",
+        "console":  "NES",
+        "romUrl":  "roms/nes/caesarspalace.nes"
     },
     {
-        "name":  "California Games",
-        "romUrl":  "roms/nes/California Games (USA).nes",
-        "console":  "NES"
+        "name":  "californiagames",
+        "console":  "NES",
+        "romUrl":  "roms/nes/californiagames.nes"
     },
     {
-        "name":  "Caltron - 6 in 1 (Unl)",
-        "romUrl":  "roms/nes/Caltron - 6 in 1 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "caltron6in1",
+        "console":  "NES",
+        "romUrl":  "roms/nes/caltron6in1.nes"
     },
     {
-        "name":  "Capcom\u0027s Gold Medal Challenge \u002792",
-        "romUrl":  "roms/nes/Capcom\u0027s Gold Medal Challenge \u002792 (USA).nes",
-        "console":  "NES"
+        "name":  "capcomsgoldmedalchallenge92",
+        "console":  "NES",
+        "romUrl":  "roms/nes/capcomsgoldmedalchallenge92.nes"
     },
     {
-        "name":  "Captain America and the Avengers",
-        "romUrl":  "roms/nes/Captain America and the Avengers (USA).nes",
-        "console":  "NES"
+        "name":  "captainamericaandtheavengers",
+        "console":  "NES",
+        "romUrl":  "roms/nes/captainamericaandtheavengers.nes"
     },
     {
-        "name":  "Captain Comic - The Adventure (Unl)",
-        "romUrl":  "roms/nes/Captain Comic - The Adventure (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "captaincomictheadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/captaincomictheadventure.nes"
     },
     {
-        "name":  "Captain Planet and the Planeteers",
-        "romUrl":  "roms/nes/Captain Planet and the Planeteers (USA).nes",
-        "console":  "NES"
+        "name":  "captainplanetandtheplaneteers",
+        "console":  "NES",
+        "romUrl":  "roms/nes/captainplanetandtheplaneteers.nes"
     },
     {
-        "name":  "Casino Kid",
-        "romUrl":  "roms/nes/Casino Kid (USA).nes",
-        "console":  "NES"
+        "name":  "casinokid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/casinokid.nes"
     },
     {
-        "name":  "Casino Kid II",
-        "romUrl":  "roms/nes/Casino Kid II (USA).nes",
-        "console":  "NES"
+        "name":  "casinokidii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/casinokidii.nes"
     },
     {
-        "name":  "Castelian",
-        "romUrl":  "roms/nes/Castelian (USA).nes",
-        "console":  "NES"
+        "name":  "castelian",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castelian.nes"
     },
     {
-        "name":  "Castle of Deceit (Unl)",
-        "romUrl":  "roms/nes/Castle of Deceit (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "castleofdeceit",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castleofdeceit.nes"
     },
     {
-        "name":  "Castle of Dragon",
-        "romUrl":  "roms/nes/Castle of Dragon (USA).nes",
-        "console":  "NES"
+        "name":  "castleofdragon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castleofdragon.nes"
     },
     {
-        "name":  "Castlequest",
-        "romUrl":  "roms/nes/Castlequest (USA).nes",
-        "console":  "NES"
+        "name":  "castlequest",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castlequest.nes"
     },
     {
-        "name":  "Castlevania II - Simon\u0027s Quest",
-        "romUrl":  "roms/nes/Castlevania II - Simon\u0027s Quest (USA).nes",
-        "console":  "NES"
+        "name":  "castlevaniaiiidraculascurse",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castlevaniaiiidraculascurse.nes"
     },
     {
-        "name":  "Castlevania III - Dracula\u0027s Curse",
-        "romUrl":  "roms/nes/Castlevania III - Dracula\u0027s Curse (USA).nes",
-        "console":  "NES"
+        "name":  "castlevaniaiisimonsquest",
+        "console":  "NES",
+        "romUrl":  "roms/nes/castlevaniaiisimonsquest.nes"
     },
     {
-        "name":  "Caveman Games",
-        "romUrl":  "roms/nes/Caveman Games (USA).nes",
-        "console":  "NES"
+        "name":  "cavemangames",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cavemangames.nes"
     },
     {
-        "name":  "Challenge of the Dragon (Unl)",
-        "romUrl":  "roms/nes/Challenge of the Dragon (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "challengeofthedragon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/challengeofthedragon.nes"
     },
     {
-        "name":  "Championship Bowling",
-        "romUrl":  "roms/nes/Championship Bowling (USA).nes",
-        "console":  "NES"
+        "name":  "championshipbowling",
+        "console":  "NES",
+        "romUrl":  "roms/nes/championshipbowling.nes"
     },
     {
-        "name":  "Championship Pool",
-        "romUrl":  "roms/nes/Championship Pool (USA).nes",
-        "console":  "NES"
+        "name":  "championshippool",
+        "console":  "NES",
+        "romUrl":  "roms/nes/championshippool.nes"
     },
     {
-        "name":  "Championship Rally",
-        "romUrl":  "roms/nes/Championship Rally (Europe).nes",
-        "console":  "NES"
+        "name":  "championshiprally",
+        "console":  "NES",
+        "romUrl":  "roms/nes/championshiprally.nes"
     },
     {
-        "name":  "Cheetahmen II (Unl)",
-        "romUrl":  "roms/nes/Cheetahmen II (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "cheetahmenii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cheetahmenii.nes"
     },
     {
-        "name":  "Chessmaster, The",
-        "romUrl":  "roms/nes/Chessmaster, The (USA).nes",
-        "console":  "NES"
+        "name":  "chessmasterthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/chessmasterthe.nes"
     },
     {
-        "name":  "Chiller (Unl)",
-        "romUrl":  "roms/nes/Chiller (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "chiller",
+        "console":  "NES",
+        "romUrl":  "roms/nes/chiller.nes"
     },
     {
-        "name":  "Chris Evert \u0026 Ivan Lendl in Top Players\u0027 Tennis",
-        "romUrl":  "roms/nes/Chris Evert \u0026 Ivan Lendl in Top Players\u0027 Tennis (USA).nes",
-        "console":  "NES"
+        "name":  "chrisevertandivanlendlintopplayerstennis",
+        "console":  "NES",
+        "romUrl":  "roms/nes/chrisevertandivanlendlintopplayerstennis.nes"
     },
     {
-        "name":  "Chubby Cherub",
-        "romUrl":  "roms/nes/Chubby Cherub (USA).nes",
-        "console":  "NES"
+        "name":  "chubbycherub",
+        "console":  "NES",
+        "romUrl":  "roms/nes/chubbycherub.nes"
     },
     {
-        "name":  "Circus Caper",
-        "romUrl":  "roms/nes/Circus Caper (USA).nes",
-        "console":  "NES"
+        "name":  "circuscaper",
+        "console":  "NES",
+        "romUrl":  "roms/nes/circuscaper.nes"
     },
     {
-        "name":  "City Connection",
-        "romUrl":  "roms/nes/City Connection (USA).nes",
-        "console":  "NES"
+        "name":  "cityconnection",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cityconnection.nes"
     },
     {
-        "name":  "Clash at Demonhead",
-        "romUrl":  "roms/nes/Clash at Demonhead (USA).nes",
-        "console":  "NES"
+        "name":  "clashatdemonhead",
+        "console":  "NES",
+        "romUrl":  "roms/nes/clashatdemonhead.nes"
     },
     {
-        "name":  "Classic Concentration",
-        "romUrl":  "roms/nes/Classic Concentration (USA).nes",
-        "console":  "NES"
+        "name":  "classicconcentration",
+        "console":  "NES",
+        "romUrl":  "roms/nes/classicconcentration.nes"
     },
     {
-        "name":  "Cliffhanger",
-        "romUrl":  "roms/nes/Cliffhanger (USA).nes",
-        "console":  "NES"
+        "name":  "cliffhanger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cliffhanger.nes"
     },
     {
-        "name":  "Clu Clu Land (World)",
-        "romUrl":  "roms/nes/Clu Clu Land (World).nes",
-        "console":  "NES"
+        "name":  "clucluland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/clucluland.nes"
     },
     {
-        "name":  "Cobra Command",
-        "romUrl":  "roms/nes/Cobra Command (USA).nes",
-        "console":  "NES"
+        "name":  "cobracommand",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cobracommand.nes"
     },
     {
-        "name":  "Cobra Triangle",
-        "romUrl":  "roms/nes/Cobra Triangle (USA).nes",
-        "console":  "NES"
+        "name":  "cobratriangle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cobratriangle.nes"
     },
     {
-        "name":  "Code Name - Viper",
-        "romUrl":  "roms/nes/Code Name - Viper (USA).nes",
-        "console":  "NES"
+        "name":  "codenameviper",
+        "console":  "NES",
+        "romUrl":  "roms/nes/codenameviper.nes"
     },
     {
-        "name":  "Color a Dinosaur",
-        "romUrl":  "roms/nes/Color a Dinosaur (USA).nes",
-        "console":  "NES"
+        "name":  "coloradinosaur",
+        "console":  "NES",
+        "romUrl":  "roms/nes/coloradinosaur.nes"
     },
     {
-        "name":  "Commando",
-        "romUrl":  "roms/nes/Commando (USA).nes",
-        "console":  "NES"
+        "name":  "commando",
+        "console":  "NES",
+        "romUrl":  "roms/nes/commando.nes"
     },
     {
-        "name":  "Conan",
-        "romUrl":  "roms/nes/Conan (USA).nes",
-        "console":  "NES"
+        "name":  "conan",
+        "console":  "NES",
+        "romUrl":  "roms/nes/conan.nes"
     },
     {
-        "name":  "Conflict",
-        "romUrl":  "roms/nes/Conflict (USA).nes",
-        "console":  "NES"
+        "name":  "conflict",
+        "console":  "NES",
+        "romUrl":  "roms/nes/conflict.nes"
     },
     {
-        "name":  "Conquest of the Crystal Palace",
-        "romUrl":  "roms/nes/Conquest of the Crystal Palace (USA).nes",
-        "console":  "NES"
+        "name":  "conquestofthecrystalpalace",
+        "console":  "NES",
+        "romUrl":  "roms/nes/conquestofthecrystalpalace.nes"
     },
     {
-        "name":  "Contra",
-        "romUrl":  "roms/nes/Contra (USA).nes",
-        "console":  "NES"
+        "name":  "contra",
+        "console":  "NES",
+        "romUrl":  "roms/nes/contra.nes"
     },
     {
-        "name":  "Contra Force",
-        "romUrl":  "roms/nes/Contra Force (USA).nes",
-        "console":  "NES"
+        "name":  "contraforce",
+        "console":  "NES",
+        "romUrl":  "roms/nes/contraforce.nes"
     },
     {
-        "name":  "Cool World",
-        "romUrl":  "roms/nes/Cool World (USA).nes",
-        "console":  "NES"
+        "name":  "coolworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/coolworld.nes"
     },
     {
-        "name":  "Cowboy Kid",
-        "romUrl":  "roms/nes/Cowboy Kid (USA).nes",
-        "console":  "NES"
+        "name":  "cowboykid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cowboykid.nes"
     },
     {
-        "name":  "Crackout",
-        "romUrl":  "roms/nes/Crackout (Europe).nes",
-        "console":  "NES"
+        "name":  "crackout",
+        "console":  "NES",
+        "romUrl":  "roms/nes/crackout.nes"
     },
     {
-        "name":  "Crash \u0027n\u0027 the Boys - Street Challenge",
-        "romUrl":  "roms/nes/Crash \u0027n\u0027 the Boys - Street Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "crashntheboysstreetchallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/crashntheboysstreetchallenge.nes"
     },
     {
-        "name":  "Crystal Mines (Unl)",
-        "romUrl":  "roms/nes/Crystal Mines (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "crystalis",
+        "console":  "NES",
+        "romUrl":  "roms/nes/crystalis.nes"
     },
     {
-        "name":  "Crystalis",
-        "romUrl":  "roms/nes/Crystalis (USA).nes",
-        "console":  "NES"
+        "name":  "crystalmines",
+        "console":  "NES",
+        "romUrl":  "roms/nes/crystalmines.nes"
     },
     {
-        "name":  "Cyber Stadium Series - Base Wars",
-        "romUrl":  "roms/nes/Cyber Stadium Series - Base Wars (USA).nes",
-        "console":  "NES"
+        "name":  "cyberball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cyberball.nes"
     },
     {
-        "name":  "Cyberball",
-        "romUrl":  "roms/nes/Cyberball (USA).nes",
-        "console":  "NES"
+        "name":  "cybernoidthefightingmachine",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cybernoidthefightingmachine.nes"
     },
     {
-        "name":  "Cybernoid - The Fighting Machine",
-        "romUrl":  "roms/nes/Cybernoid - The Fighting Machine (USA).nes",
-        "console":  "NES"
+        "name":  "cyberstadiumseriesbasewars",
+        "console":  "NES",
+        "romUrl":  "roms/nes/cyberstadiumseriesbasewars.nes"
     },
     {
-        "name":  "Dance Aerobics",
-        "romUrl":  "roms/nes/Dance Aerobics (USA).nes",
-        "console":  "NES"
+        "name":  "danceaerobics",
+        "console":  "NES",
+        "romUrl":  "roms/nes/danceaerobics.nes"
     },
     {
-        "name":  "Danny Sullivan\u0027s Indy Heat",
-        "romUrl":  "roms/nes/Danny Sullivan\u0027s Indy Heat (USA).nes",
-        "console":  "NES"
+        "name":  "dannysullivansindyheat",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dannysullivansindyheat.nes"
     },
     {
-        "name":  "Darkman",
-        "romUrl":  "roms/nes/Darkman (USA).nes",
-        "console":  "NES"
+        "name":  "darkman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/darkman.nes"
     },
     {
-        "name":  "Darkwing Duck",
-        "romUrl":  "roms/nes/Darkwing Duck (USA).nes",
-        "console":  "NES"
+        "name":  "darkwingduck",
+        "console":  "NES",
+        "romUrl":  "roms/nes/darkwingduck.nes"
     },
     {
-        "name":  "Dash Galaxy in the Alien Asylum",
-        "romUrl":  "roms/nes/Dash Galaxy in the Alien Asylum (USA).nes",
-        "console":  "NES"
+        "name":  "dashgalaxyinthealienasylum",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dashgalaxyinthealienasylum.nes"
     },
     {
-        "name":  "Day Dreamin\u0027 Davey",
-        "romUrl":  "roms/nes/Day Dreamin\u0027 Davey (USA).nes",
-        "console":  "NES"
+        "name":  "daydreamindavey",
+        "console":  "NES",
+        "romUrl":  "roms/nes/daydreamindavey.nes"
     },
     {
-        "name":  "Days of Thunder",
-        "romUrl":  "roms/nes/Days of Thunder (USA).nes",
-        "console":  "NES"
+        "name":  "daysofthunder",
+        "console":  "NES",
+        "romUrl":  "roms/nes/daysofthunder.nes"
     },
     {
-        "name":  "Deadly Towers",
-        "romUrl":  "roms/nes/Deadly Towers (USA).nes",
-        "console":  "NES"
+        "name":  "deadlytowers",
+        "console":  "NES",
+        "romUrl":  "roms/nes/deadlytowers.nes"
     },
     {
-        "name":  "Death Race (Unl)",
-        "romUrl":  "roms/nes/Death Race (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "deathrace",
+        "console":  "NES",
+        "romUrl":  "roms/nes/deathrace.nes"
     },
     {
-        "name":  "Defender II",
-        "romUrl":  "roms/nes/Defender II (USA).nes",
-        "console":  "NES"
+        "name":  "defenderii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/defenderii.nes"
     },
     {
-        "name":  "Defender of the Crown",
-        "romUrl":  "roms/nes/Defender of the Crown (USA).nes",
-        "console":  "NES"
+        "name":  "defenderofthecrown",
+        "console":  "NES",
+        "romUrl":  "roms/nes/defenderofthecrown.nes"
     },
     {
-        "name":  "Defenders of Dynatron City",
-        "romUrl":  "roms/nes/Defenders of Dynatron City (USA).nes",
-        "console":  "NES"
+        "name":  "defendersofdynatroncity",
+        "console":  "NES",
+        "romUrl":  "roms/nes/defendersofdynatroncity.nes"
     },
     {
-        "name":  "Deja Vu",
-        "romUrl":  "roms/nes/Deja Vu (USA).nes",
-        "console":  "NES"
+        "name":  "dejavu",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dejavu.nes"
     },
     {
-        "name":  "Demon Sword - Release the Power",
-        "romUrl":  "roms/nes/Demon Sword - Release the Power (USA).nes",
-        "console":  "NES"
+        "name":  "demonswordreleasethepower",
+        "console":  "NES",
+        "romUrl":  "roms/nes/demonswordreleasethepower.nes"
     },
     {
-        "name":  "Desert Commander",
-        "romUrl":  "roms/nes/Desert Commander (USA).nes",
-        "console":  "NES"
+        "name":  "desertcommander",
+        "console":  "NES",
+        "romUrl":  "roms/nes/desertcommander.nes"
     },
     {
-        "name":  "Destination Earthstar",
-        "romUrl":  "roms/nes/Destination Earthstar (USA).nes",
-        "console":  "NES"
+        "name":  "destinationearthstar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/destinationearthstar.nes"
     },
     {
-        "name":  "Destiny of an Emperor",
-        "romUrl":  "roms/nes/Destiny of an Emperor (USA).nes",
-        "console":  "NES"
+        "name":  "destinyofanemperor",
+        "console":  "NES",
+        "romUrl":  "roms/nes/destinyofanemperor.nes"
     },
     {
-        "name":  "Devil World",
-        "romUrl":  "roms/nes/Devil World (Europe).nes",
-        "console":  "NES"
+        "name":  "devilworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/devilworld.nes"
     },
     {
-        "name":  "Dick Tracy",
-        "romUrl":  "roms/nes/Dick Tracy (USA).nes",
-        "console":  "NES"
+        "name":  "dicktracy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dicktracy.nes"
     },
     {
-        "name":  "Die Hard",
-        "romUrl":  "roms/nes/Die Hard (USA).nes",
-        "console":  "NES"
+        "name":  "diehard",
+        "console":  "NES",
+        "romUrl":  "roms/nes/diehard.nes"
     },
     {
-        "name":  "Dig Dug II - Trouble in Paradise",
-        "romUrl":  "roms/nes/Dig Dug II - Trouble in Paradise (USA).nes",
-        "console":  "NES"
+        "name":  "digdugiitroubleinparadise",
+        "console":  "NES",
+        "romUrl":  "roms/nes/digdugiitroubleinparadise.nes"
     },
     {
-        "name":  "Digger - The Legend of the Lost City",
-        "romUrl":  "roms/nes/Digger - The Legend of the Lost City (USA).nes",
-        "console":  "NES"
+        "name":  "diggerthelegendofthelostcity",
+        "console":  "NES",
+        "romUrl":  "roms/nes/diggerthelegendofthelostcity.nes"
     },
     {
-        "name":  "Dirty Harry",
-        "romUrl":  "roms/nes/Dirty Harry (USA).nes",
-        "console":  "NES"
+        "name":  "dirtyharry",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dirtyharry.nes"
     },
     {
-        "name":  "Dizzy the Adventurer (Aladdin Compact Cartridge) (Unl)",
-        "romUrl":  "roms/nes/Dizzy the Adventurer (USA) (Aladdin Compact Cartridge) (Unl).nes",
-        "console":  "NES"
+        "name":  "dizzytheadventureraladdincompactcartridge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dizzytheadventureraladdincompactcartridge.nes"
     },
     {
-        "name":  "Donkey Kong 3 (World)",
-        "romUrl":  "roms/nes/Donkey Kong 3 (World).nes",
-        "console":  "NES"
+        "name":  "donkeykong3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/donkeykong3.nes"
     },
     {
-        "name":  "Donkey Kong Classics (USA, Europe)",
-        "romUrl":  "roms/nes/Donkey Kong Classics (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "donkeykongclassicsusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/donkeykongclassicsusaeurope.nes"
     },
     {
-        "name":  "Donkey Kong Jr Math (USA, Europe)",
-        "romUrl":  "roms/nes/Donkey Kong Jr. Math (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "donkeykongjrmathusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/donkeykongjrmathusaeurope.nes"
     },
     {
-        "name":  "Double Dare",
-        "romUrl":  "roms/nes/Double Dare (USA).nes",
-        "console":  "NES"
+        "name":  "doubledare",
+        "console":  "NES",
+        "romUrl":  "roms/nes/doubledare.nes"
     },
     {
-        "name":  "Double Dragon",
-        "romUrl":  "roms/nes/Double Dragon (USA).nes",
-        "console":  "NES"
+        "name":  "doubledragon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/doubledragon.nes"
     },
     {
-        "name":  "Double Dragon III - The Sacred Stones",
-        "romUrl":  "roms/nes/Double Dragon III - The Sacred Stones (USA).nes",
-        "console":  "NES"
+        "name":  "doubledragoniiithesacredstones",
+        "console":  "NES",
+        "romUrl":  "roms/nes/doubledragoniiithesacredstones.nes"
     },
     {
-        "name":  "Dr Chaos",
-        "romUrl":  "roms/nes/Dr. Chaos (USA).nes",
-        "console":  "NES"
+        "name":  "dragonfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonfighter.nes"
     },
     {
-        "name":  "Dr Jekyll and Mr Hyde",
-        "romUrl":  "roms/nes/Dr. Jekyll and Mr. Hyde (USA).nes",
-        "console":  "NES"
+        "name":  "dragonpower",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonpower.nes"
     },
     {
-        "name":  "Dragon Fighter",
-        "romUrl":  "roms/nes/Dragon Fighter (USA).nes",
-        "console":  "NES"
+        "name":  "dragonslair",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonslair.nes"
     },
     {
-        "name":  "Dragon Power",
-        "romUrl":  "roms/nes/Dragon Power (USA).nes",
-        "console":  "NES"
+        "name":  "dragonspiritthenewlegend",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonspiritthenewlegend.nes"
     },
     {
-        "name":  "Dragon Spirit - The New Legend",
-        "romUrl":  "roms/nes/Dragon Spirit - The New Legend (USA).nes",
-        "console":  "NES"
+        "name":  "dragonwarriorii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonwarriorii.nes"
     },
     {
-        "name":  "Dragon Warrior II",
-        "romUrl":  "roms/nes/Dragon Warrior II (USA).nes",
-        "console":  "NES"
+        "name":  "dragonwarrioriii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonwarrioriii.nes"
     },
     {
-        "name":  "Dragon Warrior III",
-        "romUrl":  "roms/nes/Dragon Warrior III (USA).nes",
-        "console":  "NES"
+        "name":  "dragonwarrioriv",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dragonwarrioriv.nes"
     },
     {
-        "name":  "Dragon Warrior IV",
-        "romUrl":  "roms/nes/Dragon Warrior IV (USA).nes",
-        "console":  "NES"
+        "name":  "drchaos",
+        "console":  "NES",
+        "romUrl":  "roms/nes/drchaos.nes"
     },
     {
-        "name":  "Dragon\u0027s Lair",
-        "romUrl":  "roms/nes/Dragon\u0027s Lair (USA).nes",
-        "console":  "NES"
+        "name":  "drjekyllandmrhyde",
+        "console":  "NES",
+        "romUrl":  "roms/nes/drjekyllandmrhyde.nes"
     },
     {
-        "name":  "Dropzone",
-        "romUrl":  "roms/nes/Dropzone (Europe).nes",
-        "console":  "NES"
+        "name":  "dropzone",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dropzone.nes"
     },
     {
-        "name":  "Duck Hunt (World)",
-        "romUrl":  "roms/nes/Duck Hunt (World).nes",
-        "console":  "NES"
+        "name":  "duckhunt",
+        "console":  "NES",
+        "romUrl":  "roms/nes/duckhunt.nes"
     },
     {
-        "name":  "DuckTales",
-        "romUrl":  "roms/nes/DuckTales (USA).nes",
-        "console":  "NES"
+        "name":  "ducktales",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ducktales.nes"
     },
     {
-        "name":  "DuckTales 2",
-        "romUrl":  "roms/nes/DuckTales 2 (USA).nes",
-        "console":  "NES"
+        "name":  "ducktales2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ducktales2.nes"
     },
     {
-        "name":  "Dungeon Magic - Sword of the Elements",
-        "romUrl":  "roms/nes/Dungeon Magic - Sword of the Elements (USA).nes",
-        "console":  "NES"
+        "name":  "dungeonmagicswordoftheelements",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dungeonmagicswordoftheelements.nes"
     },
     {
-        "name":  "Dusty Diamond\u0027s All-Star Softball",
-        "romUrl":  "roms/nes/Dusty Diamond\u0027s All-Star Softball (USA).nes",
-        "console":  "NES"
+        "name":  "dustydiamondsallstarsoftball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dustydiamondsallstarsoftball.nes"
     },
     {
-        "name":  "Dynowarz - Destruction of Spondylus",
-        "romUrl":  "roms/nes/Dynowarz - Destruction of Spondylus (USA).nes",
-        "console":  "NES"
+        "name":  "dynowarzdestructionofspondylus",
+        "console":  "NES",
+        "romUrl":  "roms/nes/dynowarzdestructionofspondylus.nes"
     },
     {
-        "name":  "Elevator Action",
-        "romUrl":  "roms/nes/Elevator Action (USA).nes",
-        "console":  "NES"
+        "name":  "elevatoraction",
+        "console":  "NES",
+        "romUrl":  "roms/nes/elevatoraction.nes"
     },
     {
-        "name":  "Eliminator Boat Duel",
-        "romUrl":  "roms/nes/Eliminator Boat Duel (USA).nes",
-        "console":  "NES"
+        "name":  "eliminatorboatduel",
+        "console":  "NES",
+        "romUrl":  "roms/nes/eliminatorboatduel.nes"
     },
     {
-        "name":  "Empereur, L\u0027",
-        "romUrl":  "roms/nes/Empereur, L\u0027 (USA).nes",
-        "console":  "NES"
+        "name":  "empereurl",
+        "console":  "NES",
+        "romUrl":  "roms/nes/empereurl.nes"
     },
     {
-        "name":  "Excitebike (Japan, USA)",
-        "romUrl":  "roms/nes/Excitebike (Japan, USA).nes",
-        "console":  "NES"
+        "name":  "excitebikejapanusa",
+        "console":  "NES",
+        "romUrl":  "roms/nes/excitebikejapanusa.nes"
     },
     {
-        "name":  "F-117A - Stealth Fighter",
-        "romUrl":  "roms/nes/F-117A - Stealth Fighter (USA).nes",
-        "console":  "NES"
+        "name":  "f117astealthfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/f117astealthfighter.nes"
     },
     {
-        "name":  "F-15 Strike Eagle",
-        "romUrl":  "roms/nes/F-15 Strike Eagle (USA).nes",
-        "console":  "NES"
+        "name":  "f15strikeeagle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/f15strikeeagle.nes"
     },
     {
-        "name":  "Family Feud",
-        "romUrl":  "roms/nes/Family Feud (USA).nes",
-        "console":  "NES"
+        "name":  "familyfeud",
+        "console":  "NES",
+        "romUrl":  "roms/nes/familyfeud.nes"
     },
     {
-        "name":  "Fantastic Adventures of Dizzy, The (Unl)",
-        "romUrl":  "roms/nes/Fantastic Adventures of Dizzy, The (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "fantasticadventuresofdizzythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fantasticadventuresofdizzythe.nes"
     },
     {
-        "name":  "Fantasy Zone (Unl)",
-        "romUrl":  "roms/nes/Fantasy Zone (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "fantasyzone",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fantasyzone.nes"
     },
     {
-        "name":  "Faria - A World of Mystery \u0026 Danger!",
-        "romUrl":  "roms/nes/Faria - A World of Mystery \u0026 Danger! (USA).nes",
-        "console":  "NES"
+        "name":  "fariaaworldofmysteryanddanger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fariaaworldofmysteryanddanger.nes"
     },
     {
-        "name":  "Felix the Cat",
-        "romUrl":  "roms/nes/Felix the Cat (USA).nes",
-        "console":  "NES"
+        "name":  "felixthecat",
+        "console":  "NES",
+        "romUrl":  "roms/nes/felixthecat.nes"
     },
     {
-        "name":  "Ferrari Grand Prix Challenge",
-        "romUrl":  "roms/nes/Ferrari Grand Prix Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "ferrarigrandprixchallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ferrarigrandprixchallenge.nes"
     },
     {
-        "name":  "Fester\u0027s Quest",
-        "romUrl":  "roms/nes/Fester\u0027s Quest (USA).nes",
-        "console":  "NES"
+        "name":  "festersquest",
+        "console":  "NES",
+        "romUrl":  "roms/nes/festersquest.nes"
     },
     {
-        "name":  "Final Fantasy",
-        "romUrl":  "roms/nes/Final Fantasy (USA).nes",
-        "console":  "NES"
+        "name":  "finalfantasy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/finalfantasy.nes"
     },
     {
-        "name":  "Fire \u0027n Ice",
-        "romUrl":  "roms/nes/Fire \u0027n Ice (USA).nes",
-        "console":  "NES"
+        "name":  "firenice",
+        "console":  "NES",
+        "romUrl":  "roms/nes/firenice.nes"
     },
     {
-        "name":  "Fisher-Price - Firehouse Rescue",
-        "romUrl":  "roms/nes/Fisher-Price - Firehouse Rescue (USA).nes",
-        "console":  "NES"
+        "name":  "fisherpricefirehouserescue",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fisherpricefirehouserescue.nes"
     },
     {
-        "name":  "Fisher-Price - I Can Remember",
-        "romUrl":  "roms/nes/Fisher-Price - I Can Remember (USA).nes",
-        "console":  "NES"
+        "name":  "fisherpriceicanremember",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fisherpriceicanremember.nes"
     },
     {
-        "name":  "Fisher-Price - Perfect Fit",
-        "romUrl":  "roms/nes/Fisher-Price - Perfect Fit (USA).nes",
-        "console":  "NES"
+        "name":  "fisherpriceperfectfit",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fisherpriceperfectfit.nes"
     },
     {
-        "name":  "Fist of the North Star",
-        "romUrl":  "roms/nes/Fist of the North Star (USA).nes",
-        "console":  "NES"
+        "name":  "fistofthenorthstar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fistofthenorthstar.nes"
     },
     {
-        "name":  "Flight of the Intruder",
-        "romUrl":  "roms/nes/Flight of the Intruder (USA).nes",
-        "console":  "NES"
+        "name":  "flightoftheintruder",
+        "console":  "NES",
+        "romUrl":  "roms/nes/flightoftheintruder.nes"
     },
     {
-        "name":  "Flintstones, The - The Rescue of Dino \u0026 Hoppy",
-        "romUrl":  "roms/nes/Flintstones, The - The Rescue of Dino \u0026 Hoppy (USA).nes",
-        "console":  "NES"
+        "name":  "flintstonesthetherescueofdinoandhoppy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/flintstonesthetherescueofdinoandhoppy.nes"
     },
     {
-        "name":  "Flintstones, The - The Surprise at Dinosaur Peak!",
-        "romUrl":  "roms/nes/Flintstones, The - The Surprise at Dinosaur Peak! (USA).nes",
-        "console":  "NES"
+        "name":  "flintstonesthethesurpriseatdinosaurpeak",
+        "console":  "NES",
+        "romUrl":  "roms/nes/flintstonesthethesurpriseatdinosaurpeak.nes"
     },
     {
-        "name":  "Flying Dragon - The Secret Scroll",
-        "romUrl":  "roms/nes/Flying Dragon - The Secret Scroll (USA).nes",
-        "console":  "NES"
+        "name":  "flyingdragonthesecretscroll",
+        "console":  "NES",
+        "romUrl":  "roms/nes/flyingdragonthesecretscroll.nes"
     },
     {
-        "name":  "Flying Warriors",
-        "romUrl":  "roms/nes/Flying Warriors (USA).nes",
-        "console":  "NES"
+        "name":  "flyingwarriors",
+        "console":  "NES",
+        "romUrl":  "roms/nes/flyingwarriors.nes"
     },
     {
-        "name":  "Formula 1 Sensation",
-        "romUrl":  "roms/nes/Formula 1 Sensation (Europe).nes",
-        "console":  "NES"
+        "name":  "formula1sensation",
+        "console":  "NES",
+        "romUrl":  "roms/nes/formula1sensation.nes"
     },
     {
-        "name":  "Formula One - Built to Win",
-        "romUrl":  "roms/nes/Formula One - Built to Win (USA).nes",
-        "console":  "NES"
+        "name":  "formulaonebuilttowin",
+        "console":  "NES",
+        "romUrl":  "roms/nes/formulaonebuilttowin.nes"
     },
     {
-        "name":  "Fox\u0027s Peter Pan \u0026 the Pirates - The Revenge of Captain Hook",
-        "romUrl":  "roms/nes/Fox\u0027s Peter Pan \u0026 the Pirates - The Revenge of Captain Hook (USA).nes",
-        "console":  "NES"
+        "name":  "foxspeterpanandthepiratestherevengeofcaptainhook",
+        "console":  "NES",
+        "romUrl":  "roms/nes/foxspeterpanandthepiratestherevengeofcaptainhook.nes"
     },
     {
-        "name":  "Frankenstein - The Monster Returns",
-        "romUrl":  "roms/nes/Frankenstein - The Monster Returns (USA).nes",
-        "console":  "NES"
+        "name":  "frankensteinthemonsterreturns",
+        "console":  "NES",
+        "romUrl":  "roms/nes/frankensteinthemonsterreturns.nes"
     },
     {
-        "name":  "Freedom Force",
-        "romUrl":  "roms/nes/Freedom Force (USA).nes",
-        "console":  "NES"
+        "name":  "freedomforce",
+        "console":  "NES",
+        "romUrl":  "roms/nes/freedomforce.nes"
     },
     {
-        "name":  "Friday the 13th",
-        "romUrl":  "roms/nes/Friday the 13th (USA).nes",
-        "console":  "NES"
+        "name":  "fridaythe13th",
+        "console":  "NES",
+        "romUrl":  "roms/nes/fridaythe13th.nes"
     },
     {
-        "name":  "Fun House",
-        "romUrl":  "roms/nes/Fun House (USA).nes",
-        "console":  "NES"
+        "name":  "funhouse",
+        "console":  "NES",
+        "romUrl":  "roms/nes/funhouse.nes"
     },
     {
-        "name":  "G I Joe - A Real American Hero",
-        "romUrl":  "roms/nes/G.I. Joe - A Real American Hero (USA).nes",
-        "console":  "NES"
+        "name":  "galacticcrusader",
+        "console":  "NES",
+        "romUrl":  "roms/nes/galacticcrusader.nes"
     },
     {
-        "name":  "G I Joe - The Atlantis Factor",
-        "romUrl":  "roms/nes/G.I. Joe - The Atlantis Factor (USA).nes",
-        "console":  "NES"
+        "name":  "galagademonsofdeath",
+        "console":  "NES",
+        "romUrl":  "roms/nes/galagademonsofdeath.nes"
     },
     {
-        "name":  "Galactic Crusader (Unl)",
-        "romUrl":  "roms/nes/Galactic Crusader (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "galaxy5000",
+        "console":  "NES",
+        "romUrl":  "roms/nes/galaxy5000.nes"
     },
     {
-        "name":  "Galaga - Demons of Death",
-        "romUrl":  "roms/nes/Galaga - Demons of Death (USA).nes",
-        "console":  "NES"
+        "name":  "gargoylesquestii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gargoylesquestii.nes"
     },
     {
-        "name":  "Galaxy 5000",
-        "romUrl":  "roms/nes/Galaxy 5000 (USA).nes",
-        "console":  "NES"
+        "name":  "gauntlet",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gauntlet.nes"
     },
     {
-        "name":  "Gargoyle\u0027s Quest II",
-        "romUrl":  "roms/nes/Gargoyle\u0027s Quest II (USA).nes",
-        "console":  "NES"
+        "name":  "gauntletii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gauntletii.nes"
     },
     {
-        "name":  "Gauntlet",
-        "romUrl":  "roms/nes/Gauntlet (USA).nes",
-        "console":  "NES"
+        "name":  "gemfire",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gemfire.nes"
     },
     {
-        "name":  "Gauntlet II",
-        "romUrl":  "roms/nes/Gauntlet II (USA).nes",
-        "console":  "NES"
+        "name":  "genghiskhan",
+        "console":  "NES",
+        "romUrl":  "roms/nes/genghiskhan.nes"
     },
     {
-        "name":  "Gemfire",
-        "romUrl":  "roms/nes/Gemfire (USA).nes",
-        "console":  "NES"
+        "name":  "georgeforemanskoboxing",
+        "console":  "NES",
+        "romUrl":  "roms/nes/georgeforemanskoboxing.nes"
     },
     {
-        "name":  "Genghis Khan",
-        "romUrl":  "roms/nes/Genghis Khan (USA).nes",
-        "console":  "NES"
+        "name":  "ghostbusters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ghostbusters.nes"
     },
     {
-        "name":  "George Foreman\u0027s KO Boxing",
-        "romUrl":  "roms/nes/George Foreman\u0027s KO Boxing (USA).nes",
-        "console":  "NES"
+        "name":  "ghostsngoblins",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ghostsngoblins.nes"
     },
     {
-        "name":  "Ghostbusters",
-        "romUrl":  "roms/nes/Ghostbusters (USA).nes",
-        "console":  "NES"
+        "name":  "ghoulschool",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ghoulschool.nes"
     },
     {
-        "name":  "Ghosts\u0027n Goblins",
-        "romUrl":  "roms/nes/Ghosts\u0027n Goblins (USA).nes",
-        "console":  "NES"
+        "name":  "gijoearealamericanhero",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gijoearealamericanhero.nes"
     },
     {
-        "name":  "Ghoul School",
-        "romUrl":  "roms/nes/Ghoul School (USA).nes",
-        "console":  "NES"
+        "name":  "gijoetheatlantisfactor",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gijoetheatlantisfactor.nes"
     },
     {
-        "name":  "Goal!",
-        "romUrl":  "roms/nes/Goal! (USA).nes",
-        "console":  "NES"
+        "name":  "goal",
+        "console":  "NES",
+        "romUrl":  "roms/nes/goal.nes"
     },
     {
-        "name":  "Goal! Two",
-        "romUrl":  "roms/nes/Goal! Two (USA).nes",
-        "console":  "NES"
+        "name":  "goaltwo",
+        "console":  "NES",
+        "romUrl":  "roms/nes/goaltwo.nes"
     },
     {
-        "name":  "Godzilla - Monster of Monsters!",
-        "romUrl":  "roms/nes/Godzilla - Monster of Monsters! (USA).nes",
-        "console":  "NES"
+        "name":  "godzilla2warofthemonsters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/godzilla2warofthemonsters.nes"
     },
     {
-        "name":  "Godzilla 2 - War of the Monsters",
-        "romUrl":  "roms/nes/Godzilla 2 - War of the Monsters (USA).nes",
-        "console":  "NES"
+        "name":  "godzillamonsterofmonsters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/godzillamonsterofmonsters.nes"
     },
     {
-        "name":  "Golf",
-        "romUrl":  "roms/nes/Golf (USA).nes",
-        "console":  "NES"
+        "name":  "golf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/golf.nes"
     },
     {
-        "name":  "Golf Grand Slam",
-        "romUrl":  "roms/nes/Golf Grand Slam (USA).nes",
-        "console":  "NES"
+        "name":  "golfgrandslam",
+        "console":  "NES",
+        "romUrl":  "roms/nes/golfgrandslam.nes"
     },
     {
-        "name":  "Golgo 13 - Top Secret Episode",
-        "romUrl":  "roms/nes/Golgo 13 - Top Secret Episode (USA).nes",
-        "console":  "NES"
+        "name":  "golgo13topsecretepisode",
+        "console":  "NES",
+        "romUrl":  "roms/nes/golgo13topsecretepisode.nes"
     },
     {
-        "name":  "Goonies II, The",
-        "romUrl":  "roms/nes/Goonies II, The (USA).nes",
-        "console":  "NES"
+        "name":  "gooniesiithe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gooniesiithe.nes"
     },
     {
-        "name":  "Gotcha! - The Sport!",
-        "romUrl":  "roms/nes/Gotcha! - The Sport! (USA).nes",
-        "console":  "NES"
+        "name":  "gotchathesport",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gotchathesport.nes"
     },
     {
-        "name":  "Gradius",
-        "romUrl":  "roms/nes/Gradius (USA).nes",
-        "console":  "NES"
+        "name":  "gradius",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gradius.nes"
     },
     {
-        "name":  "Great Waldo Search, The",
-        "romUrl":  "roms/nes/Great Waldo Search, The (USA).nes",
-        "console":  "NES"
+        "name":  "greatwaldosearchthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/greatwaldosearchthe.nes"
     },
     {
-        "name":  "Greg Norman\u0027s Golf Power",
-        "romUrl":  "roms/nes/Greg Norman\u0027s Golf Power (USA).nes",
-        "console":  "NES"
+        "name":  "gregnormansgolfpower",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gregnormansgolfpower.nes"
     },
     {
-        "name":  "Gremlins 2 - The New Batch",
-        "romUrl":  "roms/nes/Gremlins 2 - The New Batch (USA).nes",
-        "console":  "NES"
+        "name":  "gremlins2thenewbatch",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gremlins2thenewbatch.nes"
     },
     {
-        "name":  "Guardian Legend, The",
-        "romUrl":  "roms/nes/Guardian Legend, The (USA).nes",
-        "console":  "NES"
+        "name":  "guardianlegendthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/guardianlegendthe.nes"
     },
     {
-        "name":  "Guerrilla War",
-        "romUrl":  "roms/nes/Guerrilla War (USA).nes",
-        "console":  "NES"
+        "name":  "guerrillawar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/guerrillawar.nes"
     },
     {
-        "name":  "Gumshoe (USA, Europe)",
-        "romUrl":  "roms/nes/Gumshoe (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "gumshoeusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gumshoeusaeurope.nes"
     },
     {
-        "name":  "Gun Nac",
-        "romUrl":  "roms/nes/Gun Nac (USA).nes",
-        "console":  "NES"
+        "name":  "gunnac",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gunnac.nes"
     },
     {
-        "name":  "Gun Smoke",
-        "romUrl":  "roms/nes/Gun.Smoke (USA).nes",
-        "console":  "NES"
+        "name":  "gunsmoke",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gunsmoke.nes"
     },
     {
-        "name":  "Gyromite (World)",
-        "romUrl":  "roms/nes/Gyromite (World).nes",
-        "console":  "NES"
+        "name":  "gyromite",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gyromite.nes"
     },
     {
-        "name":  "Gyruss",
-        "romUrl":  "roms/nes/Gyruss (USA).nes",
-        "console":  "NES"
+        "name":  "gyruss",
+        "console":  "NES",
+        "romUrl":  "roms/nes/gyruss.nes"
     },
     {
-        "name":  "Hammerin\u0027 Harry",
-        "romUrl":  "roms/nes/Hammerin\u0027 Harry (Europe).nes",
-        "console":  "NES"
+        "name":  "hammerinharry",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hammerinharry.nes"
     },
     {
-        "name":  "Harlem Globetrotters",
-        "romUrl":  "roms/nes/Harlem Globetrotters (USA).nes",
-        "console":  "NES"
+        "name":  "harlemglobetrotters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/harlemglobetrotters.nes"
     },
     {
-        "name":  "Hatris",
-        "romUrl":  "roms/nes/Hatris (USA).nes",
-        "console":  "NES"
+        "name":  "hatris",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hatris.nes"
     },
     {
-        "name":  "Heavy Barrel",
-        "romUrl":  "roms/nes/Heavy Barrel (USA).nes",
-        "console":  "NES"
+        "name":  "heavybarrel",
+        "console":  "NES",
+        "romUrl":  "roms/nes/heavybarrel.nes"
     },
     {
-        "name":  "Heavy Shreddin\u0027",
-        "romUrl":  "roms/nes/Heavy Shreddin\u0027 (USA).nes",
-        "console":  "NES"
+        "name":  "heavyshreddin",
+        "console":  "NES",
+        "romUrl":  "roms/nes/heavyshreddin.nes"
     },
     {
-        "name":  "High Speed",
-        "romUrl":  "roms/nes/High Speed (USA).nes",
-        "console":  "NES"
+        "name":  "highspeed",
+        "console":  "NES",
+        "romUrl":  "roms/nes/highspeed.nes"
     },
     {
-        "name":  "Hogan\u0027s Alley (World)",
-        "romUrl":  "roms/nes/Hogan\u0027s Alley (World).nes",
-        "console":  "NES"
+        "name":  "hogansalley",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hogansalley.nes"
     },
     {
-        "name":  "Hollywood Squares",
-        "romUrl":  "roms/nes/Hollywood Squares (USA).nes",
-        "console":  "NES"
+        "name":  "hollywoodsquares",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hollywoodsquares.nes"
     },
     {
-        "name":  "Home Alone 2 - Lost in New York",
-        "romUrl":  "roms/nes/Home Alone 2 - Lost in New York (USA).nes",
-        "console":  "NES"
+        "name":  "homealone2lostinnewyork",
+        "console":  "NES",
+        "romUrl":  "roms/nes/homealone2lostinnewyork.nes"
     },
     {
-        "name":  "Hook",
-        "romUrl":  "roms/nes/Hook (USA).nes",
-        "console":  "NES"
+        "name":  "hook",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hook.nes"
     },
     {
-        "name":  "Hoops",
-        "romUrl":  "roms/nes/Hoops (USA).nes",
-        "console":  "NES"
+        "name":  "hoops",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hoops.nes"
     },
     {
-        "name":  "Hudson Hawk",
-        "romUrl":  "roms/nes/Hudson Hawk (USA).nes",
-        "console":  "NES"
+        "name":  "hudsonhawk",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hudsonhawk.nes"
     },
     {
-        "name":  "Hydlide",
-        "romUrl":  "roms/nes/Hydlide (USA).nes",
-        "console":  "NES"
+        "name":  "hydlide",
+        "console":  "NES",
+        "romUrl":  "roms/nes/hydlide.nes"
     },
     {
-        "name":  "Ice Climber (USA, Europe)",
-        "romUrl":  "roms/nes/Ice Climber (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "iceclimberusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/iceclimberusaeurope.nes"
     },
     {
-        "name":  "Ice Hockey",
-        "romUrl":  "roms/nes/Ice Hockey (USA).nes",
-        "console":  "NES"
+        "name":  "icehockey",
+        "console":  "NES",
+        "romUrl":  "roms/nes/icehockey.nes"
     },
     {
-        "name":  "Ikari Warriors II - Victory Road",
-        "romUrl":  "roms/nes/Ikari Warriors II - Victory Road (USA).nes",
-        "console":  "NES"
+        "name":  "ikariwarriorsiivictoryroad",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ikariwarriorsiivictoryroad.nes"
     },
     {
-        "name":  "Image Fight",
-        "romUrl":  "roms/nes/Image Fight (USA).nes",
-        "console":  "NES"
+        "name":  "imagefight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/imagefight.nes"
     },
     {
-        "name":  "Immortal, The",
-        "romUrl":  "roms/nes/Immortal, The (USA).nes",
-        "console":  "NES"
+        "name":  "immortalthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/immortalthe.nes"
     },
     {
-        "name":  "Impossible Mission II (Unl)",
-        "romUrl":  "roms/nes/Impossible Mission II (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "impossiblemissionii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/impossiblemissionii.nes"
     },
     {
-        "name":  "Incredible Crash Dummies, The",
-        "romUrl":  "roms/nes/Incredible Crash Dummies, The (USA).nes",
-        "console":  "NES"
+        "name":  "incrediblecrashdummiesthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/incrediblecrashdummiesthe.nes"
     },
     {
-        "name":  "Infiltrator",
-        "romUrl":  "roms/nes/Infiltrator (USA).nes",
-        "console":  "NES"
+        "name":  "infiltrator",
+        "console":  "NES",
+        "romUrl":  "roms/nes/infiltrator.nes"
     },
     {
-        "name":  "Iron Tank - The Invasion of Normandy",
-        "romUrl":  "roms/nes/Iron Tank - The Invasion of Normandy (USA).nes",
-        "console":  "NES"
+        "name":  "irontanktheinvasionofnormandy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/irontanktheinvasionofnormandy.nes"
     },
     {
-        "name":  "Isolated Warrior",
-        "romUrl":  "roms/nes/Isolated Warrior (USA).nes",
-        "console":  "NES"
+        "name":  "isolatedwarrior",
+        "console":  "NES",
+        "romUrl":  "roms/nes/isolatedwarrior.nes"
     },
     {
-        "name":  "Ivan \u0027Ironman\u0027 Stewart\u0027s Super Off Road",
-        "romUrl":  "roms/nes/Ivan \u0027Ironman\u0027 Stewart\u0027s Super Off Road (USA).nes",
-        "console":  "NES"
+        "name":  "ivanironmanstewartssuperoffroad",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ivanironmanstewartssuperoffroad.nes"
     },
     {
-        "name":  "Jack Nicklaus\u0027 Greatest 18 Holes of Major Championship Golf",
-        "romUrl":  "roms/nes/Jack Nicklaus\u0027 Greatest 18 Holes of Major Championship Golf (USA).nes",
-        "console":  "NES"
+        "name":  "jackal",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jackal.nes"
     },
     {
-        "name":  "Jackal",
-        "romUrl":  "roms/nes/Jackal (USA).nes",
-        "console":  "NES"
+        "name":  "jackiechansactionkungfu",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jackiechansactionkungfu.nes"
     },
     {
-        "name":  "Jackie Chan\u0027s Action Kung Fu",
-        "romUrl":  "roms/nes/Jackie Chan\u0027s Action Kung Fu (USA).nes",
-        "console":  "NES"
+        "name":  "jacknicklausgreatest18holesofmajorchampionshipgolf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jacknicklausgreatest18holesofmajorchampionshipgolf.nes"
     },
     {
-        "name":  "James Bond Jr",
-        "romUrl":  "roms/nes/James Bond Jr (USA).nes",
-        "console":  "NES"
+        "name":  "jamesbondjr",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jamesbondjr.nes"
     },
     {
-        "name":  "Jaws",
-        "romUrl":  "roms/nes/Jaws (USA).nes",
-        "console":  "NES"
+        "name":  "jaws",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jaws.nes"
     },
     {
-        "name":  "Jeopardy! 25th Anniversary Edition",
-        "romUrl":  "roms/nes/Jeopardy! 25th Anniversary Edition (USA).nes",
-        "console":  "NES"
+        "name":  "jeopardy25thanniversaryedition",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jeopardy25thanniversaryedition.nes"
     },
     {
-        "name":  "Jeopardy! Junior Edition",
-        "romUrl":  "roms/nes/Jeopardy! Junior Edition (USA).nes",
-        "console":  "NES"
+        "name":  "jeopardyjunioredition",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jeopardyjunioredition.nes"
     },
     {
-        "name":  "Jetsons, The - Cogswell\u0027s Caper",
-        "romUrl":  "roms/nes/Jetsons, The - Cogswell\u0027s Caper (USA).nes",
-        "console":  "NES"
+        "name":  "jetsonsthecogswellscaper",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jetsonsthecogswellscaper.nes"
     },
     {
-        "name":  "Jimmy Connors Tennis",
-        "romUrl":  "roms/nes/Jimmy Connors Tennis (USA).nes",
-        "console":  "NES"
+        "name":  "jimmyconnorstennis",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jimmyconnorstennis.nes"
     },
     {
-        "name":  "Joe \u0026 Mac",
-        "romUrl":  "roms/nes/Joe \u0026 Mac (USA).nes",
-        "console":  "NES"
+        "name":  "joeandmac",
+        "console":  "NES",
+        "romUrl":  "roms/nes/joeandmac.nes"
     },
     {
-        "name":  "John Elway\u0027s Quarterback",
-        "romUrl":  "roms/nes/John Elway\u0027s Quarterback (USA).nes",
-        "console":  "NES"
+        "name":  "johnelwaysquarterback",
+        "console":  "NES",
+        "romUrl":  "roms/nes/johnelwaysquarterback.nes"
     },
     {
-        "name":  "Jordan vs Bird - One On One",
-        "romUrl":  "roms/nes/Jordan vs Bird - One On One (USA).nes",
-        "console":  "NES"
+        "name":  "jordanvsbirdoneonone",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jordanvsbirdoneonone.nes"
     },
     {
-        "name":  "Journey to Silius",
-        "romUrl":  "roms/nes/Journey to Silius (USA).nes",
-        "console":  "NES"
+        "name":  "journeytosilius",
+        "console":  "NES",
+        "romUrl":  "roms/nes/journeytosilius.nes"
     },
     {
-        "name":  "Joust",
-        "romUrl":  "roms/nes/Joust (USA).nes",
-        "console":  "NES"
+        "name":  "joust",
+        "console":  "NES",
+        "romUrl":  "roms/nes/joust.nes"
     },
     {
-        "name":  "Jungle Book, The",
-        "romUrl":  "roms/nes/Jungle Book, The (USA).nes",
-        "console":  "NES"
+        "name":  "junglebookthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/junglebookthe.nes"
     },
     {
-        "name":  "Jurassic Park",
-        "romUrl":  "roms/nes/Jurassic Park (USA).nes",
-        "console":  "NES"
+        "name":  "jurassicpark",
+        "console":  "NES",
+        "romUrl":  "roms/nes/jurassicpark.nes"
     },
     {
-        "name":  "Kabuki - Quantum Fighter",
-        "romUrl":  "roms/nes/Kabuki - Quantum Fighter (USA).nes",
-        "console":  "NES"
+        "name":  "kabukiquantumfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kabukiquantumfighter.nes"
     },
     {
-        "name":  "Karate Kid, The",
-        "romUrl":  "roms/nes/Karate Kid, The (USA).nes",
-        "console":  "NES"
+        "name":  "karatekidthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/karatekidthe.nes"
     },
     {
-        "name":  "Karnov",
-        "romUrl":  "roms/nes/Karnov (USA).nes",
-        "console":  "NES"
+        "name":  "karnov",
+        "console":  "NES",
+        "romUrl":  "roms/nes/karnov.nes"
     },
     {
-        "name":  "Kick Master",
-        "romUrl":  "roms/nes/Kick Master (USA).nes",
-        "console":  "NES"
+        "name":  "kicklecubicle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kicklecubicle.nes"
     },
     {
-        "name":  "Kick Off",
-        "romUrl":  "roms/nes/Kick Off (Europe).nes",
-        "console":  "NES"
+        "name":  "kickmaster",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kickmaster.nes"
     },
     {
-        "name":  "Kickle Cubicle",
-        "romUrl":  "roms/nes/Kickle Cubicle (USA).nes",
-        "console":  "NES"
+        "name":  "kickoff",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kickoff.nes"
     },
     {
-        "name":  "Kid Icarus (USA, Europe)",
-        "romUrl":  "roms/nes/Kid Icarus (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "kidicarususaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kidicarususaeurope.nes"
     },
     {
-        "name":  "Kid Klown in Night Mayor World",
-        "romUrl":  "roms/nes/Kid Klown in Night Mayor World (USA).nes",
-        "console":  "NES"
+        "name":  "kidklowninnightmayorworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kidklowninnightmayorworld.nes"
     },
     {
-        "name":  "Kid Kool and the Quest for the Seven Wonder Herbs",
-        "romUrl":  "roms/nes/Kid Kool and the Quest for the Seven Wonder Herbs (USA).nes",
-        "console":  "NES"
+        "name":  "kidkoolandthequestforthesevenwonderherbs",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kidkoolandthequestforthesevenwonderherbs.nes"
     },
     {
-        "name":  "King Neptune\u0027s Adventure (Unl)",
-        "romUrl":  "roms/nes/King Neptune\u0027s Adventure (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "kingneptunesadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kingneptunesadventure.nes"
     },
     {
-        "name":  "King\u0027s Knight",
-        "romUrl":  "roms/nes/King\u0027s Knight (USA).nes",
-        "console":  "NES"
+        "name":  "kingsknight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kingsknight.nes"
     },
     {
-        "name":  "King\u0027s Quest V",
-        "romUrl":  "roms/nes/King\u0027s Quest V (USA).nes",
-        "console":  "NES"
+        "name":  "kingsofthebeachprofessionalbeachvolleyball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kingsofthebeachprofessionalbeachvolleyball.nes"
     },
     {
-        "name":  "Kings of the Beach - Professional Beach Volleyball",
-        "romUrl":  "roms/nes/Kings of the Beach - Professional Beach Volleyball (USA).nes",
-        "console":  "NES"
+        "name":  "kingsquestv",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kingsquestv.nes"
     },
     {
-        "name":  "Kiwi Kraze - A Bird-Brained Adventure!",
-        "romUrl":  "roms/nes/Kiwi Kraze - A Bird-Brained Adventure! (USA).nes",
-        "console":  "NES"
+        "name":  "kiwikrazeabirdbrainedadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kiwikrazeabirdbrainedadventure.nes"
     },
     {
-        "name":  "Klash Ball",
-        "romUrl":  "roms/nes/Klash Ball (USA).nes",
-        "console":  "NES"
+        "name":  "klashball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/klashball.nes"
     },
     {
-        "name":  "Klax (Unl)",
-        "romUrl":  "roms/nes/Klax (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "klax",
+        "console":  "NES",
+        "romUrl":  "roms/nes/klax.nes"
     },
     {
-        "name":  "Knight Rider",
-        "romUrl":  "roms/nes/Knight Rider (USA).nes",
-        "console":  "NES"
+        "name":  "knightrider",
+        "console":  "NES",
+        "romUrl":  "roms/nes/knightrider.nes"
     },
     {
-        "name":  "Konami Hyper Soccer",
-        "romUrl":  "roms/nes/Konami Hyper Soccer (Europe).nes",
-        "console":  "NES"
+        "name":  "konamihypersoccer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/konamihypersoccer.nes"
     },
     {
-        "name":  "Krazy Kreatures (Unl)",
-        "romUrl":  "roms/nes/Krazy Kreatures (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "krazykreatures",
+        "console":  "NES",
+        "romUrl":  "roms/nes/krazykreatures.nes"
     },
     {
-        "name":  "Krion Conquest, The",
-        "romUrl":  "roms/nes/Krion Conquest, The (USA).nes",
-        "console":  "NES"
+        "name":  "krionconquestthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/krionconquestthe.nes"
     },
     {
-        "name":  "Krusty\u0027s Fun House",
-        "romUrl":  "roms/nes/Krusty\u0027s Fun House (USA).nes",
-        "console":  "NES"
+        "name":  "krustysfunhouse",
+        "console":  "NES",
+        "romUrl":  "roms/nes/krustysfunhouse.nes"
     },
     {
-        "name":  "Kung Fu (Japan, USA)",
-        "romUrl":  "roms/nes/Kung Fu (Japan, USA).nes",
-        "console":  "NES"
+        "name":  "kungfuheroes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kungfuheroes.nes"
     },
     {
-        "name":  "Kung-Fu Heroes",
-        "romUrl":  "roms/nes/Kung-Fu Heroes (USA).nes",
-        "console":  "NES"
+        "name":  "kungfujapanusa",
+        "console":  "NES",
+        "romUrl":  "roms/nes/kungfujapanusa.nes"
     },
     {
-        "name":  "Lan Master (Shiru)",
-        "romUrl":  "roms/nes/Lan Master (Shiru).nes",
-        "console":  "NES"
+        "name":  "lanmastershiru",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lanmastershiru.nes"
     },
     {
-        "name":  "Laser Invasion",
-        "romUrl":  "roms/nes/Laser Invasion (USA).nes",
-        "console":  "NES"
+        "name":  "laserinvasion",
+        "console":  "NES",
+        "romUrl":  "roms/nes/laserinvasion.nes"
     },
     {
-        "name":  "Last Action Hero",
-        "romUrl":  "roms/nes/Last Action Hero (USA).nes",
-        "console":  "NES"
+        "name":  "lastactionhero",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lastactionhero.nes"
     },
     {
-        "name":  "Last Ninja, The",
-        "romUrl":  "roms/nes/Last Ninja, The (USA).nes",
-        "console":  "NES"
+        "name":  "lastninjathe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lastninjathe.nes"
     },
     {
-        "name":  "Last Starfighter, The",
-        "romUrl":  "roms/nes/Last Starfighter, The (USA).nes",
-        "console":  "NES"
+        "name":  "laststarfighterthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/laststarfighterthe.nes"
     },
     {
-        "name":  "Lawn Mower (Shiru)",
-        "romUrl":  "roms/nes/Lawn Mower (Shiru).nes",
-        "console":  "NES"
+        "name":  "lawnmowershiru",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lawnmowershiru.nes"
     },
     {
-        "name":  "Lee Trevino\u0027s Fighting Golf",
-        "romUrl":  "roms/nes/Lee Trevino\u0027s Fighting Golf (USA).nes",
-        "console":  "NES"
+        "name":  "leetrevinosfightinggolf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/leetrevinosfightinggolf.nes"
     },
     {
-        "name":  "Legacy of the Wizard",
-        "romUrl":  "roms/nes/Legacy of the Wizard (USA).nes",
-        "console":  "NES"
+        "name":  "legacyofthewizard",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legacyofthewizard.nes"
     },
     {
-        "name":  "Legend of Kage, The",
-        "romUrl":  "roms/nes/Legend of Kage, The (USA).nes",
-        "console":  "NES"
+        "name":  "legendarywings",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendarywings.nes"
     },
     {
-        "name":  "Legend of Prince Valiant, The",
-        "romUrl":  "roms/nes/Legend of Prince Valiant, The (Europe).nes",
-        "console":  "NES"
+        "name":  "legendofkagethe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendofkagethe.nes"
     },
     {
-        "name":  "Legend of the Ghost Lion",
-        "romUrl":  "roms/nes/Legend of the Ghost Lion (USA).nes",
-        "console":  "NES"
+        "name":  "legendofprincevaliantthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendofprincevaliantthe.nes"
     },
     {
-        "name":  "Legend of Zelda, The (Rev A)",
-        "romUrl":  "roms/nes/Legend of Zelda, The (USA) (Rev A).nes",
-        "console":  "NES"
+        "name":  "legendoftheghostlion",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendoftheghostlion.nes"
     },
     {
-        "name":  "Legendary Wings",
-        "romUrl":  "roms/nes/Legendary Wings (USA).nes",
-        "console":  "NES"
+        "name":  "legendofzeldathereva",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendofzeldathereva.nes"
     },
     {
-        "name":  "Legends of the Diamond - The Baseball Championship Game",
-        "romUrl":  "roms/nes/Legends of the Diamond - The Baseball Championship Game (USA).nes",
-        "console":  "NES"
+        "name":  "legendsofthediamondthebaseballchampionshipgame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/legendsofthediamondthebaseballchampionshipgame.nes"
     },
     {
-        "name":  "Lemmings",
-        "romUrl":  "roms/nes/Lemmings (USA).nes",
-        "console":  "NES"
+        "name":  "lemmings",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lemmings.nes"
     },
     {
-        "name":  "Lethal Weapon",
-        "romUrl":  "roms/nes/Lethal Weapon (USA).nes",
-        "console":  "NES"
+        "name":  "lethalweapon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lethalweapon.nes"
     },
     {
-        "name":  "Life Force",
-        "romUrl":  "roms/nes/Life Force (USA).nes",
-        "console":  "NES"
+        "name":  "lifeforce",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lifeforce.nes"
     },
     {
-        "name":  "Lion King, The",
-        "romUrl":  "roms/nes/Lion King, The (Europe).nes",
-        "console":  "NES"
+        "name":  "lionkingthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lionkingthe.nes"
     },
     {
-        "name":  "Little League Baseball - Championship Series",
-        "romUrl":  "roms/nes/Little League Baseball - Championship Series (USA).nes",
-        "console":  "NES"
+        "name":  "littleleaguebaseballchampionshipseries",
+        "console":  "NES",
+        "romUrl":  "roms/nes/littleleaguebaseballchampionshipseries.nes"
     },
     {
-        "name":  "Little Mermaid, The",
-        "romUrl":  "roms/nes/Little Mermaid, The (USA).nes",
-        "console":  "NES"
+        "name":  "littlemermaidthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/littlemermaidthe.nes"
     },
     {
-        "name":  "Little Nemo - The Dream Master",
-        "romUrl":  "roms/nes/Little Nemo - The Dream Master (USA).nes",
-        "console":  "NES"
+        "name":  "littlenemothedreammaster",
+        "console":  "NES",
+        "romUrl":  "roms/nes/littlenemothedreammaster.nes"
     },
     {
-        "name":  "Little Ninja Brothers",
-        "romUrl":  "roms/nes/Little Ninja Brothers (USA).nes",
-        "console":  "NES"
+        "name":  "littleninjabrothers",
+        "console":  "NES",
+        "romUrl":  "roms/nes/littleninjabrothers.nes"
     },
     {
-        "name":  "Little Samson",
-        "romUrl":  "roms/nes/Little Samson (USA).nes",
-        "console":  "NES"
+        "name":  "littlesamson",
+        "console":  "NES",
+        "romUrl":  "roms/nes/littlesamson.nes"
     },
     {
-        "name":  "Lode Runner",
-        "romUrl":  "roms/nes/Lode Runner (USA).nes",
-        "console":  "NES"
+        "name":  "loderunner",
+        "console":  "NES",
+        "romUrl":  "roms/nes/loderunner.nes"
     },
     {
-        "name":  "Lone Ranger, The",
-        "romUrl":  "roms/nes/Lone Ranger, The (USA).nes",
-        "console":  "NES"
+        "name":  "lonerangerthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lonerangerthe.nes"
     },
     {
-        "name":  "Loopz",
-        "romUrl":  "roms/nes/Loopz (USA).nes",
-        "console":  "NES"
+        "name":  "loopz",
+        "console":  "NES",
+        "romUrl":  "roms/nes/loopz.nes"
     },
     {
-        "name":  "Low G Man - The Low Gravity Man",
-        "romUrl":  "roms/nes/Low G Man - The Low Gravity Man (USA).nes",
-        "console":  "NES"
+        "name":  "lowgmanthelowgravityman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lowgmanthelowgravityman.nes"
     },
     {
-        "name":  "Lunar Pool",
-        "romUrl":  "roms/nes/Lunar Pool (USA).nes",
-        "console":  "NES"
+        "name":  "lunarpool",
+        "console":  "NES",
+        "romUrl":  "roms/nes/lunarpool.nes"
     },
     {
-        "name":  "M C Kids",
-        "romUrl":  "roms/nes/M.C. Kids (USA).nes",
-        "console":  "NES"
+        "name":  "machriderjapanusareva",
+        "console":  "NES",
+        "romUrl":  "roms/nes/machriderjapanusareva.nes"
     },
     {
-        "name":  "M U L E",
-        "romUrl":  "roms/nes/M.U.L.E. (USA).nes",
-        "console":  "NES"
+        "name":  "madmax",
+        "console":  "NES",
+        "romUrl":  "roms/nes/madmax.nes"
     },
     {
-        "name":  "M U S C L E - Tag Team Match",
-        "romUrl":  "roms/nes/M.U.S.C.L.E. - Tag Team Match (USA).nes",
-        "console":  "NES"
+        "name":  "mafatconspiracythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mafatconspiracythe.nes"
     },
     {
-        "name":  "Mach Rider (Japan, USA) (Rev A)",
-        "romUrl":  "roms/nes/Mach Rider (Japan, USA) (Rev A).nes",
-        "console":  "NES"
+        "name":  "magicdarts",
+        "console":  "NES",
+        "romUrl":  "roms/nes/magicdarts.nes"
     },
     {
-        "name":  "Mad Max",
-        "romUrl":  "roms/nes/Mad Max (USA).nes",
-        "console":  "NES"
+        "name":  "magician",
+        "console":  "NES",
+        "romUrl":  "roms/nes/magician.nes"
     },
     {
-        "name":  "Mafat Conspiracy, The",
-        "romUrl":  "roms/nes/Mafat Conspiracy, The (USA).nes",
-        "console":  "NES"
+        "name":  "magicjohnsonsfastbreak",
+        "console":  "NES",
+        "romUrl":  "roms/nes/magicjohnsonsfastbreak.nes"
     },
     {
-        "name":  "Magic Darts",
-        "romUrl":  "roms/nes/Magic Darts (USA).nes",
-        "console":  "NES"
+        "name":  "magicofscheherazadethe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/magicofscheherazadethe.nes"
     },
     {
-        "name":  "Magic Johnson\u0027s Fast Break",
-        "romUrl":  "roms/nes/Magic Johnson\u0027s Fast Break (USA).nes",
-        "console":  "NES"
+        "name":  "magmax",
+        "console":  "NES",
+        "romUrl":  "roms/nes/magmax.nes"
     },
     {
-        "name":  "Magic of Scheherazade, The",
-        "romUrl":  "roms/nes/Magic of Scheherazade, The (USA).nes",
-        "console":  "NES"
+        "name":  "maniacmansion",
+        "console":  "NES",
+        "romUrl":  "roms/nes/maniacmansion.nes"
     },
     {
-        "name":  "Magician",
-        "romUrl":  "roms/nes/Magician (USA).nes",
-        "console":  "NES"
+        "name":  "mappyland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mappyland.nes"
     },
     {
-        "name":  "Magmax",
-        "romUrl":  "roms/nes/Magmax (USA).nes",
-        "console":  "NES"
+        "name":  "marblemadness",
+        "console":  "NES",
+        "romUrl":  "roms/nes/marblemadness.nes"
     },
     {
-        "name":  "Maniac Mansion",
-        "romUrl":  "roms/nes/Maniac Mansion (USA).nes",
-        "console":  "NES"
+        "name":  "mariobros",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mariobros.nes"
     },
     {
-        "name":  "Mappy-Land",
-        "romUrl":  "roms/nes/Mappy-Land (USA).nes",
-        "console":  "NES"
+        "name":  "marioismissing",
+        "console":  "NES",
+        "romUrl":  "roms/nes/marioismissing.nes"
     },
     {
-        "name":  "Marble Madness",
-        "romUrl":  "roms/nes/Marble Madness (USA).nes",
-        "console":  "NES"
+        "name":  "mariostimemachine",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mariostimemachine.nes"
     },
     {
-        "name":  "Mario Bros (World)",
-        "romUrl":  "roms/nes/Mario Bros. (World).nes",
-        "console":  "NES"
+        "name":  "masterchuandthedrunkardhu",
+        "console":  "NES",
+        "romUrl":  "roms/nes/masterchuandthedrunkardhu.nes"
     },
     {
-        "name":  "Mario Is Missing!",
-        "romUrl":  "roms/nes/Mario Is Missing! (USA).nes",
-        "console":  "NES"
+        "name":  "mckids",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mckids.nes"
     },
     {
-        "name":  "Mario\u0027s Time Machine",
-        "romUrl":  "roms/nes/Mario\u0027s Time Machine (USA).nes",
-        "console":  "NES"
+        "name":  "mechanizedattack",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mechanizedattack.nes"
     },
     {
-        "name":  "Master Chu and the Drunkard Hu (Unl)",
-        "romUrl":  "roms/nes/Master Chu and the Drunkard Hu (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "megaman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman.nes"
     },
     {
-        "name":  "Mechanized Attack",
-        "romUrl":  "roms/nes/Mechanized Attack (USA).nes",
-        "console":  "NES"
+        "name":  "megaman2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman2.nes"
     },
     {
-        "name":  "Mega Man",
-        "romUrl":  "roms/nes/Mega Man (USA).nes",
-        "console":  "NES"
+        "name":  "megaman3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman3.nes"
     },
     {
-        "name":  "Mega Man 2",
-        "romUrl":  "roms/nes/Mega Man 2 (USA).nes",
-        "console":  "NES"
+        "name":  "megaman4",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman4.nes"
     },
     {
-        "name":  "Mega Man 3",
-        "romUrl":  "roms/nes/Mega Man 3 (USA).nes",
-        "console":  "NES"
+        "name":  "megaman5",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman5.nes"
     },
     {
-        "name":  "Mega Man 4",
-        "romUrl":  "roms/nes/Mega Man 4 (USA).nes",
-        "console":  "NES"
+        "name":  "megaman6",
+        "console":  "NES",
+        "romUrl":  "roms/nes/megaman6.nes"
     },
     {
-        "name":  "Mega Man 5",
-        "romUrl":  "roms/nes/Mega Man 5 (USA).nes",
-        "console":  "NES"
+        "name":  "menacebeach",
+        "console":  "NES",
+        "romUrl":  "roms/nes/menacebeach.nes"
     },
     {
-        "name":  "Mega Man 6",
-        "romUrl":  "roms/nes/Mega Man 6 (USA).nes",
-        "console":  "NES"
+        "name":  "mendelpalace",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mendelpalace.nes"
     },
     {
-        "name":  "Menace Beach (Unl)",
-        "romUrl":  "roms/nes/Menace Beach (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "mermaidsofatlantistheriddleofthemagicbubble",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mermaidsofatlantistheriddleofthemagicbubble.nes"
     },
     {
-        "name":  "Mendel Palace",
-        "romUrl":  "roms/nes/Mendel Palace (USA).nes",
-        "console":  "NES"
+        "name":  "metalfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/metalfighter.nes"
     },
     {
-        "name":  "Mermaids of Atlantis - The Riddle of the Magic Bubble (Unl)",
-        "romUrl":  "roms/nes/Mermaids of Atlantis - The Riddle of the Magic Bubble (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "metalgear",
+        "console":  "NES",
+        "romUrl":  "roms/nes/metalgear.nes"
     },
     {
-        "name":  "Metal Fighter (Unl)",
-        "romUrl":  "roms/nes/Metal Fighter (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "metalmechmanandmachine",
+        "console":  "NES",
+        "romUrl":  "roms/nes/metalmechmanandmachine.nes"
     },
     {
-        "name":  "Metal Gear",
-        "romUrl":  "roms/nes/Metal Gear (USA).nes",
-        "console":  "NES"
+        "name":  "metalstorm",
+        "console":  "NES",
+        "romUrl":  "roms/nes/metalstorm.nes"
     },
     {
-        "name":  "Metal Mech - Man \u0026 Machine",
-        "romUrl":  "roms/nes/Metal Mech - Man \u0026 Machine (USA).nes",
-        "console":  "NES"
+        "name":  "metroid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/metroid.nes"
     },
     {
-        "name":  "Metal Storm",
-        "romUrl":  "roms/nes/Metal Storm (USA).nes",
-        "console":  "NES"
+        "name":  "michaelandrettisworldgp",
+        "console":  "NES",
+        "romUrl":  "roms/nes/michaelandrettisworldgp.nes"
     },
     {
-        "name":  "Metroid",
-        "romUrl":  "roms/nes/Metroid (USA).nes",
-        "console":  "NES"
+        "name":  "mickeymousecapade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mickeymousecapade.nes"
     },
     {
-        "name":  "Michael Andretti\u0027s World GP",
-        "romUrl":  "roms/nes/Michael Andretti\u0027s World GP (USA).nes",
-        "console":  "NES"
+        "name":  "mickeysadventureinnumberland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mickeysadventureinnumberland.nes"
     },
     {
-        "name":  "Mickey Mousecapade",
-        "romUrl":  "roms/nes/Mickey Mousecapade (USA).nes",
-        "console":  "NES"
+        "name":  "mickeyssafariinletterland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mickeyssafariinletterland.nes"
     },
     {
-        "name":  "Mickey\u0027s Adventure in Numberland",
-        "romUrl":  "roms/nes/Mickey\u0027s Adventure in Numberland (USA).nes",
-        "console":  "NES"
+        "name":  "micromachines",
+        "console":  "NES",
+        "romUrl":  "roms/nes/micromachines.nes"
     },
     {
-        "name":  "Mickey\u0027s Safari in Letterland",
-        "romUrl":  "roms/nes/Mickey\u0027s Safari in Letterland (USA).nes",
-        "console":  "NES"
+        "name":  "mig29sovietfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mig29sovietfighter.nes"
     },
     {
-        "name":  "Micro Machines (Unl)",
-        "romUrl":  "roms/nes/Micro Machines (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "mightandmagicsecretoftheinnersanctum",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mightandmagicsecretoftheinnersanctum.nes"
     },
     {
-        "name":  "MiG 29 - Soviet Fighter (Unl)",
-        "romUrl":  "roms/nes/MiG 29 - Soviet Fighter (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "mightybombjack",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mightybombjack.nes"
     },
     {
-        "name":  "Might \u0026 Magic - Secret of the Inner Sanctum",
-        "romUrl":  "roms/nes/Might \u0026 Magic - Secret of the Inner Sanctum (USA).nes",
-        "console":  "NES"
+        "name":  "mightyfinalfight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mightyfinalfight.nes"
     },
     {
-        "name":  "Mighty Bomb Jack",
-        "romUrl":  "roms/nes/Mighty Bomb Jack (USA).nes",
-        "console":  "NES"
+        "name":  "millipede",
+        "console":  "NES",
+        "romUrl":  "roms/nes/millipede.nes"
     },
     {
-        "name":  "Mighty Final Fight",
-        "romUrl":  "roms/nes/Mighty Final Fight (USA).nes",
-        "console":  "NES"
+        "name":  "milonssecretcastle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/milonssecretcastle.nes"
     },
     {
-        "name":  "Millipede",
-        "romUrl":  "roms/nes/Millipede (USA).nes",
-        "console":  "NES"
+        "name":  "missioncobra",
+        "console":  "NES",
+        "romUrl":  "roms/nes/missioncobra.nes"
     },
     {
-        "name":  "Milon\u0027s Secret Castle",
-        "romUrl":  "roms/nes/Milon\u0027s Secret Castle (USA).nes",
-        "console":  "NES"
+        "name":  "missionimpossible",
+        "console":  "NES",
+        "romUrl":  "roms/nes/missionimpossible.nes"
     },
     {
-        "name":  "Mission Cobra (Unl)",
-        "romUrl":  "roms/nes/Mission Cobra (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "monopoly",
+        "console":  "NES",
+        "romUrl":  "roms/nes/monopoly.nes"
     },
     {
-        "name":  "Mission Impossible",
-        "romUrl":  "roms/nes/Mission Impossible (USA).nes",
-        "console":  "NES"
+        "name":  "monsterinmypocket",
+        "console":  "NES",
+        "romUrl":  "roms/nes/monsterinmypocket.nes"
     },
     {
-        "name":  "Monopoly",
-        "romUrl":  "roms/nes/Monopoly (USA).nes",
-        "console":  "NES"
+        "name":  "monsterparty",
+        "console":  "NES",
+        "romUrl":  "roms/nes/monsterparty.nes"
     },
     {
-        "name":  "Monster in My Pocket",
-        "romUrl":  "roms/nes/Monster in My Pocket (USA).nes",
-        "console":  "NES"
+        "name":  "monstertruckrally",
+        "console":  "NES",
+        "romUrl":  "roms/nes/monstertruckrally.nes"
     },
     {
-        "name":  "Monster Party",
-        "romUrl":  "roms/nes/Monster Party (USA).nes",
-        "console":  "NES"
+        "name":  "moonranger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/moonranger.nes"
     },
     {
-        "name":  "Monster Truck Rally",
-        "romUrl":  "roms/nes/Monster Truck Rally (USA).nes",
-        "console":  "NES"
+        "name":  "motorcitypatrol",
+        "console":  "NES",
+        "romUrl":  "roms/nes/motorcitypatrol.nes"
     },
     {
-        "name":  "Moon Ranger (Unl)",
-        "romUrl":  "roms/nes/Moon Ranger (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "mrgimmick",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mrgimmick.nes"
     },
     {
-        "name":  "Motor City Patrol",
-        "romUrl":  "roms/nes/Motor City Patrol (USA).nes",
-        "console":  "NES"
+        "name":  "mspacman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mspacman.nes"
     },
     {
-        "name":  "Mr Gimmick",
-        "romUrl":  "roms/nes/Mr. Gimmick (Europe).nes",
-        "console":  "NES"
+        "name":  "mule",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mule.nes"
     },
     {
-        "name":  "Ms Pac-Man",
-        "romUrl":  "roms/nes/Ms. Pac-Man (USA).nes",
-        "console":  "NES"
+        "name":  "muppetadventurechaosatthecarnival",
+        "console":  "NES",
+        "romUrl":  "roms/nes/muppetadventurechaosatthecarnival.nes"
     },
     {
-        "name":  "Muppet Adventure - Chaos at the Carnival",
-        "romUrl":  "roms/nes/Muppet Adventure - Chaos at the Carnival (USA).nes",
-        "console":  "NES"
+        "name":  "muscletagteammatch",
+        "console":  "NES",
+        "romUrl":  "roms/nes/muscletagteammatch.nes"
     },
     {
-        "name":  "Mutant Virus, The - Crisis in a Computer World",
-        "romUrl":  "roms/nes/Mutant Virus, The - Crisis in a Computer World (USA).nes",
-        "console":  "NES"
+        "name":  "mutantvirusthecrisisinacomputerworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mutantvirusthecrisisinacomputerworld.nes"
     },
     {
-        "name":  "Mystery Quest",
-        "romUrl":  "roms/nes/Mystery Quest (USA).nes",
-        "console":  "NES"
+        "name":  "mysteryquest",
+        "console":  "NES",
+        "romUrl":  "roms/nes/mysteryquest.nes"
     },
     {
-        "name":  "NARC",
-        "romUrl":  "roms/nes/NARC (USA).nes",
-        "console":  "NES"
+        "name":  "narc",
+        "console":  "NES",
+        "romUrl":  "roms/nes/narc.nes"
     },
     {
-        "name":  "NES Open Tournament Golf",
-        "romUrl":  "roms/nes/NES Open Tournament Golf (USA).nes",
-        "console":  "NES"
+        "name":  "nesopentournamentgolf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nesopentournamentgolf.nes"
     },
     {
-        "name":  "NES Play Action Football",
-        "romUrl":  "roms/nes/NES Play Action Football (USA).nes",
-        "console":  "NES"
+        "name":  "nesplayactionfootball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nesplayactionfootball.nes"
     },
     {
-        "name":  "New Ghostbusters II",
-        "romUrl":  "roms/nes/New Ghostbusters II (Europe).nes",
-        "console":  "NES"
+        "name":  "newghostbustersii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/newghostbustersii.nes"
     },
     {
-        "name":  "New Zealand Story, The",
-        "romUrl":  "roms/nes/New Zealand Story, The (Europe).nes",
-        "console":  "NES"
+        "name":  "newzealandstorythe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/newzealandstorythe.nes"
     },
     {
-        "name":  "NFL",
-        "romUrl":  "roms/nes/NFL (USA).nes",
-        "console":  "NES"
+        "name":  "nfl",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nfl.nes"
     },
     {
-        "name":  "Nigel Mansell\u0027s World Championship Challenge",
-        "romUrl":  "roms/nes/Nigel Mansell\u0027s World Championship Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "nigelmansellsworldchampionshipchallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nigelmansellsworldchampionshipchallenge.nes"
     },
     {
-        "name":  "Nightmare on Elm Street, A",
-        "romUrl":  "roms/nes/Nightmare on Elm Street, A (USA).nes",
-        "console":  "NES"
+        "name":  "nightmareonelmstreeta",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nightmareonelmstreeta.nes"
     },
     {
-        "name":  "Nightshade",
-        "romUrl":  "roms/nes/Nightshade (USA).nes",
-        "console":  "NES"
+        "name":  "nightshade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nightshade.nes"
     },
     {
-        "name":  "Ninja Crusaders",
-        "romUrl":  "roms/nes/Ninja Crusaders (USA).nes",
-        "console":  "NES"
+        "name":  "ninjacrusaders",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ninjacrusaders.nes"
     },
     {
-        "name":  "Ninja Gaiden",
-        "romUrl":  "roms/nes/Ninja Gaiden (USA).nes",
-        "console":  "NES"
+        "name":  "ninjagaiden",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ninjagaiden.nes"
     },
     {
-        "name":  "Ninja Gaiden II - The Dark Sword of Chaos",
-        "romUrl":  "roms/nes/Ninja Gaiden II - The Dark Sword of Chaos (USA).nes",
-        "console":  "NES"
+        "name":  "ninjagaideniiitheancientshipofdoom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ninjagaideniiitheancientshipofdoom.nes"
     },
     {
-        "name":  "Ninja Gaiden III - The Ancient Ship of Doom",
-        "romUrl":  "roms/nes/Ninja Gaiden III - The Ancient Ship of Doom (USA).nes",
-        "console":  "NES"
+        "name":  "ninjagaideniithedarkswordofchaos",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ninjagaideniithedarkswordofchaos.nes"
     },
     {
-        "name":  "Ninja Kid",
-        "romUrl":  "roms/nes/Ninja Kid (USA).nes",
-        "console":  "NES"
+        "name":  "ninjakid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ninjakid.nes"
     },
     {
-        "name":  "Nintendo World Championships 1990",
-        "romUrl":  "roms/nes/Nintendo World Championships 1990 (USA).nes",
-        "console":  "NES"
+        "name":  "nintendoworldchampionships1990",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nintendoworldchampionships1990.nes"
     },
     {
-        "name":  "Nintendo World Cup",
-        "romUrl":  "roms/nes/Nintendo World Cup (USA).nes",
-        "console":  "NES"
+        "name":  "nintendoworldcup",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nintendoworldcup.nes"
     },
     {
-        "name":  "Noah\u0027s Ark",
-        "romUrl":  "roms/nes/Noah\u0027s Ark (Europe).nes",
-        "console":  "NES"
+        "name":  "noahsark",
+        "console":  "NES",
+        "romUrl":  "roms/nes/noahsark.nes"
     },
     {
-        "name":  "Nobunaga\u0027s Ambition",
-        "romUrl":  "roms/nes/Nobunaga\u0027s Ambition (USA).nes",
-        "console":  "NES"
+        "name":  "nobunagasambition",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nobunagasambition.nes"
     },
     {
-        "name":  "Nobunaga\u0027s Ambition II",
-        "romUrl":  "roms/nes/Nobunaga\u0027s Ambition II (USA).nes",
-        "console":  "NES"
+        "name":  "nobunagasambitionii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/nobunagasambitionii.nes"
     },
     {
-        "name":  "North and South",
-        "romUrl":  "roms/nes/North and South (USA).nes",
-        "console":  "NES"
+        "name":  "northandsouth",
+        "console":  "NES",
+        "romUrl":  "roms/nes/northandsouth.nes"
     },
     {
-        "name":  "Operation Secret Storm (Unl)",
-        "romUrl":  "roms/nes/Operation Secret Storm (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "operationsecretstorm",
+        "console":  "NES",
+        "romUrl":  "roms/nes/operationsecretstorm.nes"
     },
     {
-        "name":  "Orb 3D",
-        "romUrl":  "roms/nes/Orb 3D (USA).nes",
-        "console":  "NES"
+        "name":  "orb3d",
+        "console":  "NES",
+        "romUrl":  "roms/nes/orb3d.nes"
     },
     {
-        "name":  "Othello",
-        "romUrl":  "roms/nes/Othello (USA).nes",
-        "console":  "NES"
+        "name":  "othello",
+        "console":  "NES",
+        "romUrl":  "roms/nes/othello.nes"
     },
     {
-        "name":  "Over Horizon",
-        "romUrl":  "roms/nes/Over Horizon (Europe).nes",
-        "console":  "NES"
+        "name":  "overhorizon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/overhorizon.nes"
     },
     {
-        "name":  "Overlord",
-        "romUrl":  "roms/nes/Overlord (USA).nes",
-        "console":  "NES"
+        "name":  "overlord",
+        "console":  "NES",
+        "romUrl":  "roms/nes/overlord.nes"
     },
     {
-        "name":  "P\u0027radikus Conflict, The (Unl)",
-        "romUrl":  "roms/nes/P\u0027radikus Conflict, The (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "pacmania",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pacmania.nes"
     },
     {
-        "name":  "P O W - Prisoners of War",
-        "romUrl":  "roms/nes/P.O.W. - Prisoners of War (USA).nes",
-        "console":  "NES"
+        "name":  "pacmantengen",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pacmantengen.nes"
     },
     {
-        "name":  "Pac-Man (Tengen)",
-        "romUrl":  "roms/nes/Pac-Man (USA) (Tengen).nes",
-        "console":  "NES"
+        "name":  "palamedes",
+        "console":  "NES",
+        "romUrl":  "roms/nes/palamedes.nes"
     },
     {
-        "name":  "Pac-Mania (Unl)",
-        "romUrl":  "roms/nes/Pac-Mania (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "panicrestaurant",
+        "console":  "NES",
+        "romUrl":  "roms/nes/panicrestaurant.nes"
     },
     {
-        "name":  "Palamedes",
-        "romUrl":  "roms/nes/Palamedes (USA).nes",
-        "console":  "NES"
+        "name":  "paperboy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/paperboy.nes"
     },
     {
-        "name":  "Panic Restaurant",
-        "romUrl":  "roms/nes/Panic Restaurant (USA).nes",
-        "console":  "NES"
+        "name":  "paperboy2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/paperboy2.nes"
     },
     {
-        "name":  "Paperboy",
-        "romUrl":  "roms/nes/Paperboy (USA).nes",
-        "console":  "NES"
+        "name":  "parodius",
+        "console":  "NES",
+        "romUrl":  "roms/nes/parodius.nes"
     },
     {
-        "name":  "Paperboy 2",
-        "romUrl":  "roms/nes/Paperboy 2 (USA).nes",
-        "console":  "NES"
+        "name":  "pesterminator",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pesterminator.nes"
     },
     {
-        "name":  "Parodius",
-        "romUrl":  "roms/nes/Parodius (Europe).nes",
-        "console":  "NES"
+        "name":  "phantomfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/phantomfighter.nes"
     },
     {
-        "name":  "Pesterminator (Unl)",
-        "romUrl":  "roms/nes/Pesterminator (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "pictionarythegameofvideoquickdraw",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pictionarythegameofvideoquickdraw.nes"
     },
     {
-        "name":  "Phantom Fighter",
-        "romUrl":  "roms/nes/Phantom Fighter (USA).nes",
-        "console":  "NES"
+        "name":  "pinball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pinball.nes"
     },
     {
-        "name":  "Pictionary - The Game of Video Quick Draw",
-        "romUrl":  "roms/nes/Pictionary - The Game of Video Quick Draw (USA).nes",
-        "console":  "NES"
+        "name":  "pinballquest",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pinballquest.nes"
     },
     {
-        "name":  "Pinball (World)",
-        "romUrl":  "roms/nes/Pinball (World).nes",
-        "console":  "NES"
+        "name":  "pipedream",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pipedream.nes"
     },
     {
-        "name":  "Pinball Quest",
-        "romUrl":  "roms/nes/Pinball Quest (USA).nes",
-        "console":  "NES"
+        "name":  "pirates",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pirates.nes"
     },
     {
-        "name":  "Pipe Dream",
-        "romUrl":  "roms/nes/Pipe Dream (USA).nes",
-        "console":  "NES"
+        "name":  "powerblade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/powerblade.nes"
     },
     {
-        "name":  "Pirates!",
-        "romUrl":  "roms/nes/Pirates! (USA).nes",
-        "console":  "NES"
+        "name":  "powerblade2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/powerblade2.nes"
     },
     {
-        "name":  "Power Blade",
-        "romUrl":  "roms/nes/Power Blade (USA).nes",
-        "console":  "NES"
+        "name":  "powerpunchii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/powerpunchii.nes"
     },
     {
-        "name":  "Power Blade 2",
-        "romUrl":  "roms/nes/Power Blade 2 (USA).nes",
-        "console":  "NES"
+        "name":  "powprisonersofwar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/powprisonersofwar.nes"
     },
     {
-        "name":  "Power Punch II",
-        "romUrl":  "roms/nes/Power Punch II (USA).nes",
-        "console":  "NES"
+        "name":  "pradikusconflictthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pradikusconflictthe.nes"
     },
     {
-        "name":  "Predator",
-        "romUrl":  "roms/nes/Predator (USA).nes",
-        "console":  "NES"
+        "name":  "predator",
+        "console":  "NES",
+        "romUrl":  "roms/nes/predator.nes"
     },
     {
-        "name":  "Prince of Persia",
-        "romUrl":  "roms/nes/Prince of Persia (USA).nes",
-        "console":  "NES"
+        "name":  "princeofpersia",
+        "console":  "NES",
+        "romUrl":  "roms/nes/princeofpersia.nes"
     },
     {
-        "name":  "Princess Tomato in Salad Kingdom",
-        "romUrl":  "roms/nes/Princess Tomato in Salad Kingdom (USA).nes",
-        "console":  "NES"
+        "name":  "princesstomatoinsaladkingdom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/princesstomatoinsaladkingdom.nes"
     },
     {
-        "name":  "Pro Sport Hockey",
-        "romUrl":  "roms/nes/Pro Sport Hockey (USA).nes",
-        "console":  "NES"
+        "name":  "prosporthockey",
+        "console":  "NES",
+        "romUrl":  "roms/nes/prosporthockey.nes"
     },
     {
-        "name":  "Punch-Out!!",
-        "romUrl":  "roms/nes/Punch-Out!! (USA).nes",
-        "console":  "NES"
+        "name":  "punchout",
+        "console":  "NES",
+        "romUrl":  "roms/nes/punchout.nes"
     },
     {
-        "name":  "Punisher, The",
-        "romUrl":  "roms/nes/Punisher, The (USA).nes",
-        "console":  "NES"
+        "name":  "punisherthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/punisherthe.nes"
     },
     {
-        "name":  "Puss n Boots - Pero\u0027s Great Adventure",
-        "romUrl":  "roms/nes/Puss n Boots - Pero\u0027s Great Adventure (USA).nes",
-        "console":  "NES"
+        "name":  "pussnbootsperosgreatadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/pussnbootsperosgreatadventure.nes"
     },
     {
-        "name":  "Puzzle (Unl)",
-        "romUrl":  "roms/nes/Puzzle (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "puzzle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/puzzle.nes"
     },
     {
-        "name":  "Puzznic",
-        "romUrl":  "roms/nes/Puzznic (USA).nes",
-        "console":  "NES"
+        "name":  "puzznic",
+        "console":  "NES",
+        "romUrl":  "roms/nes/puzznic.nes"
     },
     {
-        "name":  "Q-bert",
-        "romUrl":  "roms/nes/Q-bert (USA).nes",
-        "console":  "NES"
+        "name":  "qbert",
+        "console":  "NES",
+        "romUrl":  "roms/nes/qbert.nes"
     },
     {
-        "name":  "Quattro Adventure (Unl)",
-        "romUrl":  "roms/nes/Quattro Adventure (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "quattroadventure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/quattroadventure.nes"
     },
     {
-        "name":  "Quattro Arcade (Unl)",
-        "romUrl":  "roms/nes/Quattro Arcade (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "quattroarcade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/quattroarcade.nes"
     },
     {
-        "name":  "Quattro Sports (Unl)",
-        "romUrl":  "roms/nes/Quattro Sports (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "quattrosports",
+        "console":  "NES",
+        "romUrl":  "roms/nes/quattrosports.nes"
     },
     {
-        "name":  "R B I Baseball",
-        "romUrl":  "roms/nes/R.B.I. Baseball (USA).nes",
-        "console":  "NES"
+        "name":  "raceamerica",
+        "console":  "NES",
+        "romUrl":  "roms/nes/raceamerica.nes"
     },
     {
-        "name":  "R B I Baseball 2 (Unl)",
-        "romUrl":  "roms/nes/R.B.I. Baseball 2 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "racketattack",
+        "console":  "NES",
+        "romUrl":  "roms/nes/racketattack.nes"
     },
     {
-        "name":  "R B I Baseball 3 (Unl)",
-        "romUrl":  "roms/nes/R.B.I. Baseball 3 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "racketsandrivals",
+        "console":  "NES",
+        "romUrl":  "roms/nes/racketsandrivals.nes"
     },
     {
-        "name":  "R C Pro-Am II",
-        "romUrl":  "roms/nes/R.C. Pro-Am II (USA).nes",
-        "console":  "NES"
+        "name":  "radracer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/radracer.nes"
     },
     {
-        "name":  "Race America",
-        "romUrl":  "roms/nes/Race America (USA).nes",
-        "console":  "NES"
+        "name":  "radracerii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/radracerii.nes"
     },
     {
-        "name":  "Racket Attack",
-        "romUrl":  "roms/nes/Racket Attack (USA).nes",
-        "console":  "NES"
+        "name":  "radracketdeluxetennisii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/radracketdeluxetennisii.nes"
     },
     {
-        "name":  "Rackets \u0026 Rivals",
-        "romUrl":  "roms/nes/Rackets \u0026 Rivals (Europe).nes",
-        "console":  "NES"
+        "name":  "raid2020",
+        "console":  "NES",
+        "romUrl":  "roms/nes/raid2020.nes"
     },
     {
-        "name":  "Rad Racer",
-        "romUrl":  "roms/nes/Rad Racer (USA).nes",
-        "console":  "NES"
+        "name":  "raidonbungelingbay",
+        "console":  "NES",
+        "romUrl":  "roms/nes/raidonbungelingbay.nes"
     },
     {
-        "name":  "Rad Racer II",
-        "romUrl":  "roms/nes/Rad Racer II (USA).nes",
-        "console":  "NES"
+        "name":  "rainbowislands",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rainbowislands.nes"
     },
     {
-        "name":  "Rad Racket - Deluxe Tennis II (Unl)",
-        "romUrl":  "roms/nes/Rad Racket - Deluxe Tennis II (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "rallybike",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rallybike.nes"
     },
     {
-        "name":  "Raid 2020 (Unl)",
-        "romUrl":  "roms/nes/Raid 2020 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "ramboreva",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ramboreva.nes"
     },
     {
-        "name":  "Raid on Bungeling Bay",
-        "romUrl":  "roms/nes/Raid on Bungeling Bay (USA).nes",
-        "console":  "NES"
+        "name":  "rampage",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rampage.nes"
     },
     {
-        "name":  "Rainbow Islands",
-        "romUrl":  "roms/nes/Rainbow Islands (USA).nes",
-        "console":  "NES"
+        "name":  "rampart",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rampart.nes"
     },
     {
-        "name":  "Rally Bike",
-        "romUrl":  "roms/nes/Rally Bike (USA).nes",
-        "console":  "NES"
+        "name":  "rbibaseball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rbibaseball.nes"
     },
     {
-        "name":  "Rambo (Rev A)",
-        "romUrl":  "roms/nes/Rambo (USA) (Rev A).nes",
-        "console":  "NES"
+        "name":  "rbibaseball2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rbibaseball2.nes"
     },
     {
-        "name":  "Rampage",
-        "romUrl":  "roms/nes/Rampage (USA).nes",
-        "console":  "NES"
+        "name":  "rbibaseball3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rbibaseball3.nes"
     },
     {
-        "name":  "Rampart",
-        "romUrl":  "roms/nes/Rampart (USA).nes",
-        "console":  "NES"
+        "name":  "rcproamii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rcproamii.nes"
     },
     {
-        "name":  "Remote Control",
-        "romUrl":  "roms/nes/Remote Control (USA).nes",
-        "console":  "NES"
+        "name":  "remotecontrol",
+        "console":  "NES",
+        "romUrl":  "roms/nes/remotecontrol.nes"
     },
     {
-        "name":  "Ren \u0026 Stimpy Show, The - Buckeroo$!",
-        "romUrl":  "roms/nes/Ren \u0026 Stimpy Show, The - Buckeroo$! (USA).nes",
-        "console":  "NES"
+        "name":  "renandstimpyshowthebuckeroo",
+        "console":  "NES",
+        "romUrl":  "roms/nes/renandstimpyshowthebuckeroo.nes"
     },
     {
-        "name":  "Renegade",
-        "romUrl":  "roms/nes/Renegade (USA).nes",
-        "console":  "NES"
+        "name":  "renegade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/renegade.nes"
     },
     {
-        "name":  "Rescue - The Embassy Mission",
-        "romUrl":  "roms/nes/Rescue - The Embassy Mission (USA).nes",
-        "console":  "NES"
+        "name":  "rescuetheembassymission",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rescuetheembassymission.nes"
     },
     {
-        "name":  "Ring King",
-        "romUrl":  "roms/nes/Ring King (USA).nes",
-        "console":  "NES"
+        "name":  "ringking",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ringking.nes"
     },
     {
-        "name":  "River City Ransom",
-        "romUrl":  "roms/nes/River City Ransom (USA).nes",
-        "console":  "NES"
+        "name":  "rivercityransom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rivercityransom.nes"
     },
     {
-        "name":  "Road Fighter",
-        "romUrl":  "roms/nes/Road Fighter (Europe).nes",
-        "console":  "NES"
+        "name":  "roadblasters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/roadblasters.nes"
     },
     {
-        "name":  "Road Runner (Unl)",
-        "romUrl":  "roms/nes/Road Runner (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "roadfighter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/roadfighter.nes"
     },
     {
-        "name":  "RoadBlasters",
-        "romUrl":  "roms/nes/RoadBlasters (USA).nes",
-        "console":  "NES"
+        "name":  "roadrunner",
+        "console":  "NES",
+        "romUrl":  "roms/nes/roadrunner.nes"
     },
     {
-        "name":  "Robo Warrior",
-        "romUrl":  "roms/nes/Robo Warrior (USA).nes",
-        "console":  "NES"
+        "name":  "robocop",
+        "console":  "NES",
+        "romUrl":  "roms/nes/robocop.nes"
     },
     {
-        "name":  "RoboCop",
-        "romUrl":  "roms/nes/RoboCop (USA).nes",
-        "console":  "NES"
+        "name":  "robocop2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/robocop2.nes"
     },
     {
-        "name":  "RoboCop 2",
-        "romUrl":  "roms/nes/RoboCop 2 (USA).nes",
-        "console":  "NES"
+        "name":  "robocop3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/robocop3.nes"
     },
     {
-        "name":  "RoboCop 3",
-        "romUrl":  "roms/nes/RoboCop 3 (USA).nes",
-        "console":  "NES"
+        "name":  "robodemons",
+        "console":  "NES",
+        "romUrl":  "roms/nes/robodemons.nes"
     },
     {
-        "name":  "Robodemons (Unl)",
-        "romUrl":  "roms/nes/Robodemons (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "robowarrior",
+        "console":  "NES",
+        "romUrl":  "roms/nes/robowarrior.nes"
     },
     {
-        "name":  "Rock \u0027n\u0027 Ball",
-        "romUrl":  "roms/nes/Rock \u0027n\u0027 Ball (USA).nes",
-        "console":  "NES"
+        "name":  "rocketeerthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rocketeerthe.nes"
     },
     {
-        "name":  "Rocket Ranger",
-        "romUrl":  "roms/nes/Rocket Ranger (USA).nes",
-        "console":  "NES"
+        "name":  "rocketranger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rocketranger.nes"
     },
     {
-        "name":  "Rocketeer, The",
-        "romUrl":  "roms/nes/Rocketeer, The (USA).nes",
-        "console":  "NES"
+        "name":  "rockinkats",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rockinkats.nes"
     },
     {
-        "name":  "Rockin\u0027 Kats",
-        "romUrl":  "roms/nes/Rockin\u0027 Kats (USA).nes",
-        "console":  "NES"
+        "name":  "rocknball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rocknball.nes"
     },
     {
-        "name":  "Rod Land",
-        "romUrl":  "roms/nes/Rod Land (Europe).nes",
-        "console":  "NES"
+        "name":  "rodland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rodland.nes"
     },
     {
-        "name":  "Roger Clemens\u0027 MVP Baseball",
-        "romUrl":  "roms/nes/Roger Clemens\u0027 MVP Baseball (USA).nes",
-        "console":  "NES"
+        "name":  "rogerclemensmvpbaseball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rogerclemensmvpbaseball.nes"
     },
     {
-        "name":  "Rollerball",
-        "romUrl":  "roms/nes/Rollerball (USA).nes",
-        "console":  "NES"
+        "name":  "rollerball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rollerball.nes"
     },
     {
-        "name":  "Rollerblade Racer",
-        "romUrl":  "roms/nes/Rollerblade Racer (USA).nes",
-        "console":  "NES"
+        "name":  "rollerbladeracer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rollerbladeracer.nes"
     },
     {
-        "name":  "Rollergames",
-        "romUrl":  "roms/nes/Rollergames (USA).nes",
-        "console":  "NES"
+        "name":  "rollergames",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rollergames.nes"
     },
     {
-        "name":  "Rolling Thunder (Unl)",
-        "romUrl":  "roms/nes/Rolling Thunder (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "rollingthunder",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rollingthunder.nes"
     },
     {
-        "name":  "Romance of the Three Kingdoms",
-        "romUrl":  "roms/nes/Romance of the Three Kingdoms (USA).nes",
-        "console":  "NES"
+        "name":  "romanceofthethreekingdoms",
+        "console":  "NES",
+        "romUrl":  "roms/nes/romanceofthethreekingdoms.nes"
     },
     {
-        "name":  "Romance of the Three Kingdoms II",
-        "romUrl":  "roms/nes/Romance of the Three Kingdoms II (USA).nes",
-        "console":  "NES"
+        "name":  "romanceofthethreekingdomsii",
+        "console":  "NES",
+        "romUrl":  "roms/nes/romanceofthethreekingdomsii.nes"
     },
     {
-        "name":  "Roundball - 2-on-2 Challenge",
-        "romUrl":  "roms/nes/Roundball - 2-on-2 Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "roundball2on2challenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/roundball2on2challenge.nes"
     },
     {
-        "name":  "Rush\u0027n Attack",
-        "romUrl":  "roms/nes/Rush\u0027n Attack (USA).nes",
-        "console":  "NES"
+        "name":  "rushnattack",
+        "console":  "NES",
+        "romUrl":  "roms/nes/rushnattack.nes"
     },
     {
-        "name":  "S C A T - Special Cybernetic Attack Team",
-        "romUrl":  "roms/nes/S.C.A.T. - Special Cybernetic Attack Team (USA).nes",
-        "console":  "NES"
+        "name":  "scatspecialcyberneticattackteam",
+        "console":  "NES",
+        "romUrl":  "roms/nes/scatspecialcyberneticattackteam.nes"
     },
     {
-        "name":  "Secret Scout in the Temple of Demise (Unl)",
-        "romUrl":  "roms/nes/Secret Scout in the Temple of Demise (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "secretscoutinthetempleofdemise",
+        "console":  "NES",
+        "romUrl":  "roms/nes/secretscoutinthetempleofdemise.nes"
     },
     {
-        "name":  "Section-Z",
-        "romUrl":  "roms/nes/Section-Z (USA).nes",
-        "console":  "NES"
+        "name":  "sectionz",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sectionz.nes"
     },
     {
-        "name":  "Seicross",
-        "romUrl":  "roms/nes/Seicross (USA).nes",
-        "console":  "NES"
+        "name":  "seicross",
+        "console":  "NES",
+        "romUrl":  "roms/nes/seicross.nes"
     },
     {
-        "name":  "Sesame Street - Big Bird\u0027s Hide \u0026 Speak",
-        "romUrl":  "roms/nes/Sesame Street - Big Bird\u0027s Hide \u0026 Speak (USA).nes",
-        "console":  "NES"
+        "name":  "sesamestreet123",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sesamestreet123.nes"
     },
     {
-        "name":  "Sesame Street 123",
-        "romUrl":  "roms/nes/Sesame Street 123 (USA).nes",
-        "console":  "NES"
+        "name":  "sesamestreetabc",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sesamestreetabc.nes"
     },
     {
-        "name":  "Sesame Street ABC \u0026 123",
-        "romUrl":  "roms/nes/Sesame Street ABC \u0026 123 (USA).nes",
-        "console":  "NES"
+        "name":  "sesamestreetabcand123",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sesamestreetabcand123.nes"
     },
     {
-        "name":  "Sesame Street ABC",
-        "romUrl":  "roms/nes/Sesame Street ABC (USA).nes",
-        "console":  "NES"
+        "name":  "sesamestreetbigbirdshideandspeak",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sesamestreetbigbirdshideandspeak.nes"
     },
     {
-        "name":  "Sesame Street Countdown",
-        "romUrl":  "roms/nes/Sesame Street Countdown (USA).nes",
-        "console":  "NES"
+        "name":  "sesamestreetcountdown",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sesamestreetcountdown.nes"
     },
     {
-        "name":  "Shadow of the Ninja",
-        "romUrl":  "roms/nes/Shadow of the Ninja (USA).nes",
-        "console":  "NES"
+        "name":  "shadowgate",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shadowgate.nes"
     },
     {
-        "name":  "Shadowgate",
-        "romUrl":  "roms/nes/Shadowgate (USA).nes",
-        "console":  "NES"
+        "name":  "shadowoftheninja",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shadowoftheninja.nes"
     },
     {
-        "name":  "Shatterhand",
-        "romUrl":  "roms/nes/Shatterhand (USA).nes",
-        "console":  "NES"
+        "name":  "shatterhand",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shatterhand.nes"
     },
     {
-        "name":  "Shingen the Ruler",
-        "romUrl":  "roms/nes/Shingen the Ruler (USA).nes",
-        "console":  "NES"
+        "name":  "shingentheruler",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shingentheruler.nes"
     },
     {
-        "name":  "Shinobi (Unl)",
-        "romUrl":  "roms/nes/Shinobi (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "shinobi",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shinobi.nes"
     },
     {
-        "name":  "Shockwave (Unl)",
-        "romUrl":  "roms/nes/Shockwave (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "shockwave",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shockwave.nes"
     },
     {
-        "name":  "Shooting Range",
-        "romUrl":  "roms/nes/Shooting Range (USA).nes",
-        "console":  "NES"
+        "name":  "shootingrange",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shootingrange.nes"
     },
     {
-        "name":  "Short Order + Egg-Splode!",
-        "romUrl":  "roms/nes/Short Order + Egg-Splode! (USA).nes",
-        "console":  "NES"
+        "name":  "shortordereggsplode",
+        "console":  "NES",
+        "romUrl":  "roms/nes/shortordereggsplode.nes"
     },
     {
-        "name":  "Side Pocket",
-        "romUrl":  "roms/nes/Side Pocket (USA).nes",
-        "console":  "NES"
+        "name":  "sidepocket",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sidepocket.nes"
     },
     {
-        "name":  "Silent Assault (Unl)",
-        "romUrl":  "roms/nes/Silent Assault (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "silentassault",
+        "console":  "NES",
+        "romUrl":  "roms/nes/silentassault.nes"
     },
     {
-        "name":  "Silk Worm",
-        "romUrl":  "roms/nes/Silk Worm (USA).nes",
-        "console":  "NES"
+        "name":  "silkworm",
+        "console":  "NES",
+        "romUrl":  "roms/nes/silkworm.nes"
     },
     {
-        "name":  "Silver Surfer",
-        "romUrl":  "roms/nes/Silver Surfer (USA).nes",
-        "console":  "NES"
+        "name":  "silversurfer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/silversurfer.nes"
     },
     {
-        "name":  "Simpsons, The - Bart vs the World",
-        "romUrl":  "roms/nes/Simpsons, The - Bart vs. the World (USA).nes",
-        "console":  "NES"
+        "name":  "simpsonsthebartmanmeetsradioactiveman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/simpsonsthebartmanmeetsradioactiveman.nes"
     },
     {
-        "name":  "Simpsons, The - Bartman Meets Radioactive Man",
-        "romUrl":  "roms/nes/Simpsons, The - Bartman Meets Radioactive Man (USA).nes",
-        "console":  "NES"
+        "name":  "simpsonsthebartvstheworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/simpsonsthebartvstheworld.nes"
     },
     {
-        "name":  "Sir Ababol (2013)(The Mojon Twins)[!]",
-        "romUrl":  "roms/nes/Sir Ababol (2013)(The Mojon Twins)[!].nes",
-        "console":  "NES"
+        "name":  "sirababol2013themojontwins",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sirababol2013themojontwins.nes"
     },
     {
-        "name":  "Skate or Die",
-        "romUrl":  "roms/nes/Skate or Die (USA).nes",
-        "console":  "NES"
+        "name":  "skateordie",
+        "console":  "NES",
+        "romUrl":  "roms/nes/skateordie.nes"
     },
     {
-        "name":  "Skate or Die 2 - The Search for Double Trouble",
-        "romUrl":  "roms/nes/Skate or Die 2 - The Search for Double Trouble (USA).nes",
-        "console":  "NES"
+        "name":  "skateordie2thesearchfordoubletrouble",
+        "console":  "NES",
+        "romUrl":  "roms/nes/skateordie2thesearchfordoubletrouble.nes"
     },
     {
-        "name":  "Ski or Die",
-        "romUrl":  "roms/nes/Ski or Die (USA).nes",
-        "console":  "NES"
+        "name":  "skiordie",
+        "console":  "NES",
+        "romUrl":  "roms/nes/skiordie.nes"
     },
     {
-        "name":  "Skull \u0026 Crossbones (Unl)",
-        "romUrl":  "roms/nes/Skull \u0026 Crossbones (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "skullandcrossbones",
+        "console":  "NES",
+        "romUrl":  "roms/nes/skullandcrossbones.nes"
     },
     {
-        "name":  "Sky Kid",
-        "romUrl":  "roms/nes/Sky Kid (USA).nes",
-        "console":  "NES"
+        "name":  "skykid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/skykid.nes"
     },
     {
-        "name":  "Slalom",
-        "romUrl":  "roms/nes/Slalom (USA).nes",
-        "console":  "NES"
+        "name":  "slalom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/slalom.nes"
     },
     {
-        "name":  "Smash T V",
-        "romUrl":  "roms/nes/Smash T.V. (USA).nes",
-        "console":  "NES"
+        "name":  "smashtv",
+        "console":  "NES",
+        "romUrl":  "roms/nes/smashtv.nes"
     },
     {
-        "name":  "Snake Rattle n Roll",
-        "romUrl":  "roms/nes/Snake Rattle n Roll (USA).nes",
-        "console":  "NES"
+        "name":  "snakerattlenroll",
+        "console":  "NES",
+        "romUrl":  "roms/nes/snakerattlenroll.nes"
     },
     {
-        "name":  "Snake\u0027s Revenge",
-        "romUrl":  "roms/nes/Snake\u0027s Revenge (USA).nes",
-        "console":  "NES"
+        "name":  "snakesrevenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/snakesrevenge.nes"
     },
     {
-        "name":  "Snoopy\u0027s Silly Sports Spectacular!",
-        "romUrl":  "roms/nes/Snoopy\u0027s Silly Sports Spectacular! (USA).nes",
-        "console":  "NES"
+        "name":  "snoopyssillysportsspectacular",
+        "console":  "NES",
+        "romUrl":  "roms/nes/snoopyssillysportsspectacular.nes"
     },
     {
-        "name":  "Snow Brothers",
-        "romUrl":  "roms/nes/Snow Brothers (USA).nes",
-        "console":  "NES"
+        "name":  "snowbrothers",
+        "console":  "NES",
+        "romUrl":  "roms/nes/snowbrothers.nes"
     },
     {
-        "name":  "Soccer (World)",
-        "romUrl":  "roms/nes/Soccer (World).nes",
-        "console":  "NES"
+        "name":  "soccer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/soccer.nes"
     },
     {
-        "name":  "Solar Jetman - Hunt for the Golden Warpship",
-        "romUrl":  "roms/nes/Solar Jetman - Hunt for the Golden Warpship (USA).nes",
-        "console":  "NES"
+        "name":  "solarjetmanhuntforthegoldenwarpship",
+        "console":  "NES",
+        "romUrl":  "roms/nes/solarjetmanhuntforthegoldenwarpship.nes"
     },
     {
-        "name":  "Solitaire (Unl)",
-        "romUrl":  "roms/nes/Solitaire (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "solitaire",
+        "console":  "NES",
+        "romUrl":  "roms/nes/solitaire.nes"
     },
     {
-        "name":  "Solomon\u0027s Key",
-        "romUrl":  "roms/nes/Solomon\u0027s Key (USA).nes",
-        "console":  "NES"
+        "name":  "solomonskey",
+        "console":  "NES",
+        "romUrl":  "roms/nes/solomonskey.nes"
     },
     {
-        "name":  "Solomon\u0027s Key 2",
-        "romUrl":  "roms/nes/Solomon\u0027s Key 2 (Europe).nes",
-        "console":  "NES"
+        "name":  "solomonskey2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/solomonskey2.nes"
     },
     {
-        "name":  "Solstice - The Quest for the Staff of Demnos",
-        "romUrl":  "roms/nes/Solstice - The Quest for the Staff of Demnos (USA).nes",
-        "console":  "NES"
+        "name":  "solsticethequestforthestaffofdemnos",
+        "console":  "NES",
+        "romUrl":  "roms/nes/solsticethequestforthestaffofdemnos.nes"
     },
     {
-        "name":  "Space Shuttle Project",
-        "romUrl":  "roms/nes/Space Shuttle Project (USA).nes",
-        "console":  "NES"
+        "name":  "spaceshuttleproject",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spaceshuttleproject.nes"
     },
     {
-        "name":  "Spelunker",
-        "romUrl":  "roms/nes/Spelunker (USA).nes",
-        "console":  "NES"
+        "name":  "spelunker",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spelunker.nes"
     },
     {
-        "name":  "Spider-Man - Return of the Sinister Six",
-        "romUrl":  "roms/nes/Spider-Man - Return of the Sinister Six (USA).nes",
-        "console":  "NES"
+        "name":  "spidermanreturnofthesinistersix",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spidermanreturnofthesinistersix.nes"
     },
     {
-        "name":  "Spot - The Video Game",
-        "romUrl":  "roms/nes/Spot - The Video Game (USA).nes",
-        "console":  "NES"
+        "name":  "spotthevideogame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spotthevideogame.nes"
     },
     {
-        "name":  "Spy Hunter",
-        "romUrl":  "roms/nes/Spy Hunter (USA).nes",
-        "console":  "NES"
+        "name":  "spyhunter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spyhunter.nes"
     },
     {
-        "name":  "Spy vs Spy",
-        "romUrl":  "roms/nes/Spy vs Spy (USA).nes",
-        "console":  "NES"
+        "name":  "spyvsspy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/spyvsspy.nes"
     },
     {
-        "name":  "Sqoon",
-        "romUrl":  "roms/nes/Sqoon (USA).nes",
-        "console":  "NES"
+        "name":  "sqoon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sqoon.nes"
     },
     {
-        "name":  "Stack-Up (World)",
-        "romUrl":  "roms/nes/Stack-Up (World).nes",
-        "console":  "NES"
+        "name":  "stackup",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stackup.nes"
     },
     {
-        "name":  "Stadium Events",
-        "romUrl":  "roms/nes/Stadium Events (USA).nes",
-        "console":  "NES"
+        "name":  "stadiumevents",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stadiumevents.nes"
     },
     {
-        "name":  "Stanley - The Search for Dr Livingston",
-        "romUrl":  "roms/nes/Stanley - The Search for Dr. Livingston (USA).nes",
-        "console":  "NES"
+        "name":  "stanleythesearchfordrlivingston",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stanleythesearchfordrlivingston.nes"
     },
     {
-        "name":  "Star Force",
-        "romUrl":  "roms/nes/Star Force (USA).nes",
-        "console":  "NES"
+        "name":  "starforce",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starforce.nes"
     },
     {
-        "name":  "Star Soldier",
-        "romUrl":  "roms/nes/Star Soldier (USA).nes",
-        "console":  "NES"
+        "name":  "starshiphector",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starshiphector.nes"
     },
     {
-        "name":  "Star Trek - 25th Anniversary",
-        "romUrl":  "roms/nes/Star Trek - 25th Anniversary (USA).nes",
-        "console":  "NES"
+        "name":  "starsoldier",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starsoldier.nes"
     },
     {
-        "name":  "Star Trek - The Next Generation",
-        "romUrl":  "roms/nes/Star Trek - The Next Generation (USA).nes",
-        "console":  "NES"
+        "name":  "startrek25thanniversary",
+        "console":  "NES",
+        "romUrl":  "roms/nes/startrek25thanniversary.nes"
     },
     {
-        "name":  "Star Voyager",
-        "romUrl":  "roms/nes/Star Voyager (USA).nes",
-        "console":  "NES"
+        "name":  "startrekthenextgeneration",
+        "console":  "NES",
+        "romUrl":  "roms/nes/startrekthenextgeneration.nes"
     },
     {
-        "name":  "Star Wars",
-        "romUrl":  "roms/nes/Star Wars (USA).nes",
-        "console":  "NES"
+        "name":  "starvoyager",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starvoyager.nes"
     },
     {
-        "name":  "Star Wars - The Empire Strikes Back",
-        "romUrl":  "roms/nes/Star Wars - The Empire Strikes Back (USA).nes",
-        "console":  "NES"
+        "name":  "starwars",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starwars.nes"
     },
     {
-        "name":  "Starship Hector",
-        "romUrl":  "roms/nes/Starship Hector (USA).nes",
-        "console":  "NES"
+        "name":  "starwarstheempirestrikesback",
+        "console":  "NES",
+        "romUrl":  "roms/nes/starwarstheempirestrikesback.nes"
     },
     {
-        "name":  "Stealth ATF",
-        "romUrl":  "roms/nes/Stealth ATF (USA).nes",
-        "console":  "NES"
+        "name":  "stealthatf",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stealthatf.nes"
     },
     {
-        "name":  "Steemerz v02 (fauxgame) (FR)",
-        "romUrl":  "roms/nes/Steemerz v02 (fauxgame) (FR).nes",
-        "console":  "NES"
+        "name":  "steemerzv02fauxgame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/steemerzv02fauxgame.nes"
     },
     {
-        "name":  "Steemerz v02 (fauxgame)",
-        "romUrl":  "roms/nes/Steemerz v02 (fauxgame).nes",
-        "console":  "NES"
+        "name":  "steemerzv02fauxgamefr",
+        "console":  "NES",
+        "romUrl":  "roms/nes/steemerzv02fauxgamefr.nes"
     },
     {
-        "name":  "Stinger",
-        "romUrl":  "roms/nes/Stinger (USA).nes",
-        "console":  "NES"
+        "name":  "stinger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stinger.nes"
     },
     {
-        "name":  "Street Cop",
-        "romUrl":  "roms/nes/Street Cop (USA).nes",
-        "console":  "NES"
+        "name":  "streetcop",
+        "console":  "NES",
+        "romUrl":  "roms/nes/streetcop.nes"
     },
     {
-        "name":  "Street Fighter 2010 - The Final Fight",
-        "romUrl":  "roms/nes/Street Fighter 2010 - The Final Fight (USA).nes",
-        "console":  "NES"
+        "name":  "streetfighter2010thefinalfight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/streetfighter2010thefinalfight.nes"
     },
     {
-        "name":  "Strider",
-        "romUrl":  "roms/nes/Strider (USA).nes",
-        "console":  "NES"
+        "name":  "strider",
+        "console":  "NES",
+        "romUrl":  "roms/nes/strider.nes"
     },
     {
-        "name":  "Stunt Kids (Unl)",
-        "romUrl":  "roms/nes/Stunt Kids (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "stuntkids",
+        "console":  "NES",
+        "romUrl":  "roms/nes/stuntkids.nes"
     },
     {
-        "name":  "Sunday Funday - The Ride (Unl)",
-        "romUrl":  "roms/nes/Sunday Funday - The Ride (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "sundayfundaytheride",
+        "console":  "NES",
+        "romUrl":  "roms/nes/sundayfundaytheride.nes"
     },
     {
-        "name":  "Super C",
-        "romUrl":  "roms/nes/Super C (USA).nes",
-        "console":  "NES"
+        "name":  "superc",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superc.nes"
     },
     {
-        "name":  "Super Cars",
-        "romUrl":  "roms/nes/Super Cars (USA).nes",
-        "console":  "NES"
+        "name":  "supercars",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supercars.nes"
     },
     {
-        "name":  "Super Dodge Ball",
-        "romUrl":  "roms/nes/Super Dodge Ball (USA).nes",
-        "console":  "NES"
+        "name":  "superdodgeball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superdodgeball.nes"
     },
     {
-        "name":  "Super Glove Ball",
-        "romUrl":  "roms/nes/Super Glove Ball (USA).nes",
-        "console":  "NES"
+        "name":  "supergloveball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supergloveball.nes"
     },
     {
-        "name":  "Super Jeopardy!",
-        "romUrl":  "roms/nes/Super Jeopardy! (USA).nes",
-        "console":  "NES"
+        "name":  "superjeopardy",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superjeopardy.nes"
     },
     {
-        "name":  "Super Mario Bros (World)",
-        "romUrl":  "roms/nes/Super Mario Bros. (World).nes",
-        "console":  "NES"
+        "name":  "superman",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superman.nes"
     },
     {
-        "name":  "Super Mario Bros 2",
-        "romUrl":  "roms/nes/Super Mario Bros. 2 (USA).nes",
-        "console":  "NES"
+        "name":  "supermariobros",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supermariobros.nes"
     },
     {
-        "name":  "Super Mario Bros 3",
-        "romUrl":  "roms/nes/Super Mario Bros. 3 (USA).nes",
-        "console":  "NES"
+        "name":  "supermariobros2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supermariobros2.nes"
     },
     {
-        "name":  "Super Pitfall",
-        "romUrl":  "roms/nes/Super Pitfall (USA).nes",
-        "console":  "NES"
+        "name":  "supermariobros3",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supermariobros3.nes"
     },
     {
-        "name":  "Super Spike V\u0027Ball",
-        "romUrl":  "roms/nes/Super Spike V\u0027Ball (USA).nes",
-        "console":  "NES"
+        "name":  "superpitfall",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superpitfall.nes"
     },
     {
-        "name":  "Super Spike V\u0027Ball + Nintendo World Cup",
-        "romUrl":  "roms/nes/Super Spike V\u0027Ball + Nintendo World Cup (USA).nes",
-        "console":  "NES"
+        "name":  "superspikevball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superspikevball.nes"
     },
     {
-        "name":  "Super Sprint (Unl)",
-        "romUrl":  "roms/nes/Super Sprint (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "superspikevballnintendoworldcup",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superspikevballnintendoworldcup.nes"
     },
     {
-        "name":  "Super Spy Hunter",
-        "romUrl":  "roms/nes/Super Spy Hunter (USA).nes",
-        "console":  "NES"
+        "name":  "supersprint",
+        "console":  "NES",
+        "romUrl":  "roms/nes/supersprint.nes"
     },
     {
-        "name":  "Super Team Games",
-        "romUrl":  "roms/nes/Super Team Games (USA).nes",
-        "console":  "NES"
+        "name":  "superspyhunter",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superspyhunter.nes"
     },
     {
-        "name":  "Super Turrican",
-        "romUrl":  "roms/nes/Super Turrican (Europe).nes",
-        "console":  "NES"
+        "name":  "superteamgames",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superteamgames.nes"
     },
     {
-        "name":  "Superman",
-        "romUrl":  "roms/nes/Superman (USA).nes",
-        "console":  "NES"
+        "name":  "superturrican",
+        "console":  "NES",
+        "romUrl":  "roms/nes/superturrican.nes"
     },
     {
-        "name":  "Swamp Thing",
-        "romUrl":  "roms/nes/Swamp Thing (USA).nes",
-        "console":  "NES"
+        "name":  "swampthing",
+        "console":  "NES",
+        "romUrl":  "roms/nes/swampthing.nes"
     },
     {
-        "name":  "Sword Master",
-        "romUrl":  "roms/nes/Sword Master (USA).nes",
-        "console":  "NES"
+        "name":  "swordmaster",
+        "console":  "NES",
+        "romUrl":  "roms/nes/swordmaster.nes"
     },
     {
-        "name":  "Swords and Serpents",
-        "romUrl":  "roms/nes/Swords and Serpents (USA).nes",
-        "console":  "NES"
+        "name":  "swordsandserpents",
+        "console":  "NES",
+        "romUrl":  "roms/nes/swordsandserpents.nes"
     },
     {
-        "name":  "Tag Team Wrestling",
-        "romUrl":  "roms/nes/Tag Team Wrestling (USA).nes",
-        "console":  "NES"
+        "name":  "tagindragon",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tagindragon.nes"
     },
     {
-        "name":  "Tagin\u0027 Dragon (Unl)",
-        "romUrl":  "roms/nes/Tagin\u0027 Dragon (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "tagteamwrestling",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tagteamwrestling.nes"
     },
     {
-        "name":  "TaleSpin",
-        "romUrl":  "roms/nes/TaleSpin (USA).nes",
-        "console":  "NES"
+        "name":  "talespin",
+        "console":  "NES",
+        "romUrl":  "roms/nes/talespin.nes"
     },
     {
-        "name":  "Target Renegade",
-        "romUrl":  "roms/nes/Target Renegade (USA).nes",
-        "console":  "NES"
+        "name":  "targetrenegade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/targetrenegade.nes"
     },
     {
-        "name":  "Tecmo Baseball",
-        "romUrl":  "roms/nes/Tecmo Baseball (USA).nes",
-        "console":  "NES"
+        "name":  "tecmobaseball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tecmobaseball.nes"
     },
     {
-        "name":  "Tecmo Cup - Soccer Game",
-        "romUrl":  "roms/nes/Tecmo Cup - Soccer Game (USA).nes",
-        "console":  "NES"
+        "name":  "tecmocupsoccergame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tecmocupsoccergame.nes"
     },
     {
-        "name":  "Tecmo Super Bowl",
-        "romUrl":  "roms/nes/Tecmo Super Bowl (USA).nes",
-        "console":  "NES"
+        "name":  "tecmosuperbowl",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tecmosuperbowl.nes"
     },
     {
-        "name":  "Tecmo World Cup Soccer",
-        "romUrl":  "roms/nes/Tecmo World Cup Soccer (Europe).nes",
-        "console":  "NES"
+        "name":  "tecmoworldcupsoccer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tecmoworldcupsoccer.nes"
     },
     {
-        "name":  "Tecmo World Wrestling",
-        "romUrl":  "roms/nes/Tecmo World Wrestling (USA).nes",
-        "console":  "NES"
+        "name":  "tecmoworldwrestling",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tecmoworldwrestling.nes"
     },
     {
-        "name":  "Teenage Mutant Ninja Turtles",
-        "romUrl":  "roms/nes/Teenage Mutant Ninja Turtles (USA).nes",
-        "console":  "NES"
+        "name":  "teenagemutantninjaturtles",
+        "console":  "NES",
+        "romUrl":  "roms/nes/teenagemutantninjaturtles.nes"
     },
     {
-        "name":  "Teenage Mutant Ninja Turtles - Tournament Fighters",
-        "romUrl":  "roms/nes/Teenage Mutant Ninja Turtles - Tournament Fighters (USA).nes",
-        "console":  "NES"
+        "name":  "teenagemutantninjaturtlesiiithemanhattanproject",
+        "console":  "NES",
+        "romUrl":  "roms/nes/teenagemutantninjaturtlesiiithemanhattanproject.nes"
     },
     {
-        "name":  "Teenage Mutant Ninja Turtles II - The Arcade Game",
-        "romUrl":  "roms/nes/Teenage Mutant Ninja Turtles II - The Arcade Game (USA).nes",
-        "console":  "NES"
+        "name":  "teenagemutantninjaturtlesiithearcadegame",
+        "console":  "NES",
+        "romUrl":  "roms/nes/teenagemutantninjaturtlesiithearcadegame.nes"
     },
     {
-        "name":  "Teenage Mutant Ninja Turtles III - The Manhattan Project",
-        "romUrl":  "roms/nes/Teenage Mutant Ninja Turtles III - The Manhattan Project (USA).nes",
-        "console":  "NES"
+        "name":  "teenagemutantninjaturtlestournamentfighters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/teenagemutantninjaturtlestournamentfighters.nes"
     },
     {
-        "name":  "Tennis (Japan, USA)",
-        "romUrl":  "roms/nes/Tennis (Japan, USA).nes",
-        "console":  "NES"
+        "name":  "tennisjapanusa",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tennisjapanusa.nes"
     },
     {
-        "name":  "Terminator 2 - Judgment Day",
-        "romUrl":  "roms/nes/Terminator 2 - Judgment Day (USA).nes",
-        "console":  "NES"
+        "name":  "terminator2judgmentday",
+        "console":  "NES",
+        "romUrl":  "roms/nes/terminator2judgmentday.nes"
     },
     {
-        "name":  "Terminator, The (USA, Europe)",
-        "romUrl":  "roms/nes/Terminator, The (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "terminatortheusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/terminatortheusaeurope.nes"
     },
     {
-        "name":  "Terra Cresta",
-        "romUrl":  "roms/nes/Terra Cresta (USA).nes",
-        "console":  "NES"
+        "name":  "terracresta",
+        "console":  "NES",
+        "romUrl":  "roms/nes/terracresta.nes"
     },
     {
-        "name":  "Tetris",
-        "romUrl":  "roms/nes/Tetris (USA).nes",
-        "console":  "NES"
+        "name":  "tetris",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tetris.nes"
     },
     {
-        "name":  "Tetris 2",
-        "romUrl":  "roms/nes/Tetris 2 (USA).nes",
-        "console":  "NES"
+        "name":  "tetris2",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tetris2.nes"
     },
     {
-        "name":  "Three Stooges, The",
-        "romUrl":  "roms/nes/Three Stooges, The (USA).nes",
-        "console":  "NES"
+        "name":  "threestoogesthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/threestoogesthe.nes"
     },
     {
-        "name":  "Thunder \u0026 Lightning",
-        "romUrl":  "roms/nes/Thunder \u0026 Lightning (USA).nes",
-        "console":  "NES"
+        "name":  "thunderandlightning",
+        "console":  "NES",
+        "romUrl":  "roms/nes/thunderandlightning.nes"
     },
     {
-        "name":  "Thunderbirds",
-        "romUrl":  "roms/nes/Thunderbirds (USA).nes",
-        "console":  "NES"
+        "name":  "thunderbirds",
+        "console":  "NES",
+        "romUrl":  "roms/nes/thunderbirds.nes"
     },
     {
-        "name":  "Thundercade",
-        "romUrl":  "roms/nes/Thundercade (USA).nes",
-        "console":  "NES"
+        "name":  "thundercade",
+        "console":  "NES",
+        "romUrl":  "roms/nes/thundercade.nes"
     },
     {
-        "name":  "Tiger Jenny (Ludosity)",
-        "romUrl":  "roms/nes/Tiger Jenny (Ludosity).nes",
-        "console":  "NES"
+        "name":  "tigerheli",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tigerheli.nes"
     },
     {
-        "name":  "Tiger-Heli",
-        "romUrl":  "roms/nes/Tiger-Heli (USA).nes",
-        "console":  "NES"
+        "name":  "tigerjennyludosity",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tigerjennyludosity.nes"
     },
     {
-        "name":  "Tiles of Fate (Unl)",
-        "romUrl":  "roms/nes/Tiles of Fate (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "tilesoffate",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tilesoffate.nes"
     },
     {
-        "name":  "Time Lord",
-        "romUrl":  "roms/nes/Time Lord (USA).nes",
-        "console":  "NES"
+        "name":  "timelord",
+        "console":  "NES",
+        "romUrl":  "roms/nes/timelord.nes"
     },
     {
-        "name":  "Times of Lore",
-        "romUrl":  "roms/nes/Times of Lore (USA).nes",
-        "console":  "NES"
+        "name":  "timesoflore",
+        "console":  "NES",
+        "romUrl":  "roms/nes/timesoflore.nes"
     },
     {
-        "name":  "Tiny Toon Adventures",
-        "romUrl":  "roms/nes/Tiny Toon Adventures (USA).nes",
-        "console":  "NES"
+        "name":  "tinytoonadventures",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tinytoonadventures.nes"
     },
     {
-        "name":  "Tiny Toon Adventures 2 - Trouble in Wackyland",
-        "romUrl":  "roms/nes/Tiny Toon Adventures 2 - Trouble in Wackyland (USA).nes",
-        "console":  "NES"
+        "name":  "tinytoonadventures2troubleinwackyland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tinytoonadventures2troubleinwackyland.nes"
     },
     {
-        "name":  "Tiny Toon Adventures Cartoon Workshop",
-        "romUrl":  "roms/nes/Tiny Toon Adventures Cartoon Workshop (USA).nes",
-        "console":  "NES"
+        "name":  "tinytoonadventurescartoonworkshop",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tinytoonadventurescartoonworkshop.nes"
     },
     {
-        "name":  "To the Earth",
-        "romUrl":  "roms/nes/To the Earth (USA).nes",
-        "console":  "NES"
+        "name":  "toki",
+        "console":  "NES",
+        "romUrl":  "roms/nes/toki.nes"
     },
     {
-        "name":  "Toki",
-        "romUrl":  "roms/nes/Toki (USA).nes",
-        "console":  "NES"
+        "name":  "tomandjerrytheultimategameofcatandmouse",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tomandjerrytheultimategameofcatandmouse.nes"
     },
     {
-        "name":  "Tom \u0026 Jerry - The Ultimate Game of Cat and Mouse!",
-        "romUrl":  "roms/nes/Tom \u0026 Jerry - The Ultimate Game of Cat and Mouse! (USA).nes",
-        "console":  "NES"
+        "name":  "tombsandtreasure",
+        "console":  "NES",
+        "romUrl":  "roms/nes/tombsandtreasure.nes"
     },
     {
-        "name":  "Tombs \u0026 Treasure",
-        "romUrl":  "roms/nes/Tombs \u0026 Treasure (USA).nes",
-        "console":  "NES"
+        "name":  "toobin",
+        "console":  "NES",
+        "romUrl":  "roms/nes/toobin.nes"
     },
     {
-        "name":  "Toobin\u0027 (Unl)",
-        "romUrl":  "roms/nes/Toobin\u0027 (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "topgunthesecondmission",
+        "console":  "NES",
+        "romUrl":  "roms/nes/topgunthesecondmission.nes"
     },
     {
-        "name":  "Top Gun - The Second Mission",
-        "romUrl":  "roms/nes/Top Gun - The Second Mission (USA).nes",
-        "console":  "NES"
+        "name":  "totallyrad",
+        "console":  "NES",
+        "romUrl":  "roms/nes/totallyrad.nes"
     },
     {
-        "name":  "Total Recall",
-        "romUrl":  "roms/nes/Total Recall (USA).nes",
-        "console":  "NES"
+        "name":  "totalrecall",
+        "console":  "NES",
+        "romUrl":  "roms/nes/totalrecall.nes"
     },
     {
-        "name":  "Totally Rad",
-        "romUrl":  "roms/nes/Totally Rad (USA).nes",
-        "console":  "NES"
+        "name":  "totheearth",
+        "console":  "NES",
+        "romUrl":  "roms/nes/totheearth.nes"
     },
     {
-        "name":  "Touch Down Fever",
-        "romUrl":  "roms/nes/Touch Down Fever (USA).nes",
-        "console":  "NES"
+        "name":  "touchdownfever",
+        "console":  "NES",
+        "romUrl":  "roms/nes/touchdownfever.nes"
     },
     {
-        "name":  "Town \u0026 Country Surf Designs - Thrilla\u0027s Surfari",
-        "romUrl":  "roms/nes/Town \u0026 Country Surf Designs - Thrilla\u0027s Surfari (USA).nes",
-        "console":  "NES"
+        "name":  "townandcountrysurfdesignsthrillassurfari",
+        "console":  "NES",
+        "romUrl":  "roms/nes/townandcountrysurfdesignsthrillassurfari.nes"
     },
     {
-        "name":  "Town \u0026 Country Surf Designs - Wood \u0026 Water Rage",
-        "romUrl":  "roms/nes/Town \u0026 Country Surf Designs - Wood \u0026 Water Rage (USA).nes",
-        "console":  "NES"
+        "name":  "townandcountrysurfdesignswoodandwaterrage",
+        "console":  "NES",
+        "romUrl":  "roms/nes/townandcountrysurfdesignswoodandwaterrage.nes"
     },
     {
-        "name":  "Toxic Crusaders",
-        "romUrl":  "roms/nes/Toxic Crusaders (USA).nes",
-        "console":  "NES"
+        "name":  "toxiccrusaders",
+        "console":  "NES",
+        "romUrl":  "roms/nes/toxiccrusaders.nes"
     },
     {
-        "name":  "Track \u0026 Field",
-        "romUrl":  "roms/nes/Track \u0026 Field (USA).nes",
-        "console":  "NES"
+        "name":  "trackandfield",
+        "console":  "NES",
+        "romUrl":  "roms/nes/trackandfield.nes"
     },
     {
-        "name":  "Treasure Master",
-        "romUrl":  "roms/nes/Treasure Master (USA).nes",
-        "console":  "NES"
+        "name":  "treasuremaster",
+        "console":  "NES",
+        "romUrl":  "roms/nes/treasuremaster.nes"
     },
     {
-        "name":  "Trog!",
-        "romUrl":  "roms/nes/Trog! (USA).nes",
-        "console":  "NES"
+        "name":  "trog",
+        "console":  "NES",
+        "romUrl":  "roms/nes/trog.nes"
     },
     {
-        "name":  "Trojan",
-        "romUrl":  "roms/nes/Trojan (USA).nes",
-        "console":  "NES"
+        "name":  "trojan",
+        "console":  "NES",
+        "romUrl":  "roms/nes/trojan.nes"
     },
     {
-        "name":  "Trolls in Crazyland, The",
-        "romUrl":  "roms/nes/Trolls in Crazyland, The (Europe).nes",
-        "console":  "NES"
+        "name":  "trollsincrazylandthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/trollsincrazylandthe.nes"
     },
     {
-        "name":  "Trolls on Treasure Island (Unl)",
-        "romUrl":  "roms/nes/Trolls on Treasure Island (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "trollsontreasureisland",
+        "console":  "NES",
+        "romUrl":  "roms/nes/trollsontreasureisland.nes"
     },
     {
-        "name":  "Twin Cobra",
-        "romUrl":  "roms/nes/Twin Cobra (USA).nes",
-        "console":  "NES"
+        "name":  "twincobra",
+        "console":  "NES",
+        "romUrl":  "roms/nes/twincobra.nes"
     },
     {
-        "name":  "Twin Eagle",
-        "romUrl":  "roms/nes/Twin Eagle (USA).nes",
-        "console":  "NES"
+        "name":  "twineagle",
+        "console":  "NES",
+        "romUrl":  "roms/nes/twineagle.nes"
     },
     {
-        "name":  "Ufouria - The Saga",
-        "romUrl":  "roms/nes/Ufouria - The Saga (Europe).nes",
-        "console":  "NES"
+        "name":  "ufouriathesaga",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ufouriathesaga.nes"
     },
     {
-        "name":  "Ultima - Exodus",
-        "romUrl":  "roms/nes/Ultima - Exodus (USA).nes",
-        "console":  "NES"
+        "name":  "ultimaexodus",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimaexodus.nes"
     },
     {
-        "name":  "Ultima - Quest of the Avatar",
-        "romUrl":  "roms/nes/Ultima - Quest of the Avatar (USA).nes",
-        "console":  "NES"
+        "name":  "ultimaquestoftheavatar",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimaquestoftheavatar.nes"
     },
     {
-        "name":  "Ultima - Warriors of Destiny",
-        "romUrl":  "roms/nes/Ultima - Warriors of Destiny (USA).nes",
-        "console":  "NES"
+        "name":  "ultimateaircombat",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimateaircombat.nes"
     },
     {
-        "name":  "Ultimate Air Combat",
-        "romUrl":  "roms/nes/Ultimate Air Combat (USA).nes",
-        "console":  "NES"
+        "name":  "ultimatebasketball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimatebasketball.nes"
     },
     {
-        "name":  "Ultimate Basketball",
-        "romUrl":  "roms/nes/Ultimate Basketball (USA).nes",
-        "console":  "NES"
+        "name":  "ultimateleaguesoccer",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimateleaguesoccer.nes"
     },
     {
-        "name":  "Ultimate League Soccer (Unl)",
-        "romUrl":  "roms/nes/Ultimate League Soccer (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "ultimatestuntmanthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimatestuntmanthe.nes"
     },
     {
-        "name":  "Ultimate Stuntman, The (Unl)",
-        "romUrl":  "roms/nes/Ultimate Stuntman, The (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "ultimawarriorsofdestiny",
+        "console":  "NES",
+        "romUrl":  "roms/nes/ultimawarriorsofdestiny.nes"
     },
     {
-        "name":  "Uncanny X-Men, The",
-        "romUrl":  "roms/nes/Uncanny X-Men, The (USA).nes",
-        "console":  "NES"
+        "name":  "uncannyxmenthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/uncannyxmenthe.nes"
     },
     {
-        "name":  "Uncharted Waters",
-        "romUrl":  "roms/nes/Uncharted Waters (USA).nes",
-        "console":  "NES"
+        "name":  "unchartedwaters",
+        "console":  "NES",
+        "romUrl":  "roms/nes/unchartedwaters.nes"
     },
     {
-        "name":  "Uninvited",
-        "romUrl":  "roms/nes/Uninvited (USA).nes",
-        "console":  "NES"
+        "name":  "uninvited",
+        "console":  "NES",
+        "romUrl":  "roms/nes/uninvited.nes"
     },
     {
-        "name":  "Urban Champion (World)",
-        "romUrl":  "roms/nes/Urban Champion (World).nes",
-        "console":  "NES"
+        "name":  "urbanchampion",
+        "console":  "NES",
+        "romUrl":  "roms/nes/urbanchampion.nes"
     },
     {
-        "name":  "Vegas Dream",
-        "romUrl":  "roms/nes/Vegas Dream (USA).nes",
-        "console":  "NES"
+        "name":  "vegasdream",
+        "console":  "NES",
+        "romUrl":  "roms/nes/vegasdream.nes"
     },
     {
-        "name":  "Venice Beach Volleyball (Unl)",
-        "romUrl":  "roms/nes/Venice Beach Volleyball (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "venicebeachvolleyball",
+        "console":  "NES",
+        "romUrl":  "roms/nes/venicebeachvolleyball.nes"
     },
     {
-        "name":  "Vice - Project Doom",
-        "romUrl":  "roms/nes/Vice - Project Doom (USA).nes",
-        "console":  "NES"
+        "name":  "viceprojectdoom",
+        "console":  "NES",
+        "romUrl":  "roms/nes/viceprojectdoom.nes"
     },
     {
-        "name":  "Videomation",
-        "romUrl":  "roms/nes/Videomation (USA).nes",
-        "console":  "NES"
+        "name":  "videomation",
+        "console":  "NES",
+        "romUrl":  "roms/nes/videomation.nes"
     },
     {
-        "name":  "Vindicators (Unl)",
-        "romUrl":  "roms/nes/Vindicators (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "vindicators",
+        "console":  "NES",
+        "romUrl":  "roms/nes/vindicators.nes"
     },
     {
-        "name":  "Volleyball (USA, Europe)",
-        "romUrl":  "roms/nes/Volleyball (USA, Europe).nes",
-        "console":  "NES"
+        "name":  "volleyballusaeurope",
+        "console":  "NES",
+        "romUrl":  "roms/nes/volleyballusaeurope.nes"
     },
     {
-        "name":  "Wacky Races",
-        "romUrl":  "roms/nes/Wacky Races (USA).nes",
-        "console":  "NES"
+        "name":  "wackyraces",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wackyraces.nes"
     },
     {
-        "name":  "Wall Street Kid",
-        "romUrl":  "roms/nes/Wall Street Kid (USA).nes",
-        "console":  "NES"
+        "name":  "wallstreetkid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wallstreetkid.nes"
     },
     {
-        "name":  "Wally Bear and the No! Gang (Unl)",
-        "romUrl":  "roms/nes/Wally Bear and the No! Gang (USA) (Unl).nes",
-        "console":  "NES"
+        "name":  "wallybearandthenogang",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wallybearandthenogang.nes"
     },
     {
-        "name":  "Wario\u0027s Woods",
-        "romUrl":  "roms/nes/Wario\u0027s Woods (USA).nes",
-        "console":  "NES"
+        "name":  "warioswoods",
+        "console":  "NES",
+        "romUrl":  "roms/nes/warioswoods.nes"
     },
     {
-        "name":  "Wayne Gretzky Hockey",
-        "romUrl":  "roms/nes/Wayne Gretzky Hockey (USA).nes",
-        "console":  "NES"
+        "name":  "waynegretzkyhockey",
+        "console":  "NES",
+        "romUrl":  "roms/nes/waynegretzkyhockey.nes"
     },
     {
-        "name":  "Wayne\u0027s World",
-        "romUrl":  "roms/nes/Wayne\u0027s World (USA).nes",
-        "console":  "NES"
+        "name":  "waynesworld",
+        "console":  "NES",
+        "romUrl":  "roms/nes/waynesworld.nes"
     },
     {
-        "name":  "Werewolf - The Last Warrior",
-        "romUrl":  "roms/nes/Werewolf - The Last Warrior (USA).nes",
-        "console":  "NES"
+        "name":  "werewolfthelastwarrior",
+        "console":  "NES",
+        "romUrl":  "roms/nes/werewolfthelastwarrior.nes"
     },
     {
-        "name":  "Wheel of Fortune - Family Edition",
-        "romUrl":  "roms/nes/Wheel of Fortune - Family Edition (USA).nes",
-        "console":  "NES"
+        "name":  "wheeloffortunefamilyedition",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wheeloffortunefamilyedition.nes"
     },
     {
-        "name":  "Wheel of Fortune - Junior Edition",
-        "romUrl":  "roms/nes/Wheel of Fortune - Junior Edition (USA).nes",
-        "console":  "NES"
+        "name":  "wheeloffortunejunioredition",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wheeloffortunejunioredition.nes"
     },
     {
-        "name":  "Wheel of Fortune Starring Vanna White",
-        "romUrl":  "roms/nes/Wheel of Fortune Starring Vanna White (USA).nes",
-        "console":  "NES"
+        "name":  "wheeloffortunestarringvannawhite",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wheeloffortunestarringvannawhite.nes"
     },
     {
-        "name":  "Where\u0027s Waldo",
-        "romUrl":  "roms/nes/Where\u0027s Waldo (USA).nes",
-        "console":  "NES"
+        "name":  "whereswaldo",
+        "console":  "NES",
+        "romUrl":  "roms/nes/whereswaldo.nes"
     },
     {
-        "name":  "Who Framed Roger Rabbit",
-        "romUrl":  "roms/nes/Who Framed Roger Rabbit (USA).nes",
-        "console":  "NES"
+        "name":  "whoframedrogerrabbit",
+        "console":  "NES",
+        "romUrl":  "roms/nes/whoframedrogerrabbit.nes"
     },
     {
-        "name":  "Whomp \u0027Em",
-        "romUrl":  "roms/nes/Whomp \u0027Em (USA).nes",
-        "console":  "NES"
+        "name":  "whompem",
+        "console":  "NES",
+        "romUrl":  "roms/nes/whompem.nes"
     },
     {
-        "name":  "Widget",
-        "romUrl":  "roms/nes/Widget (USA).nes",
-        "console":  "NES"
+        "name":  "widget",
+        "console":  "NES",
+        "romUrl":  "roms/nes/widget.nes"
     },
     {
-        "name":  "Willow",
-        "romUrl":  "roms/nes/Willow (USA).nes",
-        "console":  "NES"
+        "name":  "willow",
+        "console":  "NES",
+        "romUrl":  "roms/nes/willow.nes"
     },
     {
-        "name":  "Win, Lose or Draw",
-        "romUrl":  "roms/nes/Win, Lose or Draw (USA).nes",
-        "console":  "NES"
+        "name":  "winloseordraw",
+        "console":  "NES",
+        "romUrl":  "roms/nes/winloseordraw.nes"
     },
     {
-        "name":  "Wizardry - Knight of Diamonds - The Second Scenario",
-        "romUrl":  "roms/nes/Wizardry - Knight of Diamonds - The Second Scenario (USA).nes",
-        "console":  "NES"
+        "name":  "wizardryknightofdiamondsthesecondscenario",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wizardryknightofdiamondsthesecondscenario.nes"
     },
     {
-        "name":  "Wizardry - Proving Grounds of the Mad Overlord",
-        "romUrl":  "roms/nes/Wizardry - Proving Grounds of the Mad Overlord (USA).nes",
-        "console":  "NES"
+        "name":  "wizardryprovinggroundsofthemadoverlord",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wizardryprovinggroundsofthemadoverlord.nes"
     },
     {
-        "name":  "Wizards \u0026 Warriors III - Kuros Visions of Power",
-        "romUrl":  "roms/nes/Wizards \u0026 Warriors III - Kuros...Visions of Power (USA).nes",
-        "console":  "NES"
+        "name":  "wizardsandwarriorsiiikurosvisionsofpower",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wizardsandwarriorsiiikurosvisionsofpower.nes"
     },
     {
-        "name":  "Wolverine",
-        "romUrl":  "roms/nes/Wolverine (USA).nes",
-        "console":  "NES"
+        "name":  "wolverine",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wolverine.nes"
     },
     {
-        "name":  "World Champ - Super Boxing Great Fight",
-        "romUrl":  "roms/nes/World Champ - Super Boxing Great Fight (USA).nes",
-        "console":  "NES"
+        "name":  "worldchampsuperboxinggreatfight",
+        "console":  "NES",
+        "romUrl":  "roms/nes/worldchampsuperboxinggreatfight.nes"
     },
     {
-        "name":  "World Games",
-        "romUrl":  "roms/nes/World Games (USA).nes",
-        "console":  "NES"
+        "name":  "worldgames",
+        "console":  "NES",
+        "romUrl":  "roms/nes/worldgames.nes"
     },
     {
-        "name":  "Wrecking Crew (World)",
-        "romUrl":  "roms/nes/Wrecking Crew (World).nes",
-        "console":  "NES"
+        "name":  "wreckingcrew",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wreckingcrew.nes"
     },
     {
-        "name":  "Wurm - Journey to the Center of the Earth!",
-        "romUrl":  "roms/nes/Wurm - Journey to the Center of the Earth! (USA).nes",
-        "console":  "NES"
+        "name":  "wurmjourneytothecenteroftheearth",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wurmjourneytothecenteroftheearth.nes"
     },
     {
-        "name":  "WWF King of the Ring",
-        "romUrl":  "roms/nes/WWF King of the Ring (USA).nes",
-        "console":  "NES"
+        "name":  "wwfkingofthering",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wwfkingofthering.nes"
     },
     {
-        "name":  "WWF Wrestlemania",
-        "romUrl":  "roms/nes/WWF Wrestlemania (USA).nes",
-        "console":  "NES"
+        "name":  "wwfwrestlemania",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wwfwrestlemania.nes"
     },
     {
-        "name":  "WWF Wrestlemania Challenge",
-        "romUrl":  "roms/nes/WWF Wrestlemania Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "wwfwrestlemaniachallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wwfwrestlemaniachallenge.nes"
     },
     {
-        "name":  "WWF Wrestlemania Steel Cage Challenge",
-        "romUrl":  "roms/nes/WWF Wrestlemania Steel Cage Challenge (USA).nes",
-        "console":  "NES"
+        "name":  "wwfwrestlemaniasteelcagechallenge",
+        "console":  "NES",
+        "romUrl":  "roms/nes/wwfwrestlemaniasteelcagechallenge.nes"
     },
     {
-        "name":  "Xenophobe",
-        "romUrl":  "roms/nes/Xenophobe (USA).nes",
-        "console":  "NES"
+        "name":  "xenophobe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/xenophobe.nes"
     },
     {
-        "name":  "Xevious - The Avenger",
-        "romUrl":  "roms/nes/Xevious - The Avenger (USA).nes",
-        "console":  "NES"
+        "name":  "xevioustheavenger",
+        "console":  "NES",
+        "romUrl":  "roms/nes/xevioustheavenger.nes"
     },
     {
-        "name":  "Xexyz",
-        "romUrl":  "roms/nes/Xexyz (USA).nes",
-        "console":  "NES"
+        "name":  "xexyz",
+        "console":  "NES",
+        "romUrl":  "roms/nes/xexyz.nes"
     },
     {
-        "name":  "Yo! Noid",
-        "romUrl":  "roms/nes/Yo! Noid (USA).nes",
-        "console":  "NES"
+        "name":  "yonoid",
+        "console":  "NES",
+        "romUrl":  "roms/nes/yonoid.nes"
     },
     {
-        "name":  "Yoshi",
-        "romUrl":  "roms/nes/Yoshi (USA).nes",
-        "console":  "NES"
+        "name":  "yoshi",
+        "console":  "NES",
+        "romUrl":  "roms/nes/yoshi.nes"
     },
     {
-        "name":  "Yoshi\u0027s Cookie",
-        "romUrl":  "roms/nes/Yoshi\u0027s Cookie (USA).nes",
-        "console":  "NES"
+        "name":  "yoshiscookie",
+        "console":  "NES",
+        "romUrl":  "roms/nes/yoshiscookie.nes"
     },
     {
-        "name":  "Young Indiana Jones Chronicles, The",
-        "romUrl":  "roms/nes/Young Indiana Jones Chronicles, The (USA).nes",
-        "console":  "NES"
+        "name":  "youngindianajoneschroniclesthe",
+        "console":  "NES",
+        "romUrl":  "roms/nes/youngindianajoneschroniclesthe.nes"
     },
     {
-        "name":  "Zanac",
-        "romUrl":  "roms/nes/Zanac (USA).nes",
-        "console":  "NES"
+        "name":  "zanac",
+        "console":  "NES",
+        "romUrl":  "roms/nes/zanac.nes"
     },
     {
-        "name":  "Zen - Intergalactic Ninja",
-        "romUrl":  "roms/nes/Zen - Intergalactic Ninja (USA).nes",
-        "console":  "NES"
+        "name":  "zenintergalacticninja",
+        "console":  "NES",
+        "romUrl":  "roms/nes/zenintergalacticninja.nes"
     },
     {
-        "name":  "Zombie Nation",
-        "romUrl":  "roms/nes/Zombie Nation (USA).nes",
-        "console":  "NES"
+        "name":  "zombienation",
+        "console":  "NES",
+        "romUrl":  "roms/nes/zombienation.nes"
     },
     {
-        "name":  "Zooming Secretary (Shiru)",
-        "romUrl":  "roms/nes/Zooming Secretary (Shiru).nes",
-        "console":  "NES"
+        "name":  "zoomingsecretaryshiru",
+        "console":  "NES",
+        "romUrl":  "roms/nes/zoomingsecretaryshiru.nes"
     }
-  ]
-
+]
