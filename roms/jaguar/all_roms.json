@@ -1,0 +1,292 @@
+﻿[
+    {
+        "name":  "aircarsu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/aircarsu.j64"
+    },
+    {
+        "name":  "alienvspredatoru",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/alienvspredatoru.j64"
+    },
+    {
+        "name":  "atarikartsu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/atarikartsu.j64"
+    },
+    {
+        "name":  "atarikartsworld",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/atarikartsworld.j64"
+    },
+    {
+        "name":  "attackofthemutantpenguinsu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/attackofthemutantpenguinsu.j64"
+    },
+    {
+        "name":  "battlespheregoldu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/battlespheregoldu.j64"
+    },
+    {
+        "name":  "brutalsportsfootballu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/brutalsportsfootballu.j64"
+    },
+    {
+        "name":  "bubsyinfracturedfurrytalesu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/bubsyinfracturedfurrytalesu.j64"
+    },
+    {
+        "name":  "bubsyinfracturedfurrytalesworld",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/bubsyinfracturedfurrytalesworld.j64"
+    },
+    {
+        "name":  "cannonfodderu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/cannonfodderu.j64"
+    },
+    {
+        "name":  "checkeredflagu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/checkeredflagu.j64"
+    },
+    {
+        "name":  "clubdriveu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/clubdriveu.j64"
+    },
+    {
+        "name":  "cybermorphu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/cybermorphu.j64"
+    },
+    {
+        "name":  "defender2000u",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/defender2000u.j64"
+    },
+    {
+        "name":  "doomu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/doomu.j64"
+    },
+    {
+        "name":  "doubledragonvtheshadowfallsu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/doubledragonvtheshadowfallsu.j64"
+    },
+    {
+        "name":  "dragonthebruceleestoryu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/dragonthebruceleestoryu.j64"
+    },
+    {
+        "name":  "evolutiondinodudesu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/evolutiondinodudesu.j64"
+    },
+    {
+        "name":  "feverpitchsocceru",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/feverpitchsocceru.j64"
+    },
+    {
+        "name":  "fightforlifeu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/fightforlifeu.j64"
+    },
+    {
+        "name":  "flashbackthequestforidentityu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/flashbackthequestforidentityu.j64"
+    },
+    {
+        "name":  "flipoutu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/flipoutu.j64"
+    },
+    {
+        "name":  "hoverstrikeu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/hoverstrikeu.j64"
+    },
+    {
+        "name":  "hyperforceu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/hyperforceu.j64"
+    },
+    {
+        "name":  "ironsoldieru",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/ironsoldieru.j64"
+    },
+    {
+        "name":  "iwaru",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/iwaru.j64"
+    },
+    {
+        "name":  "kasumininjau",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/kasumininjau.j64"
+    },
+    {
+        "name":  "missilecommand3du",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/missilecommand3du.j64"
+    },
+    {
+        "name":  "pinballfantasiesu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/pinballfantasiesu.j64"
+    },
+    {
+        "name":  "pitfallthemayanadventureu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/pitfallthemayanadventureu.j64"
+    },
+    {
+        "name":  "pitfallthemayanadventureworld",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/pitfallthemayanadventureworld.epr"
+    },
+    {
+        "name":  "pitfallthemayanadventureworld",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/pitfallthemayanadventureworld.j64"
+    },
+    {
+        "name":  "powerdriverallyu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/powerdriverallyu.j64"
+    },
+    {
+        "name":  "protectorspecialeditionu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/protectorspecialeditionu.j64"
+    },
+    {
+        "name":  "raidenu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/raidenu.j64"
+    },
+    {
+        "name":  "raymanu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/raymanu.j64"
+    },
+    {
+        "name":  "raymanworld",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/raymanworld.j64"
+    },
+    {
+        "name":  "ruinerpinballu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/ruinerpinballu.j64"
+    },
+    {
+        "name":  "sensiblesoccerinternationaleditionu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/sensiblesoccerinternationaleditionu.j64"
+    },
+    {
+        "name":  "skyhammeru",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/skyhammeru.j64"
+    },
+    {
+        "name":  "soccerkidu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/soccerkidu.j64"
+    },
+    {
+        "name":  "superburnoutu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/superburnoutu.j64"
+    },
+    {
+        "name":  "supercross3du",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/supercross3du.j64"
+    },
+    {
+        "name":  "syndicateu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/syndicateu.j64"
+    },
+    {
+        "name":  "tempest2000u",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/tempest2000u.j64"
+    },
+    {
+        "name":  "themeparku",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/themeparku.j64"
+    },
+    {
+        "name":  "totalcarnageu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/totalcarnageu.j64"
+    },
+    {
+        "name":  "towersiiu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/towersiiu.j64"
+    },
+    {
+        "name":  "trevormcfurinthecrescentgalaxyu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/trevormcfurinthecrescentgalaxyu.j64"
+    },
+    {
+        "name":  "troyaikmannflfootballu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/troyaikmannflfootballu.j64"
+    },
+    {
+        "name":  "ultravorteku",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/ultravorteku.j64"
+    },
+    {
+        "name":  "valdisereskiingandsnowboardingu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/valdisereskiingandsnowboardingu.j64"
+    },
+    {
+        "name":  "whitemencantjumpu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/whitemencantjumpu.j64"
+    },
+    {
+        "name":  "wolfenstein3du",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/wolfenstein3du.j64"
+    },
+    {
+        "name":  "wormsu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/wormsu.j64"
+    },
+    {
+        "name":  "zero5u",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/zero5u.j64"
+    },
+    {
+        "name":  "zool2u",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/zool2u.j64"
+    },
+    {
+        "name":  "zoopu",
+        "console":  "JAGUAR",
+        "romUrl":  "roms/jaguar/zoopu.j64"
+    }
+]
