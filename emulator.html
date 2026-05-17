@@ -13,7 +13,8 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const romUrl = params.get('rom');
+        // Descodificamos correctamente la URL para aceptar comillas, tildes y espacios sin romperse
+        const romUrl = decodeURIComponent(params.get('rom'));
         let core = params.get('core') || 'sega32x';
 
         if (core === 'sega32x') core = 'picodrive';
