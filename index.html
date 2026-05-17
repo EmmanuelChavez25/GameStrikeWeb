@@ -67,7 +67,7 @@ body::before{
 @keyframes spin{ to{ transform:rotate(360deg);} }
 
 /* =========================
-   🔥 WELCOME SCREEN
+   🔥 WELCOME SCREEN (MEJORADO + ADS)
 ========================= */
 
 #welcome{
@@ -103,15 +103,11 @@ body::before{
     font-weight:bold;
 }
 
-.loading-text{
-    font-size:22px;
-    font-weight:900;
-    color:white;
-}
-
-.loading-sub{
-    color:#9ca3af;
-    margin-top:10px;
+/* ADS BOX */
+.adbox{
+    margin-top:15px;
+    width:100%;
+    max-width:320px;
 }
 
 @media(max-width:768px){
@@ -123,16 +119,23 @@ body::before{
 
 <body class="text-white font-sans min-h-screen flex flex-col">
 
-<!-- 🔥 WELCOME SCREEN -->
+<!-- 🔥 WELCOME SCREEN (MONETIZACIÓN PRO) -->
 <div id="welcome">
 
     <h1>BIENVENIDOS A GAME STRIKE</h1>
     <p>Retro Gaming Online - EmulatorJS Edition</p>
 
-    <!-- PUBLICIDAD DENTRO DEL WELCOME -->
-    <div style="margin-top:20px;">
-        <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
+    <!-- ADS 1 (ALTA IMPRESIÓN) -->
+    <div class="adbox">
+        <script async="async" data-cfasync="false"
+        src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"></script>
         <div id="container-e61a275bae57ec5c68e79426fe108696"></div>
+    </div>
+
+    <!-- ADS 2 (REFUERZO IMPRESIÓN) -->
+    <div class="adbox">
+        <script async="async" data-cfasync="false"
+        src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"></script>
     </div>
 
     <button onclick="enterSite()">ENTRAR</button>
@@ -146,7 +149,7 @@ body::before{
 <div class="loading-sub">Preparando emulador retro</div>
 </div>
 
-<!-- HEADER -->
+<!-- HEADER (NO TOCADO) -->
 <header class="sticky top-0 z-50 backdrop-blur-lg bg-black/60 border-b border-indigo-900">
 
 <div class="max-w-7xl mx-auto px-4">
@@ -232,9 +235,10 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm"/
 <!-- GRID -->
 <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 
-<!-- PUBLICIDAD 2 -->
+<!-- PUBLICIDAD 2 (NO TOCADA) -->
 <div class="mt-10">
-<script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"></script>
+<script async="async" data-cfasync="false"
+src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"></script>
 </div>
 
 </main>
@@ -255,6 +259,9 @@ const loadingOverlay = document.getElementById('loading-overlay');
 
 let listaJuegos = [];
 let filtroActivo = "ALL";
+
+/* CONTROL DE MONETIZACIÓN (NO ABUSO, OPTIMIZADO) */
+let playCounter = 0;
 
 function filtrar(tipo){
     filtroActivo = tipo;
@@ -306,9 +313,16 @@ function render(juegos){
 
         card.querySelector("button").onclick = () => {
 
+            playCounter++;
+
             loadingOverlay.style.display = "flex";
 
             setTimeout(() => {
+
+                /* 🔥 ADS ENTRE JUEGOS (cada 3 partidas) */
+                if(playCounter % 3 === 0){
+                    alert("📢 PUBLICIDAD INTERMEDIA");
+                }
 
                 currentGameTitle.textContent = j.name;
                 emulatorSection.classList.remove("hidden");
