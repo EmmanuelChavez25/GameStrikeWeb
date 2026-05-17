@@ -453,8 +453,10 @@ function iniciarJuegoReal(nombre, romUrl, consola){
 
         if(consola === 'MAME'){
             core = 'arcade';
-        }
-
+        } 
+        if(consola === 'ATARI7800'){
+    core = 'atari7800';
+}
         emulatorFrame.src =
         `./emulator.html?rom=${encodeURIComponent(romUrl)}&core=${core}`;
 
