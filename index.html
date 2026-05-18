@@ -95,10 +95,6 @@ body::before{
 }
 
 .adbox{ margin-top:15px; min-height: 50px; }
-
-#touch-controls{
-    display:flex;
-}
 </style>
 </head>
 
@@ -159,12 +155,15 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm f
 <main class="max-w-7xl mx-auto px-4 py-6 flex-grow">
 
 <section id="emulator-section" class="hidden bg-black/70 rounded-3xl overflow-hidden border border-indigo-900">
-<div class="flex justify-between p-3">
+<div class="flex justify-between items-center p-3">
 <h2 id="current-game-title" class="text-indigo-400 font-bold">Juego</h2>
-<button onclick="cerrarJuego()" class="bg-red-600 px-3 py-1 rounded-xl">Salir</button>
+<div class="flex gap-2">
+<button onclick="agrandarPantalla()" class="bg-indigo-600 hover:bg-indigo-500 px-3 py-1 rounded-xl text-xs font-bold transition">Pantalla Completa</button>
+<button onclick="cerrarJuego()" class="bg-red-600 hover:bg-red-500 px-3 py-1 rounded-xl text-xs font-bold transition">Salir</button>
+</div>
 </div>
 <div class="emulator-container bg-black">
-<iframe id="emulator-frame" class="w-full h-full"></iframe>
+<iframe id="emulator-frame" class="w-full h-full" allowfullscreen strict-origin-when-cross-origin></iframe>
 </div>
 </section>
 
@@ -174,13 +173,6 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm f
 
 <div id="mobile-native-ads" class="mt-8 hidden w-full flex flex-col items-center justify-center p-4 border border-dashed border-gray-800 rounded-2xl bg-gray-950/40">
     <span class="text-xs text-gray-600 mb-2 block uppercase tracking-widest">Publicidad recomendada</span>
-</div>
-
-<div id="touch-controls" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 gap-2 z-[9999]">
-<button onclick="pressKey('A')" class="bg-indigo-600 px-3 py-2 rounded-xl">A</button>
-<button onclick="pressKey('B')" class="bg-purple-600 px-3 py-2 rounded-xl">B</button>
-<button onclick="pressKey('START')" class="bg-green-600 px-3 py-2 rounded-xl">START</button>
-<button onclick="pressKey('SELECT')" class="bg-gray-600 px-3 py-2 rounded-xl">SELECT</button>
 </div>
 
 </main>
@@ -246,20 +238,18 @@ function render(){
         `;
 
         div.querySelector("button").onclick = () => {
-            // OPCIÓN 1: Abrimos el cartel de publicidad en vez del juego directo
             const modal = document.getElementById("ad-interstitial-modal");
             const continueBtn = document.getElementById("ad-continue-btn");
             
             modal.classList.remove("hidden");
             
-            // Asignamos la acción al botón del cartel publicitario
             continueBtn.onclick = () => {
-                // Abre el Smartlink en pestaña nueva
                 window.open(SMARTLINK_URL, "_blank");
                 
-                // Oculta el cartel e inmediatamente arranca el emulador atrás
                 modal.classList.add("hidden");
                 
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
                 emulatorSection.classList.remove("hidden");
                 currentGameTitle.textContent = g.name;
 
@@ -269,8 +259,6 @@ function render(){
                 if(g.console === "NES") core = "nes";
 
                 emulatorFrame.src = `./emulator.html?game=${encodeURIComponent(g.romUrl)}&core=${core}`;
-                autoFullscreen();
-                showTouch();
             };
         };
 
@@ -278,11 +266,10 @@ function render(){
     });
 }
 
-// LOGICA DE LA OPCIÓN 3: Pestaña flotante "X"
 function triggerFloatingAd(){
     window.open(SMARTLINK_URL, "_blank");
     const tab = document.getElementById("floating-ad-tab");
-    if(tab) tab.remove(); // Desaparece por completo al interactuar
+    if(tab) tab.remove(); 
 }
 
 function cerrarJuego(){
@@ -290,22 +277,20 @@ function cerrarJuego(){
     emulatorSection.classList.add("hidden");
 }
 
+function agrandarPantalla(){
+    const f = document.getElementById("emulator-frame");
+    if (f.requestFullscreen) {
+        f.requestFullscreen();
+    } else if (f.webkitRequestFullscreen) { /* Safari */
+        f.webkitRequestFullscreen();
+    } else if (f.msRequestFullscreen) { /* IE11 */
+        f.msRequestFullscreen();
+    }
+}
+
 function pressKey(k){
     const f = document.getElementById("emulator-frame");
     f.contentWindow.postMessage({type:"key",key:k},"*");
-}
-
-function showTouch(){
-    if(isMobile()){
-        document.getElementById("touch-controls").classList.remove("hidden");
-    }
-}
-
-function autoFullscreen(){
-    if(isMobile()){
-        const f = document.getElementById("emulator-frame");
-        f.requestFullscreen?.();
-    }
 }
 
 function inicializarPublicidad() {
@@ -313,7 +298,6 @@ function inicializarPublicidad() {
     const mobileContainer = document.getElementById("mobile-native-ads");
 
     if (!isMobile()) {
-        // PC: Se inyectan los banners clásicos en la bienvenida
         pcContainer.innerHTML = `
             <div class="adbox">
                 <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"><\/script>
@@ -328,7 +312,6 @@ function inicializarPublicidad() {
             oldScript.parentNode.replaceChild(newScript, oldScript);
         });
     } else {
-        // Celulares: Bienvenida 100% limpia para tu banner social, se activa el bloque de abajo
         mobileContainer.classList.remove("hidden");
     }
 }
