@@ -133,22 +133,27 @@ body::before{
 </div>
 
 <header class="sticky top-0 z-50 backdrop-blur-lg bg-black/60 border-b border-indigo-900">
-<div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-<div>
-<h1 class="text-2xl font-black text-indigo-400">GAME-STRIKE RETRO</h1>
-<div class="flex gap-2 mt-2 flex-wrap">
-<button onclick="filtrar('ALL')" class="px-3 py-1 text-xs bg-gray-800 rounded-xl">ALL</button>
-<button onclick="filtrar('SEGA32X')" class="px-3 py-1 text-xs bg-indigo-600 rounded-xl">SEGA32X</button>
-<button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs bg-purple-600 rounded-xl">ATARI7800</button>
-<button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs bg-green-600 rounded-xl">JAGUAR</button>
-<button onclick="filtrar('NES')" class="px-3 py-1 text-xs bg-red-600 rounded-xl">NES</button>
-</div>
-</div>
-<div class="w-full md:w-72">
-<input type="text" id="search-input" oninput="buscar(this.value)"
-placeholder="Buscar juegos..."
-class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 text-white"/>
-</div>
+<div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3 relative">
+    
+    <div class="hidden md:block w-72"></div>
+
+    <div class="flex flex-col items-center text-center flex-grow">
+        <h1 class="text-2xl font-black text-indigo-400 tracking-wider">GAME-STRIKE RETRO</h1>
+        <div class="flex gap-2 mt-2 flex-wrap justify-center">
+            <button onclick="filtrar('ALL')" class="px-3 py-1 text-xs bg-gray-800 rounded-xl hover:bg-gray-700 transition">ALL</button>
+            <button onclick="filtrar('SEGA32X')" class="px-3 py-1 text-xs bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">SEGA32X</button>
+            <button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs bg-purple-600 rounded-xl hover:bg-purple-500 transition">ATARI7800</button>
+            <button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs bg-green-600 rounded-xl hover:bg-green-500 transition">JAGUAR</button>
+            <button onclick="filtrar('NES')" class="px-3 py-1 text-xs bg-red-600 rounded-xl hover:bg-red-500 transition">NES</button>
+        </div>
+    </div>
+
+    <div class="w-full md:w-72">
+        <input type="text" id="search-input" oninput="buscar(this.value)"
+        placeholder="Buscar juegos..."
+        class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 text-white"/>
+    </div>
+
 </div>
 </header>
 
@@ -163,7 +168,7 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm f
 </div>
 </div>
 <div class="emulator-container bg-black">
-<iframe id="emulator-frame" class="w-full h-full" allowfullscreen strict-origin-when-cross-origin></iframe>
+    <iframe id="emulator-frame" class="w-full h-full" allow="fullscreen; keyboard" allowfullscreen strict-origin-when-cross-origin></iframe>
 </div>
 </section>
 
@@ -171,15 +176,15 @@ class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm f
 
 <div id="games-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
 
-<div id="mobile-native-ads" class="mt-8 hidden w-full flex flex-col items-center justify-center p-4 border border-dashed border-gray-800 rounded-2xl bg-gray-950/40">
-    <span class="text-xs text-gray-600 mb-2 block uppercase tracking-widest">Publicidad recomendada</span>
+<div id="global-bottom-ads" class="mt-12 w-full flex flex-col items-center justify-center p-4 border border-dashed border-indigo-900/40 rounded-2xl bg-gray-950/40 min-h-[120px]">
+    <span class="text-[10px] text-gray-500 mb-3 block uppercase tracking-widest font-bold">Anuncio Recomendado</span>
+    <div id="native-banner-container" class="w-full flex justify-center"></div>
 </div>
 
 </main>
 
 <script>
 
-// URL de tu Smartlink de Adsterra
 const SMARTLINK_URL = "https://www.effectivecpmnetwork.com/vs496jw3?key=b7e43b566e8614c045f8eb6a7a936831";
 
 function isMobile(){
@@ -259,6 +264,11 @@ function render(){
                 if(g.console === "NES") core = "nes";
 
                 emulatorFrame.src = `./emulator.html?game=${encodeURIComponent(g.romUrl)}&core=${core}`;
+                
+                setTimeout(() => {
+                    emulatorFrame.contentWindow?.focus();
+                    emulatorFrame.focus();
+                }, 500);
             };
         };
 
@@ -281,11 +291,16 @@ function agrandarPantalla(){
     const f = document.getElementById("emulator-frame");
     if (f.requestFullscreen) {
         f.requestFullscreen();
-    } else if (f.webkitRequestFullscreen) { /* Safari */
+    } else if (f.webkitRequestFullscreen) {
         f.webkitRequestFullscreen();
-    } else if (f.msRequestFullscreen) { /* IE11 */
+    } else if (f.msRequestFullscreen) {
         f.msRequestFullscreen();
     }
+    
+    setTimeout(() => {
+        f.contentWindow?.focus();
+        f.focus();
+    }, 100);
 }
 
 function pressKey(k){
@@ -295,9 +310,10 @@ function pressKey(k){
 
 function inicializarPublicidad() {
     const pcContainer = document.getElementById("pc-ads-container");
-    const mobileContainer = document.getElementById("mobile-native-ads");
+    const nativeContainer = document.getElementById("native-banner-container");
 
     if (!isMobile()) {
+        // PC: Cargamos los banners de la pantalla de bienvenida
         pcContainer.innerHTML = `
             <div class="adbox">
                 <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"><\/script>
@@ -311,9 +327,18 @@ function inicializarPublicidad() {
             Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
             oldScript.parentNode.replaceChild(newScript, oldScript);
         });
-    } else {
-        mobileContainer.classList.remove("hidden");
     }
+
+    // CARGA DEL BANNER NATIVO ABAJO DEL TODO (Para ambos: PC y Celular)
+    // Usa un bloque de código estándar compatible con el hosting de GitHub Pages
+    nativeContainer.innerHTML = `
+        <script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"><\/script>
+    `;
+    nativeContainer.querySelectorAll("script").forEach(oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
 }
 
 window.addEventListener("load", () => {
