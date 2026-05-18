@@ -31,7 +31,7 @@ body::before{
 ::-webkit-scrollbar-track{ background:#0b0f19; }
 ::-webkit-scrollbar-thumb{ background:#312e81; border-radius:10px; }
 
-.game-card{ transition:.25s; }
+.game-card{ transition:.25s; position: relative; }
 .game-card:hover{
     transform:translateY(-5px) scale(1.02);
     border-color:#6366f1;
@@ -145,6 +145,7 @@ body::before{
             <button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs bg-purple-600 rounded-xl hover:bg-purple-500 transition">ATARI7800</button>
             <button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs bg-green-600 rounded-xl hover:bg-green-500 transition">JAGUAR</button>
             <button onclick="filtrar('NES')" class="px-3 py-1 text-xs bg-red-600 rounded-xl hover:bg-red-500 transition">NES</button>
+            <button onclick="filtrar('FAVORITOS')" class="px-3 py-1 text-xs bg-yellow-600 text-white font-bold rounded-xl hover:bg-yellow-500 transition">⭐ FAVORITOS</button>
         </div>
     </div>
 
@@ -172,7 +173,15 @@ body::before{
 </div>
 </section>
 
-<h2 class="text-2xl font-bold mt-6">Colección Retro</h2>
+<section id="destacados-section" class="mt-4 mb-8">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold tracking-wide text-indigo-300">🔥 RECOMENDADOS DE HOY</h2>
+        <button onclick="jugarAleatorio()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-4 py-1.5 rounded-xl text-xs font-black tracking-wider transition shadow-md shadow-purple-900/40">🎲 JUEGO ALEATORIO</button>
+    </div>
+    <div id="destacados-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+</section>
+
+<h2 id="section-title" class="text-2xl font-bold mt-6">Colección Retro</h2>
 
 <div id="games-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
 
@@ -196,16 +205,26 @@ function enterSite(){
 }
 
 const gamesGrid = document.getElementById("games-grid");
+const destacadosGrid = document.getElementById("destacados-grid");
 const emulatorFrame = document.getElementById("emulator-frame");
 const emulatorSection = document.getElementById("emulator-section");
 const currentGameTitle = document.getElementById("current-game-title");
 
 let lista = [];
+let favoritos = JSON.parse(localStorage.getItem("gs_favoritos")) || [];
 let filtro = "ALL";
 let busqueda = ""; 
 
 function filtrar(f){
     filtro = f;
+    // Si filtramos por favoritos, ocultamos la sección superior de destacados para no confundir
+    if(filtro === "FAVORITOS") {
+        document.getElementById("destacados-section").classList.add("hidden");
+        document.getElementById("section-title").textContent = "Mis Juegos Guardados";
+    } else {
+        document.getElementById("destacados-section").classList.remove("hidden");
+        document.getElementById("section-title").textContent = "Colección Retro";
+    }
     render();
 }
 
@@ -217,14 +236,167 @@ function buscar(texto){
 async function cargar(){
     const res = await fetch("./all_roms.json");
     lista = await res.json();
+    generarDestacados();
     render();
+}
+
+// Genera 4 juegos recomendados al azar al cargar la página
+function generarDestacados(){
+    if(lista.length === 0) return;
+    destacadosGrid.innerHTML = "";
+    
+    // Mezcla la lista y agarra los primeros 4
+    let mezclados = [...lista].sort(() => 0.5 - Math.random()).slice(0, 4);
+    
+    mezclados.forEach(g => {
+        const div = crearTarjetaJuego(g, true);
+        destacadosGrid.appendChild(div);
+    });
+}
+
+// Ejecuta un juego completamente al azar al pulsar el botón de juego aleatorio
+function jugarAleatorio(){
+    if(lista.length === 0) return;
+    const juegoAzar = lista[Math.floor(Math.random() * lista.length)];
+    iniciarProcesoJuego(juegoAzar);
+}
+
+// Alterna el estado de favoritos de un juego
+function toggleFavorito(idJuego, btnElement) {
+    const index = favoritos.indexOf(idJuego);
+    if(index === -1) {
+        favoritos.push(idJuego);
+        btnElement.textContent = "⭐";
+        btnElement.classList.remove("text-gray-600");
+        btnElement.classList.add("text-yellow-400");
+    } else {
+        favoritos.splice(index, 1);
+        btnElement.textContent = "☆";
+        btnElement.classList.remove("text-yellow-400");
+        btnElement.classList.add("text-gray-600");
+    }
+    localStorage.setItem("gs_favoritos", JSON.stringify(favoritos));
+    
+    // Si estamos parados en la pestaña de favoritos, re-renderiza al instante para quitarlo de la vista
+    if(filtro === "FAVORITOS") render();
+}
+
+// Generador de la estructura del cartucho visual (Mapeado dinámico)
+function obtenerCartuchoHTML(g) {
+    if(g.console === "NES") {
+        return `
+            <div class="w-28 h-32 bg-gray-600 rounded-b-md relative shadow-inner border border-gray-500 p-2 flex flex-col items-center mb-3">
+                <div class="absolute inset-y-0 left-2 w-1 bg-gray-700 opacity-40"></div>
+                <div class="absolute inset-y-0 left-4 w-1 bg-gray-700 opacity-40"></div>
+                <div class="absolute inset-y-0 left-6 w-1 bg-gray-700 opacity-40"></div>
+                <div class="w-20 h-20 bg-gradient-to-b from-red-800 to-red-950 border border-red-700 rounded p-1 text-center flex flex-col justify-center shadow-md">
+                    <span class="text-[9px] uppercase tracking-tighter text-red-400 font-bold">Nintendo</span>
+                    <div class="text-[10px] font-black uppercase text-white truncate px-0.5 leading-tight">${g.name}</div>
+                </div>
+                <div class="w-16 h-4 bg-gray-700/60 mt-2 rounded-t border-t border-gray-800"></div>
+            </div>`;
+    } else if(g.console === "SEGA32X") {
+        return `
+            <div class="w-28 h-28 bg-zinc-950 rounded-t-2xl rounded-b-md relative border border-zinc-800 p-2 flex flex-col items-center justify-between mb-3 shadow-2xl">
+                <div class="w-full h-2 bg-gradient-to-r from-yellow-500 via-red-500 to-purple-600 rounded-full opacity-80"></div>
+                <div class="w-22 h-16 bg-gradient-to-b from-indigo-900 to-slate-900 border border-indigo-700 rounded-lg p-1 text-center flex flex-col justify-center">
+                    <span class="text-[8px] uppercase tracking-widest text-yellow-400 font-black">SEGA 32X</span>
+                    <div class="text-[10px] font-bold uppercase text-white truncate px-0.5">${g.name}</div>
+                </div>
+                <div class="w-20 h-2 bg-zinc-900 rounded-b"></div>
+            </div>`;
+    } else if(g.console === "ATARI7800") {
+        return `
+            <div class="w-26 h-30 bg-stone-900 rounded border-t-4 border-t-red-600 border border-stone-800 p-2 flex flex-col items-center mb-3 shadow-lg">
+                <div class="w-20 h-18 bg-stone-950 border border-stone-800 rounded p-1 flex flex-col justify-between text-center">
+                    <span class="text-[8px] font-black text-red-500 tracking-wider">ATARI 7800</span>
+                    <div class="text-[10px] font-medium uppercase text-stone-300 truncate leading-tight">${g.name}</div>
+                    <div class="h-1 w-full bg-red-600"></div>
+                </div>
+            </div>`;
+    } else {
+        return `
+            <div class="w-26 h-28 bg-slate-950 rounded-lg border border-slate-800 p-2 flex flex-col items-center justify-center mb-3 shadow-lg relative">
+                <div class="absolute top-0 inset-x-0 h-1 bg-green-500 rounded-t-lg"></div>
+                <div class="w-20 h-16 bg-gradient-to-br from-green-950 to-black border border-green-900 rounded p-1 flex flex-col justify-center text-center">
+                    <span class="text-[8px] text-green-400 font-bold uppercase">${g.console}</span>
+                    <div class="text-[10px] font-bold uppercase text-white truncate">${g.name}</div>
+                </div>
+            </div>`;
+    }
+}
+
+// Fábrica central para armar las tarjetas de los juegos de manera limpia
+function crearTarjetaJuego(g, esDestacado = false) {
+    const div = document.createElement("div");
+    div.className = "bg-gray-900 p-4 rounded-3xl border border-gray-800 game-card flex flex-col items-center justify-between";
+    
+    const esFav = favoritos.includes(g.romUrl);
+    const cartucho = obtenerCartuchoHTML(g);
+
+    div.innerHTML = `
+        <button class="absolute top-3 right-3 z-10 text-base focus:outline-none transition fav-star-btn ${esFav ? 'text-yellow-400' : 'text-gray-600'}" data-rom="${g.romUrl}">
+            ${esFav ? '⭐' : '☆'}
+        </button>
+        ${cartucho}
+        <div class="w-full text-center mt-1">
+            <span class="text-[10px] uppercase font-bold text-gray-500 block tracking-wider">${g.console}</span>
+            <div class="font-bold text-sm text-gray-200 mt-0.5 line-clamp-1 capitalize">${g.name}</div>
+            <button class="mt-3 w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 font-bold rounded-xl py-1.5 text-xs tracking-wide transition shadow-md play-game-btn">JUGAR</button>
+        </div>
+    `;
+
+    // Asignación de clics
+    div.querySelector(".fav-star-btn").onclick = (e) => {
+        e.stopPropagation();
+        toggleFavorito(g.romUrl, e.target);
+    };
+
+    div.querySelector(".play-game-btn").onclick = () => {
+        iniciarProcesoJuego(g);
+    };
+
+    return div;
+}
+
+// Lógica unificada para desplegar el modal de anuncios e inyectar el juego al emulador
+function iniciarProcesoJuego(g) {
+    const modal = document.getElementById("ad-interstitial-modal");
+    const continueBtn = document.getElementById("ad-continue-btn");
+    
+    modal.classList.remove("hidden");
+    
+    continueBtn.onclick = () => {
+        window.open(SMARTLINK_URL, "_blank");
+        modal.classList.add("hidden");
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        emulatorSection.classList.remove("hidden");
+        currentGameTitle.textContent = g.name;
+
+        let core = "sega32x";
+        if(g.console === "ATARI7800") core = "atari7800";
+        if(g.console === "JAGUAR") core = "jaguar";
+        if(g.console === "NES") core = "nes";
+
+        emulatorFrame.src = `./emulator.html?game=${encodeURIComponent(g.romUrl)}&core=${core}`;
+        
+        setTimeout(() => {
+            emulatorFrame.contentWindow?.focus();
+            emulatorFrame.focus();
+        }, 500);
+    };
 }
 
 function render(){
     gamesGrid.innerHTML = "";
     let data = lista;
 
-    if(filtro !== "ALL"){
+    // Lógica de filtrado avanzada (Consolas o Favoritos)
+    if(filtro === "FAVORITOS") {
+        data = data.filter(g => favoritos.includes(g.romUrl));
+    } else if(filtro !== "ALL"){
         data = data.filter(g => g.console === filtro);
     }
 
@@ -232,46 +404,13 @@ function render(){
         data = data.filter(g => g.name.toLowerCase().includes(busqueda));
     }
 
+    if(data.length === 0) {
+        gamesGrid.innerHTML = `<div class="col-span-4 text-center py-8 text-gray-500 text-sm">No se encontraron juegos en esta categoría.</div>`;
+        return;
+    }
+
     data.forEach(g => {
-        const div = document.createElement("div");
-        div.className = "bg-gray-900 p-3 rounded-2xl border border-gray-800 game-card"; 
-
-        div.innerHTML = `
-            <div class="text-xs">${g.console}</div>
-            <div class="font-bold">${g.name}</div>
-            <button class="mt-2 w-full bg-indigo-600 rounded-xl py-1">JUGAR</button>
-        `;
-
-        div.querySelector("button").onclick = () => {
-            const modal = document.getElementById("ad-interstitial-modal");
-            const continueBtn = document.getElementById("ad-continue-btn");
-            
-            modal.classList.remove("hidden");
-            
-            continueBtn.onclick = () => {
-                window.open(SMARTLINK_URL, "_blank");
-                
-                modal.classList.add("hidden");
-                
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                emulatorSection.classList.remove("hidden");
-                currentGameTitle.textContent = g.name;
-
-                let core = "sega32x";
-                if(g.console === "ATARI7800") core = "atari7800";
-                if(g.console === "JAGUAR") core = "jaguar";
-                if(g.console === "NES") core = "nes";
-
-                emulatorFrame.src = `./emulator.html?game=${encodeURIComponent(g.romUrl)}&core=${core}`;
-                
-                setTimeout(() => {
-                    emulatorFrame.contentWindow?.focus();
-                    emulatorFrame.focus();
-                }, 500);
-            };
-        };
-
+        const div = crearTarjetaJuego(g, false);
         gamesGrid.appendChild(div);
     });
 }
@@ -313,7 +452,6 @@ function inicializarPublicidad() {
     const nativeContainer = document.getElementById("native-banner-container");
 
     if (!isMobile()) {
-        // PC: Cargamos los banners de la pantalla de bienvenida
         pcContainer.innerHTML = `
             <div class="adbox">
                 <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"><\/script>
@@ -329,8 +467,6 @@ function inicializarPublicidad() {
         });
     }
 
-    // CARGA DEL BANNER NATIVO ABAJO DEL TODO (Para ambos: PC y Celular)
-    // Usa un bloque de código estándar compatible con el hosting de GitHub Pages
     nativeContainer.innerHTML = `
         <script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"><\/script>
     `;
