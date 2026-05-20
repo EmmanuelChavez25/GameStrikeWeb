@@ -424,7 +424,7 @@ function toggleFavorito(idJuego, btnElement){
 
     if(index === -1){
 
-        favoritos.push(idJuego);
+        favorites.push(idJuego);
 
         btnElement.textContent = "⭐";
 
@@ -541,6 +541,9 @@ function iniciarProcesoJuego(g){
         modal.classList.add("hidden");
 
         emulatorSection.classList.remove("hidden");
+
+        // Hace que la pantalla suba de forma suave hacia la zona del emulador
+        emulatorSection.scrollIntoView({ behavior: 'smooth' });
 
         currentGameTitle.textContent = g.name;
 
