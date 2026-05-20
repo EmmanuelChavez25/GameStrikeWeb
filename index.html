@@ -9,7 +9,10 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-html{ scroll-behavior:smooth; }
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     background:#070b14;
@@ -27,18 +30,33 @@ body::before{
     z-index:-1;
 }
 
-::-webkit-scrollbar{ width:8px; }
-::-webkit-scrollbar-track{ background:#0b0f19; }
-::-webkit-scrollbar-thumb{ background:#312e81; border-radius:10px; }
+::-webkit-scrollbar{
+    width:8px;
+}
 
-.game-card{ transition:.25s; position: relative; }
+::-webkit-scrollbar-track{
+    background:#0b0f19;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#312e81;
+    border-radius:10px;
+}
+
+.game-card{
+    transition:.25s;
+    position:relative;
+}
+
 .game-card:hover{
     transform:translateY(-5px) scale(1.02);
     border-color:#6366f1;
     box-shadow:0 0 20px rgba(99,102,241,.25);
 }
 
-.emulator-container{ height:75vh; }
+.emulator-container{
+    height:75vh;
+}
 
 #loading-overlay{
     position:fixed;
@@ -61,9 +79,14 @@ body::before{
     margin-bottom:25px;
 }
 
-@keyframes spin{ to{ transform:rotate(360deg);} }
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
 
 /* WELCOME */
+
 #welcome{
     position:fixed;
     inset:0;
@@ -84,7 +107,10 @@ body::before{
     color:transparent;
 }
 
-#welcome p{ color:#aaa; margin-top:10px; }
+#welcome p{
+    color:#aaa;
+    margin-top:10px;
+}
 
 #welcome button{
     margin-top:20px;
@@ -94,132 +120,239 @@ body::before{
     font-weight:bold;
 }
 
-.adbox{ margin-top:15px; min-height: 50px; }
+.adbox{
+    margin-top:15px;
+    min-height:50px;
+}
+
 </style>
 </head>
 
 <body class="text-white font-sans min-h-screen flex flex-col">
 
+<!-- WELCOME -->
+
 <div id="welcome">
+
     <h1>BIENVENIDOS A GAME STRIKE</h1>
+
     <p>Retro Gaming Online - EmulatorJS Edition</p>
 
-    <div id="pc-ads-container" class="flex flex-col items-center gap-3 w-full"></div>
+    <div id="pc-ads-container"
+    class="flex flex-col items-center gap-3 w-full"></div>
 
     <button onclick="enterSite()">ENTRAR</button>
+
 </div>
 
-<div id="ad-interstitial-modal" class="fixed inset-0 bg-black/90 z-[100001] hidden flex items-center justify-center p-4">
+<!-- MODAL ADS -->
+
+<div id="ad-interstitial-modal"
+class="fixed inset-0 bg-black/90 z-[100001] hidden flex items-center justify-center p-4">
+
     <div class="bg-gray-900 border border-indigo-500 rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl">
-        <div class="w-12 h-12 border-4 border-indigo-500 border-t-purple-500 rounded-full animation:spin 1s linear infinite mx-auto mb-4 animate-spin"></div>
-        <h3 class="text-xl font-bold text-indigo-400 mb-2">Preparando Servidor de Juego</h3>
-        <p class="text-xs text-gray-400 mb-6">Por favor, hacé clic abajo para saltar la publicidad y sincronizar el emulador.</p>
-        <button id="ad-continue-btn" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 py-3 rounded-2xl font-bold tracking-wide transition shadow-lg shadow-indigo-600/30">
-            QUITAR PUBLICIDAD / CONTINUAR
+
+        <div class="w-12 h-12 border-4 border-indigo-500 border-t-purple-500 rounded-full mx-auto mb-4 animate-spin"></div>
+
+        <h3 class="text-xl font-bold text-indigo-400 mb-2">
+            Preparando Servidor de Juego
+        </h3>
+
+        <p class="text-xs text-gray-400 mb-6">
+            Por favor, hacé clic abajo para continuar.
+        </p>
+
+        <button id="ad-continue-btn"
+        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 py-3 rounded-2xl font-bold tracking-wide transition shadow-lg shadow-indigo-600/30">
+
+            CONTINUAR
+
         </button>
+
     </div>
+
 </div>
 
-<div id="floating-ad-tab" class="fixed bottom-4 right-4 z-[9998] flex items-center bg-gray-900/90 border border-indigo-900/60 backdrop-blur-sm rounded-xl pl-3 pr-1 py-1 shadow-xl">
-    <span class="text-[10px] text-gray-400 font-medium mr-2 uppercase tracking-wider">Anuncio Recomendado</span>
-    <button onclick="triggerFloatingAd()" class="w-7 h-7 bg-indigo-950 text-indigo-400 hover:bg-indigo-900 hover:text-white rounded-lg flex items-center justify-center font-bold text-sm transition">
+<!-- FLOATING AD -->
+
+<div id="floating-ad-tab"
+class="fixed bottom-4 right-4 z-[9998] flex items-center bg-gray-900/90 border border-indigo-900/60 backdrop-blur-sm rounded-xl pl-3 pr-1 py-1 shadow-xl">
+
+    <span class="text-[10px] text-gray-400 font-medium mr-2 uppercase tracking-wider">
+        Anuncio
+    </span>
+
+    <button onclick="triggerFloatingAd()"
+    class="w-7 h-7 bg-indigo-950 text-indigo-400 hover:bg-indigo-900 hover:text-white rounded-lg flex items-center justify-center font-bold text-sm transition">
+
         ✕
+
     </button>
+
 </div>
+
+<!-- LOADING -->
 
 <div id="loading-overlay">
-<div class="loader"></div>
-<div>CARGANDO JUEGO...</div>
+
+    <div class="loader"></div>
+
+    <div>CARGANDO JUEGO...</div>
+
 </div>
 
+<!-- HEADER -->
+
 <header class="sticky top-0 z-50 backdrop-blur-lg bg-black/60 border-b border-indigo-900">
+
 <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3 relative">
-    
+
     <div class="hidden md:block w-72"></div>
 
     <div class="flex flex-col items-center text-center flex-grow">
-        <h1 class="text-2xl font-black text-indigo-400 tracking-wider">GAME-STRIKE RETRO</h1>
+
+        <h1 class="text-2xl font-black text-indigo-400 tracking-wider">
+            GAME-STRIKE RETRO
+        </h1>
 
         <div class="flex gap-2 mt-2 flex-wrap justify-center">
 
-            <button onclick="filtrar('ALL')" class="px-3 py-1 text-xs bg-gray-800 rounded-xl hover:bg-gray-700 transition">ALL</button>
+            <button onclick="filtrar('ALL')"
+            class="px-3 py-1 text-xs bg-gray-800 rounded-xl hover:bg-gray-700 transition">
+                ALL
+            </button>
 
-            <button onclick="filtrar('SEGA32X')" class="px-3 py-1 text-xs bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">SEGA32X</button>
+            <button onclick="filtrar('SEGA32X')"
+            class="px-3 py-1 text-xs bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">
+                SEGA32X
+            </button>
 
-            <button onclick="filtrar('ATARI7800')" class="px-3 py-1 text-xs bg-purple-600 rounded-xl hover:bg-purple-500 transition">ATARI7800</button>
+            <button onclick="filtrar('ATARI7800')"
+            class="px-3 py-1 text-xs bg-purple-600 rounded-xl hover:bg-purple-500 transition">
+                ATARI7800
+            </button>
 
-            <button onclick="filtrar('JAGUAR')" class="px-3 py-1 text-xs bg-green-600 rounded-xl hover:bg-green-500 transition">JAGUAR</button>
+            <button onclick="filtrar('JAGUAR')"
+            class="px-3 py-1 text-xs bg-green-600 rounded-xl hover:bg-green-500 transition">
+                JAGUAR
+            </button>
 
-            <button onclick="filtrar('NES')" class="px-3 py-1 text-xs bg-red-600 rounded-xl hover:bg-red-500 transition">NES</button>
+            <button onclick="filtrar('NES')"
+            class="px-3 py-1 text-xs bg-red-600 rounded-xl hover:bg-red-500 transition">
+                NES
+            </button>
 
-            <!-- NUEVO N64 -->
-            <button onclick="filtrar('N64')" class="px-3 py-1 text-xs bg-blue-600 rounded-xl hover:bg-blue-500 transition">N64</button>
+            <button onclick="filtrar('N64')"
+            class="px-3 py-1 text-xs bg-blue-600 rounded-xl hover:bg-blue-500 transition">
+                N64
+            </button>
 
-            <button onclick="filtrar('FAVORITOS')" class="px-3 py-1 text-xs bg-yellow-600 text-white font-bold rounded-xl hover:bg-yellow-500 transition">⭐ FAVORITOS</button>
+            <button onclick="filtrar('FAVORITOS')"
+            class="px-3 py-1 text-xs bg-yellow-600 text-white font-bold rounded-xl hover:bg-yellow-500 transition">
+                ⭐ FAVORITOS
+            </button>
 
         </div>
+
     </div>
 
     <div class="w-full md:w-72">
-        <input type="text" id="search-input" oninput="buscar(this.value)"
+
+        <input type="text"
+        id="search-input"
+        oninput="buscar(this.value)"
         placeholder="Buscar juegos..."
         class="w-full bg-gray-900 border border-gray-700 rounded-2xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500 text-white"/>
+
     </div>
 
 </div>
+
 </header>
+
+<!-- MAIN -->
 
 <main class="max-w-7xl mx-auto px-4 py-6 flex-grow">
 
-<section id="emulator-section" class="hidden bg-black/70 rounded-3xl overflow-hidden border border-indigo-900">
-<div class="flex justify-between items-center p-3">
-<h2 id="current-game-title" class="text-indigo-400 font-bold">Juego</h2>
+<!-- EMULADOR -->
 
-<div class="flex gap-2">
-<button onclick="agrandarPantalla()" class="bg-indigo-600 hover:bg-indigo-500 px-3 py-1 rounded-xl text-xs font-bold transition">Pantalla Completa</button>
-<button onclick="cerrarJuego()" class="bg-red-600 hover:bg-red-500 px-3 py-1 rounded-xl text-xs font-bold transition">Salir</button>
-</div>
+<section id="emulator-section"
+class="hidden bg-black/70 rounded-3xl overflow-hidden border border-indigo-900">
+
+<div class="flex justify-between items-center p-3">
+
+    <h2 id="current-game-title"
+    class="text-indigo-400 font-bold">
+
+        Juego
+
+    </h2>
+
+    <div class="flex gap-2">
+
+        <button onclick="agrandarPantalla()"
+        class="bg-indigo-600 hover:bg-indigo-500 px-3 py-1 rounded-xl text-xs font-bold transition">
+
+            Pantalla Completa
+
+        </button>
+
+        <button onclick="cerrarJuego()"
+        class="bg-red-600 hover:bg-red-500 px-3 py-1 rounded-xl text-xs font-bold transition">
+
+            Salir
+
+        </button>
+
+    </div>
 
 </div>
 
 <div class="emulator-container bg-black">
-    <iframe id="emulator-frame" class="w-full h-full" allow="fullscreen; keyboard" allowfullscreen strict-origin-when-cross-origin></iframe>
+
+    <iframe id="emulator-frame"
+    class="w-full h-full"
+    allow="fullscreen; keyboard"
+    allowfullscreen></iframe>
+
 </div>
 
 </section>
 
-<section id="destacados-section" class="mt-4 mb-8">
+<!-- TITULO -->
 
-    <div class="flex justify-between items-center mb-4">
+<h2 id="section-title"
+class="text-2xl font-bold mt-6">
 
-        <h2 class="text-xl font-bold tracking-wide text-indigo-300">
-            🔥 RECOMENDADOS DE HOY
-        </h2>
+    Colección Retro
 
-        <button onclick="jugarAleatorio()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-4 py-1.5 rounded-xl text-xs font-black tracking-wider transition shadow-md shadow-purple-900/40">
-            🎲 JUEGO ALEATORIO
-        </button>
+</h2>
 
-    </div>
+<!-- GRID -->
 
-    <div id="destacados-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+<div id="games-grid"
+class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
 
-</section>
+<!-- ADS -->
 
-<h2 id="section-title" class="text-2xl font-bold mt-6">Colección Retro</h2>
+<div id="global-bottom-ads"
+class="mt-12 w-full flex flex-col items-center justify-center p-4 border border-dashed border-indigo-900/40 rounded-2xl bg-gray-950/40 min-h-[120px]">
 
-<div id="games-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
+    <span class="text-[10px] text-gray-500 mb-3 block uppercase tracking-widest font-bold">
+        Anuncio
+    </span>
 
-<div id="global-bottom-ads" class="mt-12 w-full flex flex-col items-center justify-center p-4 border border-dashed border-indigo-900/40 rounded-2xl bg-gray-950/40 min-h-[120px]">
-    <span class="text-[10px] text-gray-500 mb-3 block uppercase tracking-widest font-bold">Anuncio Recomendado</span>
-    <div id="native-banner-container" class="w-full flex justify-center"></div>
+    <div id="native-banner-container"
+    class="w-full flex justify-center"></div>
+
 </div>
 
 </main>
 
 <script>
 
-const SMARTLINK_URL = "https://www.effectivecpmnetwork.com/vs496jw3?key=b7e43b566e8614c045f8eb6a7a936831";
+const SMARTLINK_URL =
+"https://www.effectivecpmnetwork.com/vs496jw3?key=b7e43b566e8614c045f8eb6a7a936831";
 
 function isMobile(){
     return window.innerWidth <= 768;
@@ -229,67 +362,60 @@ function enterSite(){
     document.getElementById("welcome").style.display = "none";
 }
 
-const gamesGrid = document.getElementById("games-grid");
-const destacadosGrid = document.getElementById("destacados-grid");
-const emulatorFrame = document.getElementById("emulator-frame");
-const emulatorSection = document.getElementById("emulator-section");
-const currentGameTitle = document.getElementById("current-game-title");
+const gamesGrid =
+document.getElementById("games-grid");
+
+const emulatorFrame =
+document.getElementById("emulator-frame");
+
+const emulatorSection =
+document.getElementById("emulator-section");
+
+const currentGameTitle =
+document.getElementById("current-game-title");
 
 let lista = [];
-let favoritos = JSON.parse(localStorage.getItem("gs_favoritos")) || [];
+
+let favoritos =
+JSON.parse(localStorage.getItem("gs_favoritos")) || [];
+
 let filtro = "ALL";
+
 let busqueda = "";
 
 function filtrar(f){
+
     filtro = f;
 
-    if(filtro === "FAVORITOS") {
-        document.getElementById("destacados-section").classList.add("hidden");
-        document.getElementById("section-title").textContent = "Mis Juegos Guardados";
+    if(filtro === "FAVORITOS"){
+
+        document.getElementById("section-title")
+        .textContent = "Mis Juegos Guardados";
+
     } else {
-        document.getElementById("destacados-section").classList.remove("hidden");
-        document.getElementById("section-title").textContent = "Colección Retro";
+
+        document.getElementById("section-title")
+        .textContent = "Colección Retro";
     }
 
     render();
 }
 
 function buscar(texto){
+
     busqueda = texto.toLowerCase();
+
     render();
 }
 
 async function cargar(){
-    const res = await fetch("./all_roms.json");
+
+    const res =
+    await fetch("./all_roms.json");
+
     lista = await res.json();
-    generarDestacados();
+
     render();
-}
-
-function generarDestacados(){
-
-    if(lista.length === 0) return;
-
-    destacadosGrid.innerHTML = "";
-
-    let mezclados = [...lista]
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
-
-    mezclados.forEach(g => {
-        const div = crearTarjetaJuego(g, true);
-        destacadosGrid.appendChild(div);
-    });
-}
-
-function jugarAleatorio(){
-
-    if(lista.length === 0) return;
-
-    const juegoAzar =
-    lista[Math.floor(Math.random() * lista.length)];
-
-    iniciarProcesoJuego(juegoAzar);
 }
 
 function toggleFavorito(idJuego, btnElement){
@@ -307,7 +433,7 @@ function toggleFavorito(idJuego, btnElement){
 
     } else {
 
-        favoritos.splice(index, 1);
+        favoritos.splice(index,1);
 
         btnElement.textContent = "☆";
 
@@ -315,62 +441,31 @@ function toggleFavorito(idJuego, btnElement){
         btnElement.classList.add("text-gray-600");
     }
 
-    localStorage.setItem("gs_favoritos", JSON.stringify(favoritos));
+    localStorage.setItem(
+        "gs_favoritos",
+        JSON.stringify(favoritos)
+    );
 
-    if(filtro === "FAVORITOS") render();
+    if(filtro === "FAVORITOS"){
+        render();
+    }
 }
 
-function obtenerCartuchoHTML(g) {
+function obtenerCartuchoHTML(g){
 
-    if(g.console === "NES") {
+    return `
+    <div class="w-28 h-32 bg-gray-800 rounded-2xl border border-gray-700 p-2 flex flex-col items-center justify-center mb-3 shadow-lg">
 
-        return `
-        <div class="w-28 h-32 bg-gray-600 rounded-b-md relative shadow-inner border border-gray-500 p-2 flex flex-col items-center mb-3">
+        <div class="text-[9px] uppercase text-indigo-400 font-bold mb-2">
+            ${g.console}
+        </div>
 
-            <div class="absolute inset-y-0 left-2 w-1 bg-gray-700 opacity-40"></div>
+        <div class="text-[10px] font-black uppercase text-center text-white leading-tight">
+            ${g.name}
+        </div>
 
-            <div class="absolute inset-y-0 left-4 w-1 bg-gray-700 opacity-40"></div>
-
-            <div class="absolute inset-y-0 left-6 w-1 bg-gray-700 opacity-40"></div>
-
-            <div class="w-20 h-20 bg-gradient-to-b from-red-800 to-red-950 border border-red-700 rounded p-1 text-center flex flex-col justify-center shadow-md">
-
-                <span class="text-[9px] uppercase tracking-tighter text-red-400 font-bold">
-                Nintendo
-                </span>
-
-                <div class="text-[10px] font-black uppercase text-white truncate px-0.5 leading-tight">
-                ${g.name}
-                </div>
-
-            </div>
-
-            <div class="w-16 h-4 bg-gray-700/60 mt-2 rounded-t border-t border-gray-800"></div>
-
-        </div>`;
-    }
-
-    else {
-
-        return `
-        <div class="w-26 h-28 bg-slate-950 rounded-lg border border-slate-800 p-2 flex flex-col items-center justify-center mb-3 shadow-lg relative">
-
-            <div class="absolute top-0 inset-x-0 h-1 bg-green-500 rounded-t-lg"></div>
-
-            <div class="w-20 h-16 bg-gradient-to-br from-green-950 to-black border border-green-900 rounded p-1 flex flex-col justify-center text-center">
-
-                <span class="text-[8px] text-green-400 font-bold uppercase">
-                ${g.console}
-                </span>
-
-                <div class="text-[10px] font-bold uppercase text-white truncate">
-                ${g.name}
-                </div>
-
-            </div>
-
-        </div>`;
-    }
+    </div>
+    `;
 }
 
 function crearTarjetaJuego(g){
@@ -380,9 +475,11 @@ function crearTarjetaJuego(g){
     div.className =
     "bg-gray-900 p-4 rounded-3xl border border-gray-800 game-card flex flex-col items-center justify-between";
 
-    const esFav = favoritos.includes(g.romUrl);
+    const esFav =
+    favoritos.includes(g.romUrl);
 
-    const cartucho = obtenerCartuchoHTML(g);
+    const cartucho =
+    obtenerCartuchoHTML(g);
 
     div.innerHTML = `
 
@@ -397,23 +494,27 @@ function crearTarjetaJuego(g){
         <div class="w-full text-center mt-1">
 
             <span class="text-[10px] uppercase font-bold text-gray-500 block tracking-wider">
-            ${g.console}
+                ${g.console}
             </span>
 
             <div class="font-bold text-sm text-gray-200 mt-0.5 line-clamp-1 capitalize">
-            ${g.name}
+                ${g.name}
             </div>
 
             <button class="mt-3 w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 font-bold rounded-xl py-1.5 text-xs tracking-wide transition shadow-md play-game-btn">
-            JUGAR
+
+                JUGAR
+
             </button>
 
         </div>
     `;
 
     div.querySelector(".fav-star-btn").onclick = (e) => {
+
         e.stopPropagation();
-        toggleFavorito(g.romUrl, e.target);
+
+        toggleFavorito(g.romUrl,e.target);
     };
 
     div.querySelector(".play-game-btn").onclick = () => {
@@ -425,7 +526,8 @@ function crearTarjetaJuego(g){
 
 function iniciarProcesoJuego(g){
 
-    const modal = document.getElementById("ad-interstitial-modal");
+    const modal =
+    document.getElementById("ad-interstitial-modal");
 
     const continueBtn =
     document.getElementById("ad-continue-btn");
@@ -434,11 +536,9 @@ function iniciarProcesoJuego(g){
 
     continueBtn.onclick = () => {
 
-        window.open(SMARTLINK_URL, "_blank");
+        window.open(SMARTLINK_URL,"_blank");
 
         modal.classList.add("hidden");
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
 
         emulatorSection.classList.remove("hidden");
 
@@ -449,17 +549,10 @@ function iniciarProcesoJuego(g){
         if(g.console === "ATARI7800") core = "atari7800";
         if(g.console === "JAGUAR") core = "jaguar";
         if(g.console === "NES") core = "nes";
-
-        /* NUEVO N64 */
         if(g.console === "N64") core = "n64";
 
         emulatorFrame.src =
         `./emulator.html?game=${encodeURIComponent(g.romUrl)}&core=${core}`;
-
-        setTimeout(() => {
-            emulatorFrame.contentWindow?.focus();
-            emulatorFrame.focus();
-        }, 500);
     };
 }
 
@@ -469,18 +562,18 @@ function render(){
 
     let data = lista;
 
-    if(filtro === "FAVORITOS") {
+    if(filtro === "FAVORITOS"){
 
         data = data.filter(g =>
         favoritos.includes(g.romUrl));
 
-    } else if(filtro !== "ALL") {
+    } else if(filtro !== "ALL"){
 
         data = data.filter(g =>
         g.console === filtro);
     }
 
-    if(busqueda !== "") {
+    if(busqueda !== ""){
 
         data = data.filter(g =>
         g.name.toLowerCase().includes(busqueda));
@@ -490,23 +583,28 @@ function render(){
 
         gamesGrid.innerHTML = `
         <div class="col-span-4 text-center py-8 text-gray-500 text-sm">
-        No se encontraron juegos en esta categoría.
-        </div>`;
+            No se encontraron juegos.
+        </div>
+        `;
 
         return;
     }
 
     data.forEach(g => {
-        const div = crearTarjetaJuego(g);
+
+        const div =
+        crearTarjetaJuego(g);
+
         gamesGrid.appendChild(div);
     });
 }
 
 function triggerFloatingAd(){
 
-    window.open(SMARTLINK_URL, "_blank");
+    window.open(SMARTLINK_URL,"_blank");
 
-    const tab = document.getElementById("floating-ad-tab");
+    const tab =
+    document.getElementById("floating-ad-tab");
 
     if(tab) tab.remove();
 }
@@ -520,16 +618,12 @@ function cerrarJuego(){
 
 function agrandarPantalla(){
 
-    const f = document.getElementById("emulator-frame");
+    const f =
+    document.getElementById("emulator-frame");
 
-    if (f.requestFullscreen) {
+    if(f.requestFullscreen){
         f.requestFullscreen();
     }
-
-    setTimeout(() => {
-        f.contentWindow?.focus();
-        f.focus();
-    }, 100);
 }
 
 function inicializarPublicidad(){
@@ -540,25 +634,32 @@ function inicializarPublicidad(){
     const nativeContainer =
     document.getElementById("native-banner-container");
 
-    if (!isMobile()) {
+    if(!isMobile()){
 
         pcContainer.innerHTML = `
             <div class="adbox">
-                <script async="async" data-cfasync="false" src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"><\/script>
+                <script async="async"
+                data-cfasync="false"
+                src="https://pl29470229.effectivecpmnetwork.com/e61a275bae57ec5c68e79426fe108696/invoke.js"><\/script>
             </div>
         `;
     }
 
     nativeContainer.innerHTML = `
-        <script async="async" data-cfasync="false" src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"><\/script>
+        <script async="async"
+        data-cfasync="false"
+        src="https://pl29470228.effectivecpmnetwork.com/a9/69/ee/a969eee3f6606fdd30bb1074b6e8e53f.js"><\/script>
     `;
 }
 
 window.addEventListener("load", () => {
+
     cargar();
+
     inicializarPublicidad();
 });
 
 </script>
+
 </body>
 </html>
