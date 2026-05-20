@@ -4408,5 +4408,222 @@
         "name":  "zoomingsecretaryshiru",
         "console":  "NES",
         "romUrl":  "roms/nes/zoomingsecretaryshiru.nes"
+    },
+    {
+        "name":  "007 - The World Is Not Enough",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/007 - The World Is Not Enough.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/007 - The World Is Not Enough.png"
+    },
+    {
+        "name":  "Aidyn Chronicles - The First Mage",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Aidyn Chronicles - The First Mage.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Aidyn Chronicles - The First Mage.png"
+    },
+    {
+        "name":  "Banjo-Kazooie",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Banjo-Kazooie.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Banjo-Kazooie.png"
+    },
+    {
+        "name":  "Bomberman 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Bomberman 64.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Bomberman 64.png"
+    },
+    {
+        "name":  "Command Conquer",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Command Conquer.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Command Conquer.png"
+    },
+    {
+        "name":  "Cruisn Exotica",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Cruisn Exotica.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Cruisn Exotica.png"
+    },
+    {
+        "name":  "Cruisn World",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Cruisn World.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Cruisn World.png"
+    },
+    {
+        "name":  "Donald Duck - Goin Quackers",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Donald Duck - Goin Quackers.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Donald Duck - Goin Quackers.png"
+    },
+    {
+        "name":  "Donkey Kong 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Donkey Kong 64.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Donkey Kong 64.png"
+    },
+    {
+        "name":  "Duke Nukem - Zero Hour",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Duke Nukem - Zero Hour.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Duke Nukem - Zero Hour.png"
+    },
+    {
+        "name":  "Gex 3 - Deep Cover Gecko",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Gex 3 - Deep Cover Gecko.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Gex 3 - Deep Cover Gecko.png"
+    },
+    {
+        "name":  "Kirby 64 - The Crystal Shards",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Kirby 64 - The Crystal Shards.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Kirby 64 - The Crystal Shards.png"
+    },
+    {
+        "name":  "Legend of Zelda The - Majoras Mask",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Legend of Zelda The - Majoras Mask.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Legend of Zelda The - Majoras Mask.png"
+    },
+    {
+        "name":  "Mario Kart 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Mario Kart 64.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Mario Kart 64.png"
+    },
+    {
+        "name":  "Mario Party",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Mario Party.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Mario Party.png"
+    },
+    {
+        "name":  "Mario Tennis",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Mario Tennis.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Mario Tennis.png"
+    },
+    {
+        "name":  "Mega Man 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Mega Man 64.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Mega Man 64.png"
+    },
+    {
+        "name":  "Monaco Grand Prix - Racing Simulation 2",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Monaco Grand Prix - Racing Simulation 2.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Monaco Grand Prix - Racing Simulation 2.png"
+    },
+    {
+        "name":  "Off Road Challenge",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Off Road Challenge.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Off Road Challenge.png"
+    },
+    {
+        "name":  "Paper Mario",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Paper Mario.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Paper Mario.png"
+    },
+    {
+        "name":  "Pokemon Snap",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Pokemon Snap.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Pokemon Snap.png"
+    },
+    {
+        "name":  "Pokemon Stadium",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Pokemon Stadium.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Pokemon Stadium.png"
+    },
+    {
+        "name":  "Rayman 2 - The Great Escape",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Rayman 2 - The Great Escape.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Rayman 2 - The Great Escape.png"
+    },
+    {
+        "name":  "RR64 - Ridge Racer 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/RR64 - Ridge Racer 64.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/RR64 - Ridge Racer 64.png"
+    },
+    {
+        "name":  "Rush 2 - Extreme Racing USA",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Rush 2 - Extreme Racing USA.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Rush 2 - Extreme Racing USA.png"
+    },
+    {
+        "name":  "San Francisco Rush - Extreme Racing",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/San Francisco Rush - Extreme Racing.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/San Francisco Rush - Extreme Racing.png"
+    },
+    {
+        "name":  "San Francisco Rush 2049",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/San Francisco Rush 2049.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/San Francisco Rush 2049.png"
+    },
+    {
+        "name":  "Scooby-Doo - Classic Creep Capers",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Scooby-Doo - Classic Creep Capers.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Scooby-Doo - Classic Creep Capers.png"
+    },
+    {
+        "name":  "Spider-Man",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Spider-Man.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Spider-Man.png"
+    },
+    {
+        "name":  "Super Mario 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Super Mario 64.z64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Super Mario 64.png"
+    },
+    {
+        "name":  "Tony Hawks Pro Skater 2",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Tony Hawks Pro Skater 2.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Tony Hawks Pro Skater 2.png"
+    },
+    {
+        "name":  "Tony Hawks Pro Skater",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Tony Hawks Pro Skater.v64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Tony Hawks Pro Skater.png"
+    },
+    {
+        "name":  "Turok - Rage Wars",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Turok - Rage Wars.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Turok - Rage Wars.png"
+    },
+    {
+        "name":  "Wipeout 64",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Wipeout 64.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Wipeout 64.png"
+    },
+    {
+        "name":  "Worms Armageddon",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Worms Armageddon.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Worms Armageddon.png"
+    },
+    {
+        "name":  "Yoshis Story",
+        "console":  "N64",
+        "romUrl":  "https://archive.org/download/n64_20260520/n64/Yoshis Story.n64",
+        "image":  "https://archive.org/download/n64_20260520/n64/images/Yoshis Story.png"
     }
 ]
+
