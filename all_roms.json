@@ -4410,10 +4410,10 @@
         "romUrl":  "roms/nes/zoomingsecretaryshiru.nes"
     },
     {
-        "name":  "007 - The World Is Not Enough",
-        "console":  "N64",
-        "romUrl":  "https://archive.org/download/n64_20260520/n64/007 - The World Is Not Enough.z64",
-        "image":  "https://archive.org/download/n64_20260520/n64/images/007 - The World Is Not Enough.png"
+        "name": "007 - The World Is Not Enough",
+         "console": "N64",
+         "romUrl": "https://archive.org/download/n64_20260520/n64/007%20-%20The%20World%20Is%20Not%20Enough.z64",
+         "image": "https://archive.org/download/n64_20260520/n64/images/007%20-%20The%20World%20Is%20Not%20Enough.png"
     },
     {
         "name":  "Aidyn Chronicles - The First Mage",
@@ -4500,10 +4500,10 @@
         "image":  "https://archive.org/download/n64_20260520/n64/images/Mario Party.png"
     },
     {
-        "name":  "Mario Tennis",
-        "console":  "N64",
-        "romUrl":  "https://archive.org/download/n64_20260520/n64/Mario Tennis.n64",
-        "image":  "https://archive.org/download/n64_20260520/n64/images/Mario Tennis.png"
+  "name": "Mario Tennis",
+  "console": "N64",
+  "romUrl": "https://archive.org/download/n64_20260520/n64/Mario%20Tennis.n64",
+  "image": "https://archive.org/download/n64_20260520/n64/images/Mario%20Tennis.png"
     },
     {
         "name":  "Mega Man 64",
