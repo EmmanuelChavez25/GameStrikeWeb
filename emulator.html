@@ -60,9 +60,14 @@ if(coreParam.includes("2600")) coreId = "stella2014";
 if(coreParam.includes("jaguar")) coreId = "virtualjaguar";
 
 /* =========================
-   NES (AGREGADO)
+   NES
 ========================= */
 if(coreParam.includes("nes")) coreId = "fceumm";
+
+/* =========================
+   NINTENDO 64 (AGREGADO)
+========================= */
+if(coreParam.includes("n64")) coreId = "parallel_n64";
 
 /* =========================
    fallback seguro
@@ -82,8 +87,17 @@ window.EJS_player = "#game";
 window.EJS_core = coreId;
 window.EJS_gameUrl = romUrl;
 window.EJS_startOnLoaded = true;
+
+/* MÁS ESTABLE PARA N64 */
+window.EJS_threads = false;
+
+/* DATA */
 window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
 
+/* AUTO SAVE */
+window.EJS_color = "#4f46e5";
+
+/* CARGAR */
 const s = document.createElement("script");
 s.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
 document.body.appendChild(s);
